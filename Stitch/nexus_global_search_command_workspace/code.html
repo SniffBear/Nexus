@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-surface-variant":"#c2c6d3","tertiary":"#f7be37","on-error-container":"#ffdad6","background":"#101419","secondary-container":"#0072b5","surface-container-low":"#181c21","surface-dim":"#101419","surface-container-lowest":"#0a0f13","inverse-on-surface":"#2d3136","surface-container":"#1c2025","primary-container":"#6ea8ff","primary":"#a8c8ff","on-tertiary":"#402d00","tertiary-fixed":"#ffdea1","surface-variant":"#31353b","on-background":"#e0e2ea","on-tertiary-fixed-variant":"#5c4300","primary-fixed":"#d5e3ff","primary-fixed-dim":"#a8c8ff","on-primary-fixed":"#001b3c","on-primary":"#003061","secondary-fixed-dim":"#99cbff","on-surface":"#e0e2ea","surface-tint":"#a8c8ff","surface-container-highest":"#31353b","secondary-fixed":"#cfe5ff","on-primary-fixed-variant":"#00468a","inverse-primary":"#105eb0","tertiary-container":"#d39e10","on-secondary-fixed-variant":"#004a78","surface-container-high":"#262a30","on-secondary":"#003355","on-secondary-container":"#e8f1ff","error-container":"#93000a","on-secondary-fixed":"#001d34","error":"#ffb4ab","on-error":"#690005","on-tertiary-container":"#4e3800","tertiary-fixed-dim":"#f7be37","inverse-surface":"#e0e2ea","outline-variant":"#424751","on-tertiary-fixed":"#261900","secondary":"#99cbff","outline":"#8c919d","on-primary-container":"#003c77","surface":"#101419","surface-bright":"#36393f"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{},fontFamily:{headline:["Geist"],display:["Geist"],body:["Geist"],label:["Geist"]},fontSize:{}}}}</script></head><body class="bg-background font-body text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 flex flex-col"><div class="h-11 w-full bg-surface-container-lowest border-b border-outline-variant px-3 flex items-center justify-between text-xs"><div class="flex items-center gap-4"><div class="flex items-center gap-2"><span class="font-headline font-bold text-sm tracking-wider text-primary">NEXUS</span><span class="text-[10px] px-1.5 py-0.5 rounded-sm bg-surface-container-highest text-tertiary font-mono tracking-wide">PAPER</span></div><nav class="flex items-center gap-1" data-active-classes="text-primary border-b border-primary font-medium"><a class="px-2 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="trade" href="#">Trade</a><a class="px-2 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="markets" href="#">Markets</a><a class="px-2 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="predict" href="#">Predict</a><a class="px-2 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="social" href="#">Social</a><a class="px-2 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="leaderboard" href="#">Leaderboard</a><a class="px-2 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="earn" href="#">Earn</a><a class="px-2 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="calendar" href="#">Calendar</a><a class="px-2 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="co-invest" href="#">Co-Invest</a><a class="px-2 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="agents" href="#">Agents</a></nav></div><div class="flex items-center gap-3"><div class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container text-on-surface-variant border border-outline-variant font-mono text-[11px]"><span class="material-symbols-outlined text-[13px]">search</span><span>Search</span><kbd class="px-1 rounded bg-surface-container-high text-[10px]">⌘K</kbd></div><div class="flex items-center gap-1.5 text-on-surface-variant font-mono text-[11px]"><span class="inline-block w-1.5 h-1.5 rounded-full bg-tertiary"></span><span>12ms</span></div><button class="text-on-surface-variant hover:text-on-surface flex items-center justify-center"><span class="material-symbols-outlined text-[18px]">notifications</span></button><div class="flex items-center gap-2 pl-2 border-l border-outline-variant font-mono text-[11px]"><span class="text-on-surface">0x71a...9b4</span><span class="text-primary">$42,850.20 USDC</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="h-8 w-full bg-surface-container-low border-b border-outline-variant px-3 flex items-center gap-6 overflow-x-auto text-[11px] font-mono"><div class="flex items-center gap-1.5 text-on-surface-variant"><span class="text-[10px] uppercase font-bold text-primary">TICKER</span></div><div class="flex items-center gap-1.5"><span class="text-on-surface font-semibold">SOL</span><span class="text-on-surface">$184.25</span><span class="text-primary">+4.18%</span><span class="text-outline text-[10px]">24h $3.1B</span></div><div class="flex items-center gap-1.5"><span class="text-on-surface font-semibold">BTC</span><span class="text-on-surface">$64,120.00</span><span class="text-primary">+1.85%</span><span class="text-outline text-[10px]">24h $28.4B</span></div><div class="flex items-center gap-1.5"><span class="text-on-surface font-semibold">ETH</span><span class="text-on-surface">$3,485.40</span><span class="text-error">-0.64%</span><span class="text-outline text-[10px]">24h $14.2B</span></div><div class="flex items-center gap-1.5"><span class="text-on-surface font-semibold">JUP</span><span class="text-on-surface">$1.14</span><span class="text-primary">+8.92%</span><span class="text-outline text-[10px]">24h $412M</span></div><div class="flex items-center gap-1.5"><span class="text-on-surface font-semibold">NVDA</span><span class="text-on-surface">$128.40</span><span class="text-primary">+2.31%</span><span class="text-outline text-[10px]">24h $9.8B</span></div><div class="flex items-center gap-1.5"><span class="text-on-surface font-semibold">TSLA</span><span class="text-on-surface">$248.12</span><span class="text-error">-1.12%</span><span class="text-outline text-[10px]">24h $4.5B</span></div></div></header><main class="w-full pt-[76px] pb-8 bg-background min-h-screen"><div class="flex flex-col w-full relative min-h-[calc(100vh-108px)] p-4 sm:p-6 overflow-hidden">
+<!-- Subtle Ambient Trading Floor Background Context -->
+<div class="absolute inset-0 pointer-events-none opacity-20 flex flex-col justify-between p-6 select-none font-mono text-[11px] text-outline">
+<div class="grid grid-cols-6 gap-4">
+<div class="bg-surface-container-low p-3 rounded">
+<div class="text-on-surface-variant text-[10px]">ORDERBOOK DEPTH</div>
+<div class="text-primary mt-1 font-semibold">BIDS: 1,482.4 SOL</div>
+<div class="text-error">ASKS: 981.1 SOL</div>
+</div>
+<div class="bg-surface-container-low p-3 rounded">
+<div class="text-on-surface-variant text-[10px]">CLUSTER LATENCY</div>
+<div class="text-on-surface mt-1 font-semibold">Tokyo: 14ms</div>
+<div class="text-on-surface-variant">FRA: 78ms</div>
+</div>
+<div class="bg-surface-container-low p-3 rounded">
+<div class="text-on-surface-variant text-[10px]">PYTH ORACLE CONF</div>
+<div class="text-primary mt-1 font-semibold">±$0.014</div>
+<div class="text-on-surface-variant">Slot: 284,192,801</div>
+</div>
+<div class="bg-surface-container-low p-3 rounded">
+<div class="text-on-surface-variant text-[10px]">TOTAL MARGIN POOL</div>
+<div class="text-on-surface mt-1 font-semibold">$148,920,440.00</div>
+<div class="text-primary">+3.8% 24h</div>
+</div>
+<div class="bg-surface-container-low p-3 rounded">
+<div class="text-on-surface-variant text-[10px]">AI INFERENCE ENGINE</div>
+<div class="text-primary mt-1 font-semibold">NEXUS-V4.2 RUNNING</div>
+<div class="text-on-surface-variant">Queue: 0 pending</div>
+</div>
+<div class="bg-surface-container-low p-3 rounded">
+<div class="text-on-surface-variant text-[10px]">LIQUIDATION RADAR</div>
+<div class="text-tertiary mt-1 font-semibold">LOW RISK</div>
+<div class="text-on-surface-variant">Distance: +18.4%</div>
+</div>
+</div>
+<div class="h-48 w-full flex items-end gap-1 opacity-25">
+<div class="w-2 bg-primary h-[30%]"></div>
+<div class="w-2 bg-primary h-[45%]"></div>
+<div class="w-2 bg-primary h-[60%]"></div>
+<div class="w-2 bg-error h-[40%]"></div>
+<div class="w-2 bg-primary h-[75%]"></div>
+<div class="w-2 bg-primary h-[90%]"></div>
+<div class="w-2 bg-error h-[65%]"></div>
+<div class="w-2 bg-primary h-[80%]"></div>
+<div class="w-2 bg-primary h-[85%]"></div>
+<div class="w-2 bg-primary h-[100%]"></div>
+</div>
+</div>
+<!-- Command Palette Centered Canvas -->
+<div class="relative z-20 mx-auto w-full max-w-[840px] my-auto flex flex-col shadow-2xl rounded-lg bg-surface-container-lowest overflow-hidden">
+<!-- Header: Search Query & Status Header -->
+<div class="p-3 bg-surface-container-low flex flex-col gap-2.5">
+<div class="flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5 flex-1 bg-surface-container px-3 py-2.5 rounded">
+<span class="material-symbols-outlined text-primary text-[20px]">terminal</span>
+<input autocomplete="off" class="bg-transparent text-on-surface text-[14px] font-body placeholder:text-outline focus:outline-none w-full tracking-tight font-medium" id="omnisearch-input" placeholder="Type a command or search across assets, markets, traders, predictions, agents..." spellcheck="false" type="text" value="sol"/>
+<div class="flex items-center gap-1">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-mono bg-surface-container-high text-on-surface-variant">Esc</span>
+</div>
+</div>
+<!-- Telemetry Badge Indicator -->
+<div class="hidden sm:flex items-center gap-3 font-mono text-[11px] px-2 py-1 bg-surface-container rounded">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="text-on-surface-variant">Global Index:</span>
+<span class="text-primary font-medium">9,410 Nodes</span>
+</div>
+<div class="h-3 w-px bg-surface-container-highest"></div>
+<div class="text-outline">Latency: 1.8ms</div>
+</div>
+</div>
+<!-- Quick Category Filter Pills -->
+<div class="flex items-center gap-1.5 overflow-x-auto text-[11px] font-mono py-0.5 scrollbar-none">
+<button class="px-2 py-1 rounded bg-primary text-on-primary font-semibold flex items-center gap-1 whitespace-nowrap">
+<span>All</span>
+<span class="text-[9px] opacity-80 font-normal">24</span>
+</button>
+<button class="px-2 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high flex items-center gap-1 whitespace-nowrap transition-colors">
+<span>Assets</span>
+<span class="text-[9px] text-outline">3</span>
+</button>
+<button class="px-2 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high flex items-center gap-1 whitespace-nowrap transition-colors">
+<span>Perps &amp; Markets</span>
+<span class="text-[9px] text-outline">2</span>
+</button>
+<button class="px-2 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high flex items-center gap-1 whitespace-nowrap transition-colors">
+<span>Traders</span>
+<span class="text-[9px] text-outline">2</span>
+</button>
+<button class="px-2 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high flex items-center gap-1 whitespace-nowrap transition-colors">
+<span>Predictions</span>
+<span class="text-[9px] text-outline">2</span>
+</button>
+<button class="px-2 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high flex items-center gap-1 whitespace-nowrap transition-colors">
+<span>AI Agents</span>
+<span class="text-[9px] text-outline">2</span>
+</button>
+<button class="px-2 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high flex items-center gap-1 whitespace-nowrap transition-colors">
+<span>Signals</span>
+<span class="text-[9px] text-outline">2</span>
+</button>
+<button class="px-2 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high flex items-center gap-1 whitespace-nowrap transition-colors">
+<span>Commands</span>
+<span class="text-[9px] text-outline">6</span>
+</button>
+</div>
+</div>
+<!-- Results Body (Scrollable Container) -->
+<div class="flex flex-col max-h-[500px] overflow-y-auto divide-y-0 p-2 gap-3 text-on-surface" id="results-viewport">
+<!-- Section: SPOT ASSETS -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between px-2 pt-1 pb-0.5 text-[10px] font-mono uppercase tracking-wider text-outline">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[13px] text-primary">currency_exchange</span>SPOT ASSETS</span>
+<span>Matched in 0.4ms</span>
+</div>
+<!-- Result Item 1: SOL (Selected Active State) -->
+<div class="group relative flex items-center justify-between p-2 rounded bg-surface-container-high cursor-pointer transition-all">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-7 h-7 rounded bg-surface-container-highest flex items-center justify-center font-bold text-xs text-primary font-mono shrink-0">
+              SOL
+            </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-on-surface font-headline">Solana</span>
+<span class="text-[10px] font-mono px-1 rounded bg-surface-container text-primary">SOL/USDC</span>
+<span class="text-[10px] font-mono text-outline">Rank #4</span>
+</div>
+<div class="flex items-center gap-2 text-[11px] font-mono text-on-surface-variant">
+<span>Vol <strong class="text-on-surface">$2.41B</strong></span>
+<span class="text-surface-variant">•</span>
+<span>Depth: <strong class="text-on-surface">+$4.8M / -$3.9M</strong></span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 shrink-0 font-mono">
+<!-- Sparkline visualization -->
+<div class="hidden sm:flex items-center">
+<svg class="w-16 h-5 text-primary" fill="none" viewbox="0 0 64 20">
+<path d="M0 16 L12 14 L24 17 L36 9 L48 11 L64 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</div>
+<div class="text-right">
+<div class="text-xs font-semibold text-on-surface">$188.42</div>
+<div class="text-[10px] text-primary font-medium">+4.21% 24h</div>
+</div>
+<div class="flex items-center gap-1 bg-primary text-on-primary px-2 py-1 rounded text-[10px] font-mono font-semibold">
+<span>Open Chart</span>
+<kbd class="text-[9px] opacity-90">↵</kbd>
+</div>
+</div>
+</div>
+<!-- Result Item 2: BTC -->
+<div class="group flex items-center justify-between p-2 rounded bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-all">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-7 h-7 rounded bg-surface-container flex items-center justify-center font-bold text-xs text-tertiary font-mono shrink-0">
+              BTC
+            </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-on-surface font-headline">Bitcoin</span>
+<span class="text-[10px] font-mono px-1 rounded bg-surface-container text-on-surface-variant">BTC/USDC</span>
+<span class="text-[10px] font-mono text-outline">Dominance 56.2%</span>
+</div>
+<div class="flex items-center gap-2 text-[11px] font-mono text-on-surface-variant">
+<span>Vol <strong class="text-on-surface">$18.92B</strong></span>
+<span class="text-surface-variant">•</span>
+<span>CEX Flow: <span class="text-primary font-medium">-$140M Outflow</span></span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 shrink-0 font-mono">
+<div class="hidden sm:flex items-center">
+<svg class="w-16 h-5 text-error" fill="none" viewbox="0 0 64 20">
+<path d="M0 4 L14 6 L28 3 L42 14 L52 11 L64 17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</div>
+<div class="text-right">
+<div class="text-xs font-semibold text-on-surface">$68,450.00</div>
+<div class="text-[10px] text-error font-medium">-0.84% 24h</div>
+</div>
+<div class="hidden group-hover:flex items-center gap-1 bg-surface-container-high text-on-surface px-2 py-1 rounded text-[10px] font-mono">
+<span>View</span>
+<kbd class="text-[9px] text-outline">↵</kbd>
+</div>
+</div>
+</div>
+<!-- Result Item 3: NVDA -->
+<div class="group flex items-center justify-between p-2 rounded bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-all">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-7 h-7 rounded bg-surface-container flex items-center justify-center font-bold text-xs text-primary font-mono shrink-0">
+              NVDA
+            </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-on-surface font-headline">NVIDIA Corp (Tokenized Equity)</span>
+<span class="text-[10px] font-mono px-1 rounded bg-surface-container text-tertiary">Pre-Market Open</span>
+</div>
+<div class="text-[11px] font-mono text-on-surface-variant">
+                Synthetics 24/7 • Collateral Ratio <strong class="text-on-surface">142%</strong>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 shrink-0 font-mono">
+<div class="text-right">
+<div class="text-xs font-semibold text-on-surface">$124.80</div>
+<div class="text-[10px] text-primary font-medium">+2.15%</div>
+</div>
+<div class="hidden group-hover:flex items-center gap-1 bg-surface-container-high text-on-surface px-2 py-1 rounded text-[10px] font-mono">
+<span>Trade</span>
+<kbd class="text-[9px] text-outline">↵</kbd>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: PERPETUALS & DERIVATIVES -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between px-2 pt-2 pb-0.5 text-[10px] font-mono uppercase tracking-wider text-outline">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[13px] text-secondary">candlestick_chart</span>PERPETUAL CONTRACTS (ON-CHAIN PYTH ORACLES)</span>
+<span>Max 20x Leverage</span>
+</div>
+<!-- Perp Item: SOL-PERP -->
+<div class="group flex items-center justify-between p-2 rounded bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-all">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-7 h-7 rounded bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-[10px] font-mono shrink-0">
+              20x
+            </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-on-surface font-headline">SOL-PERP</span>
+<span class="text-[10px] font-mono px-1 rounded bg-surface-container text-primary flex items-center gap-1">
+<span class="w-1 h-1 rounded-full bg-primary"></span>Pyth $188.45
+                </span>
+<span class="text-[10px] font-mono text-outline">OI: $128.4M</span>
+</div>
+<div class="flex items-center gap-2 text-[11px] font-mono text-on-surface-variant">
+<span>1h Funding: <span class="text-primary font-semibold">+0.0120%</span></span>
+<span class="text-surface-variant">•</span>
+<span>Borrow: <span class="text-on-surface">0.003% / 8h</span></span>
+<span class="text-surface-variant">•</span>
+<span>Next settlement: <span class="text-on-surface">18m 42s</span></span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0 font-mono">
+<div class="text-right">
+<div class="text-xs font-semibold text-primary">$188.450</div>
+<div class="text-[10px] text-on-surface-variant">Spread 0.005%</div>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface px-2.5 py-1 rounded text-[10px] font-semibold transition-colors">
+<span>Execute Ticket</span>
+<kbd class="text-[9px] text-outline group-hover:text-on-primary">↵</kbd>
+</div>
+</div>
+</div>
+<!-- Perp Item: JUP-PERP -->
+<div class="group flex items-center justify-between p-2 rounded bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-all">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-7 h-7 rounded bg-surface-container text-on-surface-variant flex items-center justify-center font-bold text-[10px] font-mono shrink-0">
+              10x
+            </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-on-surface font-headline">JUP-PERP</span>
+<span class="text-[10px] font-mono px-1 rounded bg-surface-container text-on-surface-variant">Pyth $1.1412</span>
+<span class="text-[10px] font-mono text-primary font-semibold">+6.8%</span>
+</div>
+<div class="flex items-center gap-2 text-[11px] font-mono text-on-surface-variant">
+<span>OI: <strong class="text-on-surface">$42.1M</strong></span>
+<span class="text-surface-variant">•</span>
+<span>Long/Short: <strong class="text-primary font-medium">62% Long</strong></span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0 font-mono">
+<div class="text-right">
+<div class="text-xs font-semibold text-on-surface">$1.1412</div>
+<div class="text-[10px] text-primary">Funding -0.004%</div>
+</div>
+<div class="hidden group-hover:flex items-center gap-1 bg-surface-container-high text-on-surface px-2 py-1 rounded text-[10px] font-mono">
+<span>Trade</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: TRADERS & ON-CHAIN WALLETS -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between px-2 pt-2 pb-0.5 text-[10px] font-mono uppercase tracking-wider text-outline">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[13px] text-tertiary">groups</span>TRADERS &amp; HIGH-CONVICTION WALLETS</span>
+<span>Social Copy Trading Active</span>
+</div>
+<!-- Trader Item: @alpha42 -->
+<div class="group flex items-center justify-between p-2 rounded bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-all">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center text-primary shrink-0 relative">
+<span class="font-bold text-[11px] font-headline">α</span>
+<span class="material-symbols-outlined absolute -bottom-0.5 -right-0.5 text-[10px] text-primary bg-surface rounded-full" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-on-surface font-headline">@alpha42</span>
+<span class="text-[9px] font-mono px-1 rounded bg-surface-container text-tertiary">VERIFIED FUND</span>
+<span class="text-[11px] font-mono text-outline">14.2k followers</span>
+</div>
+<div class="flex items-center gap-2 text-[11px] font-mono text-on-surface-variant">
+<span>90D Win Rate: <strong class="text-on-surface">72.4%</strong></span>
+<span class="text-surface-variant">•</span>
+<span>Active Pos: <span class="text-primary font-medium">SOL Long ($340k)</span></span>
+<span class="text-surface-variant">•</span>
+<span>Copiers: <strong class="text-on-surface">1,894</strong></span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0 font-mono">
+<div class="text-right">
+<div class="text-xs font-semibold text-primary">+412.8%</div>
+<div class="text-[10px] text-outline">90D Realized PnL</div>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-high hover:bg-tertiary hover:text-on-tertiary text-on-surface px-2.5 py-1 rounded text-[10px] font-semibold transition-colors">
+<span>Co-Invest</span>
+<kbd class="text-[9px] text-outline group-hover:text-on-tertiary">↵</kbd>
+</div>
+</div>
+</div>
+<!-- Wallet Item: 7xKX...3W9p -->
+<div class="group flex items-center justify-between p-2 rounded bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-all">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-7 h-7 rounded bg-surface-container flex items-center justify-center text-outline shrink-0 font-mono text-[10px]">
+              0xW
+            </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="text-xs font-mono font-semibold text-primary">7xKX...3W9p</span>
+<span class="text-[9px] font-mono px-1 rounded bg-surface-container-highest text-on-surface-variant">Whale Cluster #14</span>
+</div>
+<div class="text-[11px] font-mono text-on-surface-variant">
+                Accumulated <strong class="text-on-surface font-semibold">25,800 SOL ($4.86M)</strong> in last 45m from Binance Hot Wallet
+              </div>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0 font-mono">
+<div class="text-right text-[10px] text-outline">
+<div>18m ago</div>
+<div class="text-primary font-medium">Inflow Detected</div>
+</div>
+<div class="hidden group-hover:flex items-center gap-1 bg-surface-container-high text-on-surface px-2 py-1 rounded text-[10px]">
+<span>Follow In Feed</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: PREDICTION MARKETS -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between px-2 pt-2 pb-0.5 text-[10px] font-mono uppercase tracking-wider text-outline">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[13px] text-primary">dynamic_form</span>PREDICTION MARKETS (PARI-MUTUEL &amp; AMM)</span>
+<span>Resolves On-Chain</span>
+</div>
+<!-- Prediction 1 -->
+<div class="group flex items-center justify-between p-2 rounded bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-all">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-7 h-7 rounded bg-surface-container-high flex items-center justify-center text-on-surface-variant shrink-0">
+<span class="material-symbols-outlined text-[15px]">help_center</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="text-xs font-semibold text-on-surface font-headline truncate">
+                "Will Solana Break All-Time High ($259.90) Before End of Q3 2025?"
+              </div>
+<div class="flex items-center gap-2 text-[11px] font-mono text-on-surface-variant">
+<span>Liquidity Pool: <strong class="text-on-surface">$842,500 USDC</strong></span>
+<span class="text-surface-variant">•</span>
+<span>Oracle: Pyth High-Water Mark</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0 font-mono">
+<div class="flex items-center gap-2">
+<div class="px-2 py-0.5 rounded bg-surface-container text-primary font-bold text-xs">
+                YES 41¢
+              </div>
+<div class="px-2 py-0.5 rounded bg-surface-container text-error font-bold text-xs">
+                NO 59¢
+              </div>
+</div>
+<div class="hidden group-hover:flex items-center gap-1 bg-primary text-on-primary px-2.5 py-1 rounded text-[10px] font-semibold">
+<span>Place Bet</span>
+<kbd class="text-[9px]">↵</kbd>
+</div>
+</div>
+</div>
+<!-- Prediction 2 -->
+<div class="group flex items-center justify-between p-2 rounded bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-all">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-7 h-7 rounded bg-surface-container-high flex items-center justify-center text-on-surface-variant shrink-0">
+<span class="material-symbols-outlined text-[15px]">gavel</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="text-xs font-semibold text-on-surface font-headline truncate">
+                "Federal Reserve Cuts Fed Funds Rate by ≥ 25 bps at Next FOMC?"
+              </div>
+<div class="flex items-center gap-2 text-[11px] font-mono text-on-surface-variant">
+<span>Pool: <strong class="text-on-surface">$1,240,000 USDC</strong></span>
+<span class="text-surface-variant">•</span>
+<span>Resolves in 14 days</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0 font-mono">
+<div class="flex items-center gap-2">
+<div class="px-2 py-0.5 rounded bg-surface-container text-primary font-bold text-xs">
+                YES 64¢
+              </div>
+<div class="px-2 py-0.5 rounded bg-surface-container text-error font-bold text-xs">
+                NO 36¢
+              </div>
+</div>
+<div class="hidden group-hover:flex items-center gap-1 bg-surface-container-high text-on-surface px-2 py-1 rounded text-[10px]">
+<span>Predict</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: AUTONOMOUS AGENTS & STRATEGIES -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between px-2 pt-2 pb-0.5 text-[10px] font-mono uppercase tracking-wider text-outline">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[13px] text-primary">smart_toy</span>ACTIVE AI EXECUTION AGENTS &amp; ALGOS</span>
+<span>Sub-second TWAP/VWAP</span>
+</div>
+<!-- Agent Item 1 -->
+<div class="group flex items-center justify-between p-2 rounded bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-all">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-7 h-7 rounded bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[16px]">neurology</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-on-surface font-headline">Momentum-Surge-v2</span>
+<span class="text-[9px] font-mono px-1 rounded bg-surface-container text-primary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>RUNNING
+                </span>
+<span class="text-[10px] font-mono text-outline">SOL / JUP Pair</span>
+</div>
+<div class="flex items-center gap-2 text-[11px] font-mono text-on-surface-variant">
+<span>Today PnL: <strong class="text-primary">+$1,420.50</strong></span>
+<span class="text-surface-variant">•</span>
+<span>Sharpe: <strong class="text-on-surface">2.84</strong></span>
+<span class="text-surface-variant">•</span>
+<span>Trades Executed: <strong class="text-on-surface">48</strong></span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0 font-mono">
+<div class="text-right">
+<div class="text-xs font-semibold text-on-surface">Alloc: $25.0k</div>
+<div class="text-[10px] text-outline">Max DD 3.1%</div>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-high hover:bg-surface-container-highest text-on-surface px-2 py-1 rounded text-[10px] font-mono">
+<span>Inspect</span>
+<kbd class="text-[9px] text-outline">↵</kbd>
+</div>
+</div>
+</div>
+<!-- Agent Item 2 -->
+<div class="group flex items-center justify-between p-2 rounded bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-all">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-7 h-7 rounded bg-surface-container-high flex items-center justify-center text-outline shrink-0">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-on-surface font-headline">Mean Reversion JUP (Micro-Spread)</span>
+<span class="text-[9px] font-mono px-1 rounded bg-surface-container text-outline">READY</span>
+</div>
+<div class="text-[11px] font-mono text-on-surface-variant">
+                Backtest 180D • Sharpe 2.41 • Win Rate 78.2% • Max Drawdown 4.1%
+              </div>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0 font-mono">
+<div class="text-right text-[11px]">
+<div class="text-on-surface font-semibold">Idle</div>
+<div class="text-[10px] text-outline">Simulated</div>
+</div>
+<div class="hidden group-hover:flex items-center gap-1 bg-surface-container-high text-on-surface px-2 py-1 rounded text-[10px]">
+<span>Deploy</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: REAL-TIME SIGNALS & NEWS -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between px-2 pt-2 pb-0.5 text-[10px] font-mono uppercase tracking-wider text-outline">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[13px] text-primary">bolt</span>NEXUS AI SIGNALS &amp; WIRES</span>
+<span>Natural Language Synthesis</span>
+</div>
+<!-- Signal Item -->
+<div class="group flex items-center justify-between p-2 rounded bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-all">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-7 h-7 rounded bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">insights</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-primary font-headline">SOL Bullish Divergence on 4H Timeframe</span>
+<span class="text-[9px] font-mono px-1 rounded bg-surface-container text-tertiary">CONFIDENCE 84%</span>
+</div>
+<div class="text-[11px] text-on-surface-variant">
+                RSI oversold rebound concurrent with $4.8M spot exchange outflows. Target: $194.50.
+              </div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0 font-mono text-right text-[10px] text-outline">
+<span>6m ago</span>
+</div>
+</div>
+<!-- News Item -->
+<div class="group flex items-center justify-between p-2 rounded bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-all">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-7 h-7 rounded bg-surface-container flex items-center justify-center text-outline shrink-0">
+<span class="material-symbols-outlined text-[16px]">newspaper</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="text-xs font-semibold text-on-surface font-headline truncate">
+                "Solana DeFi TVL hits new 2024 peak with surging DEX volumes led by Jupiter and Raydium"
+              </div>
+<div class="flex items-center gap-2 text-[11px] font-mono text-outline">
+<span>Bloomberg Terminal Wire</span>
+<span>•</span>
+<span>Impact Score: High (Bullish SOL)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0 font-mono text-right text-[10px] text-outline">
+<span>12m ago</span>
+</div>
+</div>
+</div>
+<!-- Section: SYSTEM COMMANDS & WORKSPACE NAVIGATION -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between px-2 pt-2 pb-0.5 text-[10px] font-mono uppercase tracking-wider text-outline">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[13px] text-on-surface-variant">keyboard_command_key</span>WORKSPACE SHORTCUTS &amp; ACTIONS</span>
+<span>Instant Jumps</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+<!-- Command 1 -->
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-all">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[16px]">show_chart</span>
+<span class="text-xs font-medium text-on-surface">Jump to SOL-PERP Trade Workspace</span>
+</div>
+<kbd class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono text-[10px]">⌘1</kbd>
+</div>
+<!-- Command 2 -->
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-all">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">account_balance_wallet</span>
+<span class="text-xs font-medium text-on-surface">Open Portfolio &amp; Risk Telemetry</span>
+</div>
+<kbd class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono text-[10px]">⌘2</kbd>
+</div>
+<!-- Command 3 -->
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-all">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-tertiary text-[16px]">add_alert</span>
+<span class="text-xs font-medium text-on-surface">Create Price / Inflow Trigger Alert</span>
+</div>
+<kbd class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono text-[10px]">⌘A</kbd>
+</div>
+<!-- Command 4 -->
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-all">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-outline text-[16px]">science</span>
+<span class="text-xs font-medium text-on-surface">Toggle Paper Trading Mode</span>
+</div>
+<kbd class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono text-[10px]">⌘P</kbd>
+</div>
+<!-- Command 5 -->
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-all">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-outline text-[16px]">dashboard_customize</span>
+<span class="text-xs font-medium text-on-surface">Switch to High-Density Cockpit</span>
+</div>
+<kbd class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono text-[10px]">⌘L</kbd>
+</div>
+<!-- Command 6 -->
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-all">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[16px]">psychology</span>
+<span class="text-xs font-medium text-on-surface">Deploy Autonomous Execution Agent</span>
+</div>
+<kbd class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono text-[10px]">⌘D</kbd>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Footer: Contextual Breadcrumbs & Navigation Keymap -->
+<div class="p-2.5 bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-[11px] font-mono">
+<!-- Active Item Breadcrumb -->
+<div class="flex items-center gap-2 text-on-surface-variant truncate">
+<span class="inline-block w-2 h-2 rounded-full bg-primary shrink-0"></span>
+<span class="text-outline">Active:</span>
+<span class="text-on-surface font-semibold truncate">SOL (Solana) • $188.42 • 24h Vol $2.41B</span>
+<span class="text-primary text-[10px] hidden md:inline-block px-1.5 py-0.5 rounded bg-surface-container">Pyth Realtime</span>
+</div>
+<!-- Shortcut Keymap Legend -->
+<div class="flex items-center gap-3 text-outline shrink-0">
+<div class="flex items-center gap-1">
+<kbd class="px-1 rounded bg-surface-container text-on-surface text-[10px]">↑↓</kbd>
+<span>Navigate</span>
+</div>
+<div class="flex items-center gap-1">
+<kbd class="px-1 rounded bg-surface-container text-on-surface text-[10px]">↵</kbd>
+<span>Select</span>
+</div>
+<div class="flex items-center gap-1">
+<kbd class="px-1 rounded bg-surface-container text-on-surface text-[10px]">Tab</kbd>
+<span>Filter</span>
+</div>
+<div class="flex items-center gap-1">
+<kbd class="px-1 rounded bg-surface-container text-on-surface text-[10px]">Esc</kbd>
+<span>Close</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Client-side Script for Navigation & Query Filtering Micro-interactions -->
+<script>
+    (function initCommandPalette() {
+      const input = document.getElementById('omnisearch-input');
+      const resultsViewport = document.getElementById('results-viewport');
+      if (!input || !resultsViewport) return;
+
+      // Ensure focus on mount
+      input.focus();
+      input.select();
+
+      // Keyboard navigation handler inside the palette
+      let activeIndex = 0;
+      const getItems = () => Array.from(resultsViewport.querySelectorAll('.group, .cursor-pointer'));
+
+      document.addEventListener('keydown', (e) => {
+        const items = getItems();
+        if (!items.length) return;
+
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          activeIndex = (activeIndex + 1) % items.length;
+          updateFocus(items);
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          activeIndex = (activeIndex - 1 + items.length) % items.length;
+          updateFocus(items);
+        } else if (e.key === 'Escape') {
+          // Visual feedback on escape
+          input.value = '';
+          input.blur();
+        }
+      });
+
+      function updateFocus(items) {
+        items.forEach((item, idx) => {
+          if (idx === activeIndex) {
+            item.classList.add('bg-surface-container-high');
+            item.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+          } else {
+            item.classList.remove('bg-surface-container-high');
+          }
+        });
+      }
+
+      // Dynamic search input micro-feedback
+      input.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        const items = getItems();
+        
+        items.forEach((item) => {
+          const text = item.innerText.toLowerCase();
+          if (!query || text.includes(query)) {
+            item.style.display = 'flex';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    })();
+  </script>
+</div></main><footer class="fixed bottom-0 left-0 right-0 z-50 h-8 bg-surface-container-lowest border-t border-outline-variant px-3 flex items-center justify-between text-[11px] font-mono"><div class="flex items-center gap-4"><nav class="flex items-center gap-3" data-active-classes="text-primary font-semibold"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="feed" href="#">Feed</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="news" href="#">News</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="chat" href="#">Chat</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="watchlist" href="#">Watchlist</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="pnl" href="#">PnL</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="market-hours" href="#">Market Hours</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="ai-intelligence" href="#">AI Intelligence</a></nav></div><div class="flex items-center gap-4 text-on-surface-variant"><div class="flex items-center gap-1 hover:text-on-surface cursor-pointer"><span class="material-symbols-outlined text-[14px]">dashboard_customize</span><span>Layout: Standard</span></div><div class="flex items-center gap-1.5"><span class="inline-block w-1.5 h-1.5 rounded-full bg-primary"></span><span>21:42:09 UTC</span></div><button class="flex items-center gap-1 hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[14px]">lock</span><span>Panel Lock</span></button></div></footer></body></html>

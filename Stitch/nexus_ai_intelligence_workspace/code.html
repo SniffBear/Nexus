@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-surface-variant":"#c2c6d3","tertiary":"#f7be37","on-error-container":"#ffdad6","background":"#101419","secondary-container":"#0072b5","surface-container-low":"#181c21","surface-dim":"#101419","surface-container-lowest":"#0a0f13","inverse-on-surface":"#2d3136","surface-container":"#1c2025","primary-container":"#6ea8ff","primary":"#a8c8ff","on-tertiary":"#402d00","tertiary-fixed":"#ffdea1","surface-variant":"#31353b","on-background":"#e0e2ea","on-tertiary-fixed-variant":"#5c4300","primary-fixed":"#d5e3ff","primary-fixed-dim":"#a8c8ff","on-primary-fixed":"#001b3c","on-primary":"#003061","secondary-fixed-dim":"#99cbff","on-surface":"#e0e2ea","surface-tint":"#a8c8ff","surface-container-highest":"#31353b","secondary-fixed":"#cfe5ff","on-primary-fixed-variant":"#00468a","inverse-primary":"#105eb0","tertiary-container":"#d39e10","on-secondary-fixed-variant":"#004a78","surface-container-high":"#262a30","on-secondary":"#003355","on-secondary-container":"#e8f1ff","error-container":"#93000a","on-secondary-fixed":"#001d34","error":"#ffb4ab","on-error":"#690005","on-tertiary-container":"#4e3800","tertiary-fixed-dim":"#f7be37","inverse-surface":"#e0e2ea","outline-variant":"#424751","on-tertiary-fixed":"#261900","secondary":"#99cbff","outline":"#8c919d","on-primary-container":"#003c77","surface":"#101419","surface-bright":"#36393f"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{},fontFamily:{headline:["Geist"],display:["Geist"],body:["Geist"],label:["Geist"]},fontSize:{}}}}</script></head><body class="bg-background font-body text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 flex flex-col"><div class="h-11 w-full bg-surface-container-lowest border-b border-outline-variant px-3 flex items-center justify-between text-xs"><div class="flex items-center gap-4"><div class="flex items-center gap-2"><span class="font-headline font-bold text-sm tracking-wider text-primary">NEXUS</span><span class="text-[10px] px-1.5 py-0.5 rounded-sm bg-surface-container-highest text-tertiary font-mono tracking-wide">PAPER</span></div><nav class="flex items-center gap-1" data-active-classes="text-primary border-b border-primary font-medium"><a class="px-2 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="trade" href="#">Trade</a><a class="px-2 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="markets" href="#">Markets</a><a class="px-2 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="predict" href="#">Predict</a><a class="px-2 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="social" href="#">Social</a><a class="px-2 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="leaderboard" href="#">Leaderboard</a><a class="px-2 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="earn" href="#">Earn</a><a class="px-2 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="calendar" href="#">Calendar</a><a aria-current="page" class="px-2 py-1 transition-colors text-primary border-b border-primary font-medium" data-path="ai-intelligence" href="#">AI Intelligence</a><a class="px-2 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="co-invest" href="#">Co-Invest</a><a class="px-2 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="agents" href="#">Agents</a></nav></div><div class="flex items-center gap-3"><div class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container text-on-surface-variant border border-outline-variant font-mono text-[11px]"><span class="material-symbols-outlined text-[13px]">search</span><span>Search</span><kbd class="px-1 rounded bg-surface-container-high text-[10px]">⌘K</kbd></div><div class="flex items-center gap-1.5 text-on-surface-variant font-mono text-[11px]"><span class="inline-block w-1.5 h-1.5 rounded-full bg-tertiary"></span><span>11ms</span></div><button class="text-on-surface-variant hover:text-on-surface flex items-center justify-center"><span class="material-symbols-outlined text-[18px]">notifications</span></button><div class="flex items-center gap-2 pl-2 border-l border-outline-variant font-mono text-[11px]"><span class="text-on-surface">0x71a...9b4</span><span class="text-primary">$42,850.20 USDC</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="h-8 w-full bg-surface-container-low border-b border-outline-variant px-3 flex items-center gap-6 overflow-x-auto text-[11px] font-mono"><div class="flex items-center gap-1.5 text-on-surface-variant"><span class="text-[10px] uppercase font-bold text-primary">TICKER</span></div><div class="flex items-center gap-1.5"><span class="text-on-surface font-semibold">SOL</span><span class="text-on-surface">$184.25</span><span class="text-primary">+4.18%</span><span class="text-outline text-[10px]">24h $3.1B</span></div><div class="flex items-center gap-1.5"><span class="text-on-surface font-semibold">BTC</span><span class="text-on-surface">$64,120.00</span><span class="text-primary">+1.85%</span><span class="text-outline text-[10px]">24h $28.4B</span></div><div class="flex items-center gap-1.5"><span class="text-on-surface font-semibold">ETH</span><span class="text-on-surface">$3,485.40</span><span class="text-error">-0.64%</span><span class="text-outline text-[10px]">24h $14.2B</span></div><div class="flex items-center gap-1.5"><span class="text-on-surface font-semibold">NVDA</span><span class="text-on-surface">$128.40</span><span class="text-primary">+2.31%</span><span class="text-outline text-[10px]">24h $9.8B</span></div><div class="flex items-center gap-1.5"><span class="text-on-surface font-semibold">JUP</span><span class="text-on-surface">$1.14</span><span class="text-primary">+8.92%</span><span class="text-outline text-[10px]">24h $412M</span></div></div></header><main class="w-full pt-[76px] pb-8 bg-background min-h-screen"><div class="flex flex-col w-full text-[13px] text-[#e0e2ea] antialiased select-none font-body">
+<!-- TOP CONTEXT / ORCHESTRATION BAR -->
+<header class="h-10 w-full bg-[#11151A] border-b border-[#252C34] px-3 flex items-center justify-between shrink-0 text-xs">
+<!-- Left: Identity & Core Selectors -->
+<div class="flex items-center gap-3 overflow-x-auto py-1">
+<div class="flex items-center gap-2 pr-3 border-r border-[#252C34] shrink-0">
+<span class="material-symbols-outlined text-[16px] text-primary">psychology</span>
+<span class="font-semibold text-[#F4F6F8] tracking-tight uppercase text-[12px]">AI Intelligence</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-[10px] font-mono font-medium text-[#39D98A] flex items-center gap-1 border border-[#252C34]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#39D98A] animate-pulse"></span>
+          v4.2-NEURAL-PROD
+        </span>
+<span class="text-[10px] font-mono text-[#9BA6B2]">12ms</span>
+</div>
+<!-- Scope Pills -->
+<div class="flex items-center gap-1.5 shrink-0 text-[11px] font-mono">
+<button class="flex items-center gap-1 px-2 py-1 rounded bg-[#171C22] border border-[#252C34] hover:bg-surface-container-high transition-colors">
+<span class="text-[#9BA6B2] text-[10px] uppercase">Market:</span>
+<span class="text-[#F4F6F8] font-medium">NVDA/USD</span>
+<span class="text-[10px] text-primary">PERP</span>
+</button>
+<button class="flex items-center gap-1 px-2 py-1 rounded bg-[#171C22] border border-[#252C34] hover:bg-surface-container-high transition-colors">
+<span class="text-[#9BA6B2] text-[10px] uppercase">Vault:</span>
+<span class="text-[#F4F6F8]">Alpha Momentum</span>
+<span class="text-[#39D98A]">$248.5k</span>
+</button>
+<button class="flex items-center gap-1 px-2 py-1 rounded bg-[#171C22] border border-[#252C34] hover:bg-surface-container-high transition-colors">
+<span class="text-[#9BA6B2] text-[10px] uppercase">Trader:</span>
+<span class="text-secondary">@MacroQuant_99</span>
+<span class="material-symbols-outlined text-[13px] text-primary">verified</span>
+</button>
+<button class="flex items-center gap-1 px-2 py-1 rounded bg-[#171C22] border border-[#252C34] hover:bg-surface-container-high transition-colors">
+<span class="text-[#9BA6B2] text-[10px] uppercase">Hedge:</span>
+<span class="text-[#F4F6F8]">SOL (Delta-Hedge)</span>
+</button>
+<button class="flex items-center gap-1 px-2 py-1 rounded bg-[#171C22] border border-[#252C34] hover:bg-surface-container-high transition-colors">
+<span class="text-[#9BA6B2] text-[10px] uppercase">Strat:</span>
+<span class="text-[#F4F6F8]">Vol Breakout</span>
+</button>
+</div>
+</div>
+<!-- Right: Operational Controls -->
+<div class="flex items-center gap-2 shrink-0 font-mono text-[11px]">
+<div class="flex items-center gap-1 px-2 py-1 rounded bg-[#171C22] border border-[#252C34] text-[#9BA6B2]">
+<span class="text-[10px]">MODEL:</span>
+<span class="text-[#F4F6F8]">Nexus-3.7-Fin</span>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-1 rounded bg-[#171C22] border border-[#252C34]">
+<span class="text-[10px] text-[#9BA6B2]">PROVENANCE:</span>
+<span class="text-[10px] text-[#39D98A] font-semibold">100% AUDIT [ON]</span>
+</div>
+<div class="flex items-center gap-1 px-2 py-1 rounded bg-[#171C22] border border-[#252C34] text-[#9BA6B2]">
+<span class="text-[10px]">CONFIDENCE:</span>
+<span class="text-primary font-semibold">&gt;80%</span>
+</div>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded bg-[#1B2128] hover:bg-[#252C34] text-[#F4F6F8] border border-[#252C34] transition-colors active:scale-95" id="refresh-synth-btn">
+<span class="material-symbols-outlined text-[14px] text-primary" id="refresh-icon">sync</span>
+<span>Refresh</span>
+<kbd class="text-[9px] bg-[#11151A] px-1 py-0.5 rounded text-[#9BA6B2]">⌘R</kbd>
+</button>
+</div>
+</header>
+<!-- MAIN TRI-PANE WORKSPACE (Desktop Matrix Layout) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 w-full border-b border-[#252C34] min-h-[660px]">
+<!-- COLUMN 1: STRUCTURED THESIS & ANALYSIS (4 Cols / ~380px) -->
+<section class="lg:col-span-4 bg-[#11151A] border-r border-[#252C34] flex flex-col justify-between">
+<!-- Section Header -->
+<div class="h-8 bg-[#171C22] border-b border-[#252C34] px-3 flex items-center justify-between text-[11px] font-semibold text-[#9BA6B2] uppercase tracking-wider">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-primary">analytics</span>
+<span>Core Thesis Analysis</span>
+</div>
+<span class="text-[#39D98A] font-mono text-[10px] tracking-normal font-bold px-1.5 py-0.5 rounded bg-[#39D98A]/10 border border-[#39D98A]/20">
+          NET: STRONGLY BULLISH (+84.2%)
+        </span>
+</div>
+<!-- Scrollable Thesis Body -->
+<div class="p-3 space-y-3.5 overflow-y-auto max-h-[630px]">
+<!-- Executive Synthesis Card -->
+<div class="p-3 bg-[#171C22] rounded border border-[#252C34] space-y-2">
+<div class="flex items-center justify-between text-[11px]">
+<span class="text-[10px] font-mono text-primary uppercase tracking-wide">Macro Catalyst Executive Summary</span>
+<span class="text-[10px] font-mono text-[#9BA6B2]">Updated 2m ago</span>
+</div>
+<p class="text-xs text-[#F4F6F8] leading-relaxed">
+            NVDA Q1 Datacenter Forward Guidance Beat + Hyperscaler CapEx Acceleration creates <span class="text-[#39D98A] font-mono font-medium">3.8x asymmetric upside</span> vs expected implied volatility band. CoWoS substrate yield reports indicate +14% QoQ supply throughput.
+          </p>
+</div>
+<!-- Rigor & Uncertainty Gauges -->
+<div class="p-3 bg-[#171C22] rounded border border-[#252C34] space-y-2.5">
+<div class="text-[10px] font-mono text-[#9BA6B2] uppercase tracking-wider flex justify-between">
+<span>Statistical Telemetry &amp; Error Bounds</span>
+<span class="text-primary">Bayesian Posterior</span>
+</div>
+<!-- Confidence Meter -->
+<div class="space-y-1">
+<div class="flex justify-between text-xs font-mono">
+<span class="text-[#9BA6B2]">Model Confidence Score</span>
+<span class="text-[#39D98A] font-bold">87.4% <span class="text-[10px] text-[#9BA6B2] font-normal">(±3.2% SEM)</span></span>
+</div>
+<div class="w-full h-1.5 bg-[#0B0D10] rounded-none overflow-hidden flex">
+<div class="h-full bg-[#39D98A]" style="width: 87.4%"></div>
+<div class="h-full bg-tertiary" style="width: 3.2%"></div>
+</div>
+</div>
+<!-- Uncertainty Vector -->
+<div class="space-y-1">
+<div class="flex justify-between text-xs font-mono">
+<span class="text-[#9BA6B2]">Residual Uncertainty</span>
+<span class="text-tertiary font-bold">12.6%</span>
+</div>
+<div class="w-full h-1.5 bg-[#0B0D10] rounded-none overflow-hidden">
+<div class="h-full bg-tertiary" style="width: 12.6%"></div>
+</div>
+<p class="text-[11px] text-[#9BA6B2] leading-tight pt-0.5">
+              Primary entropy driver: Taiwan Strait defense policy &amp; US BIS APAC license revisions.
+            </p>
+</div>
+<div class="pt-1.5 border-t border-[#252C34] flex items-center justify-between text-[11px] font-mono">
+<span class="text-[#9BA6B2]">Historical Precision:</span>
+<span class="text-[#F4F6F8]">78.9% (42 Past Tech Catalysts)</span>
+</div>
+</div>
+<!-- Bull Drivers -->
+<div class="space-y-1.5">
+<div class="text-[10px] font-mono text-[#39D98A] uppercase tracking-wider flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[13px]">arrow_circle_up</span>
+<span>Probabilistic Bull Case (Confidence-Weighted)</span>
+</div>
+<div class="space-y-1 text-xs">
+<div class="p-2 bg-[#171C22] border-l-2 border-[#39D98A] border-y border-r border-[#252C34] rounded flex flex-col gap-1">
+<div class="flex justify-between text-[11px] font-mono">
+<span class="text-[#F4F6F8] font-medium">Hyperscaler CapEx Expansion (+32% YoY)</span>
+<span class="text-[#39D98A]">Wt: 42% | Prob: 89%</span>
+</div>
+<p class="text-[11px] text-[#9BA6B2]">Aggregate forward order books from MSFT, META, and GOOGL confirm full FY25 order absorption.</p>
+</div>
+<div class="p-2 bg-[#171C22] border-l-2 border-[#39D98A] border-y border-r border-[#252C34] rounded flex flex-col gap-1">
+<div class="flex justify-between text-[11px] font-mono">
+<span class="text-[#F4F6F8] font-medium">Blackwell B200 ASP Premium Stability</span>
+<span class="text-[#39D98A]">Wt: 28% | Prob: 92%</span>
+</div>
+<p class="text-[11px] text-[#9BA6B2]">ASP anchored at $38,500 with zero client attrition or cancellation across Tier-1 Cloud CSPs.</p>
+</div>
+<div class="p-2 bg-[#171C22] border-l-2 border-[#39D98A] border-y border-r border-[#252C34] rounded flex flex-col gap-1">
+<div class="flex justify-between text-[11px] font-mono">
+<span class="text-[#F4F6F8] font-medium">Spot-Driven Perp Open Interest Flow</span>
+<span class="text-[#39D98A]">Wt: 14% | Prob: 76%</span>
+</div>
+<p class="text-[11px] text-[#9BA6B2]">Perp delta expanding with stable funding (+0.011%/8h); zero signs of speculative squeeze exhaustion.</p>
+</div>
+</div>
+</div>
+<!-- Bear Scenarios -->
+<div class="space-y-1.5">
+<div class="text-[10px] font-mono text-[#FF5C6C] uppercase tracking-wider flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[13px]">arrow_circle_down</span>
+<span>Downside Evaluation &amp; Tail Risks</span>
+</div>
+<div class="space-y-1 text-xs">
+<div class="p-2 bg-[#171C22] border-l-2 border-[#FF5C6C] border-y border-r border-[#252C34] rounded flex items-center justify-between">
+<span class="text-[#e0e2ea] text-[11px]">Middle East &amp; APAC export restriction revision</span>
+<span class="text-[10px] font-mono text-[#FF5C6C] font-semibold bg-[#FF5C6C]/10 px-1 py-0.5 rounded">SEV: HIGH (28%)</span>
+</div>
+<div class="p-2 bg-[#171C22] border-l-2 border-[#FF5C6C] border-y border-r border-[#252C34] rounded flex items-center justify-between">
+<span class="text-[#e0e2ea] text-[11px]">CoWoS packaging sub-tier yield bottleneck</span>
+<span class="text-[10px] font-mono text-tertiary font-semibold bg-tertiary/10 px-1 py-0.5 rounded">SEV: MED (31%)</span>
+</div>
+<div class="p-2 bg-[#171C22] border-l-2 border-[#FF5C6C] border-y border-r border-[#252C34] rounded flex items-center justify-between">
+<span class="text-[#e0e2ea] text-[11px]">Concentrated dealer gamma pin at $130 strike</span>
+<span class="text-[10px] font-mono text-[#9BA6B2] font-semibold bg-[#252C34] px-1 py-0.5 rounded">SEV: LOW (44%)</span>
+</div>
+</div>
+</div>
+<!-- Invalidation Criteria -->
+<div class="p-2.5 bg-[#0B0D10] border border-[#252C34] rounded space-y-1">
+<div class="flex items-center gap-1.5 text-[10px] font-mono text-tertiary font-semibold uppercase">
+<span class="material-symbols-outlined text-[13px]">gavel</span>
+<span>Deterministic Invalidation Thresholds</span>
+</div>
+<ul class="text-[11px] text-[#9BA6B2] space-y-1 list-disc list-inside font-mono">
+<li>Break below 50-day EMA ($114.20) on &gt;1.5x 30D volume prints.</li>
+<li>TSMC Fab 18 reports wafer allocation cut &gt;5% QoQ.</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- COLUMN 2: MULTI-DOMAIN RESEARCH MATRIX & EVIDENCE (5 Cols) -->
+<section class="lg:col-span-5 bg-[#0B0D10] border-r border-[#252C34] flex flex-col justify-between">
+<!-- Section Header -->
+<div class="h-8 bg-[#171C22] border-b border-[#252C34] px-3 flex items-center justify-between text-[11px] font-semibold text-[#9BA6B2] uppercase tracking-wider">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px] text-secondary">hub</span>
+<span>Multi-Domain Research Synthesizer</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-1.5 py-0.5 rounded bg-[#1B2128] text-[10px] text-primary font-mono border border-[#252C34]">6 DOMAINS SYNCED</span>
+<span class="text-[10px] font-mono text-[#9BA6B2]">14ms Latency</span>
+</div>
+</div>
+<!-- Domain Navigation Tabs -->
+<div class="h-8 bg-[#11151A] border-b border-[#252C34] px-2 flex items-center gap-1 text-[11px] font-mono overflow-x-auto">
+<button class="px-2.5 py-1 bg-[#171C22] text-primary border-b-2 border-primary font-semibold flex items-center gap-1">
+<span>Market Micro</span>
+</button>
+<button class="px-2 py-1 text-[#9BA6B2] hover:text-[#F4F6F8] transition-colors">News Wire</button>
+<button class="px-2 py-1 text-[#9BA6B2] hover:text-[#F4F6F8] transition-colors">On-Chain Flow</button>
+<button class="px-2 py-1 text-[#9BA6B2] hover:text-[#F4F6F8] transition-colors">Consensus</button>
+<button class="px-2 py-1 text-[#9BA6B2] hover:text-[#F4F6F8] transition-colors">Macro Cal</button>
+</div>
+<!-- Content Workspace -->
+<div class="p-3 space-y-3.5 overflow-y-auto max-h-[600px]">
+<!-- Market Microstructure Overview Strip -->
+<div class="p-2.5 bg-[#11151A] border border-[#252C34] rounded space-y-2">
+<div class="flex items-center justify-between font-mono text-[11px]">
+<span class="text-[#9BA6B2] uppercase text-[10px]">Spot Reference &amp; Liquidity Cluster</span>
+<span class="text-[#39D98A] font-bold">$128.45 (+4.12%)</span>
+</div>
+<div class="grid grid-cols-4 gap-2 text-center font-mono">
+<div class="p-1.5 bg-[#171C22] rounded border border-[#252C34]">
+<div class="text-[9px] text-[#9BA6B2]">24H NOTIONAL</div>
+<div class="text-[12px] font-semibold text-[#F4F6F8]">$48.2B</div>
+</div>
+<div class="p-1.5 bg-[#171C22] rounded border border-[#252C34]">
+<div class="text-[9px] text-[#9BA6B2]">IV RANK 30D</div>
+<div class="text-[12px] font-semibold text-secondary">42% (Comp)</div>
+</div>
+<div class="p-1.5 bg-[#171C22] rounded border border-[#252C34]">
+<div class="text-[9px] text-[#9BA6B2]">PUT/CALL</div>
+<div class="text-[12px] font-semibold text-[#39D98A]">0.62 (Bull)</div>
+</div>
+<div class="p-1.5 bg-[#171C22] rounded border border-[#252C34]">
+<div class="text-[9px] text-[#9BA6B2]">SESSION VWAP</div>
+<div class="text-[12px] font-semibold text-[#F4F6F8]">$126.80</div>
+</div>
+</div>
+<!-- Order Book Microstructure Graphic -->
+<div class="space-y-1 pt-1 text-[10px] font-mono">
+<div class="flex justify-between text-[#9BA6B2]">
+<span>Bid Depth Wall ($124.50): 112,000 Lots</span>
+<span>Ask Cluster Wall ($130.00): 84,200 Lots</span>
+</div>
+<div class="w-full h-2 bg-[#171C22] rounded flex overflow-hidden">
+<div class="h-full bg-[#39D98A]/70" style="width: 57%"></div>
+<div class="h-full bg-[#FF5C6C]/70" style="width: 43%"></div>
+</div>
+</div>
+</div>
+<!-- Real-Time Synthesized News Wire Feed -->
+<div class="space-y-2">
+<div class="flex items-center justify-between text-[11px] font-mono">
+<span class="text-[#9BA6B2] uppercase text-[10px] font-semibold">Real-Time Ingested Signals (Verified Direct)</span>
+<span class="text-primary text-[10px]">3 New Signals Ingested</span>
+</div>
+<div class="space-y-1.5 font-mono text-[11px]">
+<!-- News Item 1 -->
+<div class="p-2 bg-[#11151A] border border-[#252C34] rounded space-y-1 hover:border-primary/40 transition-colors">
+<div class="flex items-center justify-between text-[10px]">
+<div class="flex items-center gap-1.5">
+<span class="px-1 py-0.2 bg-[#171C22] text-primary border border-[#252C34] rounded">BLOOMBERG WIRE</span>
+<span class="text-[#9BA6B2]">14:22:04 UTC</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="text-[#39D98A]">SENTIMENT +0.89</span>
+<span class="text-[#9BA6B2] text-[9px]">• Direct Wire</span>
+</div>
+</div>
+<p class="text-[#F4F6F8] font-body text-xs leading-snug">
+                "Microsoft increases FY25 AI CapEx envelope to $80B, citing unconstrained commercial inference compute demand."
+              </p>
+<div class="text-[10px] text-[#9BA6B2] flex items-center justify-between pt-0.5 border-t border-[#252C34]/60">
+<span>Impact Assessment: +3.4% Revenue Target Implied</span>
+<span class="text-primary underline cursor-pointer">Ref: BBG-9941</span>
+</div>
+</div>
+<!-- News Item 2 -->
+<div class="p-2 bg-[#11151A] border border-[#252C34] rounded space-y-1 hover:border-primary/40 transition-colors">
+<div class="flex items-center justify-between text-[10px]">
+<div class="flex items-center gap-1.5">
+<span class="px-1 py-0.2 bg-[#171C22] text-secondary border border-[#252C34] rounded">REUTERS PRIMARY</span>
+<span class="text-[#9BA6B2]">13:45:12 UTC</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="text-[#39D98A]">SENTIMENT +0.76</span>
+<span class="text-[#9BA6B2] text-[9px]">• SEC/TWSE Filing</span>
+</div>
+</div>
+<p class="text-[#F4F6F8] font-body text-xs leading-snug">
+                "TSMC reports 3nm/4nm node aggregate utilization at 101%, adding advanced CoWoS packaging capacity at Chiayi fab ahead of target schedule."
+              </p>
+<div class="text-[10px] text-[#9BA6B2] flex items-center justify-between pt-0.5 border-t border-[#252C34]/60">
+<span>Supply Chain Verification: 100% Validated</span>
+<span class="text-primary underline cursor-pointer">Ref: TWSE-1882</span>
+</div>
+</div>
+<!-- News Item 3 -->
+<div class="p-2 bg-[#11151A] border border-[#252C34] rounded space-y-1 hover:border-primary/40 transition-colors">
+<div class="flex items-center justify-between text-[10px]">
+<div class="flex items-center gap-1.5">
+<span class="px-1 py-0.2 bg-[#171C22] text-tertiary border border-[#252C34] rounded">THE INFORMATION</span>
+<span class="text-[#9BA6B2]">11:10:48 UTC</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="text-[#39D98A]">SENTIMENT +0.82</span>
+<span class="text-[#9BA6B2] text-[9px]">• Verified Procurement</span>
+</div>
+</div>
+<p class="text-[#F4F6F8] font-body text-xs leading-snug">
+                "Meta executes multi-year multi-gigawatt Blackwell allocation commitment; eliminates competitive ASIC substitution risks."
+              </p>
+</div>
+</div>
+</div>
+<!-- Whale Telemetry & On-Chain Hedging Section -->
+<div class="p-2.5 bg-[#11151A] border border-[#252C34] rounded space-y-2">
+<div class="flex items-center justify-between font-mono text-[11px]">
+<span class="text-[#9BA6B2] uppercase text-[10px] font-semibold">Institutional Smart-Money Cluster (Solana &amp; Cross-Chain)</span>
+<span class="text-[#39D98A]">Net Flow: +$18.4M</span>
+</div>
+<div class="space-y-1.5 font-mono text-[11px]">
+<div class="flex items-center justify-between p-1.5 bg-[#171C22] rounded border border-[#252C34]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px] text-primary">account_balance_wallet</span>
+<span class="text-[#F4F6F8]">Whale 7xK...9Qm</span>
+<span class="text-[10px] text-[#9BA6B2]">Swapped 25,000 SOL</span>
+</div>
+<span class="text-[#39D98A]">+$4.2M Synthetic NVDA Perp</span>
+<span class="text-[10px] text-[#9BA6B2]">32m ago</span>
+</div>
+<div class="flex items-center justify-between p-1.5 bg-[#171C22] rounded border border-[#252C34]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px] text-secondary">groups</span>
+<span class="text-[#F4F6F8]">Smart Money Cohort 4</span>
+<span class="text-[10px] text-[#9BA6B2]">(Top 1% Sharpe)</span>
+</div>
+<span class="text-[#39D98A]">+18.4% Long Exp (48h)</span>
+<span class="text-[10px] text-[#9BA6B2]">Oracle Avg</span>
+</div>
+</div>
+</div>
+<!-- Consensus & Economic Calendar Strip -->
+<div class="grid grid-cols-2 gap-2 font-mono text-[11px]">
+<div class="p-2 bg-[#11151A] border border-[#252C34] rounded">
+<div class="text-[9px] text-[#9BA6B2] uppercase mb-1">Trader Consensus (18 Verified)</div>
+<div class="text-xs text-[#F4F6F8] font-bold flex items-center justify-between">
+<span class="text-[#39D98A]">83.3% Long (15)</span>
+<span class="text-[#9BA6B2]">2 Neutral | 1 Short</span>
+</div>
+<div class="text-[10px] text-[#9BA6B2] mt-1 italic">
+              @AlphaSurfer: "Basis trade closing; pure earnings multiple repricing."
+            </div>
+</div>
+<div class="p-2 bg-[#11151A] border border-[#252C34] rounded">
+<div class="text-[9px] text-[#9BA6B2] uppercase mb-1">Next Catalyst (T-72h)</div>
+<div class="text-xs text-[#F4F6F8] font-bold flex items-center justify-between">
+<span>US Core PCE Print</span>
+<span class="text-tertiary">Fri 08:30 ET</span>
+</div>
+<div class="text-[10px] text-[#9BA6B2] mt-1">
+              Est: 2.7% | Prior: 2.8% (Impact: HIGH)
+            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- COLUMN 3: ACTIONABLE TRADE IDEA & TELEMETRY (3 Cols / ~390px) -->
+<section class="lg:col-span-3 bg-[#11151A] flex flex-col justify-between">
+<!-- Section Header -->
+<div class="h-8 bg-[#171C22] border-b border-[#252C34] px-3 flex items-center justify-between text-[11px] font-semibold text-[#9BA6B2] uppercase tracking-wider">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-[#39D98A]">electric_bolt</span>
+<span>Actionable Synthesis</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-[#39D98A]/10 text-[#39D98A] text-[10px] font-mono font-medium border border-[#39D98A]/20">
+          PROPOSAL #T-8821
+        </span>
+</div>
+<!-- Trade Parameters Formulation -->
+<div class="p-3 space-y-3.5 overflow-y-auto max-h-[630px]">
+<!-- Order Specification Box -->
+<div class="p-3 bg-[#171C22] rounded border border-[#252C34] space-y-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="text-sm font-semibold text-[#F4F6F8]">NVDA / USD</span>
+<span class="px-1 py-0.2 bg-[#252C34] text-[10px] font-mono text-[#9BA6B2] rounded">PERP</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-[#39D98A] text-[#003061] text-xs font-bold font-mono tracking-wider">
+              LONG [BUY]
+            </span>
+</div>
+<!-- Key Quantitative Metrics Table -->
+<div class="space-y-1.5 font-mono text-xs border-t border-[#252C34] pt-2">
+<div class="flex justify-between">
+<span class="text-[#9BA6B2]">Suggested Entry:</span>
+<span class="text-[#F4F6F8] font-medium">$127.80 - $128.50 <span class="text-[10px] text-[#9BA6B2]">(Mkt: $128.45)</span></span>
+</div>
+<div class="flex justify-between">
+<span class="text-[#9BA6B2]">Allocated Size:</span>
+<span class="text-[#F4F6F8] font-medium">250 Units ($32,112.50)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-[#9BA6B2]">Portfolio NAV Share:</span>
+<span class="text-primary font-medium">12.92% (Risk-Cap 15%)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-[#9BA6B2]">Recommended Lev:</span>
+<span class="text-[#F4F6F8] font-medium">3.0x <span class="text-[10px] text-[#9BA6B2]">(Max Allowed: 5.0x)</span></span>
+</div>
+<div class="flex justify-between pt-1 border-t border-[#252C34]/50">
+<span class="text-[#39D98A]">Take Profit (TP):</span>
+<span class="text-[#39D98A] font-bold">$142.00 (+10.55% | +$3,388)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-[#FF5C6C]">Stop Loss (SL):</span>
+<span class="text-[#FF5C6C] font-bold">$122.50 (-4.63% | -$1,487)</span>
+</div>
+<div class="flex justify-between pt-1 border-t border-[#252C34]/50">
+<span class="text-[#9BA6B2]">Risk / Reward:</span>
+<span class="text-[#39D98A] font-bold">2.28 : 1 <span class="text-[10px] text-[#9BA6B2]">(Hurdle &gt; 2.0x)</span></span>
+</div>
+<div class="flex justify-between">
+<span class="text-[#9BA6B2]">Est. Liq Price:</span>
+<span class="text-[#9BA6B2] font-mono">$86.20 (32.9% Buffer)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-[#9BA6B2]">Slippage / Fee:</span>
+<span class="text-[#9BA6B2] font-mono">~$6.42 (Pyth Bench)</span>
+</div>
+</div>
+</div>
+<!-- Evidence & Catalyst Linkage Strip -->
+<div class="p-2.5 bg-[#0B0D10] border border-[#252C34] rounded space-y-1.5 font-mono text-[11px]">
+<div class="text-[10px] text-[#9BA6B2] uppercase font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-primary">link</span>
+<span>Cryptographic Anchoring</span>
+</div>
+<div class="text-[10px] text-[#F4F6F8] flex items-center justify-between">
+<span class="text-[#9BA6B2]">Proof Hash:</span>
+<span class="text-secondary select-all">0x7f8a42...331b9c</span>
+</div>
+<div class="text-[10px] text-[#9BA6B2]">
+            Anchors: Pyth L1 Spot Price + SEC EDGAR 10-Q (MSFT/META Capex filings).
+          </div>
+</div>
+<!-- Interactive Secondary Tools -->
+<div class="grid grid-cols-3 gap-1 text-[11px] font-mono">
+<button class="py-1 px-1 bg-[#171C22] border border-[#252C34] hover:bg-surface-container-high text-[#9BA6B2] hover:text-[#F4F6F8] rounded text-center">
+            Modify
+          </button>
+<button class="py-1 px-1 bg-[#171C22] border border-[#252C34] hover:bg-surface-container-high text-[#9BA6B2] hover:text-[#F4F6F8] rounded text-center">
+            Watchlist
+          </button>
+<button class="py-1 px-1 bg-[#171C22] border border-[#252C34] hover:bg-[#FF5C6C]/10 hover:text-[#FF5C6C] text-[#9BA6B2] rounded text-center">
+            Reject
+          </button>
+</div>
+<!-- Execution Action CTA Buttons -->
+<div class="space-y-2 pt-1">
+<!-- Paper Trade Execution -->
+<button class="w-full py-2 px-3 rounded bg-[#1B2128] hover:bg-[#252C34] border border-[#252C34] text-xs font-mono font-semibold text-[#F4F6F8] flex items-center justify-between transition-colors active:scale-98" id="paper-trade-btn">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-tertiary">science</span>
+<span>SIMULATE PAPER TRADE</span>
+</span>
+<span class="text-[10px] text-tertiary">3x • $32.1k</span>
+</button>
+<!-- Live Execution Button -->
+<button class="w-full py-2.5 px-3 rounded bg-[#39D98A] hover:bg-[#39D98A]/90 text-[#003061] text-xs font-mono font-bold flex items-center justify-between transition-colors shadow-sm active:scale-98" id="live-trade-btn">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>EXECUTE LIVE PROPOSAL</span>
+</span>
+<span class="text-[11px] bg-[#003061]/20 px-1.5 py-0.5 rounded font-mono">3x NOTIONAL</span>
+</button>
+<div class="text-[10px] text-[#66717D] text-center font-mono leading-tight px-1">
+            Requires hardware/web3 signature. No autonomous unverified execution permitted.
+          </div>
+</div>
+</div>
+</section>
+</div>
+<!-- BOTTOM PERSISTENT AUDIT RECEIPTS PANEL (Cryptographic Evidence Table) -->
+<section class="w-full bg-[#0B0D10] border-t border-[#252C34] flex flex-col shrink-0">
+<!-- Panel Header -->
+<div class="h-8 bg-[#171C22] border-b border-[#252C34] px-3 flex items-center justify-between text-[11px] font-mono">
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1.5 font-semibold text-[#F4F6F8] uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px] text-primary">receipt_long</span>
+<span>Deterministic Audit Provenance &amp; Fact Receipts</span>
+</div>
+<span class="text-[10px] text-[#9BA6B2] hidden md:inline">
+          Zero Hidden Prompting • Full Evidence Transparency • Ingested Fact Log
+        </span>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-[10px] text-[#39D98A] flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-[#39D98A]"></span>
+          Oracle Consensus Verified
+        </span>
+<button class="text-[10px] text-primary hover:underline flex items-center gap-0.5" id="export-json-btn">
+<span>Export Audit JSON</span>
+<span class="material-symbols-outlined text-[11px]">download</span>
+</button>
+</div>
+</div>
+<!-- Receipts Dense Table -->
+<div class="w-full overflow-x-auto max-h-[190px]">
+<table class="w-full text-left font-mono text-[11px] border-collapse">
+<thead class="bg-[#11151A] text-[#9BA6B2] text-[10px] border-b border-[#252C34] uppercase tracking-wider sticky top-0">
+<tr>
+<th class="py-1.5 px-3 font-semibold">Source Identifier</th>
+<th class="py-1.5 px-2 font-semibold">UTC Timestamp</th>
+<th class="py-1.5 px-2 font-semibold">Domain</th>
+<th class="py-1.5 px-3 font-semibold">Ingested Ground Truth / Fact</th>
+<th class="py-1.5 px-3 font-semibold">Synthesized Thesis Impact</th>
+<th class="py-1.5 px-2 font-semibold">Assigned Risk</th>
+<th class="py-1.5 px-3 font-semibold">Cryptographic Receipt / Proof</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#252C34] text-xs">
+<!-- Row 1 -->
+<tr class="hover:bg-[#11151A]/60 transition-colors">
+<td class="py-2 px-3 text-primary font-semibold">SEC-EDGAR-10Q</td>
+<td class="py-2 px-2 text-[#9BA6B2] text-[10px]">2025-03-24 14:18:02</td>
+<td class="py-2 px-2"><span class="px-1.5 py-0.2 bg-[#171C22] border border-[#252C34] rounded text-[10px] text-[#e0e2ea]">Regulatory</span></td>
+<td class="py-2 px-3 text-[#F4F6F8]">Hyperscaler Cloud CapEx forward commitments aggregated reaching $240B annualized.</td>
+<td class="py-2 px-3 text-[#9BA6B2]">Underpins Datacenter forward demand durability for 18 months.</td>
+<td class="py-2 px-2 text-[#39D98A] text-[10px]">LOW (Filing)</td>
+<td class="py-2 px-3 text-secondary text-[10px] select-all">PythSig: 0x3a9f...c812</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-[#11151A]/60 transition-colors">
+<td class="py-2 px-3 text-primary font-semibold">PYTH-ORACLE</td>
+<td class="py-2 px-2 text-[#9BA6B2] text-[10px]">2025-03-24 14:21:49</td>
+<td class="py-2 px-2"><span class="px-1.5 py-0.2 bg-[#171C22] border border-[#252C34] rounded text-[10px] text-[#e0e2ea]">Microstructure</span></td>
+<td class="py-2 px-3 text-[#F4F6F8]">NVDA 30-day Implied Volatility Index compressed 4.8% to 38.2 vol points.</td>
+<td class="py-2 px-3 text-[#9BA6B2]">Call option skew compressed favorably ahead of key catalyst event.</td>
+<td class="py-2 px-2 text-[#39D98A] text-[10px]">LOW (Realtime)</td>
+<td class="py-2 px-3 text-secondary text-[10px] select-all">Oracle Block #312984112</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-[#11151A]/60 transition-colors">
+<td class="py-2 px-3 text-primary font-semibold">NEWS-BLOOMBERG</td>
+<td class="py-2 px-2 text-[#9BA6B2] text-[10px]">2025-03-24 14:22:15</td>
+<td class="py-2 px-2"><span class="px-1.5 py-0.2 bg-[#171C22] border border-[#252C34] rounded text-[10px] text-[#e0e2ea]">Wire Intelligence</span></td>
+<td class="py-2 px-3 text-[#F4F6F8]">Microsoft capital expenditure guidance revised upward +12% for inference hardware.</td>
+<td class="py-2 px-3 text-[#9BA6B2]">Direct revenue throughput driver for Blackwell B200 delivery queue.</td>
+<td class="py-2 px-2 text-tertiary text-[10px]">MED (Reported)</td>
+<td class="py-2 px-3 text-[#9BA6B2] text-[10px]">HTTP 200 Wire SHA256</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-[#11151A]/60 transition-colors">
+<td class="py-2 px-3 text-primary font-semibold">SOL-SMART-MONEY</td>
+<td class="py-2 px-2 text-[#9BA6B2] text-[10px]">2025-03-24 14:20:30</td>
+<td class="py-2 px-2"><span class="px-1.5 py-0.2 bg-[#171C22] border border-[#252C34] rounded text-[10px] text-[#e0e2ea]">On-Chain Cluster</span></td>
+<td class="py-2 px-3 text-[#F4F6F8]">Wallet 7xK...9Qm swaps 25,000 SOL into synthetic tech perp delta-longs at $127.10.</td>
+<td class="py-2 px-3 text-[#9BA6B2]">Institutional alpha accumulation pattern match confirmed.</td>
+<td class="py-2 px-2 text-tertiary text-[10px]">MED (Flow)</td>
+<td class="py-2 px-3 text-secondary text-[10px] select-all">TxSig: 5rTz...91Lk</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-[#11151A]/60 transition-colors">
+<td class="py-2 px-3 text-primary font-semibold">FED-CALENDAR</td>
+<td class="py-2 px-2 text-[#9BA6B2] text-[10px]">2025-03-24 13:00:00</td>
+<td class="py-2 px-2"><span class="px-1.5 py-0.2 bg-[#171C22] border border-[#252C34] rounded text-[10px] text-[#e0e2ea]">Macro Calendar</span></td>
+<td class="py-2 px-3 text-[#F4F6F8]">Core PCE consensus estimate 2.7%; Fed speaker Bostic neutral rate baseline confirmed.</td>
+<td class="py-2 px-3 text-[#9BA6B2]">Macro discount rate environment remains benign for high beta tech multiples.</td>
+<td class="py-2 px-2 text-tertiary text-[10px]">MED (Event Risk)</td>
+<td class="py-2 px-3 text-[#9BA6B2] text-[10px]">BLS Release Feed #81</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Interactive Client-side Script -->
+<script>
+    (function initWorkspaceInteractions() {
+      // 1. Refresh synthesis simulation
+      const refreshBtn = document.getElementById('refresh-synth-btn');
+      const refreshIcon = document.getElementById('refresh-icon');
+
+      if (refreshBtn && refreshIcon) {
+        refreshBtn.addEventListener('click', () => {
+          refreshIcon.classList.add('animate-spin');
+          refreshBtn.disabled = true;
+          setTimeout(() => {
+            refreshIcon.classList.remove('animate-spin');
+            refreshBtn.disabled = false;
+          }, 650);
+        });
+      }
+
+      // 2. Action confirmation triggers
+      const paperBtn = document.getElementById('paper-trade-btn');
+      if (paperBtn) {
+        paperBtn.addEventListener('click', () => {
+          const original = paperBtn.innerHTML;
+          paperBtn.innerHTML = '<span class="text-[#39D98A] font-mono">SIMULATION ORDER RECORDED (#SIM-8821)</span>';
+          setTimeout(() => {
+            paperBtn.innerHTML = original;
+          }, 2400);
+        });
+      }
+
+      const liveBtn = document.getElementById('live-trade-btn');
+      if (liveBtn) {
+        liveBtn.addEventListener('click', () => {
+          const original = liveBtn.innerHTML;
+          liveBtn.innerHTML = '<span class="font-mono text-xs">PROMPTING HARDWARE KEY APPROVAL...</span>';
+          setTimeout(() => {
+            liveBtn.innerHTML = '<span class="font-mono text-xs text-[#003061]">WAITING FOR SIGNATURE (0x71a...9b4)</span>';
+            setTimeout(() => {
+              liveBtn.innerHTML = original;
+            }, 2500);
+          }, 1200);
+        });
+      }
+
+      // 3. Export audit receipts
+      const exportBtn = document.getElementById('export-json-btn');
+      if (exportBtn) {
+        exportBtn.addEventListener('click', () => {
+          const originalText = exportBtn.innerHTML;
+          exportBtn.innerHTML = '<span class="text-[#39D98A]">Provenance Exported</span>';
+          setTimeout(() => {
+            exportBtn.innerHTML = originalText;
+          }, 2000);
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="fixed bottom-0 left-0 right-0 z-50 h-8 bg-surface-container-lowest border-t border-outline-variant px-3 flex items-center justify-between text-[11px] font-mono"><div class="flex items-center gap-4"><nav class="flex items-center gap-3" data-active-classes="text-primary font-semibold"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="feed" href="#">Feed</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="news" href="#">News</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="chat" href="#">Chat</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="watchlist" href="#">Watchlist</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="pnl" href="#">PnL</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="market-hours" href="#">Market Hours</a><a aria-current="page" class="transition-colors text-primary font-semibold" data-path="ai-intelligence" href="#">AI Intelligence</a></nav></div><div class="flex items-center gap-4 text-on-surface-variant"><div class="flex items-center gap-1 hover:text-on-surface cursor-pointer"><span class="material-symbols-outlined text-[14px]">dashboard_customize</span><span>Layout: Standard</span></div><div class="flex items-center gap-1.5"><span class="inline-block w-1.5 h-1.5 rounded-full bg-primary"></span><span>21:42:09 UTC</span></div><button class="flex items-center gap-1 hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[14px]">lock</span><span>Panel Lock</span></button></div></footer></body></html>

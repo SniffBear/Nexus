@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container-lowest":"#0a0f13","surface-container-high":"#262a30","surface":"#101419","on-surface":"#e0e2ea","tertiary":"#f7be37","on-secondary-container":"#e8f1ff","inverse-surface":"#e0e2ea","inverse-on-surface":"#2d3136","on-secondary-fixed-variant":"#004a78","secondary-fixed-dim":"#99cbff","surface-container-highest":"#31353b","surface-variant":"#31353b","on-secondary":"#003355","background":"#101419","surface-bright":"#36393f","on-primary-fixed":"#001b3c","error":"#ffb4ab","surface-tint":"#a8c8ff","surface-container-low":"#181c21","on-background":"#e0e2ea","primary-container":"#6ea8ff","secondary-container":"#0072b5","on-tertiary-fixed":"#261900","secondary":"#99cbff","secondary-fixed":"#cfe5ff","primary-fixed-dim":"#a8c8ff","on-tertiary":"#402d00","outline-variant":"#424751","on-error":"#690005","primary":"#a8c8ff","inverse-primary":"#105eb0","on-error-container":"#ffdad6","on-secondary-fixed":"#001d34","tertiary-fixed-dim":"#f7be37","tertiary-container":"#d39e10","on-primary":"#003061","primary-fixed":"#d5e3ff","on-primary-container":"#003c77","surface-dim":"#101419","on-tertiary-fixed-variant":"#5c4300","on-primary-fixed-variant":"#00468a","tertiary-fixed":"#ffdea1","error-container":"#93000a","outline":"#8c919d","on-surface-variant":"#c2c6d3","on-tertiary-container":"#4e3800","surface-container":"#1c2025"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{},"fontFamily":{"headline":["Geist"],"display":["Geist"],"body":["Geist"],"label":["Geist"]},"fontSize":{}}}}</script></head><body class="bg-surface font-body text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md"><div class="h-2 bg-[repeating-linear-gradient(45deg,#d39e10,#d39e10_10px,#101419_10px,#101419_20px)] w-full"></div><div class="h-12 w-full px-4 flex items-center justify-between gap-3"><div class="flex items-center gap-4 shrink-0"><div class="flex items-center gap-2"><div class="w-6 h-6 rounded bg-primary flex items-center justify-center text-on-primary font-headline font-bold text-xs tracking-wider">NX</div><span class="font-headline font-semibold text-sm tracking-tight text-on-surface uppercase">Nexus</span></div><div class="flex items-center gap-2 px-2.5 py-1 bg-tertiary-container/30 rounded ring-1 ring-tertiary-container/60"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-headline text-[10px] font-bold tracking-widest text-tertiary uppercase">Simulation Mode</span><span class="text-[9px] font-label px-1 py-0.5 rounded bg-tertiary text-on-tertiary font-bold tracking-tight">NO REAL FUNDS</span></div></div><nav class="hidden xl:flex items-center gap-1 overflow-x-auto py-1" data-active-classes="bg-surface-container-highest text-on-surface font-medium"><a aria-current="page" class="px-2 py-1 rounded transition-colors whitespace-nowrap bg-surface-container-highest text-on-surface font-medium" data-path="paper-overview" href="#">Paper/Simulation</a><a class="text-xs px-2 py-1 rounded text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="trade-terminal" href="#">Trade</a><a class="text-xs px-2 py-1 rounded text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="markets-screener" href="#">Markets</a><a class="text-xs px-2 py-1 rounded text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="predict-arena" href="#">Predict</a><a class="text-xs px-2 py-1 rounded text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="social-feed" href="#">Social</a><a class="text-xs px-2 py-1 rounded text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="leaderboard" href="#">Leaderboard</a><a class="text-xs px-2 py-1 rounded text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="earn-vaults" href="#">Earn</a><a class="text-xs px-2 py-1 rounded text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="economic-calendar" href="#">Calendar</a><a class="text-xs px-2 py-1 rounded text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="co-invest-pools" href="#">Co-Invest</a><a class="text-xs px-2 py-1 rounded text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="autonomous-agents" href="#">Agents</a></nav><div class="flex items-center gap-3 shrink-0"><div class="hidden sm:flex items-center gap-1.5 px-2 py-1 bg-surface-container rounded text-xs text-on-surface-variant"><span class="material-symbols-outlined text-base">search</span><span class="text-[11px] font-label">Search contracts...</span><span class="text-[9px] px-1 py-0.5 rounded bg-surface-container-high text-on-surface">/</span></div><button class="p-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-base leading-none">notifications</span></button><div class="flex items-center gap-2 px-2 py-1 bg-surface-container rounded"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><div class="flex flex-col text-right leading-tight"><span class="text-[9px] font-label text-on-surface-variant uppercase tracking-wider">Sim Balance</span><span class="text-[11px] font-headline font-semibold text-secondary">$100,000.00 SIM</span></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="h-7 w-full bg-surface-container-low px-4 flex items-center justify-between overflow-x-auto text-[11px] font-label"><div class="flex items-center gap-5 whitespace-nowrap"><div class="flex items-center gap-1.5"><span class="text-on-surface-variant uppercase text-[10px]">BTC/USD SIM</span><span class="text-on-surface font-semibold">$67,420.50</span><span class="text-primary font-medium">+2.41%</span></div><div class="flex items-center gap-1.5"><span class="text-on-surface-variant uppercase text-[10px]">ETH/USD SIM</span><span class="text-on-surface font-semibold">$3,512.10</span><span class="text-primary font-medium">+1.18%</span></div><div class="flex items-center gap-1.5"><span class="text-on-surface-variant uppercase text-[10px]">SOL/USD SIM</span><span class="text-on-surface font-semibold">$182.40</span><span class="text-error font-medium">-0.84%</span></div><div class="flex items-center gap-1.5"><span class="text-on-surface-variant uppercase text-[10px]">VIX SIM</span><span class="text-on-surface font-semibold">14.28</span><span class="text-on-surface-variant">0.00%</span></div></div><div class="hidden md:flex items-center gap-4 text-[10px] text-on-surface-variant shrink-0"><span>LATENCY: <strong class="text-on-surface">12ms</strong></span><span>ENGINE: <strong class="text-tertiary">SYNTHETIC V2.4</strong></span><span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>SANDBOX ACTIVE</span></div></div></header><aside class="fixed left-0 top-[84px] bottom-0 w-56 bg-surface-container-low z-40 flex flex-col p-2"><div class="px-3 py-2 text-[10px] font-label font-bold uppercase tracking-wider text-on-surface-variant">Paper Workspace</div><nav class="space-y-0.5 flex-1" data-active-classes="bg-surface-container-highest text-on-surface font-semibold"><a aria-current="page" class="flex items-center gap-2.5 px-3 py-2 rounded transition-all bg-surface-container-highest text-on-surface font-semibold" data-path="paper-overview" href="#"><span class="material-symbols-outlined text-base">dashboard</span>Overview</a><a class="flex items-center gap-2.5 px-3 py-2 rounded text-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="trade-terminal" href="#"><span class="material-symbols-outlined text-base">candlestick_chart</span>Execution Desk</a><a class="flex items-center gap-2.5 px-3 py-2 rounded text-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="virtual-portfolio" href="#"><span class="material-symbols-outlined text-base">account_balance_wallet</span>Positions & PnL</a><a class="flex items-center gap-2.5 px-3 py-2 rounded text-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="order-history" href="#"><span class="material-symbols-outlined text-base">receipt_long</span>Order Log</a><a class="flex items-center gap-2.5 px-3 py-2 rounded text-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="risk-diagnostics" href="#"><span class="material-symbols-outlined text-base">security</span>Risk Analytics</a><a class="flex items-center gap-2.5 px-3 py-2 rounded text-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="scenario-backtesting" href="#"><span class="material-symbols-outlined text-base">history</span>Scenario Lab</a><a class="flex items-center gap-2.5 px-3 py-2 rounded text-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="simulation-settings" href="#"><span class="material-symbols-outlined text-base">tune</span>Reset & Capital</a></nav><div class="p-3 bg-surface-container rounded mt-auto"><div class="text-[10px] font-label text-on-surface-variant uppercase">Environment</div><div class="text-xs font-semibold text-tertiary flex items-center justify-between mt-1"><span>Deterministic</span><span class="material-symbols-outlined text-xs">speed</span></div></div></aside><div class="pl-56"><main class="relative pt-[84px] bg-surface w-full min-h-screen"><div class="flex flex-col w-full">
+<!-- PERSISTENT TOP SIMULATION WARNING BANNER -->
+<div class="relative w-full bg-surface-container-lowest px-4 py-2 flex flex-col md:flex-row items-center justify-between gap-3 shadow-md">
+<div class="flex items-center gap-3">
+<div class="h-6 px-2 flex items-center gap-1.5 bg-tertiary-container/30 text-tertiary rounded text-[10px] font-headline font-black uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm animate-pulse">warning</span>
+<span>VIRTUAL SIMULATION ONLY</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-xs font-headline font-bold uppercase tracking-tight text-on-surface">SIMULATION MODE — NO REAL ASSETS AT RISK</span>
+<span class="hidden lg:inline text-[10px] font-label text-tertiary uppercase tracking-widest">• SYNTHETIC MATCHING ENGINE V2.4</span>
+</div>
+</div>
+<!-- ENGINE CONTROLS BAR -->
+<div class="flex items-center flex-wrap gap-2 text-xs">
+<!-- Status Badge -->
+<div class="flex items-center gap-2 px-2.5 py-1 bg-surface-container rounded">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="text-[11px] font-label font-bold text-on-surface tracking-tight uppercase">RUNNING</span>
+<span class="text-[10px] font-label text-on-surface-variant font-mono">Tick #4,812 • 250ms Latency</span>
+</div>
+<!-- Playback Actions -->
+<div class="flex items-center bg-surface-container rounded p-0.5">
+<button class="flex items-center gap-1 px-2.5 py-1 rounded text-on-surface hover:bg-surface-container-high transition-colors font-label font-medium text-[11px]" id="btnPauseSim" type="button">
+<span class="material-symbols-outlined text-xs">pause</span>
+<span>Pause</span>
+</button>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded text-error hover:bg-error-container/30 transition-colors font-label font-medium text-[11px]" id="btnEndSim" type="button">
+<span class="material-symbols-outlined text-xs">stop</span>
+<span>End Run</span>
+</button>
+</div>
+<!-- Speed Multiplier -->
+<div class="flex items-center bg-surface-container rounded p-0.5 text-[10px] font-label font-bold">
+<button class="px-2 py-1 rounded text-on-surface-variant hover:text-on-surface" type="button">1x</button>
+<button class="px-2 py-1 rounded bg-surface-container-highest text-primary shadow-sm" type="button">5x</button>
+<button class="px-2 py-1 rounded text-on-surface-variant hover:text-on-surface" type="button">10x</button>
+<button class="px-2 py-1 rounded text-on-surface-variant hover:text-on-surface flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[11px]">history</span> Replay
+        </button>
+</div>
+<!-- Reset Capital Button -->
+<button class="flex items-center gap-1.5 px-3 py-1 bg-tertiary-container/30 hover:bg-tertiary-container/50 text-tertiary rounded text-[11px] font-headline font-semibold uppercase tracking-wider transition-all shadow-sm" id="btnTriggerResetModal" type="button">
+<span class="material-symbols-outlined text-xs">restart_alt</span>
+<span>Reset Capital</span>
+</button>
+</div>
+</div>
+<!-- TOP TELEMETRY METRICS ROW -->
+<div class="w-full bg-surface-container-low px-4 py-2.5 overflow-x-auto">
+<div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2 min-w-[960px]">
+<!-- Metric 1: Simulated Balance -->
+<div class="p-2 bg-surface-container rounded flex flex-col justify-between">
+<div class="flex items-center justify-between text-[10px] font-label uppercase text-on-surface-variant">
+<span>Sim Balance</span>
+<span class="text-[9px] px-1 rounded bg-tertiary-container/30 text-tertiary font-bold">[SIM]</span>
+</div>
+<div class="mt-1">
+<div class="text-sm font-headline font-bold text-on-surface font-mono tracking-tight">$142,850.00</div>
+<div class="text-[10px] font-label text-on-surface-variant">Start: $100,000</div>
+</div>
+</div>
+<!-- Metric 2: Equity & Unrealized PnL -->
+<div class="p-2 bg-surface-container rounded flex flex-col justify-between">
+<div class="flex items-center justify-between text-[10px] font-label uppercase text-on-surface-variant">
+<span>Sim Equity</span>
+<span class="text-[9px] px-1 rounded bg-tertiary-container/30 text-tertiary font-bold">[SIM]</span>
+</div>
+<div class="mt-1">
+<div class="text-sm font-headline font-bold text-on-surface font-mono tracking-tight">$168,412.50</div>
+<div class="text-[10px] font-label text-primary font-mono font-medium">+$25,562.50 Unr.</div>
+</div>
+</div>
+<!-- Metric 3: Total Simulated PnL -->
+<div class="p-2 bg-surface-container rounded flex flex-col justify-between">
+<div class="flex items-center justify-between text-[10px] font-label uppercase text-on-surface-variant">
+<span>Total Sim PnL</span>
+<span class="text-[9px] px-1 rounded bg-primary-container/30 text-primary font-bold">[SIM]</span>
+</div>
+<div class="mt-1">
+<div class="text-sm font-headline font-bold text-primary font-mono tracking-tight">+$68,412.50</div>
+<div class="text-[10px] font-label text-primary font-mono font-semibold">+68.41% Total</div>
+</div>
+</div>
+<!-- Metric 4: Win Rate -->
+<div class="p-2 bg-surface-container rounded flex flex-col justify-between">
+<div class="flex items-center justify-between text-[10px] font-label uppercase text-on-surface-variant">
+<span>Win Rate [SIM]</span>
+<span class="material-symbols-outlined text-[13px] text-on-surface-variant">military_tech</span>
+</div>
+<div class="mt-1">
+<div class="text-sm font-headline font-bold text-on-surface font-mono">67.4%</div>
+<div class="text-[10px] font-label text-on-surface-variant font-mono">89 W / 43 L</div>
+</div>
+</div>
+<!-- Metric 5: Max Drawdown -->
+<div class="p-2 bg-surface-container rounded flex flex-col justify-between">
+<div class="flex items-center justify-between text-[10px] font-label uppercase text-on-surface-variant">
+<span>Max Drawdown</span>
+<span class="text-[9px] text-error font-mono font-bold">-4.12%</span>
+</div>
+<div class="mt-1">
+<div class="text-sm font-headline font-bold text-error font-mono tracking-tight">-4.12% [SIM]</div>
+<div class="text-[10px] font-label text-on-surface-variant font-mono">Peak $171,200</div>
+</div>
+</div>
+<!-- Metric 6: Open Positions -->
+<div class="p-2 bg-surface-container rounded flex flex-col justify-between">
+<div class="flex items-center justify-between text-[10px] font-label uppercase text-on-surface-variant">
+<span>Positions</span>
+<span class="text-[9px] px-1 rounded bg-surface-container-high text-on-surface-variant">5 Active</span>
+</div>
+<div class="mt-1">
+<div class="text-sm font-headline font-bold text-on-surface font-mono">5 Open [SIM]</div>
+<div class="text-[10px] font-label text-on-surface-variant font-mono">$54,200 Margin</div>
+</div>
+</div>
+<!-- Metric 7: Sharpe Ratio -->
+<div class="p-2 bg-surface-container rounded flex flex-col justify-between">
+<div class="flex items-center justify-between text-[10px] font-label uppercase text-on-surface-variant">
+<span>Daily Sharpe</span>
+<span class="material-symbols-outlined text-[13px] text-tertiary">query_stats</span>
+</div>
+<div class="mt-1">
+<div class="text-sm font-headline font-bold text-tertiary font-mono">2.84 [SIM]</div>
+<div class="text-[10px] font-label text-on-surface-variant">Benchmark 1.12</div>
+</div>
+</div>
+<!-- Metric 8: Available Margin -->
+<div class="p-2 bg-surface-container rounded flex flex-col justify-between">
+<div class="flex items-center justify-between text-[10px] font-label uppercase text-on-surface-variant">
+<span>Avail Margin</span>
+<span class="text-[9px] px-1 rounded bg-tertiary-container/30 text-tertiary font-bold">[SIM]</span>
+</div>
+<div class="mt-1">
+<div class="text-sm font-headline font-bold text-secondary font-mono tracking-tight">$88,650.00</div>
+<div class="text-[10px] font-label text-on-surface-variant">62.0% Reserve</div>
+</div>
+</div>
+</div>
+</div>
+<!-- NAVIGATION TABS & FILTERS -->
+<div class="w-full bg-surface-container px-4 py-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-inner">
+<div class="flex items-center gap-1 overflow-x-auto w-full sm:w-auto">
+<button class="px-3 py-1.5 text-xs font-label font-medium rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors">Trade Execution</button>
+<button class="px-3 py-1.5 text-xs font-label font-bold rounded bg-surface-container-highest text-primary shadow-sm flex items-center gap-1.5">
+<span>Active Positions</span>
+<span class="px-1.5 py-0.2 rounded-full bg-primary/20 text-primary text-[10px]">5</span>
+</button>
+<button class="px-3 py-1.5 text-xs font-label font-medium rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors">Sim Orders (3)</button>
+<button class="px-3 py-1.5 text-xs font-label font-medium rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors">Execution Log</button>
+<button class="px-3 py-1.5 text-xs font-label font-medium rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors">Performance Lab</button>
+<button class="px-3 py-1.5 text-xs font-label font-medium rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors">Autonomous Agents</button>
+</div>
+<!-- Sub Filters -->
+<div class="flex items-center gap-1.5 text-[11px] font-label self-end sm:self-auto shrink-0">
+<span class="text-on-surface-variant text-[10px] uppercase tracking-wider mr-1">Scope:</span>
+<button class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-semibold text-[10px]">All Assets</button>
+<button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high text-[10px]">Solana Eco</button>
+<button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high text-[10px]">Majors</button>
+<button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high text-[10px]">Perpetuals</button>
+</div>
+</div>
+<!-- MAIN MULTI-PANEL WORKSPACE GRID -->
+<div class="w-full p-3 grid grid-cols-1 xl:grid-cols-12 gap-3">
+<!-- LEFT PANEL: SIMULATED EXECUTION TICKET (xl:col-span-3) -->
+<div class="xl:col-span-3 flex flex-col gap-3">
+<!-- Order Ticket Card -->
+<div class="bg-surface-container-low rounded-xl p-3.5 flex flex-col gap-3 shadow-md">
+<!-- Ticket Header with Warning -->
+<div class="flex items-center justify-between pb-2 bg-surface-container px-2.5 py-1.5 rounded">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-sm">edit_document</span>
+<span class="text-xs font-headline font-bold uppercase tracking-tight text-on-surface">Simulated Order Ticket</span>
+</div>
+<span class="text-[9px] font-label font-black px-1.5 py-0.5 rounded bg-tertiary text-on-tertiary uppercase tracking-wider">PAPER EXECUTION ONLY</span>
+</div>
+<!-- Market Selector Tabs -->
+<div>
+<label class="text-[10px] font-label uppercase text-on-surface-variant block mb-1">Contract [SIMULATED]</label>
+<div class="grid grid-cols-3 gap-1">
+<button class="p-1.5 rounded bg-surface-container-highest text-left shadow-sm" type="button">
+<div class="text-[11px] font-headline font-bold text-on-surface">SOL-PERP</div>
+<div class="text-[10px] font-mono text-primary font-semibold">$194.25 <span class="text-[9px]">+3.8%</span></div>
+</button>
+<button class="p-1.5 rounded bg-surface-container hover:bg-surface-container-high text-left transition-colors" type="button">
+<div class="text-[11px] font-headline font-bold text-on-surface-variant">BTC-PERP</div>
+<div class="text-[10px] font-mono text-on-surface-variant">$91,420</div>
+</button>
+<button class="p-1.5 rounded bg-surface-container hover:bg-surface-container-high text-left transition-colors" type="button">
+<div class="text-[11px] font-headline font-bold text-on-surface-variant">ETH-PERP</div>
+<div class="text-[10px] font-mono text-on-surface-variant">$3,420.1</div>
+</button>
+</div>
+</div>
+<!-- Order Side Toggle (Buy / Long vs Sell / Short) -->
+<div class="grid grid-cols-2 gap-1.5 bg-surface-container p-1 rounded">
+<button class="py-1.5 text-xs font-headline font-bold uppercase rounded bg-primary text-on-primary transition-all text-center shadow-sm" id="btnSideBuy" type="button">
+            Buy / Long [SIM]
+          </button>
+<button class="py-1.5 text-xs font-headline font-bold uppercase rounded text-on-surface-variant hover:text-on-surface transition-all text-center" id="btnSideSell" type="button">
+            Sell / Short [SIM]
+          </button>
+</div>
+<!-- Order Type Selector -->
+<div class="flex items-center justify-between text-[11px] font-label bg-surface-container rounded p-0.5">
+<button class="flex-1 py-1 text-center font-bold text-primary bg-surface-container-high rounded shadow-xs">Limit</button>
+<button class="flex-1 py-1 text-center text-on-surface-variant hover:text-on-surface">Market</button>
+<button class="flex-1 py-1 text-center text-on-surface-variant hover:text-on-surface">Stop Mkt</button>
+<button class="flex-1 py-1 text-center text-on-surface-variant hover:text-on-surface">Trailing</button>
+</div>
+<!-- Leverage Slider -->
+<div class="bg-surface-container p-2.5 rounded flex flex-col gap-1.5">
+<div class="flex justify-between items-center text-[11px] font-label">
+<span class="text-on-surface-variant">Simulation Leverage</span>
+<span class="font-mono font-bold text-secondary px-1.5 py-0.5 rounded bg-surface-container-high">5x Cross [SIM]</span>
+</div>
+<input class="w-full accent-primary h-1 bg-surface-container-highest rounded-lg cursor-pointer" max="20" min="1" type="range" value="5"/>
+<div class="flex justify-between text-[9px] font-mono text-on-surface-variant">
+<span>1x</span>
+<span>5x</span>
+<span>10x</span>
+<span>15x</span>
+<span>20x Max</span>
+</div>
+</div>
+<!-- Price Input -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between text-[10px] font-label text-on-surface-variant">
+<span>Simulated Limit Price</span>
+<span class="text-secondary cursor-pointer hover:underline">Mark: $194.25</span>
+</div>
+<div class="flex items-center bg-surface-container px-2.5 py-1.5 rounded">
+<span class="text-xs font-mono text-on-surface-variant mr-1">$</span>
+<input class="w-full bg-transparent text-xs font-mono font-bold text-on-surface focus:outline-none" type="text" value="194.25"/>
+<span class="text-[10px] font-label text-on-surface-variant">USD [SIM]</span>
+</div>
+</div>
+<!-- Size / Amount Input -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between text-[10px] font-label text-on-surface-variant">
+<span>Order Quantity</span>
+<span class="text-on-surface-variant font-mono">Avail: $88,650 [SIM]</span>
+</div>
+<div class="flex items-center bg-surface-container px-2.5 py-1.5 rounded">
+<input class="w-full bg-transparent text-xs font-mono font-bold text-on-surface focus:outline-none" type="text" value="150.0"/>
+<span class="text-[10px] font-label text-primary font-bold">SOL [SIM]</span>
+</div>
+<!-- Quick percentages -->
+<div class="grid grid-cols-4 gap-1 mt-0.5">
+<button class="py-0.5 text-[10px] font-mono rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant" type="button">25%</button>
+<button class="py-0.5 text-[10px] font-mono rounded bg-surface-container-high font-bold text-primary" type="button">50%</button>
+<button class="py-0.5 text-[10px] font-mono rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant" type="button">75%</button>
+<button class="py-0.5 text-[10px] font-mono rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant" type="button">100%</button>
+</div>
+</div>
+<!-- Pre-Trade Simulation Telemetry Card -->
+<div class="bg-surface-container p-2.5 rounded text-[11px] font-label space-y-1.5">
+<div class="text-[10px] uppercase font-bold text-on-surface-variant flex items-center justify-between">
+<span>Sim Execution Model</span>
+<span class="text-tertiary font-mono">SYNTHETIC V2.4</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Est. Liquidation Price:</span>
+<span class="font-mono text-error font-semibold">$158.40 [SIM]</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Simulated Slippage:</span>
+<span class="font-mono text-primary font-medium">0.02% (~$5.82)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Sim Maker Rebate:</span>
+<span class="font-mono text-on-surface">-$1.42 [SIM]</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Take Profit / Stop Loss:</span>
+<span class="font-mono text-secondary">TP $215 / SL $188</span>
+</div>
+</div>
+<!-- Submit Simulation Order Button -->
+<button class="w-full py-2.5 px-3 rounded-lg bg-primary hover:bg-primary/90 text-on-primary font-headline font-bold text-xs uppercase tracking-wider flex flex-col items-center justify-center transition-all shadow-md group" id="btnSubmitSimOrder" type="button">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">send</span>
+<span>Submit Simulated Order</span>
+</span>
+<span class="text-[9px] font-label text-on-primary/80 normal-case tracking-normal mt-0.5">
+            Zero real capital commitment • Virtual Sandbox
+          </span>
+</button>
+</div>
+<!-- Quick Market Depth Sandbox Preview Widget -->
+<div class="bg-surface-container-low rounded-xl p-3 flex flex-col gap-2 shadow-sm">
+<div class="flex items-center justify-between text-[11px] font-label">
+<span class="font-headline font-bold uppercase text-on-surface">Synthetic Depth Snapshot</span>
+<span class="text-[9px] font-mono text-tertiary">SOL-PERP</span>
+</div>
+<div class="space-y-1 text-[10px] font-mono">
+<div class="flex justify-between text-error">
+<span>194.40 [SIM]</span>
+<span>420.5 SOL</span>
+<span class="text-on-surface-variant text-[9px]">$81.7k</span>
+</div>
+<div class="flex justify-between text-error">
+<span>194.30 [SIM]</span>
+<span>180.2 SOL</span>
+<span class="text-on-surface-variant text-[9px]">$35.0k</span>
+</div>
+<div class="py-0.5 bg-surface-container text-center text-xs font-bold text-on-surface rounded">
+            SPREAD: $0.05 • MID $194.25
+          </div>
+<div class="flex justify-between text-primary">
+<span>194.20 [SIM]</span>
+<span>612.0 SOL</span>
+<span class="text-on-surface-variant text-[9px]">$118.8k</span>
+</div>
+<div class="flex justify-between text-primary">
+<span>194.10 [SIM]</span>
+<span>890.1 SOL</span>
+<span class="text-on-surface-variant text-[9px]">$172.7k</span>
+</div>
+</div>
+</div>
+</div>
+<!-- CENTER PANEL: SIMULATED CHART & POSITIONS TABLE (xl:col-span-6) -->
+<div class="xl:col-span-6 flex flex-col gap-3">
+<!-- Top Strip: Interactive SOL/USD Simulated Candlestick Preview & Overlay -->
+<div class="bg-surface-container-low rounded-xl p-3 shadow-md flex flex-col gap-2">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-3">
+<span class="text-xs font-headline font-bold text-on-surface">SOL/USD SIMULATED PERPETUAL</span>
+<span class="text-xs font-mono font-bold text-primary">$194.25</span>
+<span class="text-[10px] font-label px-1.5 py-0.5 rounded bg-primary/20 text-primary font-bold">+3.82%</span>
+</div>
+<div class="flex items-center gap-2 text-[10px] font-label">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-mono text-on-surface">15M</span>
+<span class="text-on-surface-variant">EMA (20, 50)</span>
+<span class="text-on-surface-variant">VWAP $191.10</span>
+<span class="text-tertiary font-mono">[SIMULATED FEED]</span>
+</div>
+</div>
+<!-- Simulated SVG Chart Graphic -->
+<div class="relative w-full h-44 bg-surface-container-lowest rounded-lg p-2 overflow-hidden flex flex-col justify-end">
+<!-- Virtual Overlay Lines (TP, Entry, SL) -->
+<div class="absolute inset-0 pointer-events-none flex flex-col justify-between py-3 px-4 z-10">
+<!-- TP Line -->
+<div class="flex items-center justify-between border-b border-dashed border-primary/50 pb-0.5">
+<span class="text-[9px] font-mono text-primary font-bold px-1 rounded bg-surface-container-lowest/80">TP Line: $210.00 (+53.4% [SIM])</span>
+<span class="text-[9px] font-mono text-primary">Take-Profit Target</span>
+</div>
+<!-- Current Price Level -->
+<div class="flex items-center justify-between border-b border-dashed border-secondary/60 pb-0.5 my-auto">
+<span class="text-[9px] font-mono text-secondary font-bold px-1 rounded bg-surface-container-lowest/80">Entry Fill: $182.40 (Long 5x)</span>
+<span class="text-[9px] font-mono text-secondary">Mark: $194.25 [SIM]</span>
+</div>
+<!-- SL Line -->
+<div class="flex items-center justify-between border-b border-dashed border-error/50 pb-0.5">
+<span class="text-[9px] font-mono text-error font-bold px-1 rounded bg-surface-container-lowest/80">Stop Loss: $176.00 (-16.1% [SIM])</span>
+<span class="text-[9px] font-mono text-error">Sim Risk Cutoff</span>
+</div>
+</div>
+<!-- Candlesticks SVG -->
+<svg class="w-full h-full text-primary" preserveaspectratio="none" viewbox="0 0 500 120">
+<!-- Candlestick sequence synthetic -->
+<g opacity="0.85">
+<!-- Bar 1 red -->
+<line stroke="#ffb4ab" stroke-width="1" x1="20" x2="20" y1="50" y2="90"></line>
+<rect fill="#ffb4ab" height="20" width="6" x="17" y="60"></rect>
+<!-- Bar 2 green -->
+<line stroke="#a8c8ff" stroke-width="1" x1="45" x2="45" y1="40" y2="85"></line>
+<rect fill="#a8c8ff" height="30" width="6" x="42" y="45"></rect>
+<!-- Bar 3 green -->
+<line stroke="#a8c8ff" stroke-width="1" x1="70" x2="70" y1="35" y2="75"></line>
+<rect fill="#a8c8ff" height="25" width="6" x="67" y="40"></rect>
+<!-- Bar 4 red -->
+<line stroke="#ffb4ab" stroke-width="1" x1="95" x2="95" y1="45" y2="80"></line>
+<rect fill="#ffb4ab" height="22" width="6" x="92" y="50"></rect>
+<!-- Bar 5 green -->
+<line stroke="#a8c8ff" stroke-width="1" x1="120" x2="120" y1="30" y2="70"></line>
+<rect fill="#a8c8ff" height="30" width="6" x="117" y="35"></rect>
+<!-- Bar 6 green -->
+<line stroke="#a8c8ff" stroke-width="1" x1="145" x2="145" y1="25" y2="65"></line>
+<rect fill="#a8c8ff" height="28" width="6" x="142" y="30"></rect>
+<!-- Bar 7 red -->
+<line stroke="#ffb4ab" stroke-width="1" x1="170" x2="170" y1="32" y2="68"></line>
+<rect fill="#ffb4ab" height="15" width="6" x="167" y="38"></rect>
+<!-- Bar 8 green breakout -->
+<line stroke="#a8c8ff" stroke-width="1" x1="195" x2="195" y1="18" y2="55"></line>
+<rect fill="#a8c8ff" height="30" width="6" x="192" y="22"></rect>
+<!-- Bar 9 green -->
+<line stroke="#a8c8ff" stroke-width="1" x1="220" x2="220" y1="15" y2="48"></line>
+<rect fill="#a8c8ff" height="25" width="6" x="217" y="18"></rect>
+<!-- Bar 10 green -->
+<line stroke="#a8c8ff" stroke-width="1" x1="245" x2="245" y1="10" y2="42"></line>
+<rect fill="#a8c8ff" height="20" width="6" x="242" y="14"></rect>
+<!-- Bar 11 red consolidation -->
+<line stroke="#ffb4ab" stroke-width="1" x1="270" x2="270" y1="12" y2="40"></line>
+<rect fill="#ffb4ab" height="18" width="6" x="267" y="16"></rect>
+<!-- Bar 12 green continuation -->
+<line stroke="#a8c8ff" stroke-width="1" x1="295" x2="295" y1="8" y2="35"></line>
+<rect fill="#a8c8ff" height="22" width="6" x="292" y="10"></rect>
+<!-- Bar 13 green -->
+<line stroke="#a8c8ff" stroke-width="1" x1="320" x2="320" y1="5" y2="32"></line>
+<rect fill="#a8c8ff" height="18" width="6" x="317" y="8"></rect>
+<!-- Bar 14 red -->
+<line stroke="#ffb4ab" stroke-width="1" x1="345" x2="345" y1="12" y2="38"></line>
+<rect fill="#ffb4ab" height="16" width="6" x="342" y="14"></rect>
+<!-- Bar 15 green current -->
+<line stroke="#a8c8ff" stroke-width="1" x1="370" x2="370" y1="4" y2="30"></line>
+<rect fill="#a8c8ff" height="18" width="6" x="367" y="6"></rect>
+<!-- Bar 16 green current mark -->
+<line stroke="#a8c8ff" stroke-width="1" x1="395" x2="395" y1="2" y2="28"></line>
+<rect fill="#a8c8ff" height="18" width="6" x="392" y="4"></rect>
+<!-- Bar 17 live tick -->
+<line stroke="#a8c8ff" stroke-width="1" x1="420" x2="420" y1="3" y2="25"></line>
+<rect fill="#a8c8ff" height="12" width="6" x="417" y="5"></rect>
+</g>
+<!-- EMA 20 overlay line -->
+<path d="M 20 80 Q 120 50, 220 25 T 440 8" fill="none" opacity="0.6" stroke="#f7be37" stroke-width="1.5"></path>
+<!-- VWAP overlay -->
+<path d="M 20 70 Q 120 60, 240 40 T 440 20" fill="none" opacity="0.7" stroke="#99cbff" stroke-dasharray="3,3" stroke-width="1"></path>
+</svg>
+</div>
+</div>
+<!-- Main Financial Table: OPEN POSITIONS [SIMULATED] -->
+<div class="bg-surface-container-low rounded-xl p-3 shadow-md flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="text-xs font-headline font-bold uppercase tracking-tight text-on-surface">OPEN POSITIONS</span>
+<span class="text-[10px] font-label font-bold px-1.5 py-0.2 rounded bg-tertiary-container/30 text-tertiary">[SIMULATED PORTFOLIO]</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-label text-on-surface-variant">Allocated Margin: <strong class="text-on-surface font-mono">$54,200.00</strong></span>
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-[10px] font-label text-on-surface transition-colors">Close All [SIM]</button>
+</div>
+</div>
+<!-- Dense Positions Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left text-xs font-label">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant uppercase text-[10px]">
+<th class="py-2 px-2.5 font-semibold">Contract</th>
+<th class="py-2 px-2 font-semibold">Side & Lev</th>
+<th class="py-2 px-2 font-semibold">Size [SIM]</th>
+<th class="py-2 px-2 font-semibold">Entry / Mark</th>
+<th class="py-2 px-2 font-semibold">Liq Price</th>
+<th class="py-2 px-2 font-semibold">Margin</th>
+<th class="py-2 px-2 font-semibold text-right">Unrealized PnL [SIM]</th>
+<th class="py-2 px-2.5 font-semibold text-center">Quick Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-transparent font-mono text-[11px]">
+<!-- Row 1: SOL-PERP -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-2.5 px-2.5 font-headline font-bold text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>SOL-PERP</span>
+</div>
+<span class="text-[9px] font-label text-on-surface-variant block font-normal">Perpetual Sim</span>
+</td>
+<td class="py-2.5 px-2">
+<span class="px-1.5 py-0.5 rounded bg-primary/20 text-primary font-bold text-[10px]">LONG 5x</span>
+</td>
+<td class="py-2.5 px-2 text-on-surface">
+<div>250.0 SOL</div>
+<div class="text-[9px] text-on-surface-variant">$48,562.50</div>
+</td>
+<td class="py-2.5 px-2">
+<div class="text-on-surface-variant">$182.40</div>
+<div class="font-bold text-on-surface">$194.25</div>
+</td>
+<td class="py-2.5 px-2 text-error font-medium">$148.20</td>
+<td class="py-2.5 px-2 text-on-surface">$9,712.50</td>
+<td class="py-2.5 px-2 text-right">
+<div class="text-primary font-bold">+$2,962.50 [SIM]</div>
+<div class="text-[10px] text-primary font-semibold">+30.50% ROI</div>
+</td>
+<td class="py-2.5 px-2.5 text-center">
+<div class="flex items-center justify-center gap-1 font-label text-[10px]">
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors">Close 100%</button>
+<button class="p-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" title="TP/SL Settings">
+<span class="material-symbols-outlined text-[13px] leading-none">tune</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: BTC-PERP -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-2.5 px-2.5 font-headline font-bold text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>BTC-PERP</span>
+</div>
+<span class="text-[9px] font-label text-on-surface-variant block font-normal">Perpetual Sim</span>
+</td>
+<td class="py-2.5 px-2">
+<span class="px-1.5 py-0.5 rounded bg-primary/20 text-primary font-bold text-[10px]">LONG 10x</span>
+</td>
+<td class="py-2.5 px-2 text-on-surface">
+<div>0.850 BTC</div>
+<div class="text-[9px] text-on-surface-variant">$77,707.00</div>
+</td>
+<td class="py-2.5 px-2">
+<div class="text-on-surface-variant">$88,200.00</div>
+<div class="font-bold text-on-surface">$91,420.00</div>
+</td>
+<td class="py-2.5 px-2 text-error font-medium">$80,100.00</td>
+<td class="py-2.5 px-2 text-on-surface">$7,770.70</td>
+<td class="py-2.5 px-2 text-right">
+<div class="text-primary font-bold">+$2,737.00 [SIM]</div>
+<div class="text-[10px] text-primary font-semibold">+35.22% ROI</div>
+</td>
+<td class="py-2.5 px-2.5 text-center">
+<div class="flex items-center justify-center gap-1 font-label text-[10px]">
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors">Close 100%</button>
+<button class="p-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[13px] leading-none">tune</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: JUP-PERP -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-2.5 px-2.5 font-headline font-bold text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>JUP-PERP</span>
+</div>
+<span class="text-[9px] font-label text-on-surface-variant block font-normal">Perpetual Sim</span>
+</td>
+<td class="py-2.5 px-2">
+<span class="px-1.5 py-0.5 rounded bg-primary/20 text-primary font-bold text-[10px]">LONG 3x</span>
+</td>
+<td class="py-2.5 px-2 text-on-surface">
+<div>12,000 JUP</div>
+<div class="text-[9px] text-on-surface-variant">$13,800.00</div>
+</td>
+<td class="py-2.5 px-2">
+<div class="text-on-surface-variant">$1.080</div>
+<div class="font-bold text-on-surface">$1.150</div>
+</td>
+<td class="py-2.5 px-2 text-error font-medium">$0.740</td>
+<td class="py-2.5 px-2 text-on-surface">$4,600.00</td>
+<td class="py-2.5 px-2 text-right">
+<div class="text-primary font-bold">+$840.00 [SIM]</div>
+<div class="text-[10px] text-primary font-semibold">+18.26% ROI</div>
+</td>
+<td class="py-2.5 px-2.5 text-center">
+<div class="flex items-center justify-center gap-1 font-label text-[10px]">
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors">Close 100%</button>
+<button class="p-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[13px] leading-none">tune</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: ETH-PERP (Short) -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-2.5 px-2.5 font-headline font-bold text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span>ETH-PERP</span>
+</div>
+<span class="text-[9px] font-label text-on-surface-variant block font-normal">Perpetual Sim</span>
+</td>
+<td class="py-2.5 px-2">
+<span class="px-1.5 py-0.5 rounded bg-error-container/30 text-error font-bold text-[10px]">SHORT 5x</span>
+</td>
+<td class="py-2.5 px-2 text-on-surface">
+<div>4.500 ETH</div>
+<div class="text-[9px] text-on-surface-variant">$15,390.45</div>
+</td>
+<td class="py-2.5 px-2">
+<div class="text-on-surface-variant">$3,480.00</div>
+<div class="font-bold text-on-surface">$3,420.10</div>
+</td>
+<td class="py-2.5 px-2 text-error font-medium">$4,120.00</td>
+<td class="py-2.5 px-2 text-on-surface">$3,078.09</td>
+<td class="py-2.5 px-2 text-right">
+<div class="text-primary font-bold">+$269.55 [SIM]</div>
+<div class="text-[10px] text-primary font-semibold">+8.76% ROI</div>
+</td>
+<td class="py-2.5 px-2.5 text-center">
+<div class="flex items-center justify-center gap-1 font-label text-[10px]">
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors">Close 100%</button>
+<button class="p-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[13px] leading-none">tune</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: PYTH-PERP -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-2.5 px-2.5 font-headline font-bold text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>PYTH-PERP</span>
+</div>
+<span class="text-[9px] font-label text-on-surface-variant block font-normal">Perpetual Sim</span>
+</td>
+<td class="py-2.5 px-2">
+<span class="px-1.5 py-0.5 rounded bg-primary/20 text-primary font-bold text-[10px]">LONG 2x</span>
+</td>
+<td class="py-2.5 px-2 text-on-surface">
+<div>25,000 PYTH</div>
+<div class="text-[9px] text-on-surface-variant">$10,250.00</div>
+</td>
+<td class="py-2.5 px-2">
+<div class="text-on-surface-variant">$0.395</div>
+<div class="font-bold text-on-surface">$0.410</div>
+</td>
+<td class="py-2.5 px-2 text-error font-medium">$0.210</td>
+<td class="py-2.5 px-2 text-on-surface">$5,125.00</td>
+<td class="py-2.5 px-2 text-right">
+<div class="text-primary font-bold">+$375.00 [SIM]</div>
+<div class="text-[10px] text-primary font-semibold">+7.32% ROI</div>
+</td>
+<td class="py-2.5 px-2.5 text-center">
+<div class="flex items-center justify-center gap-1 font-label text-[10px]">
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors">Close 100%</button>
+<button class="p-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[13px] leading-none">tune</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- BOTTOM TABBED SUB-WORKSPACE: OPEN SIMULATED ORDERS & LOGS -->
+<div class="bg-surface-container-low rounded-xl p-3 shadow-md flex flex-col gap-2.5">
+<div class="flex items-center justify-between border-b border-surface-container pb-2">
+<div class="flex items-center gap-3 text-xs font-label">
+<button class="text-on-surface font-bold border-b-2 border-primary pb-1">Open Simulated Orders (3)</button>
+<button class="text-on-surface-variant hover:text-on-surface pb-1 transition-colors">Simulated Fill History (42)</button>
+<button class="text-on-surface-variant hover:text-on-surface pb-1 transition-colors">Paper PnL Analytics</button>
+<button class="text-on-surface-variant hover:text-on-surface pb-1 transition-colors">Active Agents (2)</button>
+</div>
+<span class="text-[10px] font-label text-tertiary uppercase font-mono font-bold">[ENGINE QUEUE: 3 PENDING]</span>
+</div>
+<!-- Open Orders List -->
+<div class="space-y-1.5 font-mono text-[11px]">
+<div class="flex items-center justify-between p-2 rounded bg-surface-container hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-2.5">
+<span class="px-1.5 py-0.5 rounded bg-primary/20 text-primary text-[10px] font-bold">BUY LIMIT</span>
+<div>
+<span class="font-headline font-bold text-on-surface">SOL-PERP</span>
+<span class="text-on-surface-variant ml-2 text-[10px]">Qty: 100.0 SOL ($18,850.00 [SIM])</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-on-surface font-bold">$188.50 [SIM]</span>
+<span class="text-[10px] px-2 py-0.5 rounded bg-surface-container-highest text-tertiary">Book Depth #4</span>
+<button class="text-error hover:underline text-[10px] font-label">Cancel [SIM]</button>
+</div>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-2.5">
+<span class="px-1.5 py-0.5 rounded bg-secondary-container/30 text-secondary text-[10px] font-bold">TP LIMIT SELL</span>
+<div>
+<span class="font-headline font-bold text-on-surface">BTC-PERP</span>
+<span class="text-on-surface-variant ml-2 text-[10px]">Qty: 0.85 BTC ($80,325.00 [SIM])</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-on-surface font-bold">$94,500.00 [SIM]</span>
+<span class="text-[10px] px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">Conditional Trigger</span>
+<button class="text-error hover:underline text-[10px] font-label">Cancel [SIM]</button>
+</div>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-2.5">
+<span class="px-1.5 py-0.5 rounded bg-primary/20 text-primary text-[10px] font-bold">BUY LIMIT</span>
+<div>
+<span class="font-headline font-bold text-on-surface">SUI-PERP</span>
+<span class="text-on-surface-variant ml-2 text-[10px]">Qty: 3,000 SUI ($9,450.00 [SIM])</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-on-surface font-bold">$3.150 [SIM]</span>
+<span class="text-[10px] px-2 py-0.5 rounded bg-surface-container-highest text-tertiary">Book Depth #1</span>
+<button class="text-error hover:underline text-[10px] font-label">Cancel [SIM]</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT PANEL: ENGINE DIAGNOSTICS & STRATEGY AGENTS (xl:col-span-3) -->
+<div class="xl:col-span-3 flex flex-col gap-3">
+<!-- Simulation Engine Telemetry -->
+<div class="bg-surface-container-low rounded-xl p-3.5 shadow-md flex flex-col gap-3">
+<div class="flex items-center justify-between pb-2 bg-surface-container px-2.5 py-1.5 rounded">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-sm">tune</span>
+<span class="text-xs font-headline font-bold uppercase tracking-tight text-on-surface">Engine Telemetry</span>
+</div>
+<span class="text-[9px] font-mono text-tertiary font-bold">[SYNTHETIC V2.4]</span>
+</div>
+<div class="space-y-2 text-[11px] font-label">
+<div class="flex justify-between pb-1 bg-surface-container p-2 rounded">
+<span class="text-on-surface-variant">Fill Slippage Model:</span>
+<span class="text-on-surface font-mono font-medium text-right text-[10px]">L2 Volume-Weighted</span>
+</div>
+<div class="flex justify-between pb-1 bg-surface-container p-2 rounded">
+<span class="text-on-surface-variant">Latency Emulator:</span>
+<span class="text-primary font-mono font-medium text-right text-[10px]">Solana RPC (250ms avg)</span>
+</div>
+<div class="flex justify-between pb-1 bg-surface-container p-2 rounded">
+<span class="text-on-surface-variant">Starting Capital:</span>
+<span class="text-on-surface font-mono font-semibold">$100,000.00 USD</span>
+</div>
+<div class="flex justify-between pb-1 bg-surface-container p-2 rounded">
+<span class="text-on-surface-variant">Simulation Elapsed:</span>
+<span class="text-on-surface font-mono">14d 6h 32m (Sim Clock)</span>
+</div>
+<div class="flex justify-between pb-1 bg-surface-container p-2 rounded">
+<span class="text-on-surface-variant">Benchmark Alpha vs SOL:</span>
+<span class="text-primary font-mono font-bold">+22.40% Outperformance</span>
+</div>
+<div class="flex justify-between pb-1 bg-surface-container p-2 rounded">
+<span class="text-on-surface-variant">Profit Factor:</span>
+<span class="text-tertiary font-mono font-bold">2.41 [SIMULATED]</span>
+</div>
+<div class="flex justify-between pb-1 bg-surface-container p-2 rounded">
+<span class="text-on-surface-variant">Avg Win / Avg Loss:</span>
+<span class="text-on-surface font-mono">+$1,120 / -$460 USD</span>
+</div>
+</div>
+</div>
+<!-- Quick Capital Reset Widget -->
+<div class="bg-surface-container-low rounded-xl p-3.5 shadow-md flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-xs font-headline font-bold uppercase text-on-surface">
+<span class="material-symbols-outlined text-sm text-tertiary">currency_exchange</span>
+<span>Capital Reset Sandbox</span>
+</div>
+<span class="text-[9px] font-label text-on-surface-variant uppercase">[RESET ENGINE]</span>
+</div>
+<p class="text-[11px] font-body text-on-surface-variant leading-relaxed">
+          Restore virtual portfolio to initial state or inject custom simulated margin for scenario testing.
+        </p>
+<div class="flex flex-col gap-1">
+<label class="text-[10px] font-label uppercase text-on-surface-variant">New Sim Capital (USD)</label>
+<div class="flex items-center bg-surface-container px-2.5 py-1.5 rounded">
+<span class="text-xs font-mono text-on-surface-variant mr-1">$</span>
+<input class="w-full bg-transparent text-xs font-mono font-bold text-on-surface focus:outline-none" id="inputResetCapital" type="text" value="100,000.00"/>
+<span class="text-[10px] font-label text-tertiary font-bold">VIRTUAL</span>
+</div>
+</div>
+<button class="w-full py-2 bg-surface-container-highest hover:bg-error-container/30 text-error hover:text-error rounded text-xs font-headline font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5" id="btnQuickReset" type="button">
+<span class="material-symbols-outlined text-sm">restart_alt</span>
+<span>Reset Simulation & Clear Trades</span>
+</button>
+</div>
+<!-- Active Autonomous Simulation Agents -->
+<div class="bg-surface-container-low rounded-xl p-3.5 shadow-md flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-xs font-headline font-bold uppercase text-on-surface">
+<span class="material-symbols-outlined text-sm text-primary">smart_toy</span>
+<span>Sim Strategy Agents</span>
+</div>
+<span class="text-[9px] font-label px-1 rounded bg-primary/20 text-primary font-bold">2 RUNNING</span>
+</div>
+<!-- Strategy Agent 1 -->
+<div class="p-2.5 bg-surface-container rounded flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="text-xs font-headline font-bold text-on-surface">Mean Revert SOL 15m</span>
+<span class="text-[9px] px-1.5 py-0.2 rounded bg-primary/20 text-primary font-mono font-bold">ACTIVE</span>
+</div>
+<div class="text-[10px] font-body text-on-surface-variant">
+            Synthetic Bollinger Bands + VWAP counter-trend execution.
+          </div>
+<div class="flex items-center justify-between text-[11px] font-mono pt-1">
+<span class="text-on-surface-variant text-[10px]">Sim PnL:</span>
+<span class="text-primary font-bold">+$12,410.00 [SIM]</span>
+</div>
+</div>
+<!-- Strategy Agent 2 -->
+<div class="p-2.5 bg-surface-container rounded flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="text-xs font-headline font-bold text-on-surface">Breakout Momentum v2</span>
+<span class="text-[9px] px-1.5 py-0.2 rounded bg-primary/20 text-primary font-mono font-bold">ACTIVE</span>
+</div>
+<div class="text-[10px] font-body text-on-surface-variant">
+            Donchian Highs channel breakout with trailing ATR stop.
+          </div>
+<div class="flex items-center justify-between text-[11px] font-mono pt-1">
+<span class="text-on-surface-variant text-[10px]">Sim PnL:</span>
+<span class="text-primary font-bold">+$8,940.00 [SIM]</span>
+</div>
+</div>
+<button class="w-full py-1.5 bg-surface-container hover:bg-surface-container-high rounded text-[11px] font-label font-medium text-on-surface transition-colors flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-xs">add</span>
+<span>Deploy New Paper Strategy</span>
+</button>
+</div>
+</div>
+</div>
+<!-- MODAL: CONFIRM CAPITAL RESET (Hidden by default, triggered via JS) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-surface-container-lowest/80 backdrop-blur-sm p-4" id="resetModal">
+<div class="bg-surface-container-low max-w-md w-full rounded-xl p-5 shadow-2xl flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary-container/40 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-2xl">restart_alt</span>
+</div>
+<div>
+<h3 class="text-sm font-headline font-bold uppercase tracking-tight text-on-surface">Reset Virtual Environment</h3>
+<p class="text-[11px] font-label text-tertiary">Paper Sandbox Capital Reset</p>
+</div>
+</div>
+<div class="p-3 bg-surface-container rounded text-xs font-body text-on-surface-variant space-y-2 leading-relaxed">
+<p>This will permanently clear all <strong>5 active simulated positions</strong>, cancel <strong>3 pending orders</strong>, and reset your simulated balance back to:</p>
+<div class="text-base font-headline font-bold text-primary font-mono bg-surface-container-high p-2 rounded text-center">
+          $100,000.00 VIRTUAL USD
+        </div>
+<p class="text-[10px] text-tertiary uppercase font-mono font-semibold">
+          • No real cryptocurrency or fiat assets will be touched.
+        </p>
+</div>
+<div class="flex items-center justify-end gap-2 text-xs font-headline font-bold uppercase">
+<button class="px-4 py-2 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" id="btnCancelModal" type="button">
+          Cancel
+        </button>
+<button class="px-4 py-2 rounded bg-tertiary text-on-tertiary hover:bg-tertiary/90 transition-all shadow-md" id="btnConfirmReset" type="button">
+          Confirm Reset
+        </button>
+</div>
+</div>
+</div>
+<!-- TOAST NOTIFICATION CONTAINER -->
+<div class="fixed bottom-5 right-5 z-50 hidden transition-all duration-300" id="toastNotification">
+<div class="bg-surface-container-high text-on-surface px-4 py-2.5 rounded-lg shadow-xl flex items-center gap-3 text-xs font-headline font-semibold">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span id="toastMessage">Simulated order queued successfully</span>
+</div>
+</div>
+<!-- INTERACTIVITY SCRIPT -->
+<script>
+    (function initPaperTradingApp() {
+      // Modal triggers
+      const modal = document.getElementById('resetModal');
+      const triggerBtn = document.getElementById('btnTriggerResetModal');
+      const quickResetBtn = document.getElementById('btnQuickReset');
+      const cancelModalBtn = document.getElementById('btnCancelModal');
+      const confirmResetBtn = document.getElementById('btnConfirmReset');
+      const toast = document.getElementById('toastNotification');
+      const toastMsg = document.getElementById('toastMessage');
+
+      function showToast(message) {
+        if (!toast || !toastMsg) return;
+        toastMsg.textContent = message;
+        toast.classList.remove('hidden');
+        setTimeout(() => {
+          toast.classList.add('hidden');
+        }, 3200);
+      }
+
+      function openModal() {
+        if (modal) modal.classList.remove('hidden');
+      }
+
+      function closeModal() {
+        if (modal) modal.classList.add('hidden');
+      }
+
+      if (triggerBtn) triggerBtn.addEventListener('click', openModal);
+      if (quickResetBtn) quickResetBtn.addEventListener('click', openModal);
+      if (cancelModalBtn) closeModalBtn.addEventListener('click', closeModal);
+
+      if (confirmResetBtn) {
+        confirmResetBtn.addEventListener('click', function() {
+          closeModal();
+          showToast('Virtual Balance Reset to $100,000.00 [SIM]. Portfolio cleared.');
+        });
+      }
+
+      // Order Submit Simulation
+      const submitOrderBtn = document.getElementById('btnSubmitSimOrder');
+      if (submitOrderBtn) {
+        submitOrderBtn.addEventListener('click', function() {
+          showToast('Simulated Limit Order: Buy 150 SOL at $194.25 filled via Synthetic Engine (0.02% slippage)');
+        });
+      }
+
+      // Order Side Switcher
+      const btnBuy = document.getElementById('btnSideBuy');
+      const btnSell = document.getElementById('btnSideSell');
+      if (btnBuy && btnSell) {
+        btnBuy.addEventListener('click', function() {
+          btnBuy.className = 'py-1.5 text-xs font-headline font-bold uppercase rounded bg-primary text-on-primary transition-all text-center shadow-sm';
+          btnSell.className = 'py-1.5 text-xs font-headline font-bold uppercase rounded text-on-surface-variant hover:text-on-surface transition-all text-center';
+        });
+        btnSell.addEventListener('click', function() {
+          btnSell.className = 'py-1.5 text-xs font-headline font-bold uppercase rounded bg-error text-on-error transition-all text-center shadow-sm';
+          btnBuy.className = 'py-1.5 text-xs font-headline font-bold uppercase rounded text-on-surface-variant hover:text-on-surface transition-all text-center';
+        });
+      }
+
+      // Pause simulation toggle
+      const btnPause = document.getElementById('btnPauseSim');
+      let isPaused = false;
+      if (btnPause) {
+        btnPause.addEventListener('click', function() {
+          isPaused = !isPaused;
+          if (isPaused) {
+            btnPause.innerHTML = '<span class="material-symbols-outlined text-xs">play_arrow</span><span>Resume</span>';
+            showToast('Simulation clock paused at Tick #4,812');
+          } else {
+            btnPause.innerHTML = '<span class="material-symbols-outlined text-xs">pause</span><span>Pause</span>';
+            showToast('Simulation clock resumed at 5x synthetic speed');
+          }
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>

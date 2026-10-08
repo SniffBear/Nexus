@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-on-surface":"#2d3136","on-secondary-fixed":"#001d34","on-tertiary-fixed":"#261900","on-primary-fixed-variant":"#00468a","on-secondary":"#003355","error":"#ffb4ab","on-tertiary-container":"#4e3800","on-error-container":"#ffdad6","surface-container-high":"#262a30","tertiary-container":"#d39e10","surface-container-highest":"#31353b","on-primary-fixed":"#001b3c","surface-dim":"#101419","secondary-fixed-dim":"#99cbff","surface-container-lowest":"#0a0f13","on-tertiary-fixed-variant":"#5c4300","surface-variant":"#31353b","primary-container":"#6ea8ff","surface-container-low":"#181c21","on-primary":"#003061","secondary-container":"#0072b5","on-surface":"#e0e2ea","inverse-primary":"#105eb0","inverse-surface":"#e0e2ea","on-surface-variant":"#c2c6d3","outline-variant":"#424751","tertiary-fixed":"#ffdea1","surface-container":"#1c2025","outline":"#8c919d","secondary-fixed":"#cfe5ff","on-error":"#690005","primary-fixed":"#d5e3ff","primary":"#a8c8ff","background":"#101419","on-primary-container":"#003c77","on-background":"#e0e2ea","tertiary":"#f7be37","surface-tint":"#a8c8ff","on-tertiary":"#402d00","surface-bright":"#36393f","error-container":"#93000a","tertiary-fixed-dim":"#f7be37","on-secondary-container":"#e8f1ff","primary-fixed-dim":"#a8c8ff","secondary":"#99cbff","surface":"#101419","on-secondary-fixed-variant":"#004a78"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{},"fontFamily":{"headline":["Geist"],"display":["Geist"],"body":["Geist"],"label":["Geist"]},"fontSize":{}}}}</script></head><body class="bg-surface font-body text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 flex flex-col"><div class="h-[44px] w-full px-3 flex items-center justify-between border-b border-outline-variant bg-surface-container-lowest"><div class="flex items-center gap-4"><div class="flex items-center gap-2 pr-2 border-r border-outline-variant"><div class="w-5 h-5 rounded bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary-container text-[14px]">token</span></div><span class="font-headline font-semibold text-xs tracking-wider text-on-surface uppercase">Nexus</span></div><nav class="hidden xl:flex items-center gap-1 text-[11px]" data-active-classes="bg-surface-container-high text-on-surface font-medium rounded-lg"><a class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="trade" href="#">Trade</a><a class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="markets" href="#">Markets</a><a class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="predict" href="#">Predict</a><a class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="social" href="#">Social</a><a class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="leaderboard" href="#">Leaderboard</a><a class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="earn" href="#">Earn</a><a class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="calendar" href="#">Calendar</a><a class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="co-invest" href="#">Co-Invest</a><a class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="agents" href="#">Agents</a><a aria-current="page" class="px-2.5 py-1 transition-colors bg-surface-container-high text-on-surface font-medium rounded-lg" data-path="nexus-settings" href="#">Settings</a></nav></div><div class="flex items-center gap-2.5"><div class="flex items-center px-2 py-1 bg-surface-container-low border border-outline-variant rounded gap-2 text-[11px] text-on-surface-variant w-44"><span class="material-symbols-outlined text-[13px]">search</span><span class="flex-1">Command palette</span><kbd class="px-1 py-0.5 rounded bg-surface-container text-[9px] border border-outline-variant text-on-surface-variant">⌘K</kbd></div><div class="flex items-center bg-surface-container-low border border-outline-variant rounded p-0.5 text-[10px]"><button class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-semibold" type="button">Paper</button><button class="px-2 py-0.5 text-on-surface-variant hover:text-on-surface" type="button">Live</button></div><button class="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-low border border-outline-variant rounded text-[11px] font-medium text-on-surface hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>0x71C...49b2</span><span class="material-symbols-outlined text-[12px] text-on-surface-variant">expand_more</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="h-[32px] w-full px-3 flex items-center justify-between border-b border-outline-variant bg-surface-container-low text-[11px]"><div class="flex items-center gap-5 overflow-x-auto whitespace-nowrap"><div class="flex items-center gap-1.5"><span class="font-medium text-on-surface">BTC/USD</span><span class="text-on-surface">$64,820.50</span><span class="text-secondary text-[10px]">+2.41%</span></div><div class="flex items-center gap-1.5 border-l border-outline-variant pl-4"><span class="font-medium text-on-surface">ETH/USD</span><span class="text-on-surface">$3,491.12</span><span class="text-secondary text-[10px]">+1.85%</span></div><div class="flex items-center gap-1.5 border-l border-outline-variant pl-4"><span class="font-medium text-on-surface">SOL/USD</span><span class="text-on-surface">$142.30</span><span class="text-error text-[10px]">-0.64%</span></div><div class="flex items-center gap-1.5 border-l border-outline-variant pl-4"><span class="font-medium text-on-surface">NEX/USD</span><span class="text-on-surface">$18.42</span><span class="text-secondary text-[10px]">+5.12%</span></div><div class="flex items-center gap-1.5 border-l border-outline-variant pl-4"><span class="font-medium text-on-surface">GAS</span><span class="text-on-surface-variant">14 Gwei</span></div></div><div class="flex items-center gap-3 pl-3 text-on-surface-variant"><span class="text-[10px]">24h Vol: $4.28B</span></div></div></header><aside class="fixed left-0 top-[76px] bottom-[32px] w-64 bg-surface-container-lowest border-r border-outline-variant z-40 flex flex-col justify-between p-3"><div class="space-y-4"><div class="px-2 py-1.5 text-[10px] font-semibold text-on-surface-variant uppercase tracking-wider">Settings Workspace</div><nav class="space-y-1 text-xs" data-active-classes="bg-surface-container-high text-on-surface font-medium rounded"><a aria-current="page" class="flex items-center gap-2.5 px-2.5 py-1.5 transition-colors bg-surface-container-high text-on-surface font-medium rounded" data-path="nexus-settings" href="#"><span class="material-symbols-outlined text-[16px]">tune</span><span>General Preferences</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="workspace-manager" href="#"><span class="material-symbols-outlined text-[16px]">dashboard_customize</span><span>Workspaces</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="api-keys" href="#"><span class="material-symbols-outlined text-[16px]">key</span><span>API & Webhooks</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="risk-controls" href="#"><span class="material-symbols-outlined text-[16px]">shield</span><span>Risk & Margin</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="notifications" href="#"><span class="material-symbols-outlined text-[16px]">notifications</span><span>Alerts & Routing</span></a></nav></div><div class="p-2.5 rounded bg-surface-container-low border border-outline-variant"><div class="flex items-center justify-between text-[11px] mb-1"><span class="text-on-surface-variant">Nexus AI Engine</span><span class="text-secondary text-[10px]">Online</span></div><div class="text-[10px] text-outline">v4.8.2-prod • Latency 9ms</div></div></aside><div class="pl-64"><main class="w-full min-h-screen pt-[76px] pb-[32px] bg-background"><div class="flex flex-col w-full">
+<!-- Sub-workspace container -->
+<div class="flex flex-1 w-full min-h-[calc(100vh-108px)]">
+<!-- LEFT SETTINGS NAVIGATION SIDEBAR (240px) -->
+<aside class="w-60 flex-shrink-0 flex flex-col justify-between bg-surface-container-lowest/80 border-r border-outline-variant">
+<div class="flex flex-col p-3 space-y-4">
+<!-- Section Header -->
+<div class="px-2 pt-1">
+<span class="text-[10px] font-semibold text-outline tracking-wider uppercase">Preferences & Workspace</span>
+</div>
+<!-- Navigation Menu -->
+<nav class="space-y-0.5 text-xs font-medium" id="settings-nav">
+<a class="nav-item active flex items-center justify-between px-2.5 py-1.5 rounded bg-surface-container text-on-surface" href="#general">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[15px] text-primary">tune</span>
+<span>General</span>
+</div>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</a>
+<a class="nav-item flex items-center justify-between px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" href="#account">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[15px]">badge</span>
+<span>Account</span>
+</div>
+</a>
+<a class="nav-item flex items-center justify-between px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" href="#security">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[15px] text-secondary">shield</span>
+<span>Security</span>
+</div>
+<span class="text-[9px] px-1.5 py-0.2 rounded bg-surface-container-high text-secondary font-mono">MFA Active</span>
+</a>
+<a class="nav-item flex items-center justify-between px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" href="#trading">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[15px]">candlestick_chart</span>
+<span>Trading</span>
+</div>
+</a>
+<a class="nav-item flex items-center justify-between px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" href="#ai">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[15px] text-tertiary">neurology</span>
+<span>AI Engine</span>
+</div>
+<span class="text-[9px] px-1 py-0.2 rounded bg-tertiary-container/30 text-tertiary font-mono">v4.2</span>
+</a>
+<a class="nav-item flex items-center justify-between px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" href="#notifications">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[15px]">notifications</span>
+<span>Notifications</span>
+</div>
+</a>
+<a class="nav-item flex items-center justify-between px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" href="#layout">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[15px]">view_quilt</span>
+<span>Layout</span>
+</div>
+<span class="text-[9px] px-1 py-0.2 rounded bg-surface-container-high text-on-surface-variant font-mono">Cockpit</span>
+</a>
+<a class="nav-item flex items-center justify-between px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" href="#privacy">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[15px]">visibility_off</span>
+<span>Privacy</span>
+</div>
+</a>
+<a class="nav-item flex items-center justify-between px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" href="#connected-apps">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[15px]">hub</span>
+<span>Connected Apps</span>
+</div>
+<span class="text-[9px] px-1 rounded bg-surface-container-high text-outline">3 active</span>
+</a>
+<a class="nav-item flex items-center justify-between px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" href="#agents">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[15px]">smart_toy</span>
+<span>Agents Fleet</span>
+</div>
+<span class="text-[9px] px-1 rounded bg-secondary-container/40 text-secondary">2 active</span>
+</a>
+<a class="nav-item flex items-center justify-between px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" href="#co-invest">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[15px]">account_balance</span>
+<span>Co-Invest</span>
+</div>
+<span class="text-[9px] text-outline font-mono">Consensus</span>
+</a>
+</nav>
+</div>
+<!-- Bottom Profile Hash & Action Block -->
+<div class="p-3 border-t border-outline-variant bg-surface-container-lowest">
+<div class="p-2 rounded bg-surface-container-low border border-outline-variant mb-2.5">
+<div class="flex items-center justify-between text-[10px] font-mono text-on-surface-variant mb-1">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              0x8f...3a9c
+            </span>
+<span class="text-secondary">11ms</span>
+</div>
+<div class="text-[9px] text-outline truncate">Solana Mainnet-Beta • RPC Phoenix</div>
+</div>
+<div class="grid grid-cols-2 gap-1.5 text-[10px]">
+<button class="py-1 px-1.5 rounded bg-surface-container hover:bg-surface-container-high border border-outline-variant text-on-surface-variant hover:text-on-surface text-center transition-colors" type="button">
+            Export JSON
+          </button>
+<button class="py-1 px-1.5 rounded bg-surface-container hover:bg-surface-container-high border border-outline-variant text-outline hover:text-error text-center transition-colors" type="button">
+            Defaults
+          </button>
+</div>
+</div>
+</aside>
+<!-- MAIN CONTENT CANVAS -->
+<div class="flex-1 overflow-y-auto bg-surface-dim/40 px-6 py-4 flex flex-col space-y-6">
+<!-- TOP HEADER & CONTROLS BAR -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3.5 border-b border-outline-variant gap-3">
+<div>
+<div class="flex items-center gap-1.5 text-[11px] text-outline mb-0.5">
+<span>Settings</span>
+<span>/</span>
+<span class="text-on-surface-variant">Workspace Preferences</span>
+<span class="text-[9px] px-1 py-0.2 rounded bg-surface-container-high text-outline ml-1 font-mono">REV 4.8.2</span>
+</div>
+<h1 class="text-base font-semibold text-on-surface tracking-tight">System & Workspace Configuration</h1>
+</div>
+<div class="flex items-center gap-2">
+<!-- Quick search filter -->
+<div class="flex items-center px-2.5 py-1 bg-surface-container-lowest border border-outline-variant rounded gap-2 text-xs text-on-surface-variant w-64 focus-within:border-primary-container transition-colors">
+<span class="material-symbols-outlined text-[14px]">search</span>
+<input class="bg-transparent border-none outline-none text-on-surface text-xs w-full placeholder:text-outline" placeholder="Filter settings (e.g. leverage, model)..." type="text"/>
+<kbd class="px-1 py-0.2 rounded bg-surface-container text-[9px] border border-outline-variant text-outline font-mono">/</kbd>
+</div>
+<button class="px-3 py-1 rounded bg-surface-container-low hover:bg-surface-container border border-outline-variant text-xs text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+            Discard
+          </button>
+<button class="flex items-center gap-1.5 px-3 py-1 rounded bg-primary text-on-primary hover:bg-primary-fixed-dim text-xs font-medium shadow-sm transition-colors" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary animate-pulse"></span>
+<span>Save Preferences</span>
+</button>
+</div>
+</div>
+<!-- SECTION 1: GENERAL -->
+<section class="rounded border border-outline-variant bg-surface-container-lowest overflow-hidden" id="general">
+<div class="px-3.5 py-2.5 bg-surface-container-low border-b border-outline-variant flex items-center justify-between">
+<div>
+<h2 class="text-xs font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[15px] text-primary">tune</span>
+              General Preferences
+            </h2>
+<p class="text-[11px] text-outline mt-0.5">System appearance, regional formatting, atomic clock sync, and default market environment.</p>
+</div>
+<span class="text-[10px] font-mono text-outline">SEC_01</span>
+</div>
+<div class="divide-y divide-outline-variant text-xs">
+<!-- Theme -->
+<div class="px-3.5 py-2 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors">
+<div class="w-1/3">
+<span class="font-medium text-on-surface block">Theme & Contrast</span>
+<span class="text-[11px] text-outline">Viewport luminance and edge rendering mode</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-low p-0.5 border border-outline-variant rounded">
+<button class="px-2.5 py-1 text-[11px] rounded bg-primary-container text-on-primary-container font-medium">Dark</button>
+<button class="px-2.5 py-1 text-[11px] rounded text-on-surface-variant hover:text-on-surface">Light</button>
+<button class="px-2.5 py-1 text-[11px] rounded text-on-surface-variant hover:text-on-surface">System</button>
+<button class="px-2.5 py-1 text-[11px] rounded text-on-surface-variant hover:text-on-surface font-mono">Terminal Hi-Con</button>
+</div>
+</div>
+<!-- Language -->
+<div class="px-3.5 py-2 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors">
+<div class="w-1/3">
+<span class="font-medium text-on-surface block">Language & Locale</span>
+<span class="text-[11px] text-outline">Application dictionary and localized prompt context</span>
+</div>
+<div class="flex items-center gap-2">
+<select class="bg-surface-container-low border border-outline-variant rounded px-2.5 py-1 text-xs text-on-surface outline-none focus:border-primary">
+<option selected="">English (US) — en_US</option>
+<option>English (UK) — en_GB</option>
+<option>日本語 (JP) — ja_JP</option>
+<option>Deutsch (DE) — de_DE</option>
+</select>
+<span class="text-[10px] font-mono text-outline">Telemetry: Latency 0ms</span>
+</div>
+</div>
+<!-- Base Currency -->
+<div class="px-3.5 py-2 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors">
+<div class="w-1/3">
+<span class="font-medium text-on-surface block">Base Valuation Currency</span>
+<span class="text-[11px] text-outline">Global reference denom for aggregate equity and PnL</span>
+</div>
+<div class="flex items-center gap-1.5">
+<select class="bg-surface-container-low border border-outline-variant rounded px-2.5 py-1 text-xs text-on-surface outline-none focus:border-primary">
+<option selected="">USD ($) — United States Dollar</option>
+<option>SOL (◎) — Native Solana</option>
+<option>EUR (€) — Euro Spec</option>
+<option>BTC (₿) — Bitcoin Satoshi Eq</option>
+</select>
+</div>
+</div>
+<!-- Timezone -->
+<div class="px-3.5 py-2 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors">
+<div class="w-1/3">
+<span class="font-medium text-on-surface block">Execution Timezone</span>
+<span class="text-[11px] text-outline">Candlestick session intervals and execution logs</span>
+</div>
+<div class="flex items-center gap-3">
+<select class="bg-surface-container-low border border-outline-variant rounded px-2.5 py-1 text-xs text-on-surface outline-none focus:border-primary">
+<option selected="">UTC-4 (America/New_York - NYSE/EDT)</option>
+<option>UTC+0 (Coordinated Universal Time / London)</option>
+<option>UTC+8 (Asia/Singapore - SGX)</option>
+<option>UTC+9 (Asia/Tokyo - TSE)</option>
+</select>
+<div class="flex items-center gap-1 text-[11px] font-mono text-secondary bg-secondary-container/20 px-2 py-0.5 rounded border border-secondary-container/40">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>14:32:08 UTC</span>
+</div>
+</div>
+</div>
+<!-- Number Format -->
+<div class="px-3.5 py-2 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors">
+<div class="w-1/3">
+<span class="font-medium text-on-surface block">Tabular Number Format</span>
+<span class="text-[11px] text-outline">Decimal and thousands separator presentation</span>
+</div>
+<div class="flex items-center gap-3 font-mono text-xs">
+<label class="flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="accent-primary" name="num_fmt" type="radio"/>
+<span class="text-on-surface">1,234.56</span>
+<span class="text-[10px] text-outline">(US Std)</span>
+</label>
+<label class="flex items-center gap-1.5 cursor-pointer">
+<input class="accent-primary" name="num_fmt" type="radio"/>
+<span class="text-on-surface-variant">1.234,56</span>
+<span class="text-[10px] text-outline">(EU Std)</span>
+</label>
+<label class="flex items-center gap-1.5 cursor-pointer">
+<input class="accent-primary" name="num_fmt" type="radio"/>
+<span class="text-on-surface-variant">1 234,56</span>
+<span class="text-[10px] text-outline">(SI Std)</span>
+</label>
+</div>
+</div>
+<!-- Default Market -->
+<div class="px-3.5 py-2 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors">
+<div class="w-1/3">
+<span class="font-medium text-on-surface block">Default Instrument</span>
+<span class="text-[11px] text-outline">Terminal boot-up anchor market</span>
+</div>
+<div class="flex items-center gap-2">
+<select class="bg-surface-container-low border border-outline-variant rounded px-2.5 py-1 text-xs text-on-surface outline-none focus:border-primary">
+<option selected="">SOL-PERP (Drift / Phoenix DEX)</option>
+<option>BTC-PERP (Dual Oracle Index)</option>
+<option>ETH-PERP (Spot Arb)</option>
+<option>JUP-PERP (Solana DEX Vol)</option>
+</select>
+<button class="p-1 rounded hover:bg-surface-container text-tertiary" title="Toggle Favorite Boot Market">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: TRADING & RISK -->
+<section class="rounded border border-outline-variant bg-surface-container-lowest overflow-hidden" id="trading">
+<div class="px-3.5 py-2.5 bg-surface-container-low border-b border-outline-variant flex items-center justify-between">
+<div>
+<h2 class="text-xs font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[15px] text-secondary">candlestick_chart</span>
+              Trading Execution & Risk Controls
+            </h2>
+<p class="text-[11px] text-outline mt-0.5">Order entry behaviors, safety guardrails, leverage defaults, and execution circuit breakers.</p>
+</div>
+<span class="text-[10px] font-mono text-outline">SEC_02</span>
+</div>
+<div class="divide-y divide-outline-variant text-xs">
+<!-- Default Order Type -->
+<div class="px-3.5 py-2 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors">
+<div class="w-1/3">
+<span class="font-medium text-on-surface block">Default Order Type</span>
+<span class="text-[11px] text-outline">Preselected order form entry mechanism</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-low p-0.5 border border-outline-variant rounded">
+<button class="px-2.5 py-1 text-[11px] rounded text-on-surface-variant hover:text-on-surface">Market</button>
+<button class="px-2.5 py-1 text-[11px] rounded bg-primary-container text-on-primary-container font-medium">Limit</button>
+<button class="px-2.5 py-1 text-[11px] rounded text-on-surface-variant hover:text-on-surface">Stop Limit</button>
+<button class="px-2.5 py-1 text-[11px] rounded text-on-surface-variant hover:text-on-surface font-mono">TWAP</button>
+</div>
+</div>
+<!-- Leverage & Sensitivity Meter -->
+<div class="px-3.5 py-2 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors">
+<div class="w-1/3">
+<span class="font-medium text-on-surface block">Default Leverage Multiplier</span>
+<span class="text-[11px] text-outline">Initial margin multiplier for new positions</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1 font-mono text-xs">
+<button class="px-2 py-0.5 rounded border border-outline-variant text-outline hover:text-on-surface">1x</button>
+<button class="px-2 py-0.5 rounded border border-outline-variant text-outline hover:text-on-surface">3x</button>
+<button class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-semibold border border-primary-container">5x</button>
+<button class="px-2 py-0.5 rounded border border-outline-variant text-outline hover:text-on-surface">10x</button>
+<button class="px-2 py-0.5 rounded border border-outline-variant text-error/80 hover:text-error">20x</button>
+</div>
+<div class="flex flex-col items-end">
+<div class="flex items-center gap-1.5 text-[10px] font-mono text-outline">
+<span>Liq Sensitivity</span>
+<span class="text-tertiary">Moderate (-18.4%)</span>
+</div>
+<div class="w-24 h-1 rounded bg-surface-container-high overflow-hidden mt-1">
+<div class="bg-tertiary h-full w-[35%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Position Mode -->
+<div class="px-3.5 py-2 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors">
+<div class="w-1/3">
+<span class="font-medium text-on-surface block">Position Accounting Mode</span>
+<span class="text-[11px] text-outline">Net positions or allow bidirectional simultaneous holds</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-low p-0.5 border border-outline-variant rounded text-xs">
+<button class="px-2.5 py-1 text-[11px] rounded bg-surface-container-high text-on-surface font-medium">One-Way (Netting)</button>
+<button class="px-2.5 py-1 text-[11px] rounded text-on-surface-variant hover:text-on-surface">Hedge Mode (Multi-Directional)</button>
+</div>
+</div>
+<!-- Order Confirmation Cryptographic Popup -->
+<div class="px-3.5 py-2 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors">
+<div class="w-2/3">
+<span class="font-medium text-on-surface block">High-Value Cryptographic Confirmation</span>
+<span class="text-[11px] text-outline">Require modal approval & simulation signature before routing orders exceeding $5,000 USD</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary-container after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<!-- TP / SL Defaults -->
+<div class="px-3.5 py-2 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors">
+<div class="w-1/3">
+<span class="font-medium text-on-surface block">Automatic TP / SL Brackets</span>
+<span class="text-[11px] text-outline">Auto-attach trailing or static brackets upon fill</span>
+</div>
+<div class="flex items-center gap-3 font-mono text-xs">
+<div class="flex items-center gap-1 bg-surface-container-low border border-outline-variant rounded px-2 py-0.5">
+<span class="text-secondary text-[11px]">TP:</span>
+<input class="w-14 bg-transparent text-right outline-none text-on-surface" type="text" value="+15.0%"/>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-low border border-outline-variant rounded px-2 py-0.5">
+<span class="text-error text-[11px]">SL:</span>
+<input class="w-14 bg-transparent text-right outline-none text-on-surface" type="text" value="-5.0%"/>
+</div>
+<label class="flex items-center gap-1.5 text-[11px] text-on-surface-variant font-sans cursor-pointer">
+<input checked="" class="accent-primary rounded" type="checkbox"/>
+<span>Trailing Stop</span>
+</label>
+</div>
+</div>
+<!-- Slippage Tolerance -->
+<div class="px-3.5 py-2 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors">
+<div class="w-1/3">
+<span class="font-medium text-on-surface block">Max Slippage Tolerance</span>
+<span class="text-[11px] text-outline">Revert route if execution price deviates past threshold</span>
+</div>
+<div class="flex items-center gap-1.5 font-mono text-xs">
+<button class="px-2 py-0.5 rounded border border-outline-variant text-outline hover:text-on-surface">5 bps</button>
+<button class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-semibold border border-primary-container">15 bps (Default)</button>
+<button class="px-2 py-0.5 rounded border border-outline-variant text-outline hover:text-on-surface">50 bps</button>
+<div class="flex items-center border border-outline-variant rounded px-1.5 py-0.5 bg-surface-container-low">
+<span class="text-[10px] text-outline mr-1 font-sans">Custom</span>
+<input class="w-10 bg-transparent text-right outline-none text-on-surface text-[11px]" type="text" value="0.15%"/>
+</div>
+</div>
+</div>
+<!-- Risk Limits / Killswitch -->
+<div class="px-3.5 py-2 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors">
+<div class="w-1/3">
+<span class="font-medium text-on-surface block">Circuit Breakers & Limits</span>
+<span class="text-[11px] text-outline">Hardware-grade killswitch boundaries</span>
+</div>
+<div class="flex items-center gap-4 text-xs font-mono">
+<div class="flex items-center gap-1.5">
+<span class="text-[11px] text-outline font-sans">Max Order Cap:</span>
+<span class="px-1.5 py-0.5 bg-surface-container border border-outline-variant rounded text-on-surface">$50,000</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-[11px] text-error font-sans">Daily Halt:</span>
+<span class="px-1.5 py-0.5 bg-error-container/30 border border-error/30 text-error rounded">-8.0% PnL</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: AI INTELLIGENCE & AGENTS -->
+<section class="rounded border border-outline-variant bg-surface-container-lowest overflow-hidden" id="ai">
+<div class="px-3.5 py-2.5 bg-surface-container-low border-b border-outline-variant flex items-center justify-between">
+<div>
+<h2 class="text-xs font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[15px] text-tertiary">psychology</span>
+              Nexus AI Intelligence Engine
+            </h2>
+<p class="text-[11px] text-outline mt-0.5">Configure reasoning models, data ingestion depth, auditable receipts, and autonomous execution boundaries.</p>
+</div>
+<span class="text-[10px] font-mono text-outline">SEC_03</span>
+</div>
+<div class="divide-y divide-outline-variant text-xs">
+<!-- Default Model Selection -->
+<div class="px-3.5 py-2 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors">
+<div class="w-1/3">
+<span class="font-medium text-on-surface block">Primary Reasoning Model</span>
+<span class="text-[11px] text-outline">Underlying LLM powering market copilots & trade alerts</span>
+</div>
+<div class="flex items-center gap-2">
+<select class="bg-surface-container-low border border-outline-variant rounded px-2.5 py-1 text-xs text-on-surface outline-none focus:border-primary">
+<option selected="">Nexus Financial Quant v4.2 (Claude 3.7 Sonnet / Fine-tuned)</option>
+<option>DeepSeek R1 Financial Specialization (Local Fallback)</option>
+<option>OpenAI o3-Mini High Reasoning Tier</option>
+<option>Custom Nexus On-Chain Llama 3 70B</option>
+</select>
+<span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-surface-container text-secondary border border-outline-variant">180ms</span>
+</div>
+</div>
+<!-- Signal Style -->
+<div class="px-3.5 py-2 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors">
+<div class="w-1/3">
+<span class="font-medium text-on-surface block">Response & Signal Style</span>
+<span class="text-[11px] text-outline">Synthesized analytical density and verbosity level</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-low p-0.5 border border-outline-variant rounded text-xs">
+<button class="px-2.5 py-1 text-[11px] rounded bg-primary-container text-on-primary-container font-medium">Actionable Alpha Only</button>
+<button class="px-2.5 py-1 text-[11px] rounded text-on-surface-variant hover:text-on-surface">Comprehensive Research</button>
+<button class="px-2.5 py-1 text-[11px] rounded text-on-surface-variant hover:text-on-surface font-mono">Quant Probabilities</button>
+</div>
+</div>
+<!-- Ingestion Sources Checklist Matrix -->
+<div class="px-3.5 py-2.5 flex items-start justify-between hover:bg-surface-container-low/40 transition-colors">
+<div class="w-1/3">
+<span class="font-medium text-on-surface block">Active Data Ingestion Streams</span>
+<span class="text-[11px] text-outline">Real-time vector pipeline sources parsed by engine</span>
+</div>
+<div class="grid grid-cols-3 gap-2 w-2/3">
+<label class="flex items-center gap-1.5 text-[11px] text-on-surface bg-surface-container-low p-1.5 rounded border border-outline-variant cursor-pointer">
+<input checked="" class="accent-primary rounded" type="checkbox"/>
+<span class="font-mono text-[10px]">Solana RPC Stream</span>
+</label>
+<label class="flex items-center gap-1.5 text-[11px] text-on-surface bg-surface-container-low p-1.5 rounded border border-outline-variant cursor-pointer">
+<input checked="" class="accent-primary rounded" type="checkbox"/>
+<span class="font-mono text-[10px]">Pyth Low-Latency Oracles</span>
+</label>
+<label class="flex items-center gap-1.5 text-[11px] text-on-surface bg-surface-container-low p-1.5 rounded border border-outline-variant cursor-pointer">
+<input checked="" class="accent-primary rounded" type="checkbox"/>
+<span class="font-mono text-[10px]">EDGAR SEC Form 4 / 8-K</span>
+</label>
+<label class="flex items-center gap-1.5 text-[11px] text-on-surface bg-surface-container-low p-1.5 rounded border border-outline-variant cursor-pointer">
+<input checked="" class="accent-primary rounded" type="checkbox"/>
+<span class="font-mono text-[10px]">Bloomberg Wire Synced</span>
+</label>
+<label class="flex items-center gap-1.5 text-[11px] text-on-surface bg-surface-container-low p-1.5 rounded border border-outline-variant cursor-pointer">
+<input class="accent-primary rounded" type="checkbox"/>
+<span class="font-mono text-[10px]">X / Twitter Crypto Pulse</span>
+</label>
+<label class="flex items-center gap-1.5 text-[11px] text-on-surface bg-surface-container-low p-1.5 rounded border border-outline-variant cursor-pointer">
+<input checked="" class="accent-primary rounded" type="checkbox"/>
+<span class="font-mono text-[10px]">Whales > 10k SOL Tracker</span>
+</label>
+</div>
+</div>
+<!-- Cryptographic Receipts Mandatory -->
+<div class="px-3.5 py-2 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors">
+<div class="w-2/3">
+<span class="font-medium text-on-surface block">Mandatory Proof-of-Source Receipts</span>
+<span class="text-[11px] text-outline">Enforce cryptographic oracle hash & timestamp verification on all trade cards before prompt generation</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary-container after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<!-- Agent Autonomous Execution Permissions -->
+<div class="px-3.5 py-2 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors">
+<div class="w-1/3">
+<span class="font-medium text-on-surface block">Autonomous Agent Permissions</span>
+<span class="text-[11px] text-outline">Scope boundary for algorithmic execution agents</span>
+</div>
+<div class="flex items-center gap-3 font-mono text-xs">
+<label class="flex items-center gap-1.5 cursor-pointer">
+<input class="accent-primary" name="agent_perm" type="radio"/>
+<span class="text-on-surface-variant font-sans text-[11px]">Read-Only</span>
+</label>
+<label class="flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="accent-primary" name="agent_perm" type="radio"/>
+<span class="text-on-surface font-sans text-[11px]">Staged Approval (Signature Req.)</span>
+</label>
+<label class="flex items-center gap-1.5 cursor-pointer">
+<input class="accent-primary" name="agent_perm" type="radio"/>
+<span class="text-error font-sans text-[11px]">Autonomous (Max $2,500)</span>
+</label>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: SECURITY & CREDENTIALS -->
+<section class="rounded border border-outline-variant bg-surface-container-lowest overflow-hidden" id="security">
+<div class="px-3.5 py-2.5 bg-surface-container-low border-b border-outline-variant flex items-center justify-between">
+<div>
+<h2 class="text-xs font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[15px] text-secondary">shield</span>
+              Security & Cryptographic Access
+            </h2>
+<p class="text-[11px] text-outline mt-0.5">Account protection, hardware passkeys, active session telemetry, and programmatic API permissions.</p>
+</div>
+<span class="text-[10px] font-mono text-outline">SEC_04</span>
+</div>
+<div class="divide-y divide-outline-variant text-xs">
+<!-- Password Rotation -->
+<div class="px-3.5 py-2 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors">
+<div class="w-1/3">
+<span class="font-medium text-on-surface block">Master Account Password</span>
+<span class="text-[11px] text-outline">Last modified 14 days ago via WebAuthn</span>
+</div>
+<button class="px-2.5 py-1 rounded bg-surface-container-low hover:bg-surface-container border border-outline-variant text-xs text-on-surface transition-colors">
+              Rotate Password
+            </button>
+</div>
+<!-- MFA -->
+<div class="px-3.5 py-2 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors">
+<div class="w-1/3">
+<span class="font-medium text-on-surface block">Multi-Factor Authentication (MFA)</span>
+<span class="text-[11px] text-outline">Hardware Token & TOTP Authenticator</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 text-[11px] font-mono text-secondary bg-secondary-container/20 px-2 py-0.5 rounded border border-secondary-container/40">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+                FIDO2 / TOTP Enabled
+              </span>
+<button class="px-2.5 py-1 rounded bg-surface-container-low hover:bg-surface-container border border-outline-variant text-xs text-on-surface transition-colors">
+                Configure MFA
+              </button>
+</div>
+</div>
+<!-- Passkeys / WebAuthn -->
+<div class="px-3.5 py-2 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors">
+<div class="w-1/3">
+<span class="font-medium text-on-surface block">Passkeys (WebAuthn)</span>
+<span class="text-[11px] text-outline">Biometric zero-trust authorization</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-[11px] text-on-surface-variant font-mono">2 Passkeys Registered (MacBook Touch ID, YubiKey 5C)</span>
+<button class="px-2.5 py-1 rounded bg-surface-container-low hover:bg-surface-container border border-outline-variant text-xs text-primary transition-colors">
+                + Register Key
+              </button>
+</div>
+</div>
+<!-- Active Sessions List -->
+<div class="px-3.5 py-2.5 hover:bg-surface-container-low/40 transition-colors">
+<div class="flex items-center justify-between mb-2">
+<span class="font-medium text-on-surface block">Active Authenticated Sessions</span>
+<button class="text-[11px] text-error hover:underline">Revoke All Except Current</button>
+</div>
+<div class="space-y-1.5 font-mono text-[11px]">
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low border border-outline-variant">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[15px] text-secondary">laptop_mac</span>
+<div>
+<span class="text-on-surface font-semibold">Chrome 122 on macOS Sonoma</span>
+<span class="text-outline ml-2">IP 72.134.19.4 • New York, US</span>
+</div>
+</div>
+<span class="text-secondary text-[10px] font-sans px-1.5 py-0.2 rounded bg-secondary-container/30">Active Now</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low border border-outline-variant">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[15px] text-outline">smartphone</span>
+<div>
+<span class="text-on-surface">Nexus Mobile iOS 17</span>
+<span class="text-outline ml-2">IP 174.209.11.2 • Last active 42m ago</span>
+</div>
+</div>
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high border border-outline-variant text-error text-[10px] font-sans">
+                  Revoke
+                </button>
+</div>
+</div>
+</div>
+<!-- API Keys -->
+<div class="px-3.5 py-2 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors">
+<div class="w-1/3">
+<span class="font-medium text-on-surface block">High-Frequency API Keys</span>
+<span class="text-[11px] text-outline">Direct low-latency WebSocket & RPC credentials</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-2 font-mono text-xs bg-surface-container-low px-2 py-1 rounded border border-outline-variant">
+<span class="text-on-surface">PROD_EXEC_RO_01</span>
+<span class="text-[10px] text-outline">[Read, Paper Execute]</span>
+</div>
+<button class="px-2 py-1 rounded bg-surface-container-low hover:bg-surface-container border border-outline-variant text-xs text-error transition-colors">
+                Revoke
+              </button>
+<button class="px-2.5 py-1 rounded bg-surface-container-low hover:bg-surface-container border border-outline-variant text-xs text-on-surface transition-colors">
+                + Generate Key
+              </button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: LAYOUT & WORKSPACE PRESETS -->
+<section class="rounded border border-outline-variant bg-surface-container-lowest overflow-hidden mb-6" id="layout">
+<div class="px-3.5 py-2.5 bg-surface-container-low border-b border-outline-variant flex items-center justify-between">
+<div>
+<h2 class="text-xs font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[15px] text-primary">view_quilt</span>
+              Workspace Layout & Display Density
+            </h2>
+<p class="text-[11px] text-outline mt-0.5">Configure viewport layout, panel dock states, and telemetry tickers.</p>
+</div>
+<span class="text-[10px] font-mono text-outline">SEC_05</span>
+</div>
+<div class="divide-y divide-outline-variant text-xs">
+<!-- Workspace Presets Grid -->
+<div class="px-3.5 py-2.5 hover:bg-surface-container-low/40 transition-colors">
+<span class="font-medium text-on-surface block mb-2">Workspace Layout Blueprint</span>
+<div class="grid grid-cols-4 sm:grid-cols-7 gap-2">
+<button class="flex flex-col items-center p-2 rounded bg-surface-container border-2 border-primary-container text-left transition-all">
+<span class="material-symbols-outlined text-[18px] text-primary mb-1">dashboard</span>
+<span class="text-[11px] font-semibold text-on-surface">Cockpit</span>
+<span class="text-[9px] text-secondary font-mono mt-0.5">Default Active</span>
+</button>
+<button class="flex flex-col items-center p-2 rounded bg-surface-container-low hover:bg-surface-container border border-outline-variant text-left transition-all">
+<span class="material-symbols-outlined text-[18px] text-outline mb-1">speed</span>
+<span class="text-[11px] font-medium text-on-surface-variant">Scalper</span>
+<span class="text-[9px] text-outline font-mono mt-0.5">Book focus</span>
+</button>
+<button class="flex flex-col items-center p-2 rounded bg-surface-container-low hover:bg-surface-container border border-outline-variant text-left transition-all">
+<span class="material-symbols-outlined text-[18px] text-outline mb-1">trending_up</span>
+<span class="text-[11px] font-medium text-on-surface-variant">Swing</span>
+<span class="text-[9px] text-outline font-mono mt-0.5">Chart heavy</span>
+</button>
+<button class="flex flex-col items-center p-2 rounded bg-surface-container-low hover:bg-surface-container border border-outline-variant text-left transition-all">
+<span class="material-symbols-outlined text-[18px] text-outline mb-1">pie_chart</span>
+<span class="text-[11px] font-medium text-on-surface-variant">Portfolio</span>
+<span class="text-[9px] text-outline font-mono mt-0.5">Holdings</span>
+</button>
+<button class="flex flex-col items-center p-2 rounded bg-surface-container-low hover:bg-surface-container border border-outline-variant text-left transition-all">
+<span class="material-symbols-outlined text-[18px] text-outline mb-1">biotech</span>
+<span class="text-[11px] font-medium text-on-surface-variant">Research</span>
+<span class="text-[9px] text-outline font-mono mt-0.5">SEC / Alpha</span>
+</button>
+<button class="flex flex-col items-center p-2 rounded bg-surface-container-low hover:bg-surface-container border border-outline-variant text-left transition-all">
+<span class="material-symbols-outlined text-[18px] text-outline mb-1">forum</span>
+<span class="text-[11px] font-medium text-on-surface-variant">Social</span>
+<span class="text-[9px] text-outline font-mono mt-0.5">Copy / Chat</span>
+</button>
+<button class="flex flex-col items-center p-2 rounded bg-surface-container-low hover:bg-surface-container border border-outline-variant text-left transition-all">
+<span class="material-symbols-outlined text-[18px] text-outline mb-1">crop_square</span>
+<span class="text-[11px] font-medium text-on-surface-variant">Minimal</span>
+<span class="text-[9px] text-outline font-mono mt-0.5">Zen stream</span>
+</button>
+</div>
+</div>
+<!-- Visual Density -->
+<div class="px-3.5 py-2 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors">
+<div class="w-1/3">
+<span class="font-medium text-on-surface block">Visual Density & Cell Height</span>
+<span class="text-[11px] text-outline">Row padding and typography scale</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-low p-0.5 border border-outline-variant rounded">
+<button class="px-2.5 py-1 text-[11px] rounded bg-primary-container text-on-primary-container font-medium">Compact (py-1, 11px font)</button>
+<button class="px-2.5 py-1 text-[11px] rounded text-on-surface-variant hover:text-on-surface">Balanced (py-1.5, 12px)</button>
+<button class="px-2.5 py-1 text-[11px] rounded text-on-surface-variant hover:text-on-surface">Comfortable</button>
+</div>
+</div>
+<!-- Panel Lock State -->
+<div class="px-3.5 py-2 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors">
+<div class="w-2/3">
+<span class="font-medium text-on-surface block">Lock Workspace Panel Positions</span>
+<span class="text-[11px] text-outline">Prevents accidental drag-and-drop or resize handles during live trading sessions</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary-container after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<!-- Top Market Ticker Strip -->
+<div class="px-3.5 py-2 flex items-center justify-between hover:bg-surface-container-low/40 transition-colors">
+<div class="w-2/3">
+<span class="font-medium text-on-surface block">Market Ticker Strip</span>
+<span class="text-[11px] text-outline">Display sub-header 32px streaming ticker strip (BTC, ETH, SOL, NEX, Gas Gwei)</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary-container after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<!-- Panel Visibility Matrix -->
+<div class="px-3.5 py-2.5 hover:bg-surface-container-low/40 transition-colors">
+<div class="flex items-center justify-between mb-2">
+<span class="font-medium text-on-surface block">Active Panel Visibility Matrix</span>
+<span class="text-[11px] text-outline">Checked modules appear in Cockpit</span>
+</div>
+<div class="grid grid-cols-4 sm:grid-cols-7 gap-2">
+<label class="flex items-center gap-1.5 text-[11px] bg-surface-container-low p-1.5 rounded border border-outline-variant cursor-pointer text-on-surface">
+<input checked="" class="accent-primary rounded" type="checkbox"/>
+<span>Order Book</span>
+</label>
+<label class="flex items-center gap-1.5 text-[11px] bg-surface-container-low p-1.5 rounded border border-outline-variant cursor-pointer text-on-surface">
+<input checked="" class="accent-primary rounded" type="checkbox"/>
+<span>Depth Chart</span>
+</label>
+<label class="flex items-center gap-1.5 text-[11px] bg-surface-container-low p-1.5 rounded border border-outline-variant cursor-pointer text-on-surface">
+<input checked="" class="accent-primary rounded" type="checkbox"/>
+<span>Recent Trades</span>
+</label>
+<label class="flex items-center gap-1.5 text-[11px] bg-surface-container-low p-1.5 rounded border border-outline-variant cursor-pointer text-on-surface">
+<input checked="" class="accent-primary rounded" type="checkbox"/>
+<span>AI Receipts</span>
+</label>
+<label class="flex items-center gap-1.5 text-[11px] bg-surface-container-low p-1.5 rounded border border-outline-variant cursor-pointer text-on-surface">
+<input checked="" class="accent-primary rounded" type="checkbox"/>
+<span>PnL Curve</span>
+</label>
+<label class="flex items-center gap-1.5 text-[11px] bg-surface-container-low p-1.5 rounded border border-outline-variant cursor-pointer text-on-surface">
+<input checked="" class="accent-primary rounded" type="checkbox"/>
+<span>Alpha Feed</span>
+</label>
+<label class="flex items-center gap-1.5 text-[11px] bg-surface-container-low p-1.5 rounded border border-outline-variant cursor-pointer text-on-surface">
+<input class="accent-primary rounded" type="checkbox"/>
+<span>Copilot Chat</span>
+</label>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for sidebar tab activation & smooth scrolling
+  document.querySelectorAll('#settings-nav .nav-item').forEach(item => {
+    item.addEventListener('click', (e) => {
+      document.querySelectorAll('#settings-nav .nav-item').forEach(el => {
+        el.classList.remove('bg-surface-container', 'text-on-surface');
+        el.classList.add('text-on-surface-variant');
+      });
+      item.classList.add('bg-surface-container', 'text-on-surface');
+      item.classList.remove('text-on-surface-variant');
+    });
+  });
+</script></main></div><footer class="fixed bottom-0 left-0 right-0 h-[32px] bg-surface-container-lowest border-t border-outline-variant z-50 flex items-center justify-between px-3 text-[11px] text-on-surface-variant"><div class="flex items-center gap-4"><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary"></span><span>Engine Operational</span></div><div class="flex items-center gap-1 border-l border-outline-variant pl-3"><span class="material-symbols-outlined text-[13px]">speed</span><span>TPS: 14,210</span></div><div class="flex items-center gap-1 border-l border-outline-variant pl-3"><span class="material-symbols-outlined text-[13px]">memory</span><span>Memory: 42%</span></div></div><div class="flex items-center gap-3"><span class="hover:text-on-surface cursor-pointer">Nexus Docs</span><span class="hover:text-on-surface cursor-pointer">Status</span><span class="text-outline">UTC 14:32:09</span></div></footer></body></html>

@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Nexus Global Terminal</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"background":"#101419","secondary":"#99cbff","surface-container-lowest":"#0a0f13","outline":"#8c919d","secondary-container":"#0072b5","primary-fixed":"#d5e3ff","on-background":"#e0e2ea","secondary-fixed":"#cfe5ff","surface-dim":"#101419","secondary-fixed-dim":"#99cbff","on-tertiary-fixed":"#261900","surface-tint":"#a8c8ff","tertiary-container":"#d39e10","on-secondary-container":"#e8f1ff","on-surface":"#e0e2ea","on-surface-variant":"#c2c6d3","tertiary-fixed":"#ffdea1","tertiary-fixed-dim":"#f7be37","error-container":"#93000a","surface-bright":"#36393f","primary-container":"#6ea8ff","on-primary-fixed":"#001b3c","on-secondary":"#003355","on-error":"#690005","inverse-primary":"#105eb0","primary-fixed-dim":"#a8c8ff","on-secondary-fixed":"#001d34","primary":"#a8c8ff","tertiary":"#f7be37","on-primary-fixed-variant":"#00468a","surface":"#101419","on-error-container":"#ffdad6","inverse-on-surface":"#2d3136","on-tertiary":"#402d00","on-tertiary-fixed-variant":"#5c4300","on-tertiary-container":"#4e3800","on-primary":"#003061","surface-container-low":"#181c21","surface-container":"#1c2025","surface-container-highest":"#31353b","outline-variant":"#424751","surface-container-high":"#262a30","on-secondary-fixed-variant":"#004a78","inverse-surface":"#e0e2ea","on-primary-container":"#003c77","error":"#ffb4ab","surface-variant":"#31353b","text-primary":"#F4F6F8","text-secondary":"#9BA6B2","text-muted":"#66717D","accent":"#6EA8FF","positive":"#39D98A","negative":"#FF5C6C","warning":"#F5B94C","info":"#69B7FF","surface-elevated":"#171C22","border":"#252C34","border-subtle":"#1B2128"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{},fontFamily:{"headline":["Geist"],"display":["Geist"],"body":["Geist"],"label":["Geist"],"numeric":["JetBrains Mono"],"numeric-lg":["JetBrains Mono"],"numeric-sm":["JetBrains Mono"]},fontSize:{}}}};</script></head><body class="bg-background font-body text-on-surface antialiased select-none"><header class="fixed top-0 left-0 right-0 z-50 flex flex-col bg-surface border-b border-border"><div class="h-11 w-full px-3 flex items-center justify-between border-b border-border-subtle bg-background"><div class="flex items-center space-x-3"><div class="flex items-center space-x-1 pr-3 border-r border-border"><div class="w-5 h-5 rounded bg-surface-elevated border border-border flex items-center justify-center"><div class="w-2 h-2 rounded-full bg-accent shadow-[0_0_8px_#6EA8FF]"></div></div><span class="text-xs uppercase tracking-wider text-text-primary font-bold">NEXUS</span><span class="px-1 py-0.5 rounded text-[9px] font-mono tracking-tight bg-surface-container text-text-secondary border border-border">v2.4</span></div><nav class="hidden xl:flex items-center space-x-4 h-11" data-active-classes="text-accent border-b-2 border-accent font-semibold"><a class="h-11 inline-flex items-center text-on-surface-variant hover:text-on-surface transition-colors text-xs border-b-2 border-transparent" data-path="trade" href="#">Trade</a><a class="h-11 inline-flex items-center text-on-surface-variant hover:text-on-surface transition-colors text-xs border-b-2 border-transparent" data-path="markets" href="#">Markets</a><a class="h-11 inline-flex items-center text-on-surface-variant hover:text-on-surface transition-colors text-xs border-b-2 border-transparent" data-path="predict" href="#">Predict</a><a class="h-11 inline-flex items-center text-on-surface-variant hover:text-on-surface transition-colors text-xs border-b-2 border-transparent" data-path="social" href="#">Social</a><a class="h-11 inline-flex items-center text-on-surface-variant hover:text-on-surface transition-colors text-xs border-b-2 border-transparent" data-path="leaderboard" href="#">Leaderboard</a><a class="h-11 inline-flex items-center text-accent border-b-2 border-accent font-semibold transition-colors text-xs" data-path="earn" href="#">Earn</a><a class="h-11 inline-flex items-center text-on-surface-variant hover:text-on-surface transition-colors text-xs border-b-2 border-transparent" data-path="calendar" href="#">Calendar</a><a class="h-11 inline-flex items-center text-on-surface-variant hover:text-on-surface transition-colors text-xs border-b-2 border-transparent" data-path="co-invest" href="#">Co-Invest</a><a class="h-11 inline-flex items-center text-on-surface-variant hover:text-on-surface transition-colors text-xs border-b-2 border-transparent" data-path="agents" href="#">Agents</a></nav></div><div class="flex items-center space-x-3"><button class="h-7 px-2 bg-surface border border-border rounded flex items-center space-x-2 hover:bg-surface-elevated text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[15px] text-text-muted">search</span><span class="text-[10px] text-text-muted hidden sm:inline">Search</span><kbd class="px-1 rounded bg-surface-container-high border border-border text-[9px] font-mono text-text-secondary">⌘K</kbd></button><div class="flex items-center space-x-1.5 px-2 py-0.5 rounded border border-warning/30 bg-warning/10 text-warning"><span class="w-1.5 h-1.5 rounded-full bg-warning animate-pulse"></span><span class="text-[10px] uppercase tracking-wider font-semibold">PAPER MODE</span></div><div class="hidden md:flex items-center space-x-1.5 px-2 py-1 rounded bg-surface-elevated border border-border text-text-secondary"><span class="w-2 h-2 rounded-full bg-positive shadow-[0_0_6px_#39D98A]"></span><span class="text-[11px] font-mono">Connected</span><span class="text-[11px] font-mono text-positive">12ms</span></div><div class="h-7 px-2 bg-surface border border-border rounded flex items-center space-x-2"><span class="text-[11px] font-mono text-text-primary">0x71a...9b4</span><span class="w-px h-3.5 bg-border"></span><span class="text-[11px] font-mono text-accent">$42,850.20</span><button class="flex items-center text-text-muted hover:text-on-surface"><span class="material-symbols-outlined text-[14px]">content_copy</span></button></div><button class="relative h-7 w-7 rounded bg-surface border border-border flex items-center justify-center text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[16px]">notifications</span><span class="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-accent"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="h-8 w-full px-3 flex items-center justify-between bg-surface-dim overflow-x-auto overflow-y-hidden border-b border-border-subtle"><div class="flex items-center space-x-5 whitespace-nowrap"><div class="flex items-center space-x-1.5"><span class="text-[10px] text-text-muted uppercase font-semibold">FEED</span><span class="w-1.5 h-1.5 rounded-full bg-positive"></span></div><div class="flex items-center space-x-1 text-[11px] font-mono"><span class="font-semibold text-text-primary">SOL</span><span class="text-on-surface">$168.05</span><span class="text-positive">+2.40%</span></div><div class="flex items-center space-x-1 text-[11px] font-mono"><span class="font-semibold text-text-primary">BTC</span><span class="text-on-surface">$83,027.00</span><span class="text-negative">-1.06%</span></div><div class="flex items-center space-x-1 text-[11px] font-mono"><span class="font-semibold text-text-primary">ETH</span><span class="text-on-surface">$3,241.00</span><span class="text-positive">+1.20%</span></div><div class="flex items-center space-x-1 text-[11px] font-mono"><span class="font-semibold text-text-primary">JUP</span><span class="text-on-surface">$1.14</span><span class="text-positive">+5.70%</span></div><div class="flex items-center space-x-1 text-[11px] font-mono"><span class="font-semibold text-text-primary">HYPE</span><span class="text-on-surface">$88.07</span><span class="text-negative">-2.44%</span></div><div class="flex items-center space-x-1 text-[11px] font-mono"><span class="font-semibold text-text-primary">NVDA</span><span class="text-on-surface">$237.95</span><span class="text-negative">-0.94%</span></div><div class="flex items-center space-x-1 text-[11px] font-mono"><span class="font-semibold text-text-primary">TSLA</span><span class="text-on-surface">$377.96</span><span class="text-negative">-0.19%</span></div></div><div class="hidden md:flex items-center space-x-3 whitespace-nowrap pl-4"><span class="text-[11px] font-mono text-text-muted">24h Vol: <span class="text-text-primary">$2.48B</span></span><span class="text-[11px] font-mono text-text-muted">Gas: <span class="text-positive">18 Gwei</span></span><span class="px-1.5 py-0.5 rounded text-[10px] font-mono border border-border bg-surface-elevated text-warning">SAMPLE / PAPER</span></div></div></header><main class="w-full pt-[76px] pb-[32px] bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Portfolio Ribbon / Telemetry Strip -->
+<section class="bg-surface-dim px-3 py-2 border-b border-border-subtle flex flex-wrap items-center justify-between gap-y-2 text-xs">
+<div class="flex items-center flex-wrap gap-x-6 gap-y-1">
+<!-- Total Deposited Value -->
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-mono tracking-wider text-text-muted">Total Deposited Value</span>
+<div class="flex items-baseline space-x-1.5">
+<span class="text-sm md:text-base font-mono font-semibold text-text-primary">$482,910.45</span>
+<span class="text-[10px] font-mono text-positive">+2.18% 24h</span>
+</div>
+</div>
+<!-- Blended 30D APY -->
+<div class="flex flex-col border-l border-border pl-4">
+<span class="text-[10px] uppercase font-mono tracking-wider text-text-muted">Blended 30D APY</span>
+<div class="flex items-baseline space-x-1.5">
+<span class="text-sm md:text-base font-mono font-semibold text-accent">8.64%</span>
+<span class="text-[10px] font-mono text-positive flex items-center">
+<span class="material-symbols-outlined text-[11px]">arrow_upward</span>0.42% 7d
+          </span>
+</div>
+</div>
+<!-- Accrued Unclaimed Yield -->
+<div class="flex flex-col border-l border-border pl-4">
+<span class="text-[10px] uppercase font-mono tracking-wider text-text-muted">Accrued Unclaimed Yield</span>
+<div class="flex items-center space-x-2">
+<span class="text-sm md:text-base font-mono font-semibold text-positive">$3,214.80</span>
+<button class="h-5 px-2 bg-positive/10 hover:bg-positive/20 text-positive rounded text-[10px] font-mono font-medium transition-colors border border-positive/30 flex items-center space-x-0.5">
+<span>Claim All</span>
+<span class="material-symbols-outlined text-[10px]">bolt</span>
+</button>
+</div>
+</div>
+<!-- Active Allocations -->
+<div class="flex flex-col border-l border-border pl-4 hidden sm:flex">
+<span class="text-[10px] uppercase font-mono tracking-wider text-text-muted">Active Allocations</span>
+<div class="flex items-baseline space-x-1">
+<span class="text-sm md:text-base font-mono font-medium text-text-primary">7 Vaults</span>
+<span class="text-[10px] font-mono text-text-muted">/ 5 Protocols</span>
+</div>
+</div>
+<!-- Risk Score -->
+<div class="flex flex-col border-l border-border pl-4 hidden lg:flex">
+<span class="text-[10px] uppercase font-mono tracking-wider text-text-muted">Nexus Risk Rating</span>
+<div class="flex items-center space-x-1.5">
+<span class="px-1.5 py-0.2 bg-positive/10 text-positive border border-positive/30 rounded text-[10px] font-mono font-bold">A-</span>
+<span class="text-[10px] text-text-secondary truncate max-w-[130px]">Low-Mod Contract Risk</span>
+</div>
+</div>
+</div>
+<!-- Quick Actions / Mode controls -->
+<div class="flex items-center space-x-2 ml-auto">
+<div class="flex items-center space-x-1 text-[11px] font-mono bg-surface-elevated border border-border px-2 py-0.5 rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
+<span class="text-text-muted">Auto-Rebalance:</span>
+<span class="text-text-primary font-semibold">ACTIVE</span>
+</div>
+<button class="h-6 px-2 bg-surface hover:bg-surface-elevated text-text-secondary hover:text-text-primary border border-border rounded text-[11px] font-mono transition-colors flex items-center space-x-1">
+<span class="material-symbols-outlined text-[13px]">tune</span>
+<span>Settings</span>
+</button>
+</div>
+</section>
+<!-- WORKSPACE BODY: SPLIT VIEW (Opportunities Table + Inspector) -->
+<div class="flex flex-col xl:flex-row flex-1 w-full bg-background min-h-0">
+<!-- LEFT PANEL: Filter Toolbar & Dense Table (Flex 1) -->
+<div class="flex flex-col flex-1 border-b xl:border-b-0 xl:border-r border-border min-w-0">
+<!-- TOOLBAR 1: Category Tabs -->
+<div class="h-9 px-3 bg-surface border-b border-border flex items-center justify-between overflow-x-auto no-scrollbar">
+<div class="flex items-center space-x-1 h-full">
+<button class="h-full px-2.5 text-xs font-medium border-b-2 border-accent text-accent flex items-center space-x-1 whitespace-nowrap">
+<span>All Products</span>
+<span class="text-[10px] font-mono px-1 py-0.2 rounded bg-accent/15 text-accent">42</span>
+</button>
+<button class="h-full px-2.5 text-xs font-medium border-b-2 border-transparent text-text-secondary hover:text-text-primary flex items-center space-x-1 whitespace-nowrap transition-colors">
+<span>Liquid Staking</span>
+<span class="text-[10px] font-mono px-1 py-0.2 rounded bg-surface-elevated text-text-muted">8</span>
+</button>
+<button class="h-full px-2.5 text-xs font-medium border-b-2 border-transparent text-text-secondary hover:text-text-primary flex items-center space-x-1 whitespace-nowrap transition-colors">
+<span>Lending &amp; Borrowing</span>
+<span class="text-[10px] font-mono px-1 py-0.2 rounded bg-surface-elevated text-text-muted">14</span>
+</button>
+<button class="h-full px-2.5 text-xs font-medium border-b-2 border-transparent text-text-secondary hover:text-text-primary flex items-center space-x-1 whitespace-nowrap transition-colors">
+<span>Automated Liquidity</span>
+<span class="text-[10px] font-mono px-1 py-0.2 rounded bg-surface-elevated text-text-muted">11</span>
+</button>
+<button class="h-full px-2.5 text-xs font-medium border-b-2 border-transparent text-text-secondary hover:text-text-primary flex items-center space-x-1 whitespace-nowrap transition-colors">
+<span>Structured &amp; Basis</span>
+<span class="text-[10px] font-mono px-1 py-0.2 rounded bg-surface-elevated text-text-muted">9</span>
+</button>
+</div>
+<div class="flex items-center space-x-1 pl-2">
+<button class="h-6 w-6 flex items-center justify-center rounded bg-surface-elevated text-text-secondary hover:text-text-primary border border-border">
+<span class="material-symbols-outlined text-[13px]">view_column</span>
+</button>
+<button class="h-6 w-6 flex items-center justify-center rounded bg-surface-elevated text-text-secondary hover:text-text-primary border border-border">
+<span class="material-symbols-outlined text-[13px]">refresh</span>
+</button>
+</div>
+</div>
+<!-- TOOLBAR 2: Multi-dimensional Search & Precision Filters -->
+<div class="p-2.5 bg-surface-dim border-b border-border flex flex-wrap items-center gap-2 text-xs">
+<!-- Search bar -->
+<div class="relative flex-1 min-w-[200px]">
+<span class="material-symbols-outlined absolute left-2 top-1.5 text-[15px] text-text-muted pointer-events-none">search</span>
+<input class="w-full h-7 pl-7 pr-2 bg-surface border border-border rounded text-xs text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent font-sans" placeholder="Search asset, protocol, vault..." type="text"/>
+</div>
+<!-- Filter Dropdowns -->
+<div class="flex items-center flex-wrap gap-1.5">
+<!-- Asset select -->
+<div class="relative">
+<select class="h-7 pl-2 pr-6 bg-surface border border-border rounded text-[11px] font-mono text-text-secondary focus:outline-none focus:border-accent appearance-none cursor-pointer">
+<option>Asset: All (SOL, USDC, BTC...)</option>
+<option>SOL / LSTs</option>
+<option>USDC / Stablecoins</option>
+<option>BTC &amp; Wrapped</option>
+<option>ETH</option>
+<option>JUP / Ecosystem</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-2 text-[12px] text-text-muted pointer-events-none">expand_more</span>
+</div>
+<!-- Risk Tier select -->
+<div class="relative">
+<select class="h-7 pl-2 pr-6 bg-surface border border-border rounded text-[11px] font-mono text-text-secondary focus:outline-none focus:border-accent appearance-none cursor-pointer">
+<option>Risk: All Tiers</option>
+<option>Tier 1 (Low Exposure)</option>
+<option>Tier 2 (Moderate)</option>
+<option>Tier 3 (Elevated Yield)</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-2 text-[12px] text-text-muted pointer-events-none">expand_more</span>
+</div>
+<!-- APY threshold -->
+<div class="relative">
+<select class="h-7 pl-2 pr-6 bg-surface border border-border rounded text-[11px] font-mono text-text-secondary focus:outline-none focus:border-accent appearance-none cursor-pointer">
+<option>APY: Any Range</option>
+<option>&gt; 5.0% APY</option>
+<option>&gt; 8.0% APY</option>
+<option>&gt; 12.0% APY</option>
+<option>&gt; 20.0% APY</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-2 text-[12px] text-text-muted pointer-events-none">expand_more</span>
+</div>
+<!-- TVL filter -->
+<div class="relative hidden sm:block">
+<select class="h-7 pl-2 pr-6 bg-surface border border-border rounded text-[11px] font-mono text-text-secondary focus:outline-none focus:border-accent appearance-none cursor-pointer">
+<option>TVL: &gt; $10M</option>
+<option>TVL: &gt; $25M</option>
+<option>TVL: &gt; $100M</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-2 text-[12px] text-text-muted pointer-events-none">expand_more</span>
+</div>
+<!-- Lockup Filter -->
+<div class="relative hidden md:block">
+<select class="h-7 pl-2 pr-6 bg-surface border border-border rounded text-[11px] font-mono text-text-secondary focus:outline-none focus:border-accent appearance-none cursor-pointer">
+<option>Lockup: Any Duration</option>
+<option>Instant Liquid</option>
+<option>≤ 24h Unbonding</option>
+<option>Epoch Cooldown</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-2 text-[12px] text-text-muted pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<!-- MAIN TABLE: Yield Opportunities Grid -->
+<div class="flex-1 overflow-x-auto overflow-y-auto">
+<table class="w-full text-left border-collapse select-none">
+<thead class="bg-surface-elevated/70 sticky top-0 z-10 border-b border-border text-[10px] font-mono uppercase text-text-muted tracking-wider">
+<tr>
+<th class="py-2 px-3 font-medium">Vault Strategy &amp; Protocol</th>
+<th class="py-2 px-2 font-medium">Asset</th>
+<th class="py-2 px-3 font-medium text-right">Net APY</th>
+<th class="py-2 px-3 font-medium text-right">TVL</th>
+<th class="py-2 px-2.5 font-medium">Risk Tier</th>
+<th class="py-2 px-2 font-medium">Lockup</th>
+<th class="py-2 px-3 font-medium text-right hidden lg:table-cell">24h Liquidity</th>
+<th class="py-2 px-3 font-medium text-center">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border text-xs font-sans">
+<!-- Row 1 (Selected Detail Example: Kamino USDC Prime) -->
+<tr class="bg-surface-container/60 hover:bg-surface-container transition-colors cursor-pointer border-l-2 border-l-accent">
+<td class="py-2.5 px-3">
+<div class="flex items-center space-x-2.5">
+<div class="w-7 h-7 rounded bg-surface border border-border flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[16px] text-accent">savings</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-medium text-text-primary flex items-center space-x-1">
+<span class="truncate">USDC Prime Lending Vault</span>
+<span class="material-symbols-outlined text-[13px] text-positive" title="Nexus Audited">verified</span>
+</span>
+<span class="text-[10px] font-mono text-text-muted flex items-center space-x-1">
+<span>Kamino Finance</span>
+<span class="text-text-muted/40">•</span>
+<span>Neodyme / OtterSec</span>
+</span>
+</div>
+</div>
+</td>
+<td class="py-2.5 px-2">
+<span class="px-1.5 py-0.5 rounded bg-surface border border-border text-[10px] font-mono text-text-primary">USDC</span>
+</td>
+<td class="py-2.5 px-3 text-right">
+<div class="flex flex-col items-end">
+<span class="font-mono font-bold text-accent text-sm">9.12%</span>
+<span class="text-[9px] font-mono text-positive">+1.1% bonus KMNO</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-right font-mono text-text-primary">
+                $105.2M
+              </td>
+<td class="py-2.5 px-2.5">
+<span class="inline-flex items-center space-x-1 px-1.5 py-0.5 rounded text-[10px] font-mono bg-positive/10 text-positive border border-positive/30">
+<span class="w-1.5 h-1.5 rounded-full bg-positive"></span>
+<span>Tier 1 · Low</span>
+</span>
+</td>
+<td class="py-2.5 px-2 font-mono text-[11px] text-text-secondary">
+                Instant
+              </td>
+<td class="py-2.5 px-3 text-right font-mono text-text-secondary hidden lg:table-cell">
+                $19.8M inst.
+              </td>
+<td class="py-2.5 px-3 text-center">
+<div class="flex items-center justify-center space-x-1">
+<button class="h-6 px-2.5 bg-accent hover:bg-primary text-on-accent text-slate-900 rounded text-[11px] font-semibold transition-colors">
+                    Deposit
+                  </button>
+<button class="h-6 w-6 flex items-center justify-center bg-surface border border-border rounded hover:bg-surface-elevated text-text-secondary">
+<span class="material-symbols-outlined text-[14px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: JitoSOL Liquid Staking -->
+<tr class="hover:bg-surface-elevated transition-colors cursor-pointer">
+<td class="py-2.5 px-3">
+<div class="flex items-center space-x-2.5">
+<div class="w-7 h-7 rounded bg-surface border border-border flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[16px] text-tertiary">lock_clock</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-medium text-text-primary truncate">JitoSOL Liquid Staking Pool</span>
+<span class="text-[10px] font-mono text-text-muted flex items-center space-x-1">
+<span>Jito Network</span>
+<span class="text-text-muted/40">•</span>
+<span>Sec3 / Halborn</span>
+</span>
+</div>
+</div>
+</td>
+<td class="py-2.5 px-2">
+<span class="px-1.5 py-0.5 rounded bg-surface border border-border text-[10px] font-mono text-text-primary">SOL</span>
+</td>
+<td class="py-2.5 px-3 text-right">
+<div class="flex flex-col items-end">
+<span class="font-mono font-bold text-text-primary text-sm">7.84%</span>
+<span class="text-[9px] font-mono text-text-muted">MEV Staking base</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-right font-mono text-text-primary">
+                $548.2M
+              </td>
+<td class="py-2.5 px-2.5">
+<span class="inline-flex items-center space-x-1 px-1.5 py-0.5 rounded text-[10px] font-mono bg-positive/10 text-positive border border-positive/30">
+<span class="w-1.5 h-1.5 rounded-full bg-positive"></span>
+<span>Tier 1 · Low</span>
+</span>
+</td>
+<td class="py-2.5 px-2 font-mono text-[11px] text-text-secondary">
+                Epoch (~2d)
+              </td>
+<td class="py-2.5 px-3 text-right font-mono text-text-secondary hidden lg:table-cell">
+                $42.1M inst.
+              </td>
+<td class="py-2.5 px-3 text-center">
+<div class="flex items-center justify-center space-x-1">
+<button class="h-6 px-2.5 bg-surface border border-border hover:bg-surface-elevated text-text-primary rounded text-[11px] font-medium transition-colors">
+                    Deposit
+                  </button>
+<button class="h-6 w-6 flex items-center justify-center bg-surface border border-border rounded hover:bg-surface-elevated text-text-secondary">
+<span class="material-symbols-outlined text-[14px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: SOL-JUP DLMM Vault -->
+<tr class="hover:bg-surface-elevated transition-colors cursor-pointer">
+<td class="py-2.5 px-3">
+<div class="flex items-center space-x-2.5">
+<div class="w-7 h-7 rounded bg-surface border border-border flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[16px] text-info">stacked_line_chart</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-medium text-text-primary truncate">SOL-JUP Dynamic DLMM Vault</span>
+<span class="text-[10px] font-mono text-text-muted flex items-center space-x-1">
+<span>Meteora</span>
+<span class="text-text-muted/40">•</span>
+<span>Off-chain Auto-Compound</span>
+</span>
+</div>
+</div>
+</td>
+<td class="py-2.5 px-2">
+<span class="px-1.5 py-0.5 rounded bg-surface border border-border text-[10px] font-mono text-text-primary">SOL-JUP</span>
+</td>
+<td class="py-2.5 px-3 text-right">
+<div class="flex flex-col items-end">
+<span class="font-mono font-bold text-accent text-sm">24.60%</span>
+<span class="text-[9px] font-mono text-positive">Dynamic Trading Fees</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-right font-mono text-text-primary">
+                $34.4M
+              </td>
+<td class="py-2.5 px-2.5">
+<span class="inline-flex items-center space-x-1 px-1.5 py-0.5 rounded text-[10px] font-mono bg-warning/10 text-warning border border-warning/30">
+<span class="w-1.5 h-1.5 rounded-full bg-warning"></span>
+<span>Tier 2 · Mod</span>
+</span>
+</td>
+<td class="py-2.5 px-2 font-mono text-[11px] text-text-secondary">
+                Instant
+              </td>
+<td class="py-2.5 px-3 text-right font-mono text-text-secondary hidden lg:table-cell">
+                $11.2M pool
+              </td>
+<td class="py-2.5 px-3 text-center">
+<div class="flex items-center justify-center space-x-1">
+<button class="h-6 px-2.5 bg-surface border border-border hover:bg-surface-elevated text-text-primary rounded text-[11px] font-medium transition-colors">
+                    Deposit
+                  </button>
+<button class="h-6 w-6 flex items-center justify-center bg-surface border border-border rounded hover:bg-surface-elevated text-text-secondary">
+<span class="material-symbols-outlined text-[14px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Delta-Neutral Funding Arbitrage -->
+<tr class="hover:bg-surface-elevated transition-colors cursor-pointer">
+<td class="py-2.5 px-3">
+<div class="flex items-center space-x-2.5">
+<div class="w-7 h-7 rounded bg-surface border border-border flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[16px] text-secondary">balance</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-medium text-text-primary truncate">Delta-Neutral SOL Funding Basis</span>
+<span class="text-[10px] font-mono text-text-muted flex items-center space-x-1">
+<span>Drift Protocol</span>
+<span class="text-text-muted/40">•</span>
+<span>Zellic Audited</span>
+</span>
+</div>
+</div>
+</td>
+<td class="py-2.5 px-2">
+<span class="px-1.5 py-0.5 rounded bg-surface border border-border text-[10px] font-mono text-text-primary">USDC</span>
+</td>
+<td class="py-2.5 px-3 text-right">
+<div class="flex flex-col items-end">
+<span class="font-mono font-bold text-accent text-sm">16.85%</span>
+<span class="text-[9px] font-mono text-text-muted">Perp funding rate</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-right font-mono text-text-primary">
+                $48.9M
+              </td>
+<td class="py-2.5 px-2.5">
+<span class="inline-flex items-center space-x-1 px-1.5 py-0.5 rounded text-[10px] font-mono bg-warning/10 text-warning border border-warning/30">
+<span class="w-1.5 h-1.5 rounded-full bg-warning"></span>
+<span>Tier 2 · Mod</span>
+</span>
+</td>
+<td class="py-2.5 px-2 font-mono text-[11px] text-text-secondary">
+                12h Queue
+              </td>
+<td class="py-2.5 px-3 text-right font-mono text-text-secondary hidden lg:table-cell">
+                $8.4M open
+              </td>
+<td class="py-2.5 px-3 text-center">
+<div class="flex items-center justify-center space-x-1">
+<button class="h-6 px-2.5 bg-surface border border-border hover:bg-surface-elevated text-text-primary rounded text-[11px] font-medium transition-colors">
+                    Deposit
+                  </button>
+<button class="h-6 w-6 flex items-center justify-center bg-surface border border-border rounded hover:bg-surface-elevated text-text-secondary">
+<span class="material-symbols-outlined text-[14px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: mSOL Multiply 3x -->
+<tr class="hover:bg-surface-elevated transition-colors cursor-pointer">
+<td class="py-2.5 px-3">
+<div class="flex items-center space-x-2.5">
+<div class="w-7 h-7 rounded bg-surface border border-border flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[16px] text-negative">speed</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-medium text-text-primary truncate">mSOL Kamino Multiply 3.0x</span>
+<span class="text-[10px] font-mono text-text-muted flex items-center space-x-1">
+<span>Kamino Finance</span>
+<span class="text-text-muted/40">•</span>
+<span>Recursive Staking</span>
+</span>
+</div>
+</div>
+</td>
+<td class="py-2.5 px-2">
+<span class="px-1.5 py-0.5 rounded bg-surface border border-border text-[10px] font-mono text-text-primary">SOL</span>
+</td>
+<td class="py-2.5 px-3 text-right">
+<div class="flex flex-col items-end">
+<span class="font-mono font-bold text-accent text-sm">18.22%</span>
+<span class="text-[9px] font-mono text-warning">Depeg liquidation risk</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-right font-mono text-text-primary">
+                $18.1M
+              </td>
+<td class="py-2.5 px-2.5">
+<span class="inline-flex items-center space-x-1 px-1.5 py-0.5 rounded text-[10px] font-mono bg-negative/10 text-negative border border-negative/30">
+<span class="w-1.5 h-1.5 rounded-full bg-negative"></span>
+<span>Tier 3 · High</span>
+</span>
+</td>
+<td class="py-2.5 px-2 font-mono text-[11px] text-text-secondary">
+                Instant
+              </td>
+<td class="py-2.5 px-3 text-right font-mono text-text-secondary hidden lg:table-cell">
+                $4.2M liq.
+              </td>
+<td class="py-2.5 px-3 text-center">
+<div class="flex items-center justify-center space-x-1">
+<button class="h-6 px-2.5 bg-surface border border-border hover:bg-surface-elevated text-text-primary rounded text-[11px] font-medium transition-colors">
+                    Deposit
+                  </button>
+<button class="h-6 w-6 flex items-center justify-center bg-surface border border-border rounded hover:bg-surface-elevated text-text-secondary">
+<span class="material-symbols-outlined text-[14px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: USDT Margin Lending -->
+<tr class="hover:bg-surface-elevated transition-colors cursor-pointer">
+<td class="py-2.5 px-3">
+<div class="flex items-center space-x-2.5">
+<div class="w-7 h-7 rounded bg-surface border border-border flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[16px] text-positive">account_balance</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-medium text-text-primary truncate">USDT Overcollateralized Margin</span>
+<span class="text-[10px] font-mono text-text-muted flex items-center space-x-1">
+<span>Marginfi v2</span>
+<span class="text-text-muted/40">•</span>
+<span>OtterSec Audited</span>
+</span>
+</div>
+</div>
+</td>
+<td class="py-2.5 px-2">
+<span class="px-1.5 py-0.5 rounded bg-surface border border-border text-[10px] font-mono text-text-primary">USDT</span>
+</td>
+<td class="py-2.5 px-3 text-right">
+<div class="flex flex-col items-end">
+<span class="font-mono font-bold text-text-primary text-sm">8.14%</span>
+<span class="text-[9px] font-mono text-text-muted">Utilization based</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-right font-mono text-text-primary">
+                $62.7M
+              </td>
+<td class="py-2.5 px-2.5">
+<span class="inline-flex items-center space-x-1 px-1.5 py-0.5 rounded text-[10px] font-mono bg-positive/10 text-positive border border-positive/30">
+<span class="w-1.5 h-1.5 rounded-full bg-positive"></span>
+<span>Tier 1 · Low</span>
+</span>
+</td>
+<td class="py-2.5 px-2 font-mono text-[11px] text-text-secondary">
+                Instant
+              </td>
+<td class="py-2.5 px-3 text-right font-mono text-text-secondary hidden lg:table-cell">
+                $15.9M inst.
+              </td>
+<td class="py-2.5 px-3 text-center">
+<div class="flex items-center justify-center space-x-1">
+<button class="h-6 px-2.5 bg-surface border border-border hover:bg-surface-elevated text-text-primary rounded text-[11px] font-medium transition-colors">
+                    Deposit
+                  </button>
+<button class="h-6 w-6 flex items-center justify-center bg-surface border border-border rounded hover:bg-surface-elevated text-text-secondary">
+<span class="material-symbols-outlined text-[14px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7: Sanctum INF Multi-LST -->
+<tr class="hover:bg-surface-elevated transition-colors cursor-pointer">
+<td class="py-2.5 px-3">
+<div class="flex items-center space-x-2.5">
+<div class="w-7 h-7 rounded bg-surface border border-border flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[16px] text-accent">hub</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-medium text-text-primary truncate">Sanctum Infinity Pool (INF)</span>
+<span class="text-[10px] font-mono text-text-muted flex items-center space-x-1">
+<span>Sanctum</span>
+<span class="text-text-muted/40">•</span>
+<span>Neodyme Verification</span>
+</span>
+</div>
+</div>
+</td>
+<td class="py-2.5 px-2">
+<span class="px-1.5 py-0.5 rounded bg-surface border border-border text-[10px] font-mono text-text-primary">INF</span>
+</td>
+<td class="py-2.5 px-3 text-right">
+<div class="flex flex-col items-end">
+<span class="font-mono font-bold text-accent text-sm">9.45%</span>
+<span class="text-[9px] font-mono text-positive">+Trading spread rev</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-right font-mono text-text-primary">
+                $112.5M
+              </td>
+<td class="py-2.5 px-2.5">
+<span class="inline-flex items-center space-x-1 px-1.5 py-0.5 rounded text-[10px] font-mono bg-positive/10 text-positive border border-positive/30">
+<span class="w-1.5 h-1.5 rounded-full bg-positive"></span>
+<span>Tier 1 · Low</span>
+</span>
+</td>
+<td class="py-2.5 px-2 font-mono text-[11px] text-text-secondary">
+                Instant
+              </td>
+<td class="py-2.5 px-3 text-right font-mono text-text-secondary hidden lg:table-cell">
+                $31.0M pool
+              </td>
+<td class="py-2.5 px-3 text-center">
+<div class="flex items-center justify-center space-x-1">
+<button class="h-6 px-2.5 bg-surface border border-border hover:bg-surface-elevated text-text-primary rounded text-[11px] font-medium transition-colors">
+                    Deposit
+                  </button>
+<button class="h-6 w-6 flex items-center justify-center bg-surface border border-border rounded hover:bg-surface-elevated text-text-secondary">
+<span class="material-symbols-outlined text-[14px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Quick Tabular Status Strip -->
+<div class="h-8 px-3 bg-surface-elevated border-t border-border flex items-center justify-between text-[11px] font-mono text-text-muted">
+<div class="flex items-center space-x-4">
+<span>Showing 7 of 42 Verified Opportunities</span>
+<span class="hidden md:inline text-text-secondary">Avg Category Yield: <span class="text-accent font-semibold">10.63%</span></span>
+</div>
+<div class="flex items-center space-x-2">
+<span>Sort: <strong class="text-text-primary font-normal">TVL (Descending)</strong></span>
+<span class="material-symbols-outlined text-[14px]">arrow_drop_down</span>
+</div>
+</div>
+</div>
+<!-- RIGHT PANEL: Product Detail Inspector & Deposit Terminal (Width: 420px on desktop) -->
+<div class="w-full xl:w-[440px] flex-shrink-0 flex flex-col bg-surface border-t xl:border-t-0 xl:border-l border-border">
+<!-- Panel Header: Selected Product Info -->
+<div class="p-3 bg-surface-dim border-b border-border flex items-center justify-between">
+<div class="flex items-center space-x-2 min-w-0">
+<div class="w-7 h-7 rounded bg-surface-elevated border border-border flex items-center justify-center text-accent">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-xs font-semibold text-text-primary truncate">USDC Prime Lending Vault</span>
+<div class="flex items-center space-x-1.5 text-[10px] font-mono text-text-muted">
+<span>Kamino Finance</span>
+<span>•</span>
+<a class="text-accent hover:underline flex items-center space-x-0.5" href="#">
+<span>7xKp...8b9q</span>
+<span class="material-symbols-outlined text-[10px]">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+<div class="flex items-center space-x-1">
+<button class="h-6 w-6 flex items-center justify-center rounded bg-surface hover:bg-surface-elevated text-text-secondary border border-border">
+<span class="material-symbols-outlined text-[13px]">share</span>
+</button>
+<button class="h-6 w-6 flex items-center justify-center rounded bg-surface hover:bg-surface-elevated text-text-secondary border border-border">
+<span class="material-symbols-outlined text-[13px]">close</span>
+</button>
+</div>
+</div>
+<!-- Scrollable Inspector Content -->
+<div class="p-3.5 flex flex-col space-y-4 overflow-y-auto max-h-[calc(100vh-210px)]">
+<!-- TELEMETRY CARD: APY Breakdown & 30-Day Trend -->
+<div class="bg-surface-elevated p-3 rounded border border-border flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<div>
+<span class="text-[10px] uppercase font-mono tracking-wider text-text-muted">Realized Net APY</span>
+<div class="text-xl font-mono font-bold text-accent">9.12%</div>
+</div>
+<div class="text-right">
+<span class="text-[10px] uppercase font-mono tracking-wider text-text-muted">30D Trailing Range</span>
+<div class="text-xs font-mono text-text-secondary">8.94% – 9.40%</div>
+</div>
+</div>
+<!-- Clean Mini Yield Sparkline (SVG) -->
+<div class="w-full pt-1">
+<div class="flex items-center justify-between text-[9px] font-mono text-text-muted mb-1">
+<span>HISTORICAL 30-DAY PERFORMANCE</span>
+<span class="text-positive font-semibold">STABLE CURVE</span>
+</div>
+<div class="h-12 w-full bg-surface-dim/80 rounded border border-border-subtle p-1 flex items-end">
+<svg class="w-full h-full text-accent" preserveaspectratio="none" viewbox="0 0 300 40">
+<defs>
+<lineargradient id="yieldGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#6EA8FF" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#6EA8FF" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<path d="M 0,35 Q 25,32 50,30 T 100,28 T 150,22 T 200,25 T 250,15 T 300,10 L 300,40 L 0,40 Z" fill="url(#yieldGrad)"></path>
+<path d="M 0,35 Q 25,32 50,30 T 100,28 T 150,22 T 200,25 T 250,15 T 300,10" fill="none" stroke="currentColor" stroke-width="1.75" vector-effect="non-scaling-stroke"></path>
+<circle cx="300" cy="10" fill="#6EA8FF" r="3"></circle>
+</svg>
+</div>
+</div>
+<!-- Yield Components Breakdown -->
+<div class="grid grid-cols-3 gap-1 pt-1 border-t border-border-subtle text-[10px] font-mono">
+<div class="bg-surface p-1.5 rounded">
+<div class="text-text-muted">Base Lending</div>
+<div class="text-text-primary font-semibold">7.24%</div>
+</div>
+<div class="bg-surface p-1.5 rounded">
+<div class="text-text-muted">KMNO Incentives</div>
+<div class="text-positive font-semibold">+1.10%</div>
+</div>
+<div class="bg-surface p-1.5 rounded">
+<div class="text-text-muted">Nexus Boost</div>
+<div class="text-accent font-semibold">+0.78%</div>
+</div>
+</div>
+</div>
+<!-- SPECIFICATIONS & RISK ATTRIBUTES -->
+<div class="space-y-1.5 text-xs">
+<div class="text-[10px] uppercase font-mono tracking-wider text-text-muted px-0.5">Pool Parameters &amp; Capacity</div>
+<div class="bg-surface-elevated rounded border border-border divide-y divide-border text-xs">
+<!-- Utilization -->
+<div class="p-2 flex items-center justify-between">
+<span class="text-text-secondary text-[11px]">Pool Utilization</span>
+<div class="flex items-center space-x-2">
+<div class="w-16 h-1.5 rounded-full bg-surface overflow-hidden">
+<div class="h-full bg-accent w-[84.2%]"></div>
+</div>
+<span class="font-mono text-[11px] text-text-primary">84.2%</span>
+</div>
+</div>
+<!-- Pool Cap / TVL -->
+<div class="p-2 flex items-center justify-between">
+<span class="text-text-secondary text-[11px]">Vault Deposit Cap</span>
+<span class="font-mono text-[11px] text-text-primary">$105.2M / $125.0M</span>
+</div>
+<!-- Fee Structure -->
+<div class="p-2 flex items-center justify-between">
+<span class="text-text-secondary text-[11px]">Fee Structure</span>
+<span class="font-mono text-[11px] text-text-primary">10% Perf / 0% Mgmt</span>
+</div>
+<!-- Unbonding Window -->
+<div class="p-2 flex items-center justify-between">
+<span class="text-text-secondary text-[11px]">Withdrawal Speed</span>
+<span class="font-mono text-[11px] text-positive">Instant (≤ $50k)</span>
+</div>
+<!-- Security Clearance -->
+<div class="p-2 flex items-center justify-between">
+<span class="text-text-secondary text-[11px]">Security &amp; Bounties</span>
+<div class="flex items-center space-x-1">
+<span class="text-[10px] font-mono px-1 bg-positive/10 text-positive rounded">Passed</span>
+<span class="text-[10px] font-mono text-text-muted">$5M Immunefi</span>
+</div>
+</div>
+</div>
+</div>
+<!-- TRANSACTION / ALLOCATION TERMINAL -->
+<div class="bg-surface-dim p-3 rounded border border-border flex flex-col space-y-3">
+<!-- Action Mode Tabs -->
+<div class="flex bg-surface-elevated p-0.5 rounded border border-border text-xs font-mono">
+<button class="flex-1 py-1 rounded bg-accent text-slate-900 font-semibold shadow-sm transition-colors text-center">Deposit</button>
+<button class="flex-1 py-1 rounded text-text-secondary hover:text-text-primary transition-colors text-center">Withdraw</button>
+</div>
+<!-- Input Block -->
+<div class="space-y-1">
+<div class="flex items-center justify-between text-[11px] text-text-muted">
+<span>Deposit Amount</span>
+<span class="font-mono">Avail: <strong class="text-text-primary font-normal">24,510.80 USDC</strong></span>
+</div>
+<div class="relative flex items-center bg-surface border border-border focus-within:border-accent rounded">
+<input class="w-full h-9 pl-3 pr-20 bg-transparent text-sm font-mono text-text-primary focus:outline-none" type="text" value="10,000.00"/>
+<div class="absolute right-2 flex items-center space-x-1">
+<button class="px-1.5 py-0.5 rounded bg-surface-elevated hover:bg-border text-[9px] font-mono text-accent">MAX</button>
+<span class="text-xs font-mono font-semibold text-text-primary pl-1">USDC</span>
+</div>
+</div>
+<div class="grid grid-cols-4 gap-1 pt-1">
+<button class="h-5 rounded bg-surface hover:bg-surface-elevated text-[10px] font-mono text-text-secondary border border-border">25%</button>
+<button class="h-5 rounded bg-surface hover:bg-surface-elevated text-[10px] font-mono text-text-secondary border border-border">50%</button>
+<button class="h-5 rounded bg-surface hover:bg-surface-elevated text-[10px] font-mono text-text-secondary border border-border">75%</button>
+<button class="h-5 rounded bg-surface hover:bg-surface-elevated text-[10px] font-mono text-text-secondary border border-border">100%</button>
+</div>
+</div>
+<!-- Projection Box -->
+<div class="bg-surface p-2 rounded border border-border-subtle flex flex-col space-y-1 text-[11px] font-mono">
+<div class="flex items-center justify-between text-text-muted">
+<span>Est. Daily Earnings:</span>
+<span class="text-positive font-semibold">+$2.49 / day</span>
+</div>
+<div class="flex items-center justify-between text-text-muted">
+<span>Est. 1Y Projected Yield:</span>
+<span class="text-accent font-semibold">+$912.00 USDC</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="space-y-1.5 pt-1">
+<button class="w-full h-8 bg-accent hover:bg-primary text-slate-900 font-semibold rounded text-xs transition-colors flex items-center justify-center space-x-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[15px]">input</span>
+<span>Deposit 10,000.00 USDC</span>
+</button>
+<button class="w-full h-7 bg-surface hover:bg-surface-elevated text-text-secondary hover:text-text-primary border border-border rounded text-[11px] font-mono transition-colors flex items-center justify-center space-x-1">
+<span class="material-symbols-outlined text-[13px]">swap_horiz</span>
+<span>Allocate from Margin/Trade Balances</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- REGULATORY & RISK DISCLOSURE FOOTER STRIP -->
+<div class="bg-surface-container-lowest border-t border-border px-3 py-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-y-2 text-[10px] text-text-muted">
+<div class="flex items-start sm:items-center space-x-2">
+<span class="material-symbols-outlined text-[14px] text-warning flex-shrink-0">warning</span>
+<p class="leading-tight">
+        Yield is variable and not guaranteed. Yield is generated through decentralized protocols, AMMs, and staking mechanisms. Smart contract risk, liquidation risk, and counterparty risks apply. Nexus acts purely as a non-custodial execution interface.
+      </p>
+</div>
+<div class="flex items-center space-x-3 flex-shrink-0 font-mono text-[9px] text-text-secondary">
+<span>Synced: <strong class="text-text-primary font-normal">Pyth / Solana RPC</strong></span>
+<span>•</span>
+<span>Latency: <strong class="text-positive font-normal">14ms</strong></span>
+<span>•</span>
+<span>Epoch: <strong class="text-text-primary font-normal">682</strong></span>
+</div>
+</div>
+</div></main><footer class="fixed bottom-0 left-0 right-0 z-40 h-[32px] bg-surface-dim border-t border-border flex items-center justify-between px-3"><div class="flex items-center space-x-1 h-full overflow-x-auto"><button class="h-6 px-2 flex items-center space-x-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-elevated rounded text-[11px] transition-colors"><span class="material-symbols-outlined text-[13px]">terminal</span><span>Feed</span></button><button class="h-6 px-2 flex items-center space-x-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-elevated rounded text-[11px] transition-colors"><span class="material-symbols-outlined text-[13px]">feed</span><span>News</span></button><button class="h-6 px-2 flex items-center space-x-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-elevated rounded text-[11px] transition-colors"><span class="material-symbols-outlined text-[13px]">forum</span><span>Chat</span><span class="w-1.5 h-1.5 rounded-full bg-accent"></span></button><button class="h-6 px-2 flex items-center space-x-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-elevated rounded text-[11px] transition-colors"><span class="material-symbols-outlined text-[13px]">visibility</span><span>Watchlist</span></button><button class="h-6 px-2 flex items-center space-x-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-elevated rounded text-[11px] transition-colors"><span class="material-symbols-outlined text-[13px]">monitoring</span><span>PnL</span><span class="text-[11px] font-mono text-positive">+$1,420.40</span></button><button class="h-6 px-2 flex items-center space-x-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-elevated rounded text-[11px] transition-colors"><span class="material-symbols-outlined text-[13px]">schedule</span><span>Market Hours: <strong class="text-positive font-normal">OPEN</strong></span></button><button class="h-6 px-2 flex items-center space-x-1 text-accent hover:bg-surface-elevated rounded text-[11px] transition-colors"><span class="material-symbols-outlined text-[13px]">auto_awesome</span><span>AI Intelligence</span></button></div><div class="flex items-center space-x-2 h-full"><button class="h-6 px-2 flex items-center space-x-1 border border-border bg-surface hover:bg-surface-elevated text-on-surface rounded text-[11px] transition-colors"><span class="material-symbols-outlined text-[13px]">dashboard_customize</span><span>Layout: Cockpit</span><span class="material-symbols-outlined text-[13px]">expand_more</span></button><button class="h-6 w-6 flex items-center justify-center text-text-muted hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[14px]">tune</span></button><span class="text-[11px] font-mono text-text-muted pr-1">UTC 14:28:02</span></div></footer></body></html>

@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"surface-container":"#1c2025","tertiary":"#f7be37","on-secondary-fixed-variant":"#004a78","primary-fixed":"#d5e3ff","secondary":"#99cbff","tertiary-fixed":"#ffdea1","on-secondary":"#003355","inverse-on-surface":"#2d3136","on-secondary-fixed":"#001d34","primary":"#a8c8ff","surface-variant":"#31353b","on-primary":"#003061","on-primary-fixed-variant":"#00468a","on-primary-fixed":"#001b3c","error":"#ffb4ab","primary-container":"#6ea8ff","on-background":"#e0e2ea","on-surface":"#e0e2ea","tertiary-container":"#d39e10","tertiary-fixed-dim":"#f7be37","outline-variant":"#424751","on-error-container":"#ffdad6","surface-container-highest":"#31353b","inverse-primary":"#105eb0","secondary-fixed-dim":"#99cbff","on-error":"#690005","on-tertiary":"#402d00","inverse-surface":"#e0e2ea","background":"#101419","surface-container-lowest":"#0a0f13","primary-fixed-dim":"#a8c8ff","on-tertiary-container":"#4e3800","surface-dim":"#101419","surface-bright":"#36393f","on-tertiary-fixed":"#261900","secondary-container":"#0072b5","on-surface-variant":"#c2c6d3","surface-container-low":"#181c21","surface-tint":"#a8c8ff","on-primary-container":"#003c77","on-secondary-container":"#e8f1ff","error-container":"#93000a","secondary-fixed":"#cfe5ff","surface-container-high":"#262a30","on-tertiary-fixed-variant":"#5c4300","outline":"#8c919d","surface":"#101419"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{},"fontFamily":{"headline":["Geist"],"display":["Geist"],"body":["Geist"],"label":["Geist"]},"fontSize":{}}}}</script></head><body class="bg-surface font-body text-on-surface select-none antialiased"><header class="fixed top-0 left-0 w-full z-50 flex flex-col"><div class="h-11 w-full bg-surface-container-lowest px-3 flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="flex items-center gap-6 h-full"><div class="flex items-center gap-2 pr-2"><span class="text-xs font-bold tracking-[0.2em] font-headline text-primary">NEXUS</span><span class="text-[9px] px-1 py-0.5 rounded bg-surface-container-high text-on-surface-variant tracking-wider font-mono">v2.4</span></div><nav class="flex items-center gap-1 h-full text-xs" data-active-classes="text-primary font-semibold relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-primary"><a class="px-2.5 h-full flex items-center text-on-surface-variant hover:text-on-surface transition-colors" data-path="trade" href="#">Trade</a><a class="px-2.5 h-full flex items-center text-on-surface-variant hover:text-on-surface transition-colors" data-path="markets" href="#">Markets</a><a class="px-2.5 h-full flex items-center text-on-surface-variant hover:text-on-surface transition-colors" data-path="predict" href="#">Predict</a><a class="px-2.5 h-full flex items-center text-on-surface-variant hover:text-on-surface transition-colors" data-path="social" href="#">Social</a><a class="px-2.5 h-full flex items-center text-on-surface-variant hover:text-on-surface transition-colors" data-path="leaderboard" href="#">Leaderboard</a><a class="px-2.5 h-full flex items-center text-on-surface-variant hover:text-on-surface transition-colors" data-path="earn" href="#">Earn</a><a class="px-2.5 h-full flex items-center text-on-surface-variant hover:text-on-surface transition-colors" data-path="calendar" href="#">Calendar</a><a aria-current="page" class="px-2.5 h-full flex items-center transition-colors text-primary font-semibold relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-primary" data-path="co-invest" href="#">Co-Invest</a><a class="px-2.5 h-full flex items-center text-on-surface-variant hover:text-on-surface transition-colors" data-path="agents" href="#">Agents</a></nav></div><div class="flex items-center gap-3 text-xs"><button class="h-7 px-2.5 rounded bg-surface-container flex items-center gap-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[14px]">search</span><span class="text-[11px]">Command</span><kbd class="px-1 py-0.2 rounded bg-surface-container-lowest text-[10px] text-outline font-mono">⌘K</kbd></button><div class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container-low text-[11px] font-mono"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span><span class="text-on-surface-variant">12ms Pyth / Solana Mainnet-Beta</span></div><div class="flex items-center bg-surface-container-lowest p-0.5 rounded text-[11px]"><span class="px-2 py-0.5 rounded-DEFAULT text-on-surface-variant">Paper</span><span class="px-2 py-0.5 rounded-DEFAULT bg-surface-container-high text-primary font-medium shadow-[0_1px_4px_rgba(0,0,0,0.12)]">Live</span></div><button class="w-7 h-7 flex items-center justify-center rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[16px]">notifications</span></button><div class="flex items-center gap-2 pl-2 bg-surface-container-low py-1 pr-1.5 rounded"><span class="font-mono text-[11px] text-on-surface-variant">0x71A...9F2B</span><span class="font-mono text-[11px] text-secondary font-medium">$184,920.45 USDC</span><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div><div class="h-8 w-full bg-surface-container-low px-3 flex items-center justify-between text-[11px] font-mono shadow-[0_1px_4px_rgba(0,0,0,0.15)] overflow-hidden"><div class="flex items-center gap-4 whitespace-nowrap overflow-x-auto"><div class="flex items-center gap-1.5"><span class="text-on-surface-variant">SOL</span><span class="text-on-surface">$178.42</span><span class="text-secondary">+4.2%</span><span class="text-outline text-[9px]">vol 4.2M</span></div><div class="flex items-center gap-1.5"><span class="text-on-surface-variant">BTC</span><span class="text-on-surface">$67,840</span><span class="text-secondary">+1.8%</span><span class="text-outline text-[9px]">vol 18.9K</span></div><div class="flex items-center gap-1.5"><span class="text-on-surface-variant">ETH</span><span class="text-on-surface">$3,490</span><span class="text-secondary">+0.9%</span><span class="text-outline text-[9px]">vol 82.1K</span></div><div class="flex items-center gap-1.5"><span class="text-on-surface-variant">JUP</span><span class="text-on-surface">$1.24</span><span class="text-secondary">+8.4%</span><span class="text-outline text-[9px]">vol 12.3M</span></div><div class="flex items-center gap-1.5"><span class="text-on-surface-variant">NVDA</span><span class="text-on-surface">$132.80</span><span class="text-secondary">+2.1%</span><span class="text-outline text-[9px]">vol 9.5M</span></div><div class="flex items-center gap-1.5"><span class="text-on-surface-variant">PYTH</span><span class="text-on-surface">$0.42</span><span class="text-secondary">+3.6%</span><span class="text-outline text-[9px]">vol 6.1M</span></div></div><div class="flex items-center gap-3 text-outline text-[10px] pl-2"><span class="flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-secondary"></span>STREAMING</span><span>GAS: 18 GWEI</span></div></div></header><aside class="fixed left-0 top-[76px] bottom-8 w-56 bg-surface-container-lowest z-40 flex flex-col justify-between py-2.5 shadow-[1px_0_8px_rgba(0,0,0,0.1)]"><div class="flex flex-col gap-1 px-2"><div class="px-2 py-1.5 text-[10px] font-semibold tracking-wider uppercase text-outline font-headline">Workspace Scopes</div><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container text-primary font-medium"><a aria-current="page" class="flex items-center px-2 py-1.5 rounded transition-colors bg-surface-container text-primary font-medium" data-path="co-invest" href="#"><span class="material-symbols-outlined text-[16px] mr-2 text-primary">groups</span>Active Vaults</a><a class="flex items-center px-2 py-1.5 rounded text-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="pool-analytics" href="#"><span class="material-symbols-outlined text-[16px] mr-2 text-outline">analytics</span>Pool Analytics</a><a class="flex items-center px-2 py-1.5 rounded text-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="strategy-allocator" href="#"><span class="material-symbols-outlined text-[16px] mr-2 text-outline">pie_chart</span>Strategy Allocator</a><a class="flex items-center px-2 py-1.5 rounded text-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="syndicate-orders" href="#"><span class="material-symbols-outlined text-[16px] mr-2 text-outline">receipt_long</span>Syndicate Orders</a><a class="flex items-center px-2 py-1.5 rounded text-xs text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="risk-matrix" href="#"><span class="material-symbols-outlined text-[16px] mr-2 text-outline">shield</span>Risk & Guardrails</a></nav></div><div class="px-3 flex flex-col gap-2"><div class="p-2 rounded bg-surface-container-low flex flex-col gap-1"><div class="flex items-center justify-between text-[10px] text-outline"><span>CO-INVEST POOL</span><span class="text-secondary font-mono">ACTIVE</span></div><div class="text-xs font-mono font-medium text-on-surface">$12,480,000 TVL</div><div class="w-full bg-surface-container h-1 rounded overflow-hidden"><div class="bg-primary h-full w-3/4"></div></div></div></div></aside><div class="pl-56"><main class="relative pt-[76px] pb-8 min-h-screen bg-background w-full"><div class="flex flex-col w-full text-on-surface select-none font-body">
+<!-- TOP WORKSPACE STRIP: THESIS & GOVERNANCE BAR -->
+<div class="w-full bg-surface-container-low px-3 py-1.5 flex flex-wrap items-center justify-between gap-2 shadow-sm text-xs">
+<div class="flex items-center gap-3 flex-wrap">
+<div class="flex items-center gap-1.5 bg-surface-container-high px-2 py-0.5 rounded">
+<span class="text-[10px] uppercase font-bold tracking-wider text-primary">Thesis #849</span>
+<span class="text-outline text-[11px]">•</span>
+<span class="font-medium text-on-surface truncate max-w-md">Solana High-Throughput Ecosystem Expansion & AI DePIN Rebalancing</span>
+<span class="text-[10px] font-mono text-tertiary bg-tertiary/10 px-1 rounded">Q3/Q4 Catalyst</span>
+</div>
+<div class="hidden xl:flex items-center gap-1 text-[11px] text-on-surface-variant font-mono">
+<span class="text-outline">STRATEGY:</span>
+<span class="text-on-surface font-medium">Multi-Asset Alpha + Delta-Neutral Yield Vault</span>
+</div>
+<div class="hidden 2xl:flex items-center gap-1 text-[11px] text-on-surface-variant font-mono">
+<span class="text-outline">RISK PROFILE:</span>
+<span class="text-secondary font-medium">Balanced Growth</span>
+<span class="text-outline text-[10px]">(Max DD: 8.5% | Target Sharpe: 2.84)</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1.5 bg-surface-container px-2 py-0.5 rounded text-[11px] font-mono">
+<span class="material-symbols-outlined text-[13px] text-primary">psychology</span>
+<span class="text-on-surface-variant hidden md:inline">Nexus v4.2 Ensemble</span>
+<span class="text-secondary font-semibold">82.4% Conf</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container-high px-2.5 py-1 rounded text-[10px] font-mono font-semibold tracking-wide text-tertiary">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>MANUAL APPROVAL REQUIRED • ZERO AUTO-EXECUTION</span>
+</div>
+</div>
+</div>
+<!-- THREE-COLUMN MAIN WORKSPACE -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-1 p-1 bg-surface-container-lowest">
+<!-- LEFT COLUMN: RESEARCH BRIEF & SCENARIO ENGINE -->
+<div class="lg:col-span-4 xl:col-span-3 flex flex-col gap-1">
+<!-- Panel Header -->
+<div class="bg-surface-container-low p-2.5 rounded-t flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">auto_stories</span>
+<span class="text-xs font-semibold tracking-wide font-headline uppercase text-on-surface">Research Brief & Thesis</span>
+</div>
+<span class="text-[10px] font-mono text-outline">Updated 4m ago</span>
+</div>
+<!-- Executive Thesis Card -->
+<div class="bg-surface-container p-3 flex flex-col gap-2 rounded-b">
+<div class="text-[10px] font-mono uppercase tracking-wider text-outline flex items-center justify-between">
+<span>Executive Summary</span>
+<span class="text-secondary text-[9px] font-semibold">ORACLE VERIFIED</span>
+</div>
+<p class="text-xs leading-relaxed text-on-surface-variant">
+          Rotation from Large-cap L1s into Solana high-throughput infrastructure and verified AI compute tokens following Pyth Network v2 governance catalysts and Jito stake-weighted QoS rollout.
+        </p>
+<!-- Catalysts Accordion Style -->
+<div class="mt-2 flex flex-col gap-1.5">
+<div class="text-[10px] font-mono uppercase tracking-wider text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">bolt</span>
+<span>Verified Catalysts</span>
+</div>
+<div class="bg-surface-container-low p-2 rounded text-[11px] flex flex-col gap-1">
+<div class="flex items-start justify-between gap-1">
+<span class="text-on-surface font-medium">Jito Tip Distribution Upgrade</span>
+<span class="text-tertiary font-mono text-[10px] whitespace-nowrap">Sept 28</span>
+</div>
+<p class="text-[10px] text-outline leading-tight">+14% MEV capture projection across mainnet-beta validator cluster.</p>
+</div>
+<div class="bg-surface-container-low p-2 rounded text-[11px] flex flex-col gap-1">
+<div class="flex items-start justify-between gap-1">
+<span class="text-on-surface font-medium">Solana Firedancer Testnet Phase 2</span>
+<span class="text-secondary font-mono text-[10px] whitespace-nowrap">Sept 29</span>
+</div>
+<p class="text-[10px] text-outline leading-tight">1.2M TPS test run throughput target confirmed on Frankendancer nodes.</p>
+</div>
+<div class="bg-surface-container-low p-2 rounded text-[11px] flex flex-col gap-1">
+<div class="flex items-start justify-between gap-1">
+<span class="text-on-surface font-medium">SEC Institutional Liquidity</span>
+<span class="text-primary font-mono text-[10px] whitespace-nowrap">Ongoing</span>
+</div>
+<p class="text-[10px] text-outline leading-tight">Net inflows averaging +$420M/wk into decentralized yield wrappers.</p>
+</div>
+</div>
+<!-- Invalidation Risks -->
+<div class="mt-2 flex flex-col gap-1.5">
+<div class="text-[10px] font-mono uppercase tracking-wider text-error flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">warning</span>
+<span>Invalidation Guardrails</span>
+</div>
+<div class="bg-surface-container-low p-2 rounded text-[10px] flex flex-col gap-1 text-on-surface-variant font-mono">
+<div class="flex items-center justify-between text-outline">
+<span>Mempool Congestion Spike</span>
+<span class="text-error">Trigger: >12% Drop</span>
+</div>
+<div class="flex items-center justify-between text-outline">
+<span>Fed Hawkish FOMC Rate 10Y</span>
+<span class="text-error">Trigger: >4.50%</span>
+</div>
+<div class="flex items-center justify-between text-outline">
+<span>SOL/USDC Hard Stop Price</span>
+<span class="text-error">$148.00</span>
+</div>
+</div>
+</div>
+<!-- Probability Scenarios Matrix -->
+<div class="mt-2 flex flex-col gap-1.5">
+<div class="text-[10px] font-mono uppercase tracking-wider text-outline flex items-center justify-between">
+<span>Scenario Probabilities</span>
+<span class="text-[9px]">Monte Carlo 10K</span>
+</div>
+<div class="grid grid-cols-3 gap-1 text-center font-mono text-[10px]">
+<div class="bg-surface-container-low p-1.5 rounded flex flex-col gap-0.5">
+<span class="text-secondary font-bold text-[11px]">45%</span>
+<span class="text-on-surface">Bull Case</span>
+<span class="text-secondary text-[9px]">+34.2% Ret</span>
+</div>
+<div class="bg-surface-container-low p-1.5 rounded flex flex-col gap-0.5">
+<span class="text-primary font-bold text-[11px]">40%</span>
+<span class="text-on-surface">Base Case</span>
+<span class="text-primary text-[9px]">+18.5% Ret</span>
+</div>
+<div class="bg-surface-container-low p-1.5 rounded flex flex-col gap-0.5">
+<span class="text-error font-bold text-[11px]">15%</span>
+<span class="text-on-surface">Bear Case</span>
+<span class="text-error text-[9px]">-11.4% DD</span>
+</div>
+</div>
+</div>
+<!-- Portfolio Impact Projection -->
+<div class="bg-surface-container-high p-2 rounded text-[11px] font-mono flex flex-col gap-1 mt-1">
+<div class="text-[9px] text-outline uppercase font-semibold">Portfolio Impact Projections</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Net Beta Shift:</span>
+<span class="text-on-surface font-medium">1.14 → 0.98</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Tracking Error:</span>
+<span class="text-on-surface font-medium">2.4%</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Projected Vault APY:</span>
+<span class="text-secondary font-medium">+19.6%</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>VaR (99%, 1-Day):</span>
+<span class="text-error font-medium">2.1% ($3,883)</span>
+</div>
+</div>
+<!-- Attributed Sources -->
+<div class="text-[9px] text-outline flex flex-col gap-0.5 pt-1">
+<div class="flex items-center gap-1">
+<span class="text-primary">[1]</span>
+<span class="truncate">Pyth Network Governance Dispatch #104 (14:22 UTC)</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="text-primary">[2]</span>
+<span class="truncate">Jito MEV Dune Analytics (Block 284,910,211)</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="text-primary">[3]</span>
+<span class="truncate">Federal Reserve FOMC Terminal Matrix</span>
+</div>
+</div>
+</div>
+</div>
+<!-- CENTER COLUMN: PORTFOLIO PLAN & MULTI-TRADE BASKET -->
+<div class="lg:col-span-8 xl:col-span-6 flex flex-col gap-1">
+<!-- TOP SECTION: PROPOSED PORTFOLIO ALLOCATION PLAN -->
+<div class="bg-surface-container-low rounded flex flex-col overflow-hidden">
+<div class="px-3 py-2 flex items-center justify-between bg-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">pie_chart</span>
+<span class="text-xs font-semibold tracking-wide font-headline uppercase text-on-surface">Target Rebalancing Allocation Plan</span>
+</div>
+<div class="text-[10px] font-mono text-outline flex items-center gap-2">
+<span>5 ASSETS</span>
+<span class="text-secondary bg-secondary/10 px-1.5 py-0.2 rounded font-semibold">DELTA: $70,269</span>
+</div>
+</div>
+<!-- Allocation Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left text-[11px] font-mono whitespace-nowrap">
+<thead>
+<tr class="bg-surface-container-high/60 text-outline text-[10px] uppercase tracking-wider">
+<th class="py-1.5 px-3">Asset</th>
+<th class="py-1.5 px-2">Action</th>
+<th class="py-1.5 px-2 text-right">Current</th>
+<th class="py-1.5 px-2 text-right">Target</th>
+<th class="py-1.5 px-2 text-right">Delta ($ / %)</th>
+<th class="py-1.5 px-3">Rationale</th>
+<th class="py-1.5 px-2 text-center">Risk</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- SOL -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2 px-3 font-semibold text-on-surface flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>SOL</span>
+<span class="text-[9px] text-outline font-normal">Solana</span>
+</td>
+<td class="py-2 px-2 text-secondary font-medium">Overweight</td>
+<td class="py-2 px-2 text-right text-on-surface-variant">32.0% <span class="text-[10px] text-outline">($59.1k)</span></td>
+<td class="py-2 px-2 text-right font-medium text-on-surface">42.0% <span class="text-[10px] text-outline">($77.6k)</span></td>
+<td class="py-2 px-2 text-right text-secondary font-semibold">+$18,492 <span class="text-[10px]">(+10%)</span></td>
+<td class="py-2 px-3 text-[10px] text-on-surface-variant max-w-[140px] truncate">L1 volume dominance & Firedancer testnet</td>
+<td class="py-2 px-2 text-center"><span class="text-[9px] bg-tertiary/10 text-tertiary px-1 py-0.5 rounded">Med</span></td>
+</tr>
+<!-- JUP -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2 px-3 font-semibold text-on-surface flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>JUP</span>
+<span class="text-[9px] text-outline font-normal">Jupiter</span>
+</td>
+<td class="py-2 px-2 text-secondary font-medium">New Position</td>
+<td class="py-2 px-2 text-right text-on-surface-variant">0.0% <span class="text-[10px] text-outline">($0)</span></td>
+<td class="py-2 px-2 text-right font-medium text-on-surface">12.0% <span class="text-[10px] text-outline">($22.1k)</span></td>
+<td class="py-2 px-2 text-secondary font-semibold">+$22,190 <span class="text-[10px]">(+12%)</span></td>
+<td class="py-2 px-3 text-[10px] text-on-surface-variant max-w-[140px] truncate">Perps volume fee capture & DEX routing moat</td>
+<td class="py-2 px-2 text-center"><span class="text-[9px] bg-tertiary/10 text-tertiary px-1 py-0.5 rounded">Med-Hi</span></td>
+</tr>
+<!-- ETH -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2 px-3 font-semibold text-on-surface flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span>ETH</span>
+<span class="text-[9px] text-outline font-normal">Ethereum</span>
+</td>
+<td class="py-2 px-2 text-error font-medium">Partial Trim</td>
+<td class="py-2 px-2 text-right text-on-surface-variant">28.0% <span class="text-[10px] text-outline">($51.7k)</span></td>
+<td class="py-2 px-2 text-right font-medium text-on-surface">16.0% <span class="text-[10px] text-outline">($29.5k)</span></td>
+<td class="py-2 px-2 text-error font-semibold">-$22,190 <span class="text-[10px]">(-12%)</span></td>
+<td class="py-2 px-3 text-[10px] text-on-surface-variant max-w-[140px] truncate">Funding compression & yield rotation to SOL</td>
+<td class="py-2 px-2 text-center"><span class="text-[9px] bg-secondary/10 text-secondary px-1 py-0.5 rounded">Low</span></td>
+</tr>
+<!-- PYTH -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2 px-3 font-semibold text-on-surface flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>PYTH</span>
+<span class="text-[9px] text-outline font-normal">Pyth Net</span>
+</td>
+<td class="py-2 px-2 text-secondary font-medium">Accumulate</td>
+<td class="py-2 px-2 text-right text-on-surface-variant">8.0% <span class="text-[10px] text-outline">($14.7k)</span></td>
+<td class="py-2 px-2 text-right font-medium text-on-surface">12.0% <span class="text-[10px] text-outline">($22.1k)</span></td>
+<td class="py-2 px-2 text-secondary font-semibold">+$7,397 <span class="text-[10px]">(+4%)</span></td>
+<td class="py-2 px-3 text-[10px] text-on-surface-variant max-w-[140px] truncate">Cross-chain oracle market share expansion</td>
+<td class="py-2 px-2 text-center"><span class="text-[9px] bg-tertiary/10 text-tertiary px-1 py-0.5 rounded">Med</span></td>
+</tr>
+<!-- USDC -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2 px-3 font-semibold text-on-surface flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span>USDC</span>
+<span class="text-[9px] text-outline font-normal">USD Coin</span>
+</td>
+<td class="py-2 px-2 text-outline font-medium">Deploy Cash</td>
+<td class="py-2 px-2 text-right text-on-surface-variant">32.0% <span class="text-[10px] text-outline">($59.1k)</span></td>
+<td class="py-2 px-2 text-right font-medium text-on-surface">18.0% <span class="text-[10px] text-outline">($33.2k)</span></td>
+<td class="py-2 px-2 text-error font-semibold">-$25,889 <span class="text-[10px]">(-14%)</span></td>
+<td class="py-2 px-3 text-[10px] text-on-surface-variant max-w-[140px] truncate">Fund high-conviction alpha basket</td>
+<td class="py-2 px-2 text-center"><span class="text-[9px] bg-surface-container-high text-outline px-1 py-0.5 rounded">Nil</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Inline Visual Comparison Bar -->
+<div class="px-3 py-2 bg-surface-container flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-[10px] font-mono text-outline">
+<span>ALLOCATION COMPARISON (CURRENT VS PROPOSED)</span>
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded bg-primary"></span>SOL</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded bg-secondary"></span>JUP</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded bg-outline"></span>ETH</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded bg-tertiary"></span>PYTH</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded bg-surface-variant"></span>USDC</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 font-mono text-[9px]">
+<div class="flex items-center gap-2">
+<span class="w-12 text-outline">Current</span>
+<div class="h-2.5 flex-1 bg-surface-container-lowest rounded overflow-hidden flex">
+<div class="bg-primary/80 h-full" style="width: 32%;"></div>
+<div class="bg-secondary/80 h-full" style="width: 0%;"></div>
+<div class="bg-outline/80 h-full" style="width: 28%;"></div>
+<div class="bg-tertiary/80 h-full" style="width: 8%;"></div>
+<div class="bg-surface-variant h-full" style="width: 32%;"></div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-12 text-primary font-medium">Proposed</span>
+<div class="h-2.5 flex-1 bg-surface-container-lowest rounded overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 42%;"></div>
+<div class="bg-secondary h-full" style="width: 12%;"></div>
+<div class="bg-outline h-full" style="width: 16%;"></div>
+<div class="bg-tertiary h-full" style="width: 12%;"></div>
+<div class="bg-surface-variant h-full" style="width: 18%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- BOTTOM SECTION: BASKET EXECUTION (MULTI-TRADE STAGING) -->
+<div class="bg-surface-container-low rounded flex flex-col overflow-hidden">
+<div class="px-3 py-2 flex items-center justify-between bg-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-tertiary">layers</span>
+<span class="text-xs font-semibold tracking-wide font-headline uppercase text-on-surface">Basket Execution (Multi-Trade Staging)</span>
+</div>
+<span class="text-[10px] font-mono px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-medium">4 ATOMIC TRADES STAGED</span>
+</div>
+<!-- Staged Trades Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left text-[11px] font-mono whitespace-nowrap">
+<thead>
+<tr class="bg-surface-container-high/60 text-outline text-[10px] uppercase tracking-wider">
+<th class="py-1.5 px-3">Batch</th>
+<th class="py-1.5 px-2">Action</th>
+<th class="py-1.5 px-2 text-right">Size / Value</th>
+<th class="py-1.5 px-2 text-right">Limit Price</th>
+<th class="py-1.5 px-2 text-right">Slippage</th>
+<th class="py-1.5 px-3">Route / Engine</th>
+<th class="py-1.5 px-2 text-center">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Batch 1 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2 px-3 text-outline">B-01</td>
+<td class="py-2 px-2 text-secondary font-semibold">BUY SOL</td>
+<td class="py-2 px-2 text-right text-on-surface font-medium">103.6 SOL <span class="text-[10px] text-outline">(~$18,492)</span></td>
+<td class="py-2 px-2 text-right text-on-surface-variant">$178.50</td>
+<td class="py-2 px-2 text-right text-outline">0.15%</td>
+<td class="py-2 px-3 text-[10px] text-on-surface flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Jupiter DEX Aggregator</span>
+</td>
+<td class="py-2 px-2 text-center">
+<span class="text-[9px] bg-surface-container-high text-primary px-1.5 py-0.5 rounded">Staged</span>
+</td>
+</tr>
+<!-- Batch 2 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2 px-3 text-outline">B-02</td>
+<td class="py-2 px-2 text-secondary font-semibold">BUY JUP</td>
+<td class="py-2 px-2 text-right text-on-surface font-medium">17,895 JUP <span class="text-[10px] text-outline">(~$22,190)</span></td>
+<td class="py-2 px-2 text-right text-on-surface-variant">$1.240</td>
+<td class="py-2 px-2 text-right text-outline">0.20%</td>
+<td class="py-2 px-3 text-[10px] text-on-surface flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Raydium / Orca Whirlpool</span>
+</td>
+<td class="py-2 px-2 text-center">
+<span class="text-[9px] bg-surface-container-high text-primary px-1.5 py-0.5 rounded">Staged</span>
+</td>
+</tr>
+<!-- Batch 3 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2 px-3 text-outline">B-03</td>
+<td class="py-2 px-2 text-error font-semibold">SELL ETH</td>
+<td class="py-2 px-2 text-right text-on-surface font-medium">6.35 ETH <span class="text-[10px] text-outline">(~$22,190)</span></td>
+<td class="py-2 px-2 text-right text-on-surface-variant">$3,494.50</td>
+<td class="py-2 px-2 text-right text-outline">0.10%</td>
+<td class="py-2 px-3 text-[10px] text-on-surface flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Uniswap v3 / CoW Swap</span>
+</td>
+<td class="py-2 px-2 text-center">
+<span class="text-[9px] bg-surface-container-high text-primary px-1.5 py-0.5 rounded">Staged</span>
+</td>
+</tr>
+<!-- Batch 4 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2 px-3 text-outline">B-04</td>
+<td class="py-2 px-2 text-secondary font-semibold">BUY PYTH</td>
+<td class="py-2 px-2 text-right text-on-surface font-medium">17,611 PYTH <span class="text-[10px] text-outline">(~$7,397)</span></td>
+<td class="py-2 px-2 text-right text-on-surface-variant">$0.420</td>
+<td class="py-2 px-2 text-right text-outline">0.25%</td>
+<td class="py-2 px-3 text-[10px] text-on-surface flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>OpenBook v2 CLOB</span>
+</td>
+<td class="py-2 px-2 text-center">
+<span class="text-[9px] bg-surface-container-high text-primary px-1.5 py-0.5 rounded">Staged</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Basket Summary & Action Control Strip -->
+<div class="p-3 bg-surface-container flex flex-col gap-2">
+<div class="flex flex-wrap items-center justify-between text-xs font-mono text-outline">
+<div class="flex items-center gap-4">
+<span>Total Notional: <strong class="text-on-surface font-semibold">$70,269.00 USDC</strong></span>
+<span>Est. Slippage: <strong class="text-on-surface">$78.40 (0.11%)</strong></span>
+<span>Fees: <strong class="text-on-surface">0.0018 SOL (~$0.32)</strong></span>
+</div>
+<div class="flex items-center gap-1 text-[10px] text-tertiary">
+<span class="material-symbols-outlined text-[12px]">security</span>
+<span>Atomic multi-sig transaction</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-2 pt-1">
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1.5 rounded bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-variant text-xs transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+<span>Edit Basket</span>
+</button>
+<button class="px-2.5 py-1.5 rounded bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-variant text-xs transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">science</span>
+<span>Simulate Impact</span>
+</button>
+<button class="px-2.5 py-1.5 rounded bg-surface-container-high text-error hover:bg-error-container hover:text-on-error-container text-xs transition-colors">
+                Cancel All
+              </button>
+</div>
+<button class="px-4 py-1.5 rounded bg-primary text-on-primary font-medium hover:bg-primary-container text-xs transition-colors flex items-center gap-1.5 shadow-sm" id="btn-execute-basket">
+<span class="material-symbols-outlined text-[15px]">lock</span>
+<span>Confirm & Execute Basket</span>
+</button>
+</div>
+<div class="text-[10px] font-mono text-outline leading-tight pt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-tertiary">info</span>
+<span>Trades remain staged in memory. Nexus will NEVER sign transactions without your hardware/wallet confirmation.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: FOCUSED TRADE IDEA TICKET & RISK TELEMETRY -->
+<div class="lg:col-span-12 xl:col-span-3 flex flex-col gap-1">
+<div class="bg-surface-container-low p-2.5 rounded-t flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">price_change</span>
+<span class="text-xs font-semibold tracking-wide font-headline uppercase text-on-surface">Focused Trade Idea Ticket</span>
+</div>
+<span class="text-[10px] font-mono text-secondary bg-secondary/10 px-1.5 rounded font-semibold">TICKET #01</span>
+</div>
+<div class="bg-surface-container p-3 flex flex-col gap-3 rounded-b">
+<!-- Asset Header -->
+<div class="flex items-center justify-between bg-surface-container-low p-2 rounded">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="text-sm font-bold font-headline text-on-surface">SOL / USD</span>
+<span class="text-[10px] font-mono px-1 py-0.2 rounded bg-secondary/15 text-secondary font-medium">LONG</span>
+</div>
+<div class="text-[10px] font-mono text-outline">Pyth Oracle Live Feed</div>
+</div>
+<div class="text-right font-mono">
+<div class="text-sm font-bold text-on-surface">$178.42</div>
+<div class="text-[10px] text-secondary font-medium">+4.2% (24h)</div>
+</div>
+</div>
+<!-- Trade Parameters Form Display -->
+<div class="flex flex-col gap-2 font-mono text-xs">
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container-low">
+<span class="text-outline text-[11px]">Target Entry Zone</span>
+<span class="text-on-surface font-medium">$176.80 – $178.50</span>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container-low">
+<span class="text-outline text-[11px]">Allocation Size</span>
+<div class="text-right">
+<span class="text-on-surface font-medium">$18,492.00</span>
+<span class="text-[10px] text-outline ml-1">(10.0%)</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container-low">
+<span class="text-outline text-[11px]">Leverage / Risk</span>
+<div class="text-right">
+<span class="text-secondary font-medium">1.0x (Spot)</span>
+<span class="text-[10px] text-outline ml-1">0% Liq Risk</span>
+</div>
+</div>
+<!-- TP / SL Grid -->
+<div class="grid grid-cols-2 gap-1.5 pt-0.5">
+<div class="bg-surface-container-low p-2 rounded flex flex-col gap-0.5">
+<div class="text-[10px] text-secondary font-medium flex items-center justify-between">
+<span>TAKE PROFIT</span>
+<span>+20.5%</span>
+</div>
+<div class="text-xs font-bold text-on-surface">$215.00</div>
+<div class="text-[10px] text-outline">Est. +$3,790.86</div>
+</div>
+<div class="bg-surface-container-low p-2 rounded flex flex-col gap-0.5">
+<div class="text-[10px] text-error font-medium flex items-center justify-between">
+<span>STOP LOSS</span>
+<span>-9.2%</span>
+</div>
+<div class="text-xs font-bold text-on-surface">$162.00</div>
+<div class="text-[10px] text-outline">Est. -$1,701.26</div>
+</div>
+</div>
+<!-- Risk / Reward Metric -->
+<div class="flex items-center justify-between px-2 py-1 bg-surface-container-high rounded text-[11px]">
+<span class="text-outline">Risk / Reward Ratio:</span>
+<span class="text-secondary font-bold">2.23 : 1</span>
+</div>
+</div>
+<!-- Core Evidence & Catalyst Box -->
+<div class="bg-surface-container-low p-2.5 rounded text-[11px] flex flex-col gap-1.5">
+<div class="text-[10px] font-mono uppercase text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">analytics</span>
+<span>Supporting On-Chain Signal</span>
+</div>
+<p class="text-on-surface-variant text-[11px] leading-relaxed">
+            Whale wallet address accumulation detected: Top 20 non-exchange wallets added +184,200 SOL past 72 hours. Staking lockups net positive +$82M.
+          </p>
+<div class="flex items-center justify-between text-[10px] font-mono text-outline pt-1">
+<span>Primary Catalyst: Firedancer Phase 2</span>
+<span class="text-primary font-medium">HIGH SIGNAL</span>
+</div>
+</div>
+<!-- Interactive Ticket Actions -->
+<div class="flex flex-col gap-1.5 pt-1">
+<button class="w-full py-2 rounded bg-primary text-on-primary font-medium hover:bg-primary-container text-xs transition-colors flex items-center justify-center gap-1.5 shadow-sm" id="btn-confirm-idea">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Confirm Trade Idea</span>
+</button>
+<div class="grid grid-cols-2 gap-1.5">
+<button class="py-1.5 rounded bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-variant text-xs transition-colors text-center">
+              Paper Simulate
+            </button>
+<button class="py-1.5 rounded bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-variant text-xs transition-colors text-center">
+              Save Watchlist
+            </button>
+</div>
+<button class="py-1 rounded bg-transparent text-outline hover:text-error text-[11px] transition-colors text-center">
+            Reject Trade Idea
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- BOTTOM FULL-WIDTH EXPANDABLE WORKSPACE: VERIFIABLE AUDIT RECEIPTS & EVIDENCE LOG -->
+<div class="w-full bg-surface-container-lowest p-1 pt-0">
+<div class="bg-surface-container-low rounded overflow-hidden">
+<!-- Panel Header & Navigation Tabs -->
+<div class="px-3 py-2 bg-surface-container flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">receipt_long</span>
+<span class="text-xs font-semibold tracking-wide font-headline uppercase text-on-surface">Verifiable Audit Receipts & Evidence Log</span>
+</div>
+<div class="flex items-center gap-1 text-[11px] font-mono">
+<button class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-medium">Audit Receipts (5)</button>
+<button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high">Oracle Provenance</button>
+<button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high">Telemetry Matrix</button>
+<button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high">Export PRD</button>
+</div>
+</div>
+<div class="flex items-center gap-2 text-[10px] font-mono text-outline">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Zero CoT Hidden</span>
+<span>SHA-256 Immutability Enabled</span>
+</div>
+</div>
+<!-- Dense Audit Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left text-[11px] font-mono whitespace-nowrap">
+<thead>
+<tr class="bg-surface-container-high/60 text-outline text-[10px] uppercase tracking-wider">
+<th class="py-2 px-3">Receipt ID</th>
+<th class="py-2 px-2">Catalyst Trigger</th>
+<th class="py-2 px-3">Primary Source</th>
+<th class="py-2 px-2">Timestamp (UTC)</th>
+<th class="py-2 px-3">Data Point Analyzed</th>
+<th class="py-2 px-3">Inference Rationale</th>
+<th class="py-2 px-2">Risk Factor</th>
+<th class="py-2 px-3 text-right">Verification Hash</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container text-on-surface-variant">
+<!-- R-01 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2 px-3 font-semibold text-primary">R-01</td>
+<td class="py-2 px-2 text-on-surface font-medium">Firedancer Throughput Spike</td>
+<td class="py-2 px-3 text-outline">Solana Validator GitHub commit 8f9b2c</td>
+<td class="py-2 px-2 text-outline">2024-09-18 14:42:10</td>
+<td class="py-2 px-3 text-on-surface">1,240,000 TPS benchmark synthetic logs</td>
+<td class="py-2 px-3 max-w-[200px] truncate text-[10px]">Confirms scaling capability ahead of mainnet rollout</td>
+<td class="py-2 px-2 text-secondary">Low Regression</td>
+<td class="py-2 px-3 text-right text-outline hover:text-primary cursor-pointer">0x8a91...fe42</td>
+</tr>
+<!-- R-02 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2 px-3 font-semibold text-primary">R-02</td>
+<td class="py-2 px-2 text-on-surface font-medium">Whale Wallet Accumulation</td>
+<td class="py-2 px-3 text-outline">Solana RPC Account Monitor (whales.sol)</td>
+<td class="py-2 px-2 text-outline">2024-09-18 14:38:05</td>
+<td class="py-2 px-3 text-on-surface">+184,200 SOL net outflow from exchanges</td>
+<td class="py-2 px-3 max-w-[200px] truncate text-[10px]">Smart money positioning before quarterly options expiry</td>
+<td class="py-2 px-2 text-tertiary">Inventory Drying</td>
+<td class="py-2 px-3 text-right text-outline hover:text-primary cursor-pointer">0x12b4...39aa</td>
+</tr>
+<!-- R-03 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2 px-3 font-semibold text-primary">R-03</td>
+<td class="py-2 px-2 text-on-surface font-medium">Jito Stake-Weighted QoS</td>
+<td class="py-2 px-3 text-outline">Jito Labs Governance Proposal #14</td>
+<td class="py-2 px-2 text-outline">2024-09-18 13:15:00</td>
+<td class="py-2 px-3 text-on-surface">Tip floor increased by 0.002 SOL/packet</td>
+<td class="py-2 px-3 max-w-[200px] truncate text-[10px]">Projected 14% higher validator yield boosts staking appeal</td>
+<td class="py-2 px-2 text-secondary">Lockup Increase</td>
+<td class="py-2 px-3 text-right text-outline hover:text-primary cursor-pointer">0x66dc...90ee</td>
+</tr>
+<!-- R-04 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2 px-3 font-semibold text-primary">R-04</td>
+<td class="py-2 px-2 text-on-surface font-medium">Ethereum L2 Gas Cannibalization</td>
+<td class="py-2 px-3 text-outline">L2Beat / Dune Analytics contract trackers</td>
+<td class="py-2 px-2 text-outline">2024-09-18 12:44:22</td>
+<td class="py-2 px-3 text-on-surface">Mainnet burn rate down 42% YoY, blob compression</td>
+<td class="py-2 px-3 max-w-[200px] truncate text-[10px]">Trimming ETH allocation due to reduced L1 fee capture</td>
+<td class="py-2 px-2 text-error">Diminished MoS</td>
+<td class="py-2 px-3 text-right text-outline hover:text-primary cursor-pointer">0x44bf...1109</td>
+</tr>
+<!-- R-05 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2 px-3 font-semibold text-primary">R-05</td>
+<td class="py-2 px-2 text-on-surface font-medium">Cross-Chain Pyth Volume</td>
+<td class="py-2 px-3 text-outline">Pyth Network Metric API v2</td>
+<td class="py-2 px-2 text-outline">2024-09-18 11:02:18</td>
+<td class="py-2 px-3 text-on-surface">$3.2B 24h volume across 45 chains</td>
+<td class="py-2 px-3 max-w-[200px] truncate text-[10px]">Revenue sharing model activation in governance review</td>
+<td class="py-2 px-2 text-secondary">Token Velocity</td>
+<td class="py-2 px-3 text-right text-outline hover:text-primary cursor-pointer">0x992a...8831</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Interactive Confirmation Micro-Modal (Vanilla JS controlled) -->
+<div class="fixed inset-0 bg-background/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4" id="modal-confirm">
+<div class="bg-surface-container p-4 rounded max-w-md w-full shadow-xl flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-tertiary">lock_open</span>
+<span class="text-xs font-bold font-headline uppercase">Manual Signature Authorization</span>
+</div>
+<button class="text-outline hover:text-on-surface" id="modal-close"><span class="material-symbols-outlined text-[16px]">close</span></button>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+        You are about to authorize <span class="text-primary font-mono font-semibold">4 atomic trades</span> totaling <span class="text-secondary font-mono font-semibold">$70,269.00 USDC</span>. 
+        Nexus zero-automation rules strictly prohibit background execution. Please sign the intent payload with your connected hardware wallet.
+      </p>
+<div class="bg-surface-container-low p-2 rounded text-[11px] font-mono text-outline flex flex-col gap-1">
+<div class="flex justify-between"><span>Target Vault:</span> <span class="text-on-surface">Alpha Rebalance #849</span></div>
+<div class="flex justify-between"><span>Max Slippage Limit:</span> <span class="text-on-surface">0.25% Cumulative</span></div>
+<div class="flex justify-between"><span>Network Fee Estimate:</span> <span class="text-on-surface">0.0018 SOL</span></div>
+</div>
+<div class="flex items-center justify-end gap-2 pt-1">
+<button class="px-3 py-1.5 rounded bg-surface-container-high text-xs text-on-surface-variant hover:text-on-surface" id="modal-cancel-btn">Cancel</button>
+<button class="px-4 py-1.5 rounded bg-primary text-on-primary font-semibold text-xs hover:bg-primary-container flex items-center gap-1.5" id="modal-sign-btn">
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+<span>Sign & Broadcast</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initCoInvestWorkspace() {
+    const execBtn = document.getElementById('btn-execute-basket');
+    const modal = document.getElementById('modal-confirm');
+    const closeBtn = document.getElementById('modal-close');
+    const cancelBtn = document.getElementById('modal-cancel-btn');
+    const signBtn = document.getElementById('modal-sign-btn');
+    const ideaBtn = document.getElementById('btn-confirm-idea');
+
+    function openModal() {
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+    }
+
+    function closeModal() {
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    if (execBtn) execBtn.addEventListener('click', openModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+
+    if (signBtn) {
+      signBtn.addEventListener('click', function() {
+        signBtn.innerHTML = '<span class="material-symbols-outlined text-[14px] animate-spin">sync</span> Broadcasting...';
+        setTimeout(function() {
+          signBtn.innerHTML = '<span class="material-symbols-outlined text-[14px]">verified</span> Signed!';
+          setTimeout(closeModal, 600);
+        }, 1200);
+      });
+    }
+
+    if (ideaBtn) {
+      ideaBtn.addEventListener('click', function() {
+        const orig = ideaBtn.innerHTML;
+        ideaBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span> Trade Added to Staging';
+        ideaBtn.classList.add('bg-secondary', 'text-on-secondary');
+        setTimeout(function() {
+          ideaBtn.innerHTML = orig;
+          ideaBtn.classList.remove('bg-secondary', 'text-on-secondary');
+        }, 2000);
+      });
+    }
+  })();
+</script></main></div><footer class="fixed bottom-0 left-0 w-full h-8 bg-surface-container-lowest z-50 flex items-center justify-between px-3 text-[11px] font-mono shadow-[0_-1px_8px_rgba(0,0,0,0.25)]"><div class="flex items-center gap-2"><span class="text-outline uppercase text-[10px]">Layout Presets:</span><div class="flex items-center gap-1"><button class="px-1.5 py-0.5 rounded bg-surface-container text-primary font-medium hover:bg-surface-container-high">Co-Invest</button><button class="px-1.5 py-0.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface">Research</button><button class="px-1.5 py-0.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface">Basket Execution</button><button class="px-1.5 py-0.5 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface">Split View</button></div></div><div class="flex items-center gap-4 text-on-surface-variant"><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>Terminal Status: ONLINE</span></div><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>Pyth Oracle Feed OK</span></div><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>Memory Sync 100%</span></div><div class="flex items-center gap-1 text-outline"><button class="hover:text-on-surface"><span class="material-symbols-outlined text-[14px]">vertical_split</span></button><button class="hover:text-on-surface"><span class="material-symbols-outlined text-[14px]">horizontal_split</span></button><button class="hover:text-on-surface"><span class="material-symbols-outlined text-[14px]">fullscreen</span></button></div></div></footer></body></html>

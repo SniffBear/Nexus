@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Nexus Precision Multi-Workspace</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "error": "#ffb4ab",
+          "inverse-primary": "#105eb0",
+          "tertiary": "#f7be37",
+          "tertiary-container": "#d39e10",
+          "surface": "#101419",
+          "on-tertiary": "#402d00",
+          "surface-container-highest": "#31353b",
+          "primary": "#a8c8ff",
+          "on-error-container": "#ffdad6",
+          "tertiary-fixed": "#ffdea1",
+          "on-secondary-container": "#e8f1ff",
+          "surface-dim": "#101419",
+          "secondary": "#99cbff",
+          "surface-container-high": "#262a30",
+          "on-surface": "#e0e2ea",
+          "on-primary-fixed-variant": "#00468a",
+          "surface-container-low": "#181c21",
+          "surface-variant": "#31353b",
+          "on-surface-variant": "#c2c6d3",
+          "surface-container-lowest": "#0a0f13",
+          "surface-tint": "#a8c8ff",
+          "secondary-container": "#0072b5",
+          "on-error": "#690005",
+          "tertiary-fixed-dim": "#f7be37",
+          "surface-container": "#1c2025",
+          "on-tertiary-fixed-variant": "#5c4300",
+          "background": "#101419",
+          "outline": "#8c919d",
+          "on-primary": "#003061",
+          "on-secondary": "#003355",
+          "on-primary-fixed": "#001b3c",
+          "primary-container": "#6ea8ff",
+          "secondary-fixed-dim": "#99cbff",
+          "inverse-surface": "#e0e2ea",
+          "primary-fixed-dim": "#a8c8ff",
+          "on-tertiary-fixed": "#261900",
+          "on-primary-container": "#003c77",
+          "on-background": "#e0e2ea",
+          "on-secondary-fixed-variant": "#004a78",
+          "primary-fixed": "#d5e3ff",
+          "inverse-on-surface": "#2d3136",
+          "on-secondary-fixed": "#001d34",
+          "on-tertiary-container": "#4e3800",
+          "outline-variant": "#424751",
+          "secondary-fixed": "#cfe5ff",
+          "surface-bright": "#36393f",
+          "error-container": "#93000a"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {},
+        "fontFamily": {
+          "headline": [
+            "Geist"
+          ],
+          "display": [
+            "Geist"
+          ],
+          "body": [
+            "Geist"
+          ],
+          "label": [
+            "Geist"
+          ]
+        },
+        "fontSize": {}
+      },
+    },
+  }</script></head><body class="bg-surface font-body text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container pb-8"><header class="fixed top-0 left-0 right-0 z-50 flex flex-col"><div class="h-11 w-full bg-surface-container-lowest border-b border-outline-variant/30 px-3 flex items-center justify-between gap-3"><div class="flex items-center gap-4 flex-shrink-0"><div class="flex items-center gap-1.5 font-headline font-bold text-sm tracking-wider text-primary"><span class="material-symbols-outlined text-primary text-[18px]">grid_goldenratio</span><span>NEXUS</span></div><nav class="hidden xl:flex items-center gap-0.5 text-xs" data-active-classes="bg-surface-container-highest text-on-surface font-semibold rounded"><a class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="trade" href="#">Trade</a><a class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="markets" href="#">Markets</a><a class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="predict" href="#">Predict</a><a class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="social" href="#">Social</a><a class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="leaderboard" href="#">Leaderboard</a><a class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="earn" href="#">Earn</a><a class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="calendar" href="#">Calendar</a><a class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="co-invest" href="#">Co-Invest</a><a class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="agents" href="#">Agents</a><a class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="watchlist-alerts" href="#">Watchlist &amp; Alerts</a></nav></div><div class="flex items-center gap-2.5 flex-shrink-0 text-xs"><button class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container-low hover:bg-surface-container border border-outline-variant/30 text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[14px]">search</span><span class="text-[11px]">Search</span><kbd class="text-[10px] px-1 py-0.2 rounded bg-surface-container-highest text-on-surface font-mono">⌘K</kbd></button><div class="flex items-center p-0.5 rounded bg-surface-container-low border border-outline-variant/30 text-[11px]"><button class="px-2 py-0.5 rounded-sm bg-primary-container text-on-primary-container font-medium" type="button">Paper</button><button class="px-2 py-0.5 rounded-sm text-on-surface-variant hover:text-on-surface transition-colors" type="button">Live</button></div><div class="flex items-center gap-1 px-2 py-1 rounded bg-surface-container-low border border-outline-variant/30 text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-mono text-[11px] text-on-surface">0x7a...4b1f</span></div><div class="flex items-center gap-1 text-[11px] text-on-surface-variant font-mono"><span class="material-symbols-outlined text-[13px] text-secondary">bolt</span><span>12ms</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="h-8 w-full bg-surface-container-low border-b border-outline-variant/30 px-3 flex items-center justify-between text-[11px] font-mono overflow-hidden"><div class="flex items-center gap-6 overflow-x-auto no-scrollbar"><div class="flex items-center gap-1.5 flex-shrink-0"><span class="font-semibold text-on-surface">SOL/USD</span><span class="text-on-surface">192.45</span><span class="text-secondary">+4.28%</span></div><div class="flex items-center gap-1.5 flex-shrink-0"><span class="font-semibold text-on-surface">BTC/USD</span><span class="text-on-surface">88,412.00</span><span class="text-secondary">+1.85%</span></div><div class="flex items-center gap-1.5 flex-shrink-0"><span class="font-semibold text-on-surface">ETH/USD</span><span class="text-on-surface">3,428.10</span><span class="text-error">-0.62%</span></div><div class="flex items-center gap-1.5 flex-shrink-0"><span class="font-semibold text-on-surface">JUP/USD</span><span class="text-on-surface">1.24</span><span class="text-secondary">+8.14%</span></div><div class="flex items-center gap-1.5 flex-shrink-0"><span class="font-semibold text-on-surface">NVDA</span><span class="text-on-surface">141.20</span><span class="text-secondary">+2.05%</span></div></div><div class="hidden md:flex items-center gap-3 text-on-surface-variant flex-shrink-0"><span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>Feed Live</span><span>VOL $4.18B</span></div></div></header><main class="w-full pt-[76px] bg-surface min-h-[calc(100vh-32px)]"><div class="flex flex-col w-full text-on-surface select-none">
+<!-- TOP WORKSPACE TOOLBAR / SUBHEADER -->
+<div class="w-full bg-surface-container-lowest border-b border-outline-variant/30 px-3 py-1.5 flex flex-wrap items-center justify-between gap-3">
+<!-- Left: Workspace Identity, Presets & Global Telemetry -->
+<div class="flex items-center flex-wrap gap-2.5 min-w-0">
+<div class="flex items-center gap-2 pr-3 border-r border-outline-variant/30">
+<span class="material-symbols-outlined text-primary text-[17px]">radar</span>
+<span class="font-headline font-semibold text-xs tracking-wider text-on-surface uppercase">Watchlist &amp; Alerts</span>
+</div>
+<!-- Presets / Quick Views -->
+<div class="flex items-center bg-surface-container-low p-0.5 rounded border border-outline-variant/20">
+<button class="px-2 py-0.5 rounded text-[11px] font-medium bg-surface-container-high text-primary shadow-sm" type="button">Master Surveillance</button>
+<button class="px-2 py-0.5 rounded text-[11px] text-on-surface-variant hover:text-on-surface transition-colors" type="button">High Volatility</button>
+<button class="px-2 py-0.5 rounded text-[11px] text-on-surface-variant hover:text-on-surface transition-colors" type="button">Smart Money Focus</button>
+</div>
+<!-- Quick Metrics Strip -->
+<div class="hidden 2xl:flex items-center gap-3 pl-2 text-[11px] font-mono text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Monitored: <strong class="text-on-surface">38</strong></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Armed Alerts: <strong class="text-on-surface">14</strong></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>Fired Today: <strong class="text-tertiary">9</strong></span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container-low px-2 py-0.5 rounded border border-outline-variant/20">
+<span class="material-symbols-outlined text-[13px] text-secondary">cell_tower</span>
+<span class="text-[10px]">TG + Webhook + Desktop</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+</div>
+</div>
+</div>
+<!-- Right Controls: Action Triggers & Density Switch -->
+<div class="flex items-center gap-2 flex-shrink-0">
+<div class="flex items-center bg-surface-container-low rounded border border-outline-variant/20 p-0.5 text-[11px]">
+<button class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-mono" id="density-compact" type="button">Compact</button>
+<button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface transition-colors font-mono" id="density-default" type="button">Normal</button>
+</div>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-low hover:bg-surface-container border border-outline-variant/30 text-on-surface-variant hover:text-on-surface text-[11px] transition-colors" type="button">
+<span class="material-symbols-outlined text-[13px]">file_upload</span>
+<span>Import</span>
+</button>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-low hover:bg-surface-container border border-outline-variant/30 text-on-surface-variant hover:text-on-surface text-[11px] transition-colors" type="button">
+<span class="material-symbols-outlined text-[13px]">download</span>
+<span>Export</span>
+</button>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded bg-primary-container hover:bg-primary text-on-primary-container font-semibold text-[11px] transition-colors shadow-sm" onclick="focusCreateAlertForm()" type="button">
+<span class="material-symbols-outlined text-[14px]">add_alert</span>
+<span>+ New Alert</span>
+</button>
+</div>
+</div>
+<!-- MAIN SPLIT WORKSPACE BODY -->
+<div class="w-full flex flex-col xl:flex-row min-h-[calc(100vh-142px)] divide-y xl:divide-y-0 xl:divide-x divide-outline-variant/30">
+<!-- LEFT / CENTER: MARKET SURVEILLANCE & WATCHLIST TABLE (~62%) -->
+<div class="w-full xl:w-[62%] flex flex-col bg-surface-container-lowest min-w-0">
+<!-- Panel Header & Surveillance Tabs -->
+<div class="h-8 bg-surface-container-low border-b border-outline-variant/30 px-2 flex items-center justify-between text-xs overflow-x-auto">
+<div class="flex items-center gap-0.5 min-w-max font-medium">
+<button class="px-3 py-1 text-[11px] bg-surface-container-lowest text-primary border-b-2 border-primary font-semibold flex items-center gap-1.5" type="button">
+<span>Watchlist (Core 12)</span>
+<span class="px-1 py-0.2 rounded text-[9px] bg-primary/20 text-primary">12</span>
+</button>
+<button class="px-3 py-1 text-[11px] text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1.5" type="button">
+<span>Most Active (24H Vol)</span>
+<span class="px-1 py-0.2 rounded text-[9px] bg-surface-container text-on-surface-variant">25</span>
+</button>
+<button class="px-3 py-1 text-[11px] text-on-surface-variant hover:text-on-surface transition-colors" type="button">Gainers</button>
+<button class="px-3 py-1 text-[11px] text-on-surface-variant hover:text-on-surface transition-colors" type="button">Losers</button>
+<button class="px-3 py-1 text-[11px] text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-tertiary text-[12px]">token</span>
+<span>Smart Money Targets</span>
+</button>
+</div>
+<div class="flex items-center gap-1 text-[11px] text-on-surface-variant flex-shrink-0 pl-2 font-mono">
+<span>Sort: Vol 24h</span>
+<span class="material-symbols-outlined text-[14px]">arrow_downward</span>
+</div>
+</div>
+<!-- Quick Search & Sector Sub-Bar -->
+<div class="px-2.5 py-1.5 bg-surface-container-lowest border-b border-outline-variant/20 flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2 flex-grow max-w-sm">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-2 top-1.5 text-on-surface-variant text-[14px]">search</span>
+<input class="w-full bg-surface-container-low text-on-surface pl-7 pr-3 py-1 rounded text-[11px] border border-outline-variant/20 focus:outline-none focus:border-primary font-mono placeholder:text-on-surface-variant/50" placeholder="Filter ticker, name, or tag (e.g. SOL, L1, AI)..." type="text"/>
+</div>
+</div>
+<!-- Sector filter chips -->
+<div class="flex items-center gap-1 text-[10px] overflow-x-auto no-scrollbar font-mono">
+<button class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-semibold" type="button">ALL</button>
+<button class="px-2 py-0.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant transition-colors" type="button">PERPS</button>
+<button class="px-2 py-0.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant transition-colors" type="button">SPOT</button>
+<button class="px-2 py-0.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant transition-colors" type="button">AI &amp; DATA</button>
+<button class="px-2 py-0.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant transition-colors" type="button">L1 / L2</button>
+<button class="px-2 py-0.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant transition-colors" type="button">MEMES</button>
+<button class="ml-1 p-0.5 rounded bg-surface-container-low text-on-surface-variant hover:text-on-surface" title="Customize columns" type="button">
+<span class="material-symbols-outlined text-[13px]">view_column</span>
+</button>
+</div>
+</div>
+<!-- Tabular Financial Watchlist Matrix -->
+<div class="overflow-x-auto flex-grow bg-surface-container-lowest">
+<table class="w-full border-collapse text-left text-xs whitespace-nowrap">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-mono text-[10px] tracking-wider uppercase border-b border-outline-variant/30 select-none">
+<th class="py-1.5 px-2 w-8 text-center"><input class="accent-primary rounded-sm cursor-pointer" type="checkbox"/></th>
+<th class="py-1.5 px-1 w-6 text-center"><span class="material-symbols-outlined text-[12px]">star</span></th>
+<th class="py-1.5 px-2">Asset</th>
+<th class="py-1.5 px-3 text-right">Last Price</th>
+<th class="py-1.5 px-3 text-right">24H Delta</th>
+<th class="py-1.5 px-3 text-right">24H Volume</th>
+<th class="py-1.5 px-3 text-center w-36">24H High / Low</th>
+<th class="py-1.5 px-2 text-center w-24">24H Spark</th>
+<th class="py-1.5 px-2 text-left">Active Rules</th>
+<th class="py-1.5 px-2.5 text-right w-24">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/15 font-mono text-[11px]" id="watchlist-table-body">
+<!-- ROW 1: SOL -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-pointer">
+<td class="py-1.5 px-2 text-center"><input class="accent-primary rounded-sm" type="checkbox"/></td>
+<td class="py-1.5 px-1 text-center"><span class="material-symbols-outlined text-[14px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></td>
+<td class="py-1.5 px-2 font-body">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-[9px] text-primary">S</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline font-semibold text-xs text-on-surface">SOL</span>
+<span class="px-1 py-0.2 rounded text-[9px] font-mono bg-surface-container text-on-surface-variant">L1</span>
+</div>
+<span class="text-[10px] text-on-surface-variant leading-none">Solana</span>
+</div>
+</div>
+</td>
+<td class="py-1.5 px-3 text-right font-mono font-medium text-on-surface">$188.42</td>
+<td class="py-1.5 px-3 text-right font-mono">
+<div class="flex flex-col items-end leading-tight">
+<span class="text-secondary font-semibold">+4.28%</span>
+<span class="text-[9px] text-secondary/80">+$7.74</span>
+</div>
+</td>
+<td class="py-1.5 px-3 text-right font-mono text-on-surface">$2.41B</td>
+<!-- Range Bar with Indicator -->
+<td class="py-1.5 px-3">
+<div class="flex flex-col gap-0.5">
+<div class="flex justify-between text-[9px] text-on-surface-variant">
+<span>179.20</span>
+<span>191.10</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded relative overflow-hidden">
+<div class="bg-secondary h-1 rounded" style="width: 78%;"></div>
+</div>
+</div>
+</td>
+<!-- Compact Sparkline -->
+<td class="py-1.5 px-2 text-center">
+<svg class="w-20 h-5 inline-block text-secondary" fill="none" viewbox="0 0 80 20">
+<path d="M0,16 L12,14 L24,17 L36,10 L48,11 L60,4 L72,6 L80,2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"></path>
+</svg>
+</td>
+<td class="py-1.5 px-2">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container-high text-primary text-[10px]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>2 Active (Price+OI)</span>
+</span>
+</td>
+<td class="py-1.5 px-2.5 text-right font-body">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" onclick="presetAlert('SOL', '188.42')" title="Set Quick Alert" type="button">
+<span class="material-symbols-outlined text-[13px]">notification_add</span>
+</button>
+<a class="px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-mono transition-colors" href="#">Trade ↗</a>
+</div>
+</td>
+</tr>
+<!-- ROW 2: BTC -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-pointer">
+<td class="py-1.5 px-2 text-center"><input class="accent-primary rounded-sm" type="checkbox"/></td>
+<td class="py-1.5 px-1 text-center"><span class="material-symbols-outlined text-[14px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></td>
+<td class="py-1.5 px-2 font-body">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-[9px] text-tertiary">₿</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline font-semibold text-xs text-on-surface">BTC</span>
+<span class="px-1 py-0.2 rounded text-[9px] font-mono bg-surface-container text-on-surface-variant">CORE</span>
+</div>
+<span class="text-[10px] text-on-surface-variant leading-none">Bitcoin</span>
+</div>
+</div>
+</td>
+<td class="py-1.5 px-3 text-right font-mono font-medium text-on-surface">$88,412.00</td>
+<td class="py-1.5 px-3 text-right font-mono">
+<div class="flex flex-col items-end leading-tight">
+<span class="text-secondary font-semibold">+1.85%</span>
+<span class="text-[9px] text-secondary/80">+$1,605.10</span>
+</div>
+</td>
+<td class="py-1.5 px-3 text-right font-mono text-on-surface">$18.92B</td>
+<td class="py-1.5 px-3">
+<div class="flex flex-col gap-0.5">
+<div class="flex justify-between text-[9px] text-on-surface-variant">
+<span>86,200</span>
+<span>89,150</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded relative overflow-hidden">
+<div class="bg-secondary h-1 rounded" style="width: 74%;"></div>
+</div>
+</div>
+</td>
+<td class="py-1.5 px-2 text-center">
+<svg class="w-20 h-5 inline-block text-secondary" fill="none" viewbox="0 0 80 20">
+<path d="M0,14 L15,12 L30,15 L45,9 L60,8 L70,3 L80,2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"></path>
+</svg>
+</td>
+<td class="py-1.5 px-2">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container-high text-primary text-[10px]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>3 Active (Whale+Fund)</span>
+</span>
+</td>
+<td class="py-1.5 px-2.5 text-right font-body">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" onclick="presetAlert('BTC', '88412.00')" title="Set Quick Alert" type="button">
+<span class="material-symbols-outlined text-[13px]">notification_add</span>
+</button>
+<a class="px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-mono transition-colors" href="#">Trade ↗</a>
+</div>
+</td>
+</tr>
+<!-- ROW 3: ETH -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-pointer">
+<td class="py-1.5 px-2 text-center"><input class="accent-primary rounded-sm" type="checkbox"/></td>
+<td class="py-1.5 px-1 text-center"><span class="material-symbols-outlined text-[14px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></td>
+<td class="py-1.5 px-2 font-body">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-[9px] text-secondary">Ξ</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline font-semibold text-xs text-on-surface">ETH</span>
+<span class="px-1 py-0.2 rounded text-[9px] font-mono bg-surface-container text-on-surface-variant">L1</span>
+</div>
+<span class="text-[10px] text-on-surface-variant leading-none">Ethereum</span>
+</div>
+</div>
+</td>
+<td class="py-1.5 px-3 text-right font-mono font-medium text-on-surface">$3,428.10</td>
+<td class="py-1.5 px-3 text-right font-mono">
+<div class="flex flex-col items-end leading-tight">
+<span class="text-error font-semibold">-0.62%</span>
+<span class="text-[9px] text-error/80">-$21.40</span>
+</div>
+</td>
+<td class="py-1.5 px-3 text-right font-mono text-on-surface">$8.14B</td>
+<td class="py-1.5 px-3">
+<div class="flex flex-col gap-0.5">
+<div class="flex justify-between text-[9px] text-on-surface-variant">
+<span>3,390</span>
+<span>3,490</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded relative overflow-hidden">
+<div class="bg-error h-1 rounded" style="width: 38%;"></div>
+</div>
+</div>
+</td>
+<td class="py-1.5 px-2 text-center">
+<svg class="w-20 h-5 inline-block text-error" fill="none" viewbox="0 0 80 20">
+<path d="M0,4 L14,7 L28,5 L42,12 L56,11 L70,16 L80,18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"></path>
+</svg>
+</td>
+<td class="py-1.5 px-2">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-[10px]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>1 Active (Breakdown)</span>
+</span>
+</td>
+<td class="py-1.5 px-2.5 text-right font-body">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" onclick="presetAlert('ETH', '3428.10')" title="Set Quick Alert" type="button">
+<span class="material-symbols-outlined text-[13px]">notification_add</span>
+</button>
+<a class="px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-mono transition-colors" href="#">Trade ↗</a>
+</div>
+</td>
+</tr>
+<!-- ROW 4: JUP -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-pointer">
+<td class="py-1.5 px-2 text-center"><input class="accent-primary rounded-sm" type="checkbox"/></td>
+<td class="py-1.5 px-1 text-center"><span class="material-symbols-outlined text-[14px] text-outline hover:text-tertiary">star</span></td>
+<td class="py-1.5 px-2 font-body">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-[9px] text-primary">J</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline font-semibold text-xs text-on-surface">JUP</span>
+<span class="px-1 py-0.2 rounded text-[9px] font-mono bg-surface-container text-on-surface-variant">DEX</span>
+</div>
+<span class="text-[10px] text-on-surface-variant leading-none">Jupiter</span>
+</div>
+</div>
+</td>
+<td class="py-1.5 px-3 text-right font-mono font-medium text-on-surface">$1.2404</td>
+<td class="py-1.5 px-3 text-right font-mono">
+<div class="flex flex-col items-end leading-tight">
+<span class="text-secondary font-semibold">+8.14%</span>
+<span class="text-[9px] text-secondary/80">+$0.093</span>
+</div>
+</td>
+<td class="py-1.5 px-3 text-right font-mono text-on-surface">$412.3M</td>
+<td class="py-1.5 px-3">
+<div class="flex flex-col gap-0.5">
+<div class="flex justify-between text-[9px] text-on-surface-variant">
+<span>1.12</span>
+<span>1.26</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded relative overflow-hidden">
+<div class="bg-secondary h-1 rounded" style="width: 86%;"></div>
+</div>
+</div>
+</td>
+<td class="py-1.5 px-2 text-center">
+<svg class="w-20 h-5 inline-block text-secondary" fill="none" viewbox="0 0 80 20">
+<path d="M0,18 L12,17 L25,12 L38,13 L52,7 L65,3 L80,2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"></path>
+</svg>
+</td>
+<td class="py-1.5 px-2">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container-high text-primary text-[10px]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>2 Active (Volume+Rate)</span>
+</span>
+</td>
+<td class="py-1.5 px-2.5 text-right font-body">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" onclick="presetAlert('JUP', '1.2404')" title="Set Quick Alert" type="button">
+<span class="material-symbols-outlined text-[13px]">notification_add</span>
+</button>
+<a class="px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-mono transition-colors" href="#">Trade ↗</a>
+</div>
+</td>
+</tr>
+<!-- ROW 5: NVDA (Synthetic) -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-pointer">
+<td class="py-1.5 px-2 text-center"><input class="accent-primary rounded-sm" type="checkbox"/></td>
+<td class="py-1.5 px-1 text-center"><span class="material-symbols-outlined text-[14px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></td>
+<td class="py-1.5 px-2 font-body">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-[9px] text-secondary">N</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline font-semibold text-xs text-on-surface">NVDA</span>
+<span class="px-1 py-0.2 rounded text-[9px] font-mono bg-surface-container text-on-surface-variant">RWA</span>
+</div>
+<span class="text-[10px] text-on-surface-variant leading-none">NVIDIA Syn</span>
+</div>
+</div>
+</td>
+<td class="py-1.5 px-3 text-right font-mono font-medium text-on-surface">$141.20</td>
+<td class="py-1.5 px-3 text-right font-mono">
+<div class="flex flex-col items-end leading-tight">
+<span class="text-secondary font-semibold">+2.05%</span>
+<span class="text-[9px] text-secondary/80">+$2.84</span>
+</div>
+</td>
+<td class="py-1.5 px-3 text-right font-mono text-on-surface">$890.1M</td>
+<td class="py-1.5 px-3">
+<div class="flex flex-col gap-0.5">
+<div class="flex justify-between text-[9px] text-on-surface-variant">
+<span>137.40</span>
+<span>142.00</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded relative overflow-hidden">
+<div class="bg-secondary h-1 rounded" style="width: 82%;"></div>
+</div>
+</div>
+</td>
+<td class="py-1.5 px-2 text-center">
+<svg class="w-20 h-5 inline-block text-secondary" fill="none" viewbox="0 0 80 20">
+<path d="M0,15 L14,13 L28,14 L42,9 L56,7 L70,4 L80,3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"></path>
+</svg>
+</td>
+<td class="py-1.5 px-2">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant text-[10px]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>1 Active (Premarket Gap)</span>
+</span>
+</td>
+<td class="py-1.5 px-2.5 text-right font-body">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" onclick="presetAlert('NVDA', '141.20')" title="Set Quick Alert" type="button">
+<span class="material-symbols-outlined text-[13px]">notification_add</span>
+</button>
+<a class="px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-mono transition-colors" href="#">Trade ↗</a>
+</div>
+</td>
+</tr>
+<!-- ROW 6: PYTH -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-pointer">
+<td class="py-1.5 px-2 text-center"><input class="accent-primary rounded-sm" type="checkbox"/></td>
+<td class="py-1.5 px-1 text-center"><span class="material-symbols-outlined text-[14px] text-outline hover:text-tertiary">star</span></td>
+<td class="py-1.5 px-2 font-body">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-[9px] text-primary">P</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline font-semibold text-xs text-on-surface">PYTH</span>
+<span class="px-1 py-0.2 rounded text-[9px] font-mono bg-surface-container text-on-surface-variant">ORACLE</span>
+</div>
+<span class="text-[10px] text-on-surface-variant leading-none">Pyth Network</span>
+</div>
+</div>
+</td>
+<td class="py-1.5 px-3 text-right font-mono font-medium text-on-surface">$0.4285</td>
+<td class="py-1.5 px-3 text-right font-mono">
+<div class="flex flex-col items-end leading-tight">
+<span class="text-secondary font-semibold">+3.12%</span>
+<span class="text-[9px] text-secondary/80">+$0.013</span>
+</div>
+</td>
+<td class="py-1.5 px-3 text-right font-mono text-on-surface">$168.4M</td>
+<td class="py-1.5 px-3">
+<div class="flex flex-col gap-0.5">
+<div class="flex justify-between text-[9px] text-on-surface-variant">
+<span>0.408</span>
+<span>0.435</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded relative overflow-hidden">
+<div class="bg-secondary h-1 rounded" style="width: 75%;"></div>
+</div>
+</div>
+</td>
+<td class="py-1.5 px-2 text-center">
+<svg class="w-20 h-5 inline-block text-secondary" fill="none" viewbox="0 0 80 20">
+<path d="M0,13 L15,14 L30,11 L45,10 L60,8 L75,5 L80,4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"></path>
+</svg>
+</td>
+<td class="py-1.5 px-2">
+<span class="text-[10px] text-on-surface-variant font-mono">None</span>
+</td>
+<td class="py-1.5 px-2.5 text-right font-body">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" onclick="presetAlert('PYTH', '0.4285')" title="Set Quick Alert" type="button">
+<span class="material-symbols-outlined text-[13px]">notification_add</span>
+</button>
+<a class="px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-mono transition-colors" href="#">Trade ↗</a>
+</div>
+</td>
+</tr>
+<!-- ROW 7: TIA -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-pointer">
+<td class="py-1.5 px-2 text-center"><input class="accent-primary rounded-sm" type="checkbox"/></td>
+<td class="py-1.5 px-1 text-center"><span class="material-symbols-outlined text-[14px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></td>
+<td class="py-1.5 px-2 font-body">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-[9px] text-primary">T</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline font-semibold text-xs text-on-surface">TIA</span>
+<span class="px-1 py-0.2 rounded text-[9px] font-mono bg-surface-container text-on-surface-variant">MODULAR</span>
+</div>
+<span class="text-[10px] text-on-surface-variant leading-none">Celestia</span>
+</div>
+</div>
+</td>
+<td class="py-1.5 px-3 text-right font-mono font-medium text-on-surface">$5.8200</td>
+<td class="py-1.5 px-3 text-right font-mono">
+<div class="flex flex-col items-end leading-tight">
+<span class="text-error font-semibold">-3.44%</span>
+<span class="text-[9px] text-error/80">-$0.207</span>
+</div>
+</td>
+<td class="py-1.5 px-3 text-right font-mono text-on-surface">$248.9M</td>
+<td class="py-1.5 px-3">
+<div class="flex flex-col gap-0.5">
+<div class="flex justify-between text-[9px] text-on-surface-variant">
+<span>5.71</span>
+<span>6.12</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded relative overflow-hidden">
+<div class="bg-error h-1 rounded" style="width: 27%;"></div>
+</div>
+</div>
+</td>
+<td class="py-1.5 px-2 text-center">
+<svg class="w-20 h-5 inline-block text-error" fill="none" viewbox="0 0 80 20">
+<path d="M0,5 L16,6 L32,12 L48,10 L64,15 L80,19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"></path>
+</svg>
+</td>
+<td class="py-1.5 px-2">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container-high text-primary text-[10px]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>1 Active (Unlock Watch)</span>
+</span>
+</td>
+<td class="py-1.5 px-2.5 text-right font-body">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" onclick="presetAlert('TIA', '5.8200')" title="Set Quick Alert" type="button">
+<span class="material-symbols-outlined text-[13px]">notification_add</span>
+</button>
+<a class="px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-mono transition-colors" href="#">Trade ↗</a>
+</div>
+</td>
+</tr>
+<!-- ROW 8: INJ -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-pointer">
+<td class="py-1.5 px-2 text-center"><input class="accent-primary rounded-sm" type="checkbox"/></td>
+<td class="py-1.5 px-1 text-center"><span class="material-symbols-outlined text-[14px] text-outline hover:text-tertiary">star</span></td>
+<td class="py-1.5 px-2 font-body">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-[9px] text-primary">I</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline font-semibold text-xs text-on-surface">INJ</span>
+<span class="px-1 py-0.2 rounded text-[9px] font-mono bg-surface-container text-on-surface-variant">DEFI</span>
+</div>
+<span class="text-[10px] text-on-surface-variant leading-none">Injective</span>
+</div>
+</div>
+</td>
+<td class="py-1.5 px-3 text-right font-mono font-medium text-on-surface">$22.45</td>
+<td class="py-1.5 px-3 text-right font-mono">
+<div class="flex flex-col items-end leading-tight">
+<span class="text-secondary font-semibold">+6.10%</span>
+<span class="text-[9px] text-secondary/80">+$1.29</span>
+</div>
+</td>
+<td class="py-1.5 px-3 text-right font-mono text-on-surface">$142.0M</td>
+<td class="py-1.5 px-3">
+<div class="flex flex-col gap-0.5">
+<div class="flex justify-between text-[9px] text-on-surface-variant">
+<span>20.80</span>
+<span>22.90</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded relative overflow-hidden">
+<div class="bg-secondary h-1 rounded" style="width: 79%;"></div>
+</div>
+</div>
+</td>
+<td class="py-1.5 px-2 text-center">
+<svg class="w-20 h-5 inline-block text-secondary" fill="none" viewbox="0 0 80 20">
+<path d="M0,17 L15,16 L30,11 L45,12 L60,6 L75,5 L80,2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"></path>
+</svg>
+</td>
+<td class="py-1.5 px-2">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container-high text-primary text-[10px]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>1 Active (Breakout)</span>
+</span>
+</td>
+<td class="py-1.5 px-2.5 text-right font-body">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" onclick="presetAlert('INJ', '22.45')" title="Set Quick Alert" type="button">
+<span class="material-symbols-outlined text-[13px]">notification_add</span>
+</button>
+<a class="px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-mono transition-colors" href="#">Trade ↗</a>
+</div>
+</td>
+</tr>
+<!-- ROW 9: RENDER -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-pointer">
+<td class="py-1.5 px-2 text-center"><input class="accent-primary rounded-sm" type="checkbox"/></td>
+<td class="py-1.5 px-1 text-center"><span class="material-symbols-outlined text-[14px] text-outline hover:text-tertiary">star</span></td>
+<td class="py-1.5 px-2 font-body">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-[9px] text-primary">R</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline font-semibold text-xs text-on-surface">RENDER</span>
+<span class="px-1 py-0.2 rounded text-[9px] font-mono bg-surface-container text-on-surface-variant">AI</span>
+</div>
+<span class="text-[10px] text-on-surface-variant leading-none">Render</span>
+</div>
+</div>
+</td>
+<td class="py-1.5 px-3 text-right font-mono font-medium text-on-surface">$7.4820</td>
+<td class="py-1.5 px-3 text-right font-mono">
+<div class="flex flex-col items-end leading-tight">
+<span class="text-secondary font-semibold">+1.90%</span>
+<span class="text-[9px] text-secondary/80">+$0.139</span>
+</div>
+</td>
+<td class="py-1.5 px-3 text-right font-mono text-on-surface">$204.1M</td>
+<td class="py-1.5 px-3">
+<div class="flex flex-col gap-0.5">
+<div class="flex justify-between text-[9px] text-on-surface-variant">
+<span>7.15</span>
+<span>7.60</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded relative overflow-hidden">
+<div class="bg-secondary h-1 rounded" style="width: 74%;"></div>
+</div>
+</div>
+</td>
+<td class="py-1.5 px-2 text-center">
+<svg class="w-20 h-5 inline-block text-secondary" fill="none" viewbox="0 0 80 20">
+<path d="M0,13 L15,12 L30,14 L45,9 L60,8 L75,6 L80,4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"></path>
+</svg>
+</td>
+<td class="py-1.5 px-2">
+<span class="text-[10px] text-on-surface-variant font-mono">None</span>
+</td>
+<td class="py-1.5 px-2.5 text-right font-body">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" onclick="presetAlert('RENDER', '7.4820')" title="Set Quick Alert" type="button">
+<span class="material-symbols-outlined text-[13px]">notification_add</span>
+</button>
+<a class="px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-mono transition-colors" href="#">Trade ↗</a>
+</div>
+</td>
+</tr>
+<!-- ROW 10: BONK -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-pointer">
+<td class="py-1.5 px-2 text-center"><input class="accent-primary rounded-sm" type="checkbox"/></td>
+<td class="py-1.5 px-1 text-center"><span class="material-symbols-outlined text-[14px] text-outline hover:text-tertiary">star</span></td>
+<td class="py-1.5 px-2 font-body">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-[9px] text-tertiary">B</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline font-semibold text-xs text-on-surface">BONK</span>
+<span class="px-1 py-0.2 rounded text-[9px] font-mono bg-surface-container text-on-surface-variant">MEME</span>
+</div>
+<span class="text-[10px] text-on-surface-variant leading-none">Bonk</span>
+</div>
+</div>
+</td>
+<td class="py-1.5 px-3 text-right font-mono font-medium text-on-surface">$0.0000318</td>
+<td class="py-1.5 px-3 text-right font-mono">
+<div class="flex flex-col items-end leading-tight">
+<span class="text-error font-semibold">-4.12%</span>
+<span class="text-[9px] text-error/80">-$0.0000014</span>
+</div>
+</td>
+<td class="py-1.5 px-3 text-right font-mono text-on-surface">$310.4M</td>
+<td class="py-1.5 px-3">
+<div class="flex flex-col gap-0.5">
+<div class="flex justify-between text-[9px] text-on-surface-variant">
+<span>0.0000305</span>
+<span>0.0000339</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded relative overflow-hidden">
+<div class="bg-error h-1 rounded" style="width: 38%;"></div>
+</div>
+</div>
+</td>
+<td class="py-1.5 px-2 text-center">
+<svg class="w-20 h-5 inline-block text-error" fill="none" viewbox="0 0 80 20">
+<path d="M0,5 L16,4 L32,10 L48,12 L64,16 L80,18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"></path>
+</svg>
+</td>
+<td class="py-1.5 px-2">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container-high text-primary text-[10px]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>1 Active (Meme Spike)</span>
+</span>
+</td>
+<td class="py-1.5 px-2.5 text-right font-body">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" onclick="presetAlert('BONK', '0.0000318')" title="Set Quick Alert" type="button">
+<span class="material-symbols-outlined text-[13px]">notification_add</span>
+</button>
+<a class="px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-mono transition-colors" href="#">Trade ↗</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Batch & Pagination Footer -->
+<div class="h-8 bg-surface-container-low border-t border-outline-variant/30 px-3 flex items-center justify-between text-[11px] font-mono text-on-surface-variant">
+<div class="flex items-center gap-3">
+<span>Showing 10 of 38 monitored items</span>
+<div class="hidden sm:flex items-center gap-1.5 pl-3 border-l border-outline-variant/30">
+<button class="hover:text-on-surface underline" type="button">Select All</button>
+<span>•</span>
+<button class="hover:text-on-surface" type="button">Batch Alert</button>
+<span>•</span>
+<button class="hover:text-on-surface" type="button">Add to Tier 1</button>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-1.5 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface disabled:opacity-40" disabled="" type="button">
+<span class="material-symbols-outlined text-[13px]">chevron_left</span>
+</button>
+<span class="px-1 text-on-surface">1 / 4</span>
+<button class="px-1.5 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface" type="button">
+<span class="material-symbols-outlined text-[13px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- RIGHT PANEL: ALERT REGISTRY & TRIGGER ENGINE (~38%) -->
+<div class="w-full xl:w-[38%] flex flex-col bg-surface divide-y divide-outline-variant/30 min-w-0">
+<!-- UPPER SUB-PANEL: CREATE / CONFIGURE ALERT -->
+<div class="p-3 bg-surface flex flex-col gap-2.5" id="create-alert-panel">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-1.5 font-headline font-semibold text-xs tracking-wide">
+<span class="material-symbols-outlined text-primary text-[16px]">add_circle</span>
+<span>CREATE MARKET ALERT</span>
+</div>
+<span class="text-[10px] font-mono text-secondary bg-surface-container px-1.5 py-0.5 rounded">Latency &lt; 15ms</span>
+</div>
+<!-- Rapid Condition Type Pills -->
+<div class="flex items-center gap-1 overflow-x-auto no-scrollbar text-[10px] font-mono py-0.5">
+<button class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-semibold flex-shrink-0" id="pill-price" onclick="selectConditionType('price')" type="button">Price</button>
+<button class="px-2 py-0.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant flex-shrink-0" id="pill-volume" onclick="selectConditionType('volume')" type="button">Volume Spike</button>
+<button class="px-2 py-0.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant flex-shrink-0" id="pill-funding" onclick="selectConditionType('funding')" type="button">Funding Rate</button>
+<button class="px-2 py-0.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant flex-shrink-0" id="pill-oi" onclick="selectConditionType('oi')" type="button">Open Interest</button>
+<button class="px-2 py-0.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant flex-shrink-0" id="pill-whale" onclick="selectConditionType('whale')" type="button">Whale Flow</button>
+<button class="px-2 py-0.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant flex-shrink-0" id="pill-news" onclick="selectConditionType('news')" type="button">News &amp; Catalysts</button>
+</div>
+<!-- Form Fields Grid -->
+<form class="grid grid-cols-2 gap-2 text-xs" id="alert-form" onsubmit="handleAlertSubmit(event)">
+<!-- Asset Selector -->
+<div class="flex flex-col gap-1">
+<label class="text-[10px] text-on-surface-variant font-mono uppercase tracking-wider">Target Asset</label>
+<select class="w-full bg-surface-container-low border border-outline-variant/30 text-on-surface px-2 py-1.5 rounded text-[11px] font-mono focus:outline-none focus:border-primary" id="form-asset">
+<option value="SOL">SOL - Solana (Perp &amp; Spot)</option>
+<option value="BTC">BTC - Bitcoin (Perp &amp; Spot)</option>
+<option value="ETH">ETH - Ethereum (Perp &amp; Spot)</option>
+<option value="JUP">JUP - Jupiter</option>
+<option value="NVDA">NVDA - NVIDIA Synthetic</option>
+<option value="PYTH">PYTH - Pyth Network</option>
+<option value="TIA">TIA - Celestia</option>
+<option value="INJ">INJ - Injective</option>
+<option value="RENDER">RENDER - Render</option>
+<option value="BONK">BONK - Bonk</option>
+</select>
+</div>
+<!-- Condition Trigger Operator -->
+<div class="flex flex-col gap-1">
+<label class="text-[10px] text-on-surface-variant font-mono uppercase tracking-wider">Trigger Condition</label>
+<select class="w-full bg-surface-container-low border border-outline-variant/30 text-on-surface px-2 py-1.5 rounded text-[11px] font-mono focus:outline-none focus:border-primary" id="form-condition">
+<option value="cross_above">Price Crosses Above (≥)</option>
+<option value="cross_below">Price Crosses Below (≤)</option>
+<option value="pct_increase">% Gain in 15m (&gt; 3%)</option>
+<option value="vol_surge">Volume Spike (&gt; 300% Avg)</option>
+<option value="funding_extreme">Funding Rate Extreme (&gt; 0.05%)</option>
+<option value="whale_inflow">Whale Net Inflow (&gt; $1M)</option>
+</select>
+</div>
+<!-- Threshold Input Value -->
+<div class="flex flex-col gap-1">
+<label class="text-[10px] text-on-surface-variant font-mono uppercase tracking-wider">Threshold Value</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low border border-outline-variant/30 text-on-surface px-2 py-1.5 rounded text-[11px] font-mono focus:outline-none focus:border-primary" id="form-threshold" type="text" value="$192.50"/>
+<span class="absolute right-2 top-1.5 text-[10px] font-mono text-on-surface-variant">USD</span>
+</div>
+</div>
+<!-- Trigger Frequency Pill -->
+<div class="flex flex-col gap-1">
+<label class="text-[10px] text-on-surface-variant font-mono uppercase tracking-wider">Execution Policy</label>
+<select class="w-full bg-surface-container-low border border-outline-variant/30 text-on-surface px-2 py-1.5 rounded text-[11px] font-mono focus:outline-none focus:border-primary" id="form-frequency">
+<option value="once">Trigger Once &amp; De-arm</option>
+<option value="recurring">Recurring (Cooldown 15m)</option>
+<option value="continuous">Continuous Every Tick</option>
+</select>
+</div>
+<!-- Multi-Channel Dispatch Toggles (Span 2) -->
+<div class="col-span-2 flex flex-col gap-1.5 pt-1">
+<label class="text-[10px] text-on-surface-variant font-mono uppercase tracking-wider">Dispatch Channels</label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5">
+<label class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container-low border border-outline-variant/20 cursor-pointer text-[10px] hover:bg-surface-container">
+<input checked="" class="accent-primary rounded-sm" type="checkbox"/>
+<span>In-App Audio</span>
+</label>
+<label class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container-low border border-outline-variant/20 cursor-pointer text-[10px] hover:bg-surface-container">
+<input checked="" class="accent-primary rounded-sm" type="checkbox"/>
+<span>Desktop Push</span>
+</label>
+<label class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container-low border border-outline-variant/20 cursor-pointer text-[10px] hover:bg-surface-container">
+<input checked="" class="accent-primary rounded-sm" type="checkbox"/>
+<span class="text-primary">Telegram Bot</span>
+</label>
+<label class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container-low border border-outline-variant/20 cursor-pointer text-[10px] hover:bg-surface-container">
+<input class="accent-primary rounded-sm" type="checkbox"/>
+<span>Webhook URL</span>
+</label>
+</div>
+</div>
+<!-- Trigger Automated Action -->
+<div class="col-span-2 flex items-center justify-between gap-2 pt-1 border-t border-outline-variant/15 text-[11px]">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-on-surface-variant">smart_toy</span>
+<span class="text-on-surface-variant text-[10px]">Action:</span>
+<select class="bg-surface-container-low border border-outline-variant/30 text-on-surface px-1.5 py-0.5 rounded text-[10px] font-mono">
+<option>Notify Only</option>
+<option>Stage Limit Order Ticket</option>
+<option>Execute Stop-Loss Safety Peg</option>
+</select>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-1.5">
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface text-[11px] font-mono" type="reset">Reset</button>
+<button class="px-3 py-1 rounded bg-primary-container hover:bg-primary text-on-primary-container font-semibold text-[11px] flex items-center gap-1" type="submit">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>Arm Alert</span>
+</button>
+</div>
+</div>
+</form>
+</div>
+<!-- LOWER SUB-PANEL: ALERT SURVEILLANCE & AUDIT LOG -->
+<div class="flex flex-col flex-grow bg-surface-container-lowest min-h-0">
+<!-- Tabbed Header for Armed vs Triggered -->
+<div class="h-8 bg-surface-container-low border-b border-outline-variant/30 px-2 flex items-center justify-between text-xs">
+<div class="flex items-center gap-1">
+<button class="px-2.5 py-1 rounded-t text-[11px] font-semibold bg-surface-container-lowest text-primary border-b-2 border-primary flex items-center gap-1.5" id="tab-armed" onclick="switchAlertsTab('armed')" type="button">
+<span>Armed Surveillance</span>
+<span class="px-1 py-0.2 rounded text-[9px] bg-secondary/20 text-secondary">14</span>
+</button>
+<button class="px-2.5 py-1 text-[11px] text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1.5" id="tab-history" onclick="switchAlertsTab('history')" type="button">
+<span>Triggered Audit Log</span>
+<span class="px-1 py-0.2 rounded text-[9px] bg-surface-container text-tertiary">9 Today</span>
+</button>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface text-[10px] font-mono flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[13px]">refresh</span>
+<span>Live Stream</span>
+</button>
+</div>
+<!-- 1. VIEW: ACTIVE ARMED ALERTS LIST -->
+<div class="flex-grow overflow-y-auto divide-y divide-outline-variant/15 text-xs font-mono" id="view-armed">
+<!-- Alert Item 1 -->
+<div class="p-2 hover:bg-surface-container-low/60 transition-colors flex items-center justify-between gap-2">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-2 h-2 rounded-full bg-secondary flex-shrink-0 animate-ping"></span>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-bold text-on-surface">SOL</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-high text-primary text-[10px]">Price ≥ $192.50</span>
+<span class="text-[10px] text-on-surface-variant">Once</span>
+</div>
+<div class="flex items-center gap-2 text-[10px] text-on-surface-variant pt-0.5">
+<span>Current: $188.42</span>
+<span class="text-secondary font-semibold">2.1% away</span>
+<span>• Via TG + Push</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1.5 flex-shrink-0">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-7 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+<button class="p-1 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[13px]">edit</span></button>
+<button class="p-1 text-on-surface-variant hover:text-error" type="button"><span class="material-symbols-outlined text-[13px]">delete</span></button>
+</div>
+</div>
+<!-- Alert Item 2 -->
+<div class="p-2 hover:bg-surface-container-low/60 transition-colors flex items-center justify-between gap-2">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-2 h-2 rounded-full bg-secondary flex-shrink-0"></span>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-bold text-on-surface">BTC</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-high text-tertiary text-[10px]">Whale Inflow &gt; $10M</span>
+<span class="text-[10px] text-on-surface-variant">Recurring (15m)</span>
+</div>
+<div class="flex items-center gap-2 text-[10px] text-on-surface-variant pt-0.5">
+<span>Last Flow: +$4.2M</span>
+<span>Threshold: +$10.0M</span>
+<span>• TG Bot Active</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1.5 flex-shrink-0">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-7 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+<button class="p-1 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[13px]">edit</span></button>
+<button class="p-1 text-on-surface-variant hover:text-error" type="button"><span class="material-symbols-outlined text-[13px]">delete</span></button>
+</div>
+</div>
+<!-- Alert Item 3 -->
+<div class="p-2 hover:bg-surface-container-low/60 transition-colors flex items-center justify-between gap-2">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-2 h-2 rounded-full bg-secondary flex-shrink-0"></span>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-bold text-on-surface">JUP</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-high text-primary text-[10px]">Funding &gt; +0.035%</span>
+<span class="text-[10px] text-on-surface-variant">Once</span>
+</div>
+<div class="flex items-center gap-2 text-[10px] text-on-surface-variant pt-0.5">
+<span>Current: +0.028%</span>
+<span class="text-secondary font-semibold">Within 0.007%</span>
+<span>• Desktop Audio</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1.5 flex-shrink-0">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-7 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+<button class="p-1 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[13px]">edit</span></button>
+<button class="p-1 text-on-surface-variant hover:text-error" type="button"><span class="material-symbols-outlined text-[13px]">delete</span></button>
+</div>
+</div>
+<!-- Alert Item 4 -->
+<div class="p-2 hover:bg-surface-container-low/60 transition-colors flex items-center justify-between gap-2">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-2 h-2 rounded-full bg-secondary flex-shrink-0"></span>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-bold text-on-surface">NVDA</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-high text-primary text-[10px]">Premarket Gap &gt; 3.0%</span>
+<span class="text-[10px] text-on-surface-variant">Session Open</span>
+</div>
+<div class="flex items-center gap-2 text-[10px] text-on-surface-variant pt-0.5">
+<span>Current Gap: +2.05%</span>
+<span>• Webhook &amp; TG</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1.5 flex-shrink-0">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-7 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+<button class="p-1 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[13px]">edit</span></button>
+<button class="p-1 text-on-surface-variant hover:text-error" type="button"><span class="material-symbols-outlined text-[13px]">delete</span></button>
+</div>
+</div>
+<!-- Alert Item 5 -->
+<div class="p-2 hover:bg-surface-container-low/60 transition-colors flex items-center justify-between gap-2">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-2 h-2 rounded-full bg-secondary flex-shrink-0"></span>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-bold text-on-surface">TIA</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-high text-tertiary text-[10px]">Token Unlock &lt; 24h</span>
+<span class="text-[10px] text-on-surface-variant">Event</span>
+</div>
+<div class="flex items-center gap-2 text-[10px] text-on-surface-variant pt-0.5">
+<span>Unlock in: 18h 40m (2.4% Float)</span>
+<span>• TG Active</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1.5 flex-shrink-0">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-7 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+<button class="p-1 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[13px]">edit</span></button>
+<button class="p-1 text-on-surface-variant hover:text-error" type="button"><span class="material-symbols-outlined text-[13px]">delete</span></button>
+</div>
+</div>
+</div>
+<!-- 2. VIEW: TRIGGERED AUDIT LOG LIST (Initially Hidden) -->
+<div class="hidden flex-grow overflow-y-auto divide-y divide-outline-variant/15 text-xs font-mono" id="view-history">
+<!-- History Item 1 -->
+<div class="p-2 hover:bg-surface-container-low/60 transition-colors flex items-center justify-between gap-2">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="text-[10px] text-on-surface-variant font-mono">14:22:08 UTC</span>
+<span class="font-bold text-primary">SOL-PERP</span>
+<span class="text-[10px] px-1 py-0.2 rounded bg-surface-container text-tertiary">Vol Surge +340% (5m)</span>
+</div>
+<div class="text-[10px] text-on-surface-variant pt-0.5">
+                Metric: $42.8M slot @ $186.20 • Telegram Ack: 11ms
+              </div>
+</div>
+<div class="flex items-center gap-1.5 flex-shrink-0">
+<button class="px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-primary hover:bg-surface-container-high" type="button">Re-Arm</button>
+<button class="p-1 text-on-surface-variant hover:text-on-surface" title="View Chart" type="button"><span class="material-symbols-outlined text-[13px]">show_chart</span></button>
+</div>
+</div>
+<!-- History Item 2 -->
+<div class="p-2 hover:bg-surface-container-low/60 transition-colors flex items-center justify-between gap-2">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="text-[10px] text-on-surface-variant font-mono">13:45:19 UTC</span>
+<span class="font-bold text-primary">BTC-PERP</span>
+<span class="text-[10px] px-1 py-0.2 rounded bg-surface-container text-secondary">Price &gt; $88,000.00</span>
+</div>
+<div class="text-[10px] text-on-surface-variant pt-0.5">
+                Triggered at $88,040.00 • In-App Alert Audio Fired
+              </div>
+</div>
+<div class="flex items-center gap-1.5 flex-shrink-0">
+<button class="px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-primary hover:bg-surface-container-high" type="button">Re-Arm</button>
+<button class="p-1 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[13px]">show_chart</span></button>
+</div>
+</div>
+<!-- History Item 3 -->
+<div class="p-2 hover:bg-surface-container-low/60 transition-colors flex items-center justify-between gap-2">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="text-[10px] text-on-surface-variant font-mono">11:05:42 UTC</span>
+<span class="font-bold text-primary">ETH-PERP</span>
+<span class="text-[10px] px-1 py-0.2 rounded bg-surface-container text-error">Breakdown &lt; $3,450.00</span>
+</div>
+<div class="text-[10px] text-on-surface-variant pt-0.5">
+                Fell to $3,448.20 • Webhook dispatched
+              </div>
+</div>
+<div class="flex items-center gap-1.5 flex-shrink-0">
+<button class="px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-primary hover:bg-surface-container-high" type="button">Re-Arm</button>
+<button class="p-1 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[13px]">show_chart</span></button>
+</div>
+</div>
+<!-- History Item 4 -->
+<div class="p-2 hover:bg-surface-container-low/60 transition-colors flex items-center justify-between gap-2">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="text-[10px] text-on-surface-variant font-mono">09:12:30 UTC</span>
+<span class="font-bold text-primary">JUP</span>
+<span class="text-[10px] px-1 py-0.2 rounded bg-surface-container text-secondary">Vol &gt; $100M/hr</span>
+</div>
+<div class="text-[10px] text-on-surface-variant pt-0.5">
+                Volume spiked to $114M @ $1.18 • Telegram Ack: 9ms
+              </div>
+</div>
+<div class="flex items-center gap-1.5 flex-shrink-0">
+<button class="px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-primary hover:bg-surface-container-high" type="button">Re-Arm</button>
+<button class="p-1 text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[13px]">show_chart</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- INLINE CLIENT SCRIPTS: MICRO-INTERACTIONS & TERMINAL DYNAMICS -->
+<script>
+    function selectConditionType(type) {
+      const pills = ['price', 'volume', 'funding', 'oi', 'whale', 'news'];
+      pills.forEach(p => {
+        const el = document.getElementById('pill-' + p);
+        if (el) {
+          if (p === type) {
+            el.className = "px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-semibold flex-shrink-0";
+          } else {
+            el.className = "px-2 py-0.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant flex-shrink-0";
+          }
+        }
+      });
+
+      const condSelect = document.getElementById('form-condition');
+      const threshInput = document.getElementById('form-threshold');
+      if (type === 'price') {
+        condSelect.value = 'cross_above';
+        threshInput.value = '$192.50';
+      } else if (type === 'volume') {
+        condSelect.value = 'vol_surge';
+        threshInput.value = '+300% 15m';
+      } else if (type === 'funding') {
+        condSelect.value = 'funding_extreme';
+        threshInput.value = '> +0.05%';
+      } else if (type === 'whale') {
+        condSelect.value = 'whale_inflow';
+        threshInput.value = '+$10,000,000';
+      }
+    }
+
+    function presetAlert(ticker, price) {
+      const assetEl = document.getElementById('form-asset');
+      const threshEl = document.getElementById('form-threshold');
+      if (assetEl) assetEl.value = ticker;
+      if (threshEl) threshEl.value = '$' + price;
+      
+      const panel = document.getElementById('create-alert-panel');
+      if (panel) {
+        panel.scrollIntoView({ behavior: 'smooth' });
+        panel.classList.add('bg-surface-container-low');
+        setTimeout(() => panel.classList.remove('bg-surface-container-low'), 600);
+      }
+    }
+
+    function focusCreateAlertForm() {
+      const input = document.getElementById('form-threshold');
+      if (input) {
+        input.focus();
+        input.select();
+      }
+    }
+
+    function switchAlertsTab(tab) {
+      const armedBtn = document.getElementById('tab-armed');
+      const histBtn = document.getElementById('tab-history');
+      const viewArmed = document.getElementById('view-armed');
+      const viewHist = document.getElementById('view-history');
+
+      if (tab === 'armed') {
+        armedBtn.className = "px-2.5 py-1 rounded-t text-[11px] font-semibold bg-surface-container-lowest text-primary border-b-2 border-primary flex items-center gap-1.5";
+        histBtn.className = "px-2.5 py-1 text-[11px] text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1.5";
+        viewArmed.classList.remove('hidden');
+        viewHist.classList.add('hidden');
+      } else {
+        histBtn.className = "px-2.5 py-1 rounded-t text-[11px] font-semibold bg-surface-container-lowest text-primary border-b-2 border-primary flex items-center gap-1.5";
+        armedBtn.className = "px-2.5 py-1 text-[11px] text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1.5";
+        viewHist.classList.remove('hidden');
+        viewArmed.classList.add('hidden');
+      }
+    }
+
+    function handleAlertSubmit(e) {
+      e.preventDefault();
+      const asset = document.getElementById('form-asset').value;
+      const thresh = document.getElementById('form-threshold').value;
+
+      const armedList = document.getElementById('view-armed');
+      if (armedList) {
+        const item = document.createElement('div');
+        item.className = 'p-2 hover:bg-surface-container-low/60 transition-colors flex items-center justify-between gap-2 bg-surface-container/30';
+        item.innerHTML = `
+          <div class="flex items-center gap-2 min-w-0">
+            <span class="w-2 h-2 rounded-full bg-secondary flex-shrink-0 animate-pulse"></span>
+            <div class="flex flex-col min-w-0">
+              <div class="flex items-center gap-1.5 flex-wrap">
+                <span class="font-bold text-on-surface">${asset}</span>
+                <span class="px-1 py-0.2 rounded bg-surface-container-high text-primary text-[10px]">${thresh}</span>
+                <span class="text-[10px] text-on-surface-variant">Armed Now</span>
+              </div>
+              <div class="flex items-center gap-2 text-[10px] text-on-surface-variant pt-0.5">
+                <span>Listening Live</span>
+                <span>• In-App + TG Dispatch</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5 flex-shrink-0">
+            <span class="text-[10px] font-mono text-secondary">ACTIVE</span>
+            <button type="button" onclick="this.closest('div.hover\\:bg-surface-container-low\\/60').remove()" class="p-1 text-on-surface-variant hover:text-error"><span class="material-symbols-outlined text-[13px]">delete</span></button>
+          </div>
+        `;
+        armedList.prepend(item);
+        switchAlertsTab('armed');
+      }
+    }
+
+    // Density toggle logic
+    const compactBtn = document.getElementById('density-compact');
+    const normalBtn = document.getElementById('density-default');
+    const tableBody = document.getElementById('watchlist-table-body');
+
+    if (compactBtn && normalBtn && tableBody) {
+      compactBtn.addEventListener('click', () => {
+        compactBtn.className = "px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-mono";
+        normalBtn.className = "px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface transition-colors font-mono";
+        tableBody.querySelectorAll('tr td').forEach(td => {
+          td.classList.remove('py-2.5');
+          td.classList.add('py-1.5');
+        });
+      });
+
+      normalBtn.addEventListener('click', () => {
+        normalBtn.className = "px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-mono";
+        compactBtn.className = "px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface transition-colors font-mono";
+        tableBody.querySelectorAll('tr td').forEach(td => {
+          td.classList.remove('py-1.5');
+          td.classList.add('py-2.5');
+        });
+      });
+    }
+  </script>
+</div></main><footer class="fixed bottom-0 left-0 right-0 h-8 z-40 bg-surface-container-lowest border-t border-outline-variant/30 px-3 flex items-center justify-between text-xs"><div class="flex items-center gap-1"><button class="flex items-center gap-1 px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors text-[11px]" type="button"><span class="material-symbols-outlined text-[13px]">dynamic_feed</span><span>Feed</span></button><button class="flex items-center gap-1 px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors text-[11px]" type="button"><span class="material-symbols-outlined text-[13px]">newspaper</span><span>News</span></button><button class="flex items-center gap-1 px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors text-[11px]" type="button"><span class="material-symbols-outlined text-[13px]">chat_bubble</span><span>Chat</span></button><button class="flex items-center gap-1 px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors text-[11px]" type="button"><span class="material-symbols-outlined text-[13px]">visibility</span><span>Watchlist</span></button><button class="flex items-center gap-1 px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors text-[11px]" type="button"><span class="material-symbols-outlined text-[13px]">monitoring</span><span>PnL</span></button><button class="flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-primary hover:bg-surface-container-high transition-colors text-[11px] font-medium" type="button"><span class="material-symbols-outlined text-[13px]">neurology</span><span>AI Intelligence</span></button></div><div class="flex items-center gap-3 text-on-surface-variant text-[11px]"><div class="flex items-center gap-1"><span class="material-symbols-outlined text-[13px]">lock</span><span>Layout Locked</span></div><div class="flex items-center gap-1.5 font-mono text-[10px]"><span>UTC 14:32:09</span><span class="material-symbols-outlined text-[13px] hover:text-on-surface cursor-pointer">settings</span></div></div></footer></body></html>

@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-primary":"#003061","secondary-fixed":"#cfe5ff","secondary-fixed-dim":"#99cbff","on-tertiary-fixed":"#261900","inverse-on-surface":"#2d3136","primary":"#a8c8ff","on-error-container":"#ffdad6","on-error":"#690005","secondary-container":"#0072b5","surface-dim":"#101419","on-secondary-fixed":"#001d34","surface":"#101419","tertiary":"#f7be37","surface-container-lowest":"#0a0f13","surface-tint":"#a8c8ff","on-secondary-container":"#e8f1ff","on-tertiary-fixed-variant":"#5c4300","on-secondary-fixed-variant":"#004a78","error-container":"#93000a","on-primary-container":"#003c77","on-primary-fixed":"#001b3c","surface-container-highest":"#31353b","on-surface":"#e0e2ea","outline":"#8c919d","on-secondary":"#003355","inverse-primary":"#105eb0","primary-fixed-dim":"#a8c8ff","surface-container-low":"#181c21","primary-container":"#6ea8ff","on-tertiary-container":"#4e3800","secondary":"#99cbff","error":"#ffb4ab","on-tertiary":"#402d00","primary-fixed":"#d5e3ff","tertiary-fixed-dim":"#f7be37","inverse-surface":"#e0e2ea","outline-variant":"#424751","surface-variant":"#31353b","background":"#101419","tertiary-container":"#d39e10","tertiary-fixed":"#ffdea1","surface-container":"#1c2025","surface-container-high":"#262a30","on-background":"#e0e2ea","surface-bright":"#36393f","on-surface-variant":"#c2c6d3","on-primary-fixed-variant":"#00468a"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{},"fontFamily":{"headline":["Geist"],"display":["Geist"],"body":["Geist"],"label":["Geist"]},"fontSize":{}}}}</script></head><body class="bg-surface-container-lowest font-body text-on-surface text-[12px] antialiased select-none min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 flex flex-col bg-surface-container-lowest border-b border-outline-variant/30"><div class="h-[44px] px-3 flex items-center justify-between gap-3 bg-surface border-b border-outline-variant/20"><div class="flex items-center gap-4 shrink-0"><div class="flex items-center gap-1.5 font-headline font-bold text-[14px] tracking-wider text-on-surface"><span class="tracking-widest">NEXUS</span><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span></div><nav class="flex items-center gap-0.5 text-[11px]" data-active-classes="bg-surface-container-highest text-primary-container font-medium border-b-2 border-primary-container"><a class="px-2.5 py-1.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="trade" href="#">Trade</a><a class="px-2.5 py-1.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="markets" href="#">Markets</a><a class="px-2.5 py-1.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="predict" href="#">Predict</a><a class="px-2.5 py-1.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="social" href="#">Social</a><a class="px-2.5 py-1.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="leaderboard" href="#">Leaderboard</a><a class="px-2.5 py-1.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="earn" href="#">Earn</a><a aria-current="page" class="px-2.5 py-1.5 transition-colors bg-surface-container-highest text-primary-container font-medium border-b-2 border-primary-container" data-path="calendar" href="#">Calendar</a><a class="px-2.5 py-1.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="co-invest" href="#">Co-Invest</a><a class="px-2.5 py-1.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="agents" href="#">Agents</a></nav></div><div class="flex items-center gap-2.5 shrink-0"><button class="flex items-center gap-2 px-2 py-1 rounded bg-surface-container border border-outline-variant/30 text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[14px]">search</span><span class="text-[11px]">Search</span><kbd class="px-1 py-0.2 bg-surface-container-highest text-[10px] rounded text-on-surface-variant font-mono">⌘K</kbd></button><button class="p-1 text-on-surface-variant hover:text-on-surface relative" type="button"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-tertiary"></span></button><div class="flex items-center p-0.5 rounded bg-surface-container border border-outline-variant/40"><span class="px-1.5 py-0.5 text-[10px] font-bold rounded bg-primary-container text-on-primary-container tracking-wider">LIVE</span><span class="px-1.5 py-0.5 text-[10px] text-on-surface-variant hover:text-on-surface cursor-pointer">PAPER</span></div><div class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container border border-outline-variant/30 font-mono text-[11px]"><span class="text-on-surface-variant">0x7f4a...9b12</span><span class="text-outline-variant">|</span><span class="text-on-surface font-semibold">$142,850.24</span><span class="text-[10px] text-on-surface-variant">USDC</span></div><div class="flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container text-[10px] font-mono"><span class="w-1.5 h-1.5 rounded-full bg-secondary-container animate-ping"></span><span class="text-secondary">11ms</span><span class="text-on-surface-variant">Pyth Net</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="h-[32px] px-3 flex items-center justify-between gap-4 bg-surface-container-lowest text-[11px] font-mono border-b border-outline-variant/20 overflow-x-auto"><div class="flex items-center gap-4 shrink-0"><span class="text-[10px] uppercase tracking-wider text-outline font-sans font-semibold">MACRO CATALYSTS:</span><div class="flex items-center gap-1"><span class="text-on-surface-variant">SPX</span><span class="text-on-surface">5,864.20</span><span class="text-secondary">+0.42%</span></div><div class="flex items-center gap-1"><span class="text-on-surface-variant">NDX</span><span class="text-on-surface">20,412.10</span><span class="text-secondary">+0.78%</span></div><div class="flex items-center gap-1"><span class="text-on-surface-variant">BTC</span><span class="text-on-surface">$91,420</span><span class="text-secondary">+2.1%</span></div><div class="flex items-center gap-1"><span class="text-on-surface-variant">SOL</span><span class="text-on-surface">$194.50</span><span class="text-secondary">+4.8%</span></div><div class="flex items-center gap-1"><span class="text-on-surface-variant">US 10Y</span><span class="text-on-surface">4.28%</span><span class="text-tertiary">-2 bps</span></div><div class="flex items-center gap-1"><span class="text-on-surface-variant">DXY</span><span class="text-on-surface">104.12</span><span class="text-error">-0.15%</span></div><div class="flex items-center gap-1"><span class="text-on-surface-variant">VIX</span><span class="text-on-surface">14.82</span><span class="text-secondary">-4.2%</span></div></div><div class="flex items-center gap-2 text-[10px] text-outline shrink-0 font-sans"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-primary-container">bolt</span>REALTIME L2 FEED ACTIVE</span></div></div></header><main class="w-full pt-[76px] pb-[32px] min-h-[calc(100vh-32px)] bg-surface-container-lowest"><div class="flex flex-col w-full text-on-surface select-none">
+<!-- TOP WORKSPACE CONTROLS & TIMELINE BAR -->
+<section class="flex flex-col w-full bg-surface-container-lowest">
+<!-- Row 1: Workspace Views, Date Switcher, Search, Timezone -->
+<div class="h-10 px-3 flex items-center justify-between gap-3 bg-surface">
+<!-- Left: View Mode + Date Switcher -->
+<div class="flex items-center gap-3 shrink-0">
+<div class="flex items-center p-0.5 rounded bg-surface-container-low text-[11px] font-sans">
+<button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface transition-colors">Day</button>
+<button class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-semibold shadow-sm">Week</button>
+<button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface transition-colors">Month</button>
+<button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface transition-colors">Agenda</button>
+</div>
+<div class="flex items-center gap-1.5 font-mono text-[11px] bg-surface-container-low px-2 py-1 rounded">
+<button class="w-5 h-5 flex items-center justify-center rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[13px]">chevron_left</span>
+</button>
+<span class="text-on-surface font-semibold flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+            Today, Oct 24, 2024 - Oct 30, 2024
+          </span>
+<button class="w-5 h-5 flex items-center justify-center rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[13px]">chevron_right</span>
+</button>
+</div>
+<!-- Quick Jump Pills -->
+<div class="hidden xl:flex items-center gap-1 text-[10px] font-mono">
+<button class="px-1.5 py-0.5 rounded bg-surface-container text-primary font-medium hover:bg-surface-container-high">This Week</button>
+<button class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface">Next Week</button>
+<button class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface">FOMC Cycle</button>
+<button class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface">Q3 Earnings Season</button>
+<button class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface">Nov Unlocks</button>
+</div>
+</div>
+<!-- Right: Search, Region, Timezone & Live Next Impact Countdown -->
+<div class="flex items-center gap-2.5 shrink-0">
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-2 top-1.5 text-[14px] text-outline">search</span>
+<input class="w-full h-7 pl-7 pr-2 text-[11px] bg-surface-container rounded text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-high font-sans" placeholder="Filter events, ticker, speaker..." type="text"/>
+</div>
+<div class="flex items-center gap-1 px-2 py-1 rounded bg-surface-container text-[11px] font-mono">
+<span class="text-on-surface-variant text-[10px]">REGION:</span>
+<button class="px-1 py-0.2 rounded bg-surface-bright text-on-surface font-semibold">ALL</button>
+<button class="px-1 py-0.2 rounded hover:text-on-surface text-on-surface-variant">US</button>
+<button class="px-1 py-0.2 rounded hover:text-on-surface text-on-surface-variant">EU</button>
+<button class="px-1 py-0.2 rounded hover:text-on-surface text-on-surface-variant">APAC</button>
+<button class="px-1 py-0.2 rounded hover:text-on-surface text-on-surface-variant">SOL</button>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-1 rounded bg-error-container/30 text-[11px] font-mono">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+<span class="text-error font-semibold tracking-wider">US CPI in 2h 27m</span>
+</div>
+</div>
+</div>
+<!-- Row 2: Category Filter Bar & Impact Toggles -->
+<div class="h-8 px-3 flex items-center justify-between gap-3 bg-surface-container-low overflow-x-auto">
+<div class="flex items-center gap-1 shrink-0 text-[11px]">
+<button class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-semibold flex items-center gap-1">
+<span>All</span>
+<span class="text-[9px] px-1 py-0.1 rounded bg-surface-dim font-mono text-outline">148</span>
+</button>
+<button class="px-2 py-0.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center gap-1">
+<span>Economic</span>
+<span class="text-[9px] px-1 py-0.1 rounded bg-surface-dim font-mono text-outline">34</span>
+</button>
+<button class="px-2 py-0.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center gap-1">
+<span>Earnings</span>
+<span class="text-[9px] px-1 py-0.1 rounded bg-surface-dim font-mono text-outline">42</span>
+</button>
+<button class="px-2 py-0.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center gap-1">
+<span>Token Unlock</span>
+<span class="text-[9px] px-1 py-0.1 rounded bg-surface-dim font-mono text-outline">18</span>
+</button>
+<button class="px-2 py-0.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center gap-1">
+<span>Governance</span>
+<span class="text-[9px] px-1 py-0.1 rounded bg-surface-dim font-mono text-outline">12</span>
+</button>
+<button class="px-2 py-0.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center gap-1">
+<span>Listings</span>
+<span class="text-[9px] px-1 py-0.1 rounded bg-surface-dim font-mono text-outline">9</span>
+</button>
+<button class="px-2 py-0.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center gap-1">
+<span>Airdrops</span>
+<span class="text-[9px] px-1 py-0.1 rounded bg-surface-dim font-mono text-outline">8</span>
+</button>
+<button class="px-2 py-0.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center gap-1">
+<span>Protocol</span>
+<span class="text-[9px] px-1 py-0.1 rounded bg-surface-dim font-mono text-outline">15</span>
+</button>
+<button class="px-2 py-0.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center gap-1">
+<span>Macro</span>
+<span class="text-[9px] px-1 py-0.1 rounded bg-surface-dim font-mono text-outline">10</span>
+</button>
+</div>
+<div class="flex items-center gap-3 shrink-0 text-[10px] font-mono">
+<span class="text-outline uppercase tracking-wider font-sans font-semibold">IMPACT FILTER:</span>
+<button class="flex items-center gap-1 px-1.5 py-0.5 rounded bg-error-container/20 text-error hover:bg-error-container/30">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span>HIGH</span>
+<span class="opacity-80">28</span>
+</button>
+<button class="flex items-center gap-1 px-1.5 py-0.5 rounded bg-tertiary-container/20 text-tertiary hover:bg-tertiary-container/30">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>MED</span>
+<span class="opacity-80">54</span>
+</button>
+<button class="flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span>LOW</span>
+<span class="opacity-80">66</span>
+</button>
+</div>
+</div>
+</section>
+<!-- MAIN DUAL-PANEL WORKSPACE CONTENT -->
+<div class="flex flex-col lg:flex-row w-full min-h-[calc(100vh-216px)] bg-surface-container-lowest">
+<!-- LEFT PANEL: SCHEDULE STRIP & EVENT LEDGER (~68% width) -->
+<div class="flex-1 flex flex-col bg-surface-dim min-w-0">
+<!-- Week Schedule Timeline Strip -->
+<div class="grid grid-cols-2 md:grid-cols-5 gap-0.5 bg-surface-container-lowest p-0.5">
+<!-- Mon -->
+<div class="flex flex-col p-2 bg-surface hover:bg-surface-container transition-colors cursor-pointer">
+<div class="flex items-center justify-between text-[10px]">
+<span class="font-sans font-semibold text-outline">MON OCT 24</span>
+<span class="font-mono text-outline">18 ev</span>
+</div>
+<div class="mt-1 flex items-center justify-between">
+<span class="font-mono text-[12px] text-on-surface">Closed</span>
+<span class="text-[9px] px-1 py-0.2 rounded bg-error-container/30 text-error font-mono">3 High</span>
+</div>
+<div class="mt-1.5 h-1 w-full bg-surface-container-highest rounded overflow-hidden flex">
+<div class="w-1/4 bg-error"></div>
+<div class="w-2/4 bg-tertiary"></div>
+<div class="w-1/4 bg-secondary"></div>
+</div>
+</div>
+<!-- Tue -->
+<div class="flex flex-col p-2 bg-surface hover:bg-surface-container transition-colors cursor-pointer">
+<div class="flex items-center justify-between text-[10px]">
+<span class="font-sans font-semibold text-outline">TUE OCT 25</span>
+<span class="font-mono text-outline">26 ev</span>
+</div>
+<div class="mt-1 flex items-center justify-between">
+<span class="font-mono text-[12px] text-on-surface">Completed</span>
+<span class="text-[9px] px-1 py-0.2 rounded bg-error-container/30 text-error font-mono">6 High</span>
+</div>
+<div class="mt-1.5 h-1 w-full bg-surface-container-highest rounded overflow-hidden flex">
+<div class="w-1/3 bg-error"></div>
+<div class="w-1/3 bg-tertiary"></div>
+<div class="w-1/3 bg-secondary"></div>
+</div>
+</div>
+<!-- Wed -->
+<div class="flex flex-col p-2 bg-surface hover:bg-surface-container transition-colors cursor-pointer">
+<div class="flex items-center justify-between text-[10px]">
+<span class="font-sans font-semibold text-outline">WED OCT 26</span>
+<span class="font-mono text-outline">34 ev</span>
+</div>
+<div class="mt-1 flex items-center justify-between">
+<span class="font-mono text-[12px] text-on-surface">Yield Curve Move</span>
+<span class="text-[9px] px-1 py-0.2 rounded bg-error-container/30 text-error font-mono">9 High</span>
+</div>
+<div class="mt-1.5 h-1 w-full bg-surface-container-highest rounded overflow-hidden flex">
+<div class="w-2/5 bg-error"></div>
+<div class="w-2/5 bg-tertiary"></div>
+<div class="w-1/5 bg-secondary"></div>
+</div>
+</div>
+<!-- Thu (TODAY - ACTIVE) -->
+<div class="flex flex-col p-2 bg-surface-container-high transition-colors cursor-pointer shadow-sm relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-0.5 bg-primary"></div>
+<div class="flex items-center justify-between text-[10px]">
+<span class="font-sans font-bold text-primary flex items-center gap-1">
+<span>THU OCT 27</span>
+<span class="px-1 py-0.1 rounded bg-primary text-on-primary text-[8px] font-mono tracking-tighter">TODAY</span>
+</span>
+<span class="font-mono text-primary font-bold">41 ev</span>
+</div>
+<div class="mt-1 flex items-center justify-between">
+<span class="font-mono text-[12px] text-on-surface font-semibold">CPI & Unlock</span>
+<span class="text-[9px] px-1 py-0.2 rounded bg-error text-on-error font-mono font-bold">12 High</span>
+</div>
+<div class="mt-1.5 h-1 w-full bg-surface-container-highest rounded overflow-hidden flex">
+<div class="w-1/2 bg-error"></div>
+<div class="w-1/3 bg-tertiary"></div>
+<div class="w-1/6 bg-secondary"></div>
+</div>
+</div>
+<!-- Fri -->
+<div class="flex flex-col p-2 bg-surface hover:bg-surface-container transition-colors cursor-pointer">
+<div class="flex items-center justify-between text-[10px]">
+<span class="font-sans font-semibold text-outline">FRI OCT 28</span>
+<span class="font-mono text-outline">29 ev</span>
+</div>
+<div class="mt-1 flex items-center justify-between">
+<span class="font-mono text-[12px] text-on-surface">PCE Deflator</span>
+<span class="text-[9px] px-1 py-0.2 rounded bg-error-container/30 text-error font-mono">4 High</span>
+</div>
+<div class="mt-1.5 h-1 w-full bg-surface-container-highest rounded overflow-hidden flex">
+<div class="w-1/5 bg-error"></div>
+<div class="w-3/5 bg-tertiary"></div>
+<div class="w-1/5 bg-secondary"></div>
+</div>
+</div>
+</div>
+<!-- Financial Ledger Header Bar -->
+<div class="h-7 px-3 bg-surface-container-low flex items-center justify-between text-[10px] font-mono uppercase tracking-wider text-outline">
+<div class="flex items-center gap-2">
+<span>EVENT LEDGER // 41 EVENTS SCHEDULED FOR OCT 27</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="text-on-surface-variant font-sans normal-case">Sorted by Chronological Impact</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Consensus Synced: Pyth Data</span>
+<span class="cursor-pointer hover:text-on-surface flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">tune</span> Density
+          </span>
+</div>
+</div>
+<!-- Tabular Ledger Table -->
+<div class="flex-1 overflow-x-auto overflow-y-auto">
+<table class="w-full text-left font-sans text-[11px] border-collapse">
+<thead>
+<tr class="bg-surface text-outline text-[10px] font-mono uppercase tracking-wider h-7">
+<th class="px-2 font-normal">Status / Countdown</th>
+<th class="px-2 font-normal">Time (UTC)</th>
+<th class="px-2 font-normal">Asset</th>
+<th class="px-2 font-normal">Category</th>
+<th class="px-3 font-normal min-w-[200px]">Event Description</th>
+<th class="px-2 font-normal">Impact</th>
+<th class="px-2 font-normal text-right">Expected</th>
+<th class="px-2 font-normal text-right">Prior</th>
+<th class="px-2 font-normal text-right">Actual</th>
+<th class="px-2 font-normal text-right">Market IV</th>
+<th class="px-2 font-normal text-center">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body">
+<!-- Row 1: Active Row (US Core CPI YoY) -->
+<tr class="bg-surface-container-high transition-colors cursor-pointer group shadow-sm">
+<td class="px-2 py-2 font-mono whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-semibold text-[10px]">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+                  In 2h 27m
+                </span>
+</td>
+<td class="px-2 py-2 font-mono text-[11px] text-on-surface whitespace-nowrap">12:30:00</td>
+<td class="px-2 py-2 whitespace-nowrap">
+<div class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-mono font-bold text-[10px]">
+<span class="text-tertiary">$</span> USD / DXY
+                </div>
+</td>
+<td class="px-2 py-2 whitespace-nowrap">
+<span class="px-1.5 py-0.5 rounded bg-surface-dim text-on-surface-variant font-mono text-[9px] uppercase tracking-wider">Economic</span>
+</td>
+<td class="px-3 py-2 font-medium text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="text-primary font-semibold">US Core CPI YoY (Sep)</span>
+<span class="text-[9px] px-1 rounded bg-primary/20 text-primary font-mono">SELECTED</span>
+</div>
+<div class="text-[10px] text-outline font-mono truncate">Key catalyst for FOMC Nov rate pause/cut odds</div>
+</td>
+<td class="px-2 py-2 whitespace-nowrap">
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-3 rounded-xs bg-error"></span>
+<span class="w-1.5 h-3 rounded-xs bg-error"></span>
+<span class="w-1.5 h-3 rounded-xs bg-error"></span>
+<span class="text-[10px] font-mono text-error font-bold ml-0.5">HIGH</span>
+</div>
+</td>
+<td class="px-2 py-2 font-mono text-right text-on-surface font-semibold">3.2%</td>
+<td class="px-2 py-2 font-mono text-right text-outline">3.2%</td>
+<td class="px-2 py-2 font-mono text-right whitespace-nowrap">
+<span class="text-tertiary animate-pulse font-bold">-- (Pending)</span>
+</td>
+<td class="px-2 py-2 font-mono text-right text-secondary whitespace-nowrap">±4.8% BTC IV</td>
+<td class="px-2 py-2 text-center whitespace-nowrap">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded bg-surface hover:bg-surface-bright text-tertiary" title="Set Alert">
+<span class="material-symbols-outlined text-[13px]">notifications_active</span>
+</button>
+<button class="p-1 rounded bg-primary-container text-on-primary-container hover:bg-primary font-medium" title="Quick Trade">
+<span class="material-symbols-outlined text-[13px]">query_stats</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: NVIDIA Q3 FY25 Earnings Call -->
+<tr class="bg-surface hover:bg-surface-container transition-colors cursor-pointer group">
+<td class="px-2 py-2 font-mono whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-[10px]">
+<span>⚪</span> Today 21:00
+                </span>
+</td>
+<td class="px-2 py-2 font-mono text-[11px] text-outline whitespace-nowrap">21:00:00</td>
+<td class="px-2 py-2 whitespace-nowrap">
+<div class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-mono font-bold text-[10px]">
+<span class="text-secondary">#</span> NVDA
+                </div>
+</td>
+<td class="px-2 py-2 whitespace-nowrap">
+<span class="px-1.5 py-0.5 rounded bg-surface-dim text-on-surface-variant font-mono text-[9px] uppercase tracking-wider">Earnings</span>
+</td>
+<td class="px-3 py-2 font-medium text-on-surface">
+<div>NVIDIA Q3 FY25 Earnings Call & Data Center Outlook</div>
+<div class="text-[10px] text-outline font-mono truncate">Blackwell GPU shipment trajectory & hyperscaler capex</div>
+</td>
+<td class="px-2 py-2 whitespace-nowrap">
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-3 rounded-xs bg-error"></span>
+<span class="w-1.5 h-3 rounded-xs bg-error"></span>
+<span class="w-1.5 h-3 rounded-xs bg-error"></span>
+<span class="text-[10px] font-mono text-error font-bold ml-0.5">HIGH</span>
+</div>
+</td>
+<td class="px-2 py-2 font-mono text-right text-on-surface font-semibold">$0.74 / $32.8B</td>
+<td class="px-2 py-2 font-mono text-right text-outline">$0.68 / $30.0B</td>
+<td class="px-2 py-2 font-mono text-right text-outline">--</td>
+<td class="px-2 py-2 font-mono text-right text-secondary whitespace-nowrap">±8.4% AI Beta</td>
+<td class="px-2 py-2 text-center whitespace-nowrap">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded bg-surface-container hover:bg-surface-bright text-on-surface-variant" title="Set Alert">
+<span class="material-symbols-outlined text-[13px]">notifications</span>
+</button>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-bright text-on-surface-variant" title="Quick Trade">
+<span class="material-symbols-outlined text-[13px]">query_stats</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Celestia (TIA) Cliff Token Unlock -->
+<tr class="bg-surface-dim hover:bg-surface-container transition-colors cursor-pointer group">
+<td class="px-2 py-2 font-mono whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-error-container/30 text-error text-[10px]">
+<span>🔴</span> In 5h 42m
+                </span>
+</td>
+<td class="px-2 py-2 font-mono text-[11px] text-outline whitespace-nowrap">18:00:00</td>
+<td class="px-2 py-2 whitespace-nowrap">
+<div class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-mono font-bold text-[10px]">
+<span class="text-tertiary">◆</span> TIA
+                </div>
+</td>
+<td class="px-2 py-2 whitespace-nowrap">
+<span class="px-1.5 py-0.5 rounded bg-surface-dim text-on-surface-variant font-mono text-[9px] uppercase tracking-wider">Token Unlock</span>
+</td>
+<td class="px-3 py-2 font-medium text-on-surface">
+<div>Celestia (TIA) Cliff Unlock (175.56M TIA / $1.02B)</div>
+<div class="text-[10px] text-outline font-mono truncate">Early backers + core contributors unlock (82.4% circulating)</div>
+</td>
+<td class="px-2 py-2 whitespace-nowrap">
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-3 rounded-xs bg-error"></span>
+<span class="w-1.5 h-3 rounded-xs bg-error"></span>
+<span class="w-1.5 h-3 rounded-xs bg-error"></span>
+<span class="text-[10px] font-mono text-error font-bold ml-0.5">HIGH</span>
+</div>
+</td>
+<td class="px-2 py-2 font-mono text-right text-on-surface font-semibold">175.56M TIA</td>
+<td class="px-2 py-2 font-mono text-right text-outline">0.0</td>
+<td class="px-2 py-2 font-mono text-right text-outline">--</td>
+<td class="px-2 py-2 font-mono text-right text-error whitespace-nowrap">-12.8% Spot Drift</td>
+<td class="px-2 py-2 text-center whitespace-nowrap">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded bg-surface-container hover:bg-surface-bright text-tertiary" title="Set Alert">
+<span class="material-symbols-outlined text-[13px]">notifications_active</span>
+</button>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-bright text-on-surface-variant" title="Quick Trade">
+<span class="material-symbols-outlined text-[13px]">query_stats</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Solana v1.18.26 Upgrade -->
+<tr class="bg-surface hover:bg-surface-container transition-colors cursor-pointer group">
+<td class="px-2 py-2 font-mono whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-tertiary-container/30 text-tertiary text-[10px]">
+<span>🟡</span> Epoch 692
+                </span>
+</td>
+<td class="px-2 py-2 font-mono text-[11px] text-outline whitespace-nowrap">15:10:00</td>
+<td class="px-2 py-2 whitespace-nowrap">
+<div class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-mono font-bold text-[10px]">
+<span class="text-secondary">⚡</span> SOL
+                </div>
+</td>
+<td class="px-2 py-2 whitespace-nowrap">
+<span class="px-1.5 py-0.5 rounded bg-surface-dim text-on-surface-variant font-mono text-[9px] uppercase tracking-wider">Protocol</span>
+</td>
+<td class="px-3 py-2 font-medium text-on-surface">
+<div>Solana v1.18.26 Mainnet Performance Rollout</div>
+<div class="text-[10px] text-outline font-mono truncate">Scheduler optimization & priority fee congestion mitigation</div>
+</td>
+<td class="px-2 py-2 whitespace-nowrap">
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-3 rounded-xs bg-tertiary"></span>
+<span class="w-1.5 h-3 rounded-xs bg-tertiary"></span>
+<span class="w-1.5 h-3 rounded-xs bg-surface-container-highest"></span>
+<span class="text-[10px] font-mono text-tertiary font-bold ml-0.5">MED</span>
+</div>
+</td>
+<td class="px-2 py-2 font-mono text-right text-on-surface">95% Validator Stake</td>
+<td class="px-2 py-2 font-mono text-right text-outline">v1.18.25</td>
+<td class="px-2 py-2 font-mono text-right text-secondary">88.4% Live</td>
+<td class="px-2 py-2 font-mono text-right text-secondary whitespace-nowrap">TPS +18%</td>
+<td class="px-2 py-2 text-center whitespace-nowrap">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded bg-surface-container hover:bg-surface-bright text-on-surface-variant" title="Set Alert">
+<span class="material-symbols-outlined text-[13px]">notifications</span>
+</button>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-bright text-on-surface-variant" title="Quick Trade">
+<span class="material-symbols-outlined text-[13px]">query_stats</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: US Initial Jobless Claims (Released 12m ago) -->
+<tr class="bg-surface-dim hover:bg-surface-container transition-colors cursor-pointer group">
+<td class="px-2 py-2 font-mono whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-secondary-container/30 text-secondary text-[10px]">
+<span>🟢</span> Released (12m ago)
+                </span>
+</td>
+<td class="px-2 py-2 font-mono text-[11px] text-outline whitespace-nowrap">12:30:00</td>
+<td class="px-2 py-2 whitespace-nowrap">
+<div class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-mono font-bold text-[10px]">
+<span class="text-tertiary">$</span> USD
+                </div>
+</td>
+<td class="px-2 py-2 whitespace-nowrap">
+<span class="px-1.5 py-0.5 rounded bg-surface-dim text-on-surface-variant font-mono text-[9px] uppercase tracking-wider">Economic</span>
+</td>
+<td class="px-3 py-2 font-medium text-on-surface">
+<div>US Initial Jobless Claims (Week ending Oct 19)</div>
+<div class="text-[10px] text-outline font-mono truncate">Labor market tightness indicator vs 4-week moving average</div>
+</td>
+<td class="px-2 py-2 whitespace-nowrap">
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-3 rounded-xs bg-tertiary"></span>
+<span class="w-1.5 h-3 rounded-xs bg-tertiary"></span>
+<span class="w-1.5 h-3 rounded-xs bg-surface-container-highest"></span>
+<span class="text-[10px] font-mono text-tertiary font-bold ml-0.5">MED</span>
+</div>
+</td>
+<td class="px-2 py-2 font-mono text-right text-on-surface">215K</td>
+<td class="px-2 py-2 font-mono text-right text-outline">220K</td>
+<td class="px-2 py-2 font-mono text-right text-secondary font-bold">218K (Neutral)</td>
+<td class="px-2 py-2 font-mono text-right text-outline whitespace-nowrap">±0.2% DXY</td>
+<td class="px-2 py-2 text-center whitespace-nowrap">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded bg-surface-container text-outline" title="Archived">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+</button>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-bright text-on-surface-variant" title="View Impact">
+<span class="material-symbols-outlined text-[13px]">insights</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Jupiter DAO Vote Closure -->
+<tr class="bg-surface hover:bg-surface-container transition-colors cursor-pointer group">
+<td class="px-2 py-2 font-mono whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-[10px]">
+<span>⚪</span> In 7h 20m
+                </span>
+</td>
+<td class="px-2 py-2 font-mono text-[11px] text-outline whitespace-nowrap">19:30:00</td>
+<td class="px-2 py-2 whitespace-nowrap">
+<div class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-mono font-bold text-[10px]">
+<span class="text-secondary">♃</span> JUP
+                </div>
+</td>
+<td class="px-2 py-2 whitespace-nowrap">
+<span class="px-1.5 py-0.5 rounded bg-surface-dim text-on-surface-variant font-mono text-[9px] uppercase tracking-wider">Governance</span>
+</td>
+<td class="px-3 py-2 font-medium text-on-surface">
+<div>Jupiter JUP DAO Budget Allocation Vote Closure</div>
+<div class="text-[10px] text-outline font-mono truncate">Proposal #14: Core working groups renewal & ASR emissions</div>
+</td>
+<td class="px-2 py-2 whitespace-nowrap">
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-3 rounded-xs bg-secondary"></span>
+<span class="w-1.5 h-3 rounded-xs bg-surface-container-highest"></span>
+<span class="w-1.5 h-3 rounded-xs bg-surface-container-highest"></span>
+<span class="text-[10px] font-mono text-secondary font-bold ml-0.5">LOW</span>
+</div>
+</td>
+<td class="px-2 py-2 font-mono text-right text-on-surface">Quorum 50M</td>
+<td class="px-2 py-2 font-mono text-right text-outline">Passed 92%</td>
+<td class="px-2 py-2 font-mono text-right text-secondary">94.2% Yes</td>
+<td class="px-2 py-2 font-mono text-right text-outline whitespace-nowrap">±1.2% JUP</td>
+<td class="px-2 py-2 text-center whitespace-nowrap">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded bg-surface-container hover:bg-surface-bright text-on-surface-variant" title="Set Alert">
+<span class="material-symbols-outlined text-[13px]">notifications</span>
+</button>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-bright text-on-surface-variant" title="Trade">
+<span class="material-symbols-outlined text-[13px]">query_stats</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7: Microsoft Cloud Azure Revenue Release -->
+<tr class="bg-surface-dim hover:bg-surface-container transition-colors cursor-pointer group">
+<td class="px-2 py-2 font-mono whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-[10px]">
+<span>⚪</span> In 8h 00m
+                </span>
+</td>
+<td class="px-2 py-2 font-mono text-[11px] text-outline whitespace-nowrap">20:30:00</td>
+<td class="px-2 py-2 whitespace-nowrap">
+<div class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-mono font-bold text-[10px]">
+<span class="text-tertiary">#</span> MSFT
+                </div>
+</td>
+<td class="px-2 py-2 whitespace-nowrap">
+<span class="px-1.5 py-0.5 rounded bg-surface-dim text-on-surface-variant font-mono text-[9px] uppercase tracking-wider">Earnings</span>
+</td>
+<td class="px-3 py-2 font-medium text-on-surface">
+<div>Microsoft (MSFT) Cloud Azure Revenue Release</div>
+<div class="text-[10px] text-outline font-mono truncate">Azure AI run-rate growth guidance & OpenAI compute demand</div>
+</td>
+<td class="px-2 py-2 whitespace-nowrap">
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-3 rounded-xs bg-error"></span>
+<span class="w-1.5 h-3 rounded-xs bg-error"></span>
+<span class="w-1.5 h-3 rounded-xs bg-error"></span>
+<span class="text-[10px] font-mono text-error font-bold ml-0.5">HIGH</span>
+</div>
+</td>
+<td class="px-2 py-2 font-mono text-right text-on-surface">+29% Azure YoY</td>
+<td class="px-2 py-2 font-mono text-right text-outline">+31% YoY</td>
+<td class="px-2 py-2 font-mono text-right text-outline">--</td>
+<td class="px-2 py-2 font-mono text-right text-secondary whitespace-nowrap">±3.9% NDX IV</td>
+<td class="px-2 py-2 text-center whitespace-nowrap">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded bg-surface-container hover:bg-surface-bright text-on-surface-variant" title="Set Alert">
+<span class="material-symbols-outlined text-[13px]">notifications</span>
+</button>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-bright text-on-surface-variant" title="Trade">
+<span class="material-symbols-outlined text-[13px]">query_stats</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 8: US GDP Q3 Advance Estimate -->
+<tr class="bg-surface hover:bg-surface-container transition-colors cursor-pointer group">
+<td class="px-2 py-2 font-mono whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-[10px]">
+<span>⚪</span> Tomorrow 12:30
+                </span>
+</td>
+<td class="px-2 py-2 font-mono text-[11px] text-outline whitespace-nowrap">12:30:00</td>
+<td class="px-2 py-2 whitespace-nowrap">
+<div class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-mono font-bold text-[10px]">
+<span class="text-tertiary">$</span> USD
+                </div>
+</td>
+<td class="px-2 py-2 whitespace-nowrap">
+<span class="px-1.5 py-0.5 rounded bg-surface-dim text-on-surface-variant font-mono text-[9px] uppercase tracking-wider">Macro</span>
+</td>
+<td class="px-3 py-2 font-medium text-on-surface">
+<div>US GDP Q3 Advance Estimate (Annualized QoQ)</div>
+<div class="text-[10px] text-outline font-mono truncate">Atlanta Fed GDPNow tracking 3.0% vs consensus print</div>
+</td>
+<td class="px-2 py-2 whitespace-nowrap">
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-3 rounded-xs bg-error"></span>
+<span class="w-1.5 h-3 rounded-xs bg-error"></span>
+<span class="w-1.5 h-3 rounded-xs bg-error"></span>
+<span class="text-[10px] font-mono text-error font-bold ml-0.5">HIGH</span>
+</div>
+</td>
+<td class="px-2 py-2 font-mono text-right text-on-surface">3.0%</td>
+<td class="px-2 py-2 font-mono text-right text-outline">3.0%</td>
+<td class="px-2 py-2 font-mono text-right text-outline">--</td>
+<td class="px-2 py-2 font-mono text-right text-secondary whitespace-nowrap">±1.4% SPX</td>
+<td class="px-2 py-2 text-center whitespace-nowrap">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded bg-surface-container hover:bg-surface-bright text-on-surface-variant" title="Set Alert">
+<span class="material-symbols-outlined text-[13px]">notifications</span>
+</button>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-bright text-on-surface-variant" title="Trade">
+<span class="material-symbols-outlined text-[13px]">query_stats</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 9: Ethereum Pectra Devnet Hardfork Sync -->
+<tr class="bg-surface-dim hover:bg-surface-container transition-colors cursor-pointer group">
+<td class="px-2 py-2 font-mono whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-[10px]">
+<span>⚪</span> Oct 28 14:00
+                </span>
+</td>
+<td class="px-2 py-2 font-mono text-[11px] text-outline whitespace-nowrap">14:00:00</td>
+<td class="px-2 py-2 whitespace-nowrap">
+<div class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-mono font-bold text-[10px]">
+<span class="text-primary">Ξ</span> ETH
+                </div>
+</td>
+<td class="px-2 py-2 whitespace-nowrap">
+<span class="px-1.5 py-0.5 rounded bg-surface-dim text-on-surface-variant font-mono text-[9px] uppercase tracking-wider">Protocol</span>
+</td>
+<td class="px-3 py-2 font-medium text-on-surface">
+<div>Ethereum Pectra Devnet 4 Hardfork Activation</div>
+<div class="text-[10px] text-outline font-mono truncate">EIP-7702 Account abstraction testing & EOF verification</div>
+</td>
+<td class="px-2 py-2 whitespace-nowrap">
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-3 rounded-xs bg-tertiary"></span>
+<span class="w-1.5 h-3 rounded-xs bg-tertiary"></span>
+<span class="w-1.5 h-3 rounded-xs bg-surface-container-highest"></span>
+<span class="text-[10px] font-mono text-tertiary font-bold ml-0.5">MED</span>
+</div>
+</td>
+<td class="px-2 py-2 font-mono text-right text-on-surface">Epoch 241,120</td>
+<td class="px-2 py-2 font-mono text-right text-outline">Devnet 3</td>
+<td class="px-2 py-2 font-mono text-right text-outline">--</td>
+<td class="px-2 py-2 font-mono text-right text-secondary whitespace-nowrap">Gas -14% est</td>
+<td class="px-2 py-2 text-center whitespace-nowrap">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded bg-surface-container hover:bg-surface-bright text-on-surface-variant" title="Set Alert">
+<span class="material-symbols-outlined text-[13px]">notifications</span>
+</button>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-bright text-on-surface-variant" title="Trade">
+<span class="material-symbols-outlined text-[13px]">query_stats</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- RIGHT PANEL: CONTEXTUAL EVENT INTEL & NEXUS AI (~32% width, 380px-440px) -->
+<aside class="w-full lg:w-[420px] shrink-0 bg-surface flex flex-col overflow-y-auto">
+<!-- Panel Header (28px height) -->
+<div class="h-8 px-3 bg-surface-container flex items-center justify-between text-[11px] font-mono shrink-0">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+<span class="font-bold text-on-surface">EVENT INTEL // US Core CPI YoY</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<button class="p-1 hover:text-on-surface" title="Dock panel"><span class="material-symbols-outlined text-[14px]">vertical_split</span></button>
+<button class="p-1 hover:text-on-surface" title="Expand panel"><span class="material-symbols-outlined text-[14px]">fullscreen</span></button>
+<button class="p-1 hover:text-on-surface" title="Close panel"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</div>
+</div>
+<!-- Section A: Event Metadata & Live Telemetry -->
+<div class="p-3 bg-surface-container-low flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded bg-surface-container-highest flex items-center justify-center font-mono font-bold text-tertiary text-[12px]">$</span>
+<div>
+<div class="text-[13px] font-headline font-bold text-on-surface">US Core Consumer Price Index YoY</div>
+<div class="text-[10px] font-mono text-outline">Bureau of Labor Statistics (BLS) · Monthly Print</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-error text-on-error text-[10px] font-mono font-bold tracking-wider">HIGH VOLATILITY</span>
+</div>
+<div class="grid grid-cols-3 gap-1.5 bg-surface-dim p-2 rounded text-[11px] font-mono">
+<div>
+<div class="text-[9px] text-outline uppercase">Consensus</div>
+<div class="text-on-surface font-semibold text-[13px]">3.2%</div>
+<div class="text-[9px] text-on-surface-variant">Band: 3.1% - 3.3%</div>
+</div>
+<div>
+<div class="text-[9px] text-outline uppercase">Prior Month</div>
+<div class="text-on-surface font-semibold text-[13px]">3.2%</div>
+<div class="text-[9px] text-secondary">Aug: 3.2%</div>
+</div>
+<div>
+<div class="text-[9px] text-outline uppercase">Countdown</div>
+<div class="text-error font-semibold text-[13px]">02:27:14</div>
+<div class="text-[9px] text-on-surface-variant">12:30:00 UTC</div>
+</div>
+</div>
+<!-- Historical Deviation Telemetry -->
+<div class="p-2 rounded bg-surface-container text-[11px]">
+<div class="flex items-center justify-between text-[10px] font-mono text-outline mb-1">
+<span class="flex items-center gap-1 font-semibold text-on-surface-variant">
+<span class="material-symbols-outlined text-[12px] text-primary">analytics</span>
+              HISTORICAL IMPACT TELEMETRY
+            </span>
+<span>LAST 6 PRINTS</span>
+</div>
+<div class="text-[11px] text-on-surface leading-tight">
+            Average 15-minute BTC candlestick deviation: <span class="font-mono font-bold text-secondary">±1.82%</span>. DXY variance impact: <span class="font-mono font-bold text-tertiary">32.4 bps</span>.
+          </div>
+</div>
+</div>
+<!-- Section B: Nexus AI Intelligence Brief -->
+<div class="p-3 bg-surface flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-[11px] font-mono font-semibold text-primary">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+<span>NEXUS AI // MACRO CATALYST THESIS</span>
+</div>
+<span class="text-[10px] font-mono px-1 py-0.2 rounded bg-primary-container/20 text-primary font-bold">CONFIDENCE: HIGH</span>
+</div>
+<!-- Structured Thesis Box -->
+<div class="p-2.5 rounded bg-surface-container-low text-[11px] flex flex-col gap-2">
+<div>
+<span class="text-[10px] uppercase font-mono font-semibold text-outline block">Signal / Scenario Thesis:</span>
+<p class="text-on-surface font-sans leading-relaxed mt-0.5">
+              Asymmetric Volatility Skew — Consensus is anchored at 3.2%. A sub-3.1% print increases the FOMC Nov 50bps rate cut probability from 34% to 78%, unlocking an immediate liquidity bid across high-beta crypto assets (<span class="font-mono text-secondary">SOL</span>, <span class="font-mono text-secondary">BTC</span>).
+            </p>
+</div>
+<div>
+<span class="text-[10px] uppercase font-mono font-semibold text-outline block">Primary Catalysts:</span>
+<ul class="mt-0.5 space-y-1 font-sans text-on-surface-variant text-[11px]">
+<li class="flex items-start gap-1.5">
+<span class="text-primary mt-0.5">•</span>
+<span>Sticky shelter disinflation lagging market rental declines by an estimated 4-month window.</span>
+</li>
+<li class="flex items-start gap-1.5">
+<span class="text-primary mt-0.5">•</span>
+<span>Energy price pass-through remains strongly muted in September wholesale metrics.</span>
+</li>
+</ul>
+</div>
+<div>
+<span class="text-[10px] uppercase font-mono font-semibold text-error block">Invalidation & Tail Risks:</span>
+<p class="text-on-surface-variant font-sans text-[11px] mt-0.5">
+              Transportation services rebound could trigger an unexpected 3.4% upside surprise, abruptly spiking the US 10-Year yield back over <span class="font-mono text-tertiary">4.35%</span> and causing immediate margin unwind on perp longs.
+            </p>
+</div>
+<div class="pt-1.5 flex items-center justify-between text-[10px] font-mono text-outline">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[11px]">verified</span> BLS API · Pyth 10Y Oracle · Polymarket
+            </span>
+<span class="text-secondary cursor-pointer hover:underline">Verify Receipts</span>
+</div>
+</div>
+</div>
+<!-- Section C: Related Markets & Instant Liquidity -->
+<div class="p-3 bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-wider text-outline">
+<span>RELATED MARKETS // INSTANT EXECUTION</span>
+<span>ORDER DEPTH</span>
+</div>
+<div class="space-y-1">
+<!-- SOL-PERP -->
+<div class="p-1.5 rounded bg-surface hover:bg-surface-container transition-colors flex items-center justify-between text-[11px]">
+<div class="flex items-center gap-2">
+<span class="font-mono font-bold text-on-surface">SOL-PERP</span>
+<span class="font-mono text-secondary font-semibold">$194.50</span>
+<span class="text-[10px] font-mono text-secondary">(+4.8%)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-mono text-outline">High IV</span>
+<button class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-mono text-[10px] font-semibold hover:bg-primary">
+                Trade SOL
+              </button>
+</div>
+</div>
+<!-- BTC-PERP -->
+<div class="p-1.5 rounded bg-surface hover:bg-surface-container transition-colors flex items-center justify-between text-[11px]">
+<div class="flex items-center gap-2">
+<span class="font-mono font-bold text-on-surface">BTC-PERP</span>
+<span class="font-mono text-secondary font-semibold">$91,420</span>
+<span class="text-[10px] font-mono text-secondary">(+2.1%)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-mono text-outline">$14.2M Depth</span>
+<button class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-mono text-[10px] font-semibold hover:bg-primary">
+                Trade BTC
+              </button>
+</div>
+</div>
+<!-- Polymarket Prediction Row -->
+<div class="p-1.5 rounded bg-surface hover:bg-surface-container transition-colors flex items-center justify-between text-[11px]">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[13px] text-tertiary">query_stats</span>
+<div class="truncate max-w-[170px] text-[10px] text-on-surface">
+                Polymarket: CPI YoY ≥ 3.2% in Sep?
+              </div>
+</div>
+<div class="flex items-center gap-1.5 font-mono text-[10px]">
+<span class="text-secondary">Yes 42¢</span>
+<span class="text-error">No 58¢</span>
+<button class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface hover:bg-surface-bright font-mono text-[10px]">
+                Predict
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Section D: Historical Reaction Matrix Visual Micro-Chart -->
+<div class="p-3 bg-surface flex flex-col gap-2">
+<div class="flex items-center justify-between text-[10px] font-mono text-outline uppercase tracking-wider">
+<span>HISTORICAL REACTION DISTRIBUTION</span>
+<span>LAST 4 CYCLES</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low flex flex-col gap-1.5">
+<!-- Item 1: Aug CPI -->
+<div class="flex items-center justify-between text-[10px] font-mono">
+<span class="text-on-surface-variant">Aug 2024 (In-line 3.2%)</span>
+<div class="flex items-center gap-2">
+<span class="text-secondary font-semibold">+0.8% S&P</span>
+<span class="text-tertiary font-semibold">-1.2% DXY</span>
+</div>
+</div>
+<!-- Item 2: Jul CPI -->
+<div class="flex items-center justify-between text-[10px] font-mono">
+<span class="text-on-surface-variant">Jul 2024 (Hot 3.4%)</span>
+<div class="flex items-center gap-2">
+<span class="text-error font-semibold">-1.4% S&P</span>
+<span class="text-secondary font-semibold">+0.9% DXY</span>
+</div>
+</div>
+<!-- Item 3: Jun CPI -->
+<div class="flex items-center justify-between text-[10px] font-mono">
+<span class="text-on-surface-variant">Jun 2024 (Cool 3.0%)</span>
+<div class="flex items-center gap-2">
+<span class="text-secondary font-semibold">+1.9% S&P</span>
+<span class="text-tertiary font-semibold">-1.8% DXY</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section E: Live Wire Headlines & Pre-Event Chatter -->
+<div class="p-3 bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between text-[10px] font-mono text-outline uppercase tracking-wider">
+<span class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+            PRE-EVENT WIRE CHATTER
+          </span>
+<span>LIVE</span>
+</div>
+<div class="space-y-1.5 text-[11px] font-sans">
+<div class="p-1.5 rounded bg-surface flex flex-col gap-0.5">
+<div class="flex items-center justify-between text-[9px] font-mono text-outline">
+<span class="text-tertiary font-semibold">GOLDMAN SACHS MACRO DESK</span>
+<span>14:28:12 UTC</span>
+</div>
+<p class="text-on-surface text-[11px] leading-tight">
+              Options gamma pinning detected around SPX 5,850 strike ahead of 12:30 print; high dealer vulnerability on large prints.
+            </p>
+</div>
+<div class="p-1.5 rounded bg-surface flex flex-col gap-0.5">
+<div class="flex items-center justify-between text-[9px] font-mono text-outline">
+<span class="text-secondary font-semibold">BLOOMBERG FED WATCH</span>
+<span>14:15:02 UTC</span>
+</div>
+<p class="text-on-surface text-[11px] leading-tight">
+              Swaps fully pricing 25bps November ease; 50bps conditional on core print ≤ 3.1%.
+            </p>
+</div>
+</div>
+</div>
+<!-- Section F: Action Toolbar -->
+<div class="p-3 bg-surface mt-auto flex flex-col gap-1.5">
+<button class="w-full py-1.5 px-3 rounded bg-tertiary text-on-tertiary font-mono font-bold text-[11px] flex items-center justify-center gap-1.5 shadow-sm hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-[14px]">notifications_active</span>
+<span>SET MULTI-CHANNEL EVENT ALERT</span>
+</button>
+<div class="grid grid-cols-2 gap-1.5">
+<button class="py-1 px-2 rounded bg-primary-container text-on-primary-container font-mono text-[10px] font-semibold flex items-center justify-center gap-1 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-[13px]">query_stats</span> Trade Catalyst
+          </button>
+<button class="py-1 px-2 rounded bg-surface-container-highest text-on-surface font-mono text-[10px] font-semibold flex items-center justify-center gap-1 hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined text-[13px]">summarize</span> Deep Research
+          </button>
+</div>
+</div>
+</aside>
+</div>
+<!-- BOTTOM UTILITY & ACCOUNT DOCK (standardized Nexus expandable drawer) -->
+<footer class="w-full bg-surface-container flex flex-col shrink-0">
+<!-- Utility Dock Header / Tabs -->
+<div class="h-7 px-3 bg-surface flex items-center justify-between text-[11px] font-mono">
+<div class="flex items-center gap-1">
+<button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface">Positions (3)</button>
+<button class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-bold shadow-sm flex items-center gap-1">
+<span>Event Alerts</span>
+<span class="px-1 py-0.1 rounded bg-primary text-on-primary text-[9px]">7 Active</span>
+</button>
+<button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface">Open Orders (2)</button>
+<button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface">Historical Reactions</button>
+<button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-primary">smart_toy</span>
+          AI Event Log
+        </button>
+</div>
+<div class="flex items-center gap-3 text-[10px] text-outline">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Conditional Execution Engine: ARMED</span>
+<button class="hover:text-on-surface flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">keyboard_arrow_down</span> Collapse
+        </button>
+</div>
+</div>
+<!-- Active Event Alert Rules Row -->
+<div class="px-3 py-2 bg-surface-container-lowest flex items-center gap-4 overflow-x-auto text-[11px] font-mono">
+<!-- Alert Rule 1 -->
+<div class="flex items-center gap-2 px-2.5 py-1 rounded bg-surface-container text-on-surface shrink-0">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="text-tertiary font-bold">TRIGGER 1:</span>
+<span>US CPI YoY ≤ 3.1%</span>
+<span class="text-outline">→</span>
+<span class="text-secondary font-semibold">Execute Limit Buy SOL-PERP @ $192.00 ($25,000)</span>
+<span class="px-1 py-0.2 rounded bg-secondary-container/30 text-secondary text-[9px] font-bold">ARMED</span>
+<button class="hover:text-error text-outline ml-1"><span class="material-symbols-outlined text-[13px]">delete</span></button>
+</div>
+<!-- Alert Rule 2 -->
+<div class="flex items-center gap-2 px-2.5 py-1 rounded bg-surface-container text-on-surface shrink-0">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="text-tertiary font-bold">TRIGGER 2:</span>
+<span>Celestia Unlock T-1h (17:00 UTC)</span>
+<span class="text-outline">→</span>
+<span class="text-on-surface">Notify Telegram + Terminal Push</span>
+<span class="px-1 py-0.2 rounded bg-tertiary-container/30 text-tertiary text-[9px] font-bold">ARMED</span>
+<button class="hover:text-error text-outline ml-1"><span class="material-symbols-outlined text-[13px]">delete</span></button>
+</div>
+<!-- Quick Add Trigger Rule Button -->
+<button class="flex items-center gap-1 px-2 py-1 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface text-[10px] shrink-0 font-sans">
+<span class="material-symbols-outlined text-[13px]">add</span>
+<span>New Event Automation Trigger</span>
+</button>
+</div>
+</footer>
+</div>
+<script>
+  // Simple micro-interaction for row selection highlighting
+  document.addEventListener('DOMContentLoaded', () => {
+    const rows = document.querySelectorAll('tbody tr');
+    rows.forEach(row => {
+      row.addEventListener('click', () => {
+        rows.forEach(r => {
+          r.classList.remove('bg-surface-container-high');
+          r.classList.add('bg-surface');
+          const badge = r.querySelector('.text-primary.font-mono');
+          if (badge && badge.textContent === 'SELECTED') badge.remove();
+        });
+        row.classList.remove('bg-surface', 'bg-surface-dim');
+        row.classList.add('bg-surface-container-high');
+      });
+    });
+  });
+</script></main><footer class="fixed bottom-0 left-0 right-0 h-[32px] z-50 px-3 bg-surface border-t border-outline-variant/30 flex items-center justify-between text-[11px] font-sans"><div class="flex items-center gap-3 shrink-0"><div class="flex items-center gap-1"><span class="text-[10px] text-outline uppercase tracking-wider font-semibold mr-1">Layout:</span><button class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-medium hover:bg-surface-bright">Cockpit</button><button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface">Scalper</button><button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface">Calendar</button><button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface">Research</button></div><div class="h-3 w-[1px] bg-outline-variant/40"></div><div class="flex items-center gap-1"><span class="text-[10px] text-outline uppercase tracking-wider font-semibold mr-1">Panels:</span><button class="px-1.5 py-0.5 rounded text-[10px] bg-surface-container text-on-surface border border-outline-variant/30">Events</button><button class="px-1.5 py-0.5 rounded text-[10px] bg-surface-container text-on-surface border border-outline-variant/30">Detail</button><button class="px-1.5 py-0.5 rounded text-[10px] bg-surface-container text-on-surface border border-outline-variant/30">Macro Timeline</button><button class="px-1.5 py-0.5 rounded text-[10px] bg-surface-container text-primary border border-outline-variant/30 flex items-center gap-1"><span class="material-symbols-outlined text-[11px]">auto_awesome</span>AI Catalysts</button></div></div><div class="flex items-center gap-4 shrink-0 font-mono text-[10px]"><div class="flex items-center gap-3"><span class="flex items-center gap-1 text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>NY Open</span><span class="flex items-center gap-1 text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>London Close</span><span class="flex items-center gap-1 text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>Tokyo 02:00 UTC</span></div><div class="h-3 w-[1px] bg-outline-variant/40"></div><div class="flex items-center gap-1 text-on-surface"><span class="text-outline font-sans">UTC</span><span class="font-semibold">14:32:08</span></div></div></footer></body></html>

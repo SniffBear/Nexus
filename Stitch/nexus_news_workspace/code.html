@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Nexus Global Terminal</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"background":"#101419","surface-container-highest":"#31353b","secondary":"#99cbff","tertiary-fixed":"#ffdea1","surface-dim":"#101419","outline-variant":"#424751","surface":"#101419","primary-container":"#6ea8ff","surface-container-lowest":"#0a0f13","on-tertiary-fixed":"#261900","on-primary-fixed":"#001b3c","on-primary-container":"#003c77","on-error":"#690005","surface-container":"#1c2025","on-surface-variant":"#c2c6d3","primary":"#a8c8ff","surface-tint":"#a8c8ff","on-secondary-fixed-variant":"#004a78","error":"#ffb4ab","on-primary":"#003061","tertiary-container":"#d39e10","on-secondary-fixed":"#001d34","tertiary-fixed-dim":"#f7be37","surface-container-low":"#181c21","on-surface":"#e0e2ea","on-tertiary":"#402d00","on-error-container":"#ffdad6","inverse-surface":"#e0e2ea","on-background":"#e0e2ea","primary-fixed":"#d5e3ff","secondary-fixed":"#cfe5ff","inverse-primary":"#105eb0","tertiary":"#f7be37","on-secondary-container":"#e8f1ff","secondary-container":"#0072b5","on-primary-fixed-variant":"#00468a","error-container":"#93000a","inverse-on-surface":"#2d3136","surface-container-high":"#262a30","on-tertiary-fixed-variant":"#5c4300","surface-variant":"#31353b","on-tertiary-container":"#4e3800","on-secondary":"#003355","primary-fixed-dim":"#a8c8ff","secondary-fixed-dim":"#99cbff","outline":"#8c919d","surface-bright":"#36393f","surface-elevated":"#171C22","border":"#252C34","border-subtle":"#1B2128","text-primary":"#F4F6F8","text-secondary":"#9BA6B2","text-muted":"#66717D","accent":"#6EA8FF","positive":"#39D98A","negative":"#FF5C6C","warning":"#F5B94C","info":"#69B7FF"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{},fontFamily:{"headline":["Geist"],"display":["Geist"],"body":["Geist"],"label":["Geist"],"mono":["JetBrains Mono"]},fontSize:{}}}};</script></head><body class="bg-background font-body text-on-surface antialiased select-none"><header class="fixed top-0 left-0 right-0 z-50 flex flex-col bg-surface border-b border-border"><div class="h-11 w-full px-3 flex items-center justify-between border-b border-border-subtle bg-surface-dim"><div class="flex items-center space-x-3"><div class="flex items-center space-x-1.5 pr-3 border-r border-border"><div class="w-5 h-5 rounded bg-surface-elevated border border-border flex items-center justify-center"><div class="w-2 h-2 rounded-full bg-accent shadow-[0_0_8px_#6EA8FF]"></div></div><span class="text-[14px] uppercase tracking-wider text-text-primary font-bold font-headline">NEXUS</span><span class="px-1 py-0.5 rounded text-[9px] font-mono tracking-tight bg-surface-container text-text-secondary border border-border">v2.4</span></div><nav class="hidden xl:flex items-center space-x-3 h-11" data-active-classes="text-accent border-b-2 border-accent font-semibold"><a class="h-11 inline-flex items-center text-on-surface-variant hover:text-on-surface transition-colors text-[12px] border-b-2 border-transparent" data-path="trade" href="#">Trade</a><a class="h-11 inline-flex items-center text-on-surface-variant hover:text-on-surface transition-colors text-[12px] border-b-2 border-transparent" data-path="markets" href="#">Markets</a><a class="h-11 inline-flex items-center text-on-surface-variant hover:text-on-surface transition-colors text-[12px] border-b-2 border-transparent" data-path="predict" href="#">Predict</a><a class="h-11 inline-flex items-center text-on-surface-variant hover:text-on-surface transition-colors text-[12px] border-b-2 border-transparent" data-path="social" href="#">Social</a><a class="h-11 inline-flex items-center text-on-surface-variant hover:text-on-surface transition-colors text-[12px] border-b-2 border-transparent" data-path="leaderboard" href="#">Leaderboard</a><a class="h-11 inline-flex items-center text-on-surface-variant hover:text-on-surface transition-colors text-[12px] border-b-2 border-transparent" data-path="earn" href="#">Earn</a><a class="h-11 inline-flex items-center text-on-surface-variant hover:text-on-surface transition-colors text-[12px] border-b-2 border-transparent" data-path="calendar" href="#">Calendar</a><a aria-current="page" class="h-11 inline-flex items-center transition-colors text-accent border-b-2 border-accent font-semibold" data-path="news" href="#">News</a><a class="h-11 inline-flex items-center text-on-surface-variant hover:text-on-surface transition-colors text-[12px] border-b-2 border-transparent" data-path="co-invest" href="#">Co-Invest</a><a class="h-11 inline-flex items-center text-on-surface-variant hover:text-on-surface transition-colors text-[12px] border-b-2 border-transparent" data-path="agents" href="#">Agents</a></nav></div><div class="flex items-center space-x-2"><button class="h-7 px-2 bg-surface-container border border-border rounded flex items-center space-x-1.5 hover:bg-surface-elevated text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[15px] text-text-muted">search</span><span class="text-[10px] text-text-muted hidden sm:inline font-label">Search</span><kbd class="px-1 rounded bg-surface-container-high border border-border text-[9px] font-mono text-text-secondary">⌘K</kbd></button><div class="flex items-center space-x-1 px-2 py-0.5 rounded border border-warning/30 bg-warning/10 text-warning"><span class="w-1.5 h-1.5 rounded-full bg-warning animate-pulse"></span><span class="text-[10px] uppercase tracking-wider font-semibold font-label">PAPER MODE</span></div><div class="hidden md:flex items-center space-x-1.5 px-2 py-1 rounded bg-surface-elevated border border-border text-text-secondary"><span class="w-2 h-2 rounded-full bg-positive shadow-[0_0_6px_#39D98A]"></span><span class="text-[11px] font-mono">Connected</span><span class="text-[11px] font-mono text-positive">12ms</span></div><div class="h-7 px-2 bg-surface-container border border-border rounded flex items-center space-x-2"><span class="text-[11px] font-mono text-text-primary">0x71a...9b4</span><span class="w-px h-3.5 bg-border"></span><span class="text-[11px] font-mono text-accent">$42,850.20</span><button class="flex items-center text-text-muted hover:text-on-surface"><span class="material-symbols-outlined text-[14px]">content_copy</span></button></div><button class="relative h-7 w-7 rounded bg-surface-container border border-border flex items-center justify-center text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[16px]">notifications</span><span class="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-accent"></span></button><div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[16px]">person</span></div></div></div><div class="h-8 w-full px-3 flex items-center justify-between bg-surface-container-lowest border-b border-border overflow-x-auto overflow-y-hidden"><div class="flex items-center space-x-4 whitespace-nowrap"><div class="flex items-center space-x-1.5"><span class="text-[10px] text-text-muted uppercase font-label">FEED</span><span class="w-1.5 h-1.5 rounded-full bg-positive"></span></div><div class="flex items-center space-x-1 text-[11px] font-mono"><span class="font-semibold text-text-primary">SOL</span><span class="text-on-surface">$168.05</span><span class="text-positive">+2.40%</span></div><div class="flex items-center space-x-1 text-[11px] font-mono"><span class="font-semibold text-text-primary">BTC</span><span class="text-on-surface">$83,027.00</span><span class="text-negative">-1.06%</span></div><div class="flex items-center space-x-1 text-[11px] font-mono"><span class="font-semibold text-text-primary">ETH</span><span class="text-on-surface">$3,241.00</span><span class="text-positive">+1.20%</span></div><div class="flex items-center space-x-1 text-[11px] font-mono"><span class="font-semibold text-text-primary">NVDA</span><span class="text-on-surface">$237.95</span><span class="text-negative">-0.94%</span></div><div class="flex items-center space-x-1 text-[11px] font-mono"><span class="font-semibold text-text-primary">JUP</span><span class="text-on-surface">$1.14</span><span class="text-positive">+5.70%</span></div></div><div class="hidden md:flex items-center space-x-3 whitespace-nowrap pl-3"><span class="text-[11px] font-mono text-text-muted">24h Vol: <span class="text-text-primary">$2.48B</span></span><span class="text-[11px] font-mono text-text-muted">Gas: <span class="text-positive">18 Gwei</span></span><span class="px-1.5 py-0.5 rounded text-[10px] font-mono border border-border bg-surface-elevated text-warning">PAPER</span></div></div></header><main class="w-full pt-[76px] pb-[30px] bg-background min-h-screen"><div class="flex flex-col w-full text-on-surface select-none font-body">
+<!-- TOP FILTER & TELEMETRY BAR -->
+<section class="w-full bg-surface-dim border-b border-[#252C34]">
+<!-- Primary Chips Row -->
+<div class="h-9 px-3 flex items-center justify-between border-b border-[#1B2128] overflow-x-auto gap-3">
+<div class="flex items-center space-x-1 shrink-0">
+<button class="h-6 px-2.5 rounded-sm text-[11px] font-medium bg-[#1c2025] text-accent border border-[#252C34] flex items-center space-x-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+<span>All</span>
+<span class="font-mono text-[10px] text-text-muted ml-0.5">148</span>
+</button>
+<button class="h-6 px-2.5 rounded-sm text-[11px] font-medium text-text-secondary hover:text-on-surface hover:bg-[#181c21] transition-colors flex items-center space-x-1">
+<span>Markets</span>
+<span class="font-mono text-[10px] text-text-muted">42</span>
+</button>
+<button class="h-6 px-2.5 rounded-sm text-[11px] font-medium text-text-secondary hover:text-on-surface hover:bg-[#181c21] transition-colors flex items-center space-x-1">
+<span>Crypto</span>
+<span class="font-mono text-[10px] text-text-muted">56</span>
+</button>
+<button class="h-6 px-2.5 rounded-sm text-[11px] font-medium text-text-secondary hover:text-on-surface hover:bg-[#181c21] transition-colors flex items-center space-x-1">
+<span>Stocks</span>
+<span class="font-mono text-[10px] text-text-muted">21</span>
+</button>
+<button class="h-6 px-2.5 rounded-sm text-[11px] font-medium text-accent bg-[#1c2025]/60 hover:bg-[#181c21] transition-colors flex items-center space-x-1">
+<span>Macro</span>
+<span class="font-mono text-[10px] text-accent">14</span>
+</button>
+<button class="h-6 px-2.5 rounded-sm text-[11px] font-medium text-text-secondary hover:text-on-surface hover:bg-[#181c21] transition-colors flex items-center space-x-1">
+<span>Companies</span>
+<span class="font-mono text-[10px] text-text-muted">9</span>
+</button>
+<button class="h-6 px-2.5 rounded-sm text-[11px] font-medium text-text-secondary hover:text-on-surface hover:bg-[#181c21] transition-colors flex items-center space-x-1">
+<span>Protocols</span>
+<span class="font-mono text-[10px] text-text-muted">6</span>
+</button>
+</div>
+<div class="flex items-center space-x-3 shrink-0">
+<div class="flex items-center space-x-1.5 px-2 py-0.5 rounded-sm bg-[#0a0f13] border border-[#252C34]">
+<span class="w-1.5 h-1.5 rounded-full bg-positive animate-ping"></span>
+<span class="text-[10px] font-mono uppercase tracking-wider text-text-secondary">WIRE CONNECTED</span>
+<span class="text-[10px] text-text-muted">•</span>
+<span class="text-[10px] font-mono text-positive">42ms</span>
+<span class="text-[10px] text-text-muted">•</span>
+<span class="text-[10px] font-mono text-text-primary">148 items today</span>
+</div>
+</div>
+</div>
+<!-- Secondary Controls Row -->
+<div class="h-8 px-3 flex items-center justify-between overflow-x-auto text-[11px] gap-2">
+<div class="flex items-center space-x-2 shrink-0">
+<!-- Impact filter -->
+<div class="flex items-center bg-[#0a0f13] border border-[#252C34] rounded-sm p-0.5">
+<span class="text-[10px] font-mono uppercase text-text-muted px-1.5">IMPACT</span>
+<button class="px-1.5 py-0.5 text-[10px] rounded-sm font-mono uppercase bg-[#FF5C6C]/15 text-[#FF5C6C] font-semibold">High</button>
+<button class="px-1.5 py-0.5 text-[10px] rounded-sm font-mono uppercase text-text-muted hover:text-on-surface">Med</button>
+<button class="px-1.5 py-0.5 text-[10px] rounded-sm font-mono uppercase text-text-muted hover:text-on-surface">Low</button>
+</div>
+<!-- Timeframe filter -->
+<div class="flex items-center bg-[#0a0f13] border border-[#252C34] rounded-sm p-0.5">
+<button class="px-1.5 py-0.5 text-[10px] rounded-sm font-mono uppercase text-accent bg-[#1c2025] font-semibold flex items-center space-x-1">
+<span class="w-1 h-1 rounded-full bg-accent"></span>
+<span>LIVE</span>
+</button>
+<button class="px-1.5 py-0.5 text-[10px] rounded-sm font-mono uppercase text-text-muted hover:text-on-surface">1H</button>
+<button class="px-1.5 py-0.5 text-[10px] rounded-sm font-mono uppercase text-text-muted hover:text-on-surface">24H</button>
+<button class="px-1.5 py-0.5 text-[10px] rounded-sm font-mono uppercase text-text-muted hover:text-on-surface">7D</button>
+</div>
+<!-- Sources Dropdown Mock -->
+<div class="flex items-center px-2 py-0.5 rounded-sm bg-[#0a0f13] border border-[#252C34] text-text-secondary cursor-pointer hover:border-outline-variant">
+<span class="text-[10px] font-mono uppercase text-text-muted mr-1">SOURCE:</span>
+<span class="text-[10px] font-mono text-text-primary">All Active (7)</span>
+<span class="material-symbols-outlined text-[13px] ml-1 text-text-muted">expand_more</span>
+</div>
+<!-- Unread / Bookmarks -->
+<div class="flex items-center space-x-1">
+<button class="h-5 px-1.5 rounded-sm text-[10px] font-mono border border-[#252C34] bg-[#0a0f13] text-text-secondary hover:text-text-primary flex items-center space-x-1">
+<span class="material-symbols-outlined text-[12px]">bookmark</span>
+<span>Bookmarked</span>
+<span class="text-accent font-mono ml-0.5">12</span>
+</button>
+<button class="h-5 px-1.5 rounded-sm text-[10px] font-mono border border-[#252C34] bg-[#0a0f13] text-text-secondary hover:text-text-primary flex items-center space-x-1">
+<span class="material-symbols-outlined text-[12px]">mark_email_unread</span>
+<span>Unread</span>
+<span class="text-positive font-mono ml-0.5">3</span>
+</button>
+</div>
+</div>
+<!-- Quick Search Bar -->
+<div class="flex items-center space-x-2 shrink-0">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-2 text-[14px] text-text-muted">search</span>
+<input class="h-6 w-72 pl-7 pr-12 text-[11px] font-mono bg-[#0a0f13] border border-[#252C34] rounded-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent" placeholder="Filter wire by ticker, keyword, desk..." type="text"/>
+<kbd class="absolute right-1.5 px-1 rounded bg-[#1c2025] border border-[#252C34] text-[9px] font-mono text-text-muted">⌘F</kbd>
+</div>
+<button class="h-6 px-2 bg-[#1c2025] hover:bg-[#262a30] border border-[#252C34] text-text-secondary hover:text-text-primary rounded-sm flex items-center space-x-1">
+<span class="material-symbols-outlined text-[13px]">refresh</span>
+<span class="text-[10px] font-mono uppercase">Sync</span>
+</button>
+</div>
+</div>
+</section>
+<!-- MAIN TERMINAL COCKPIT (3 Flush Panels) -->
+<div class="w-full grid grid-cols-12 bg-background min-h-[calc(100vh-172px)]">
+<!-- LEFT PANEL: STREAMING WIRE FEED (Col 1-4: ~440px equivalent) -->
+<aside class="col-span-12 lg:col-span-4 xl:col-span-4 border-r border-[#252C34] flex flex-col bg-surface-dim">
+<!-- 28px Flush Panel Header -->
+<div class="h-7 px-3 bg-[#0a0f13] border-b border-[#252C34] flex items-center justify-between shrink-0">
+<div class="flex items-center space-x-2">
+<span class="w-1.5 h-1.5 rounded-full bg-positive animate-pulse"></span>
+<span class="text-[11px] font-mono uppercase tracking-wider font-semibold text-text-primary">STREAMING WIRE</span>
+<span class="px-1 py-0.2 rounded-sm text-[9px] font-mono bg-[#1c2025] text-accent border border-[#252C34]">LIVE</span>
+</div>
+<div class="flex items-center space-x-2 text-[10px] font-mono text-text-muted">
+<span>SORT:</span>
+<button class="text-accent underline font-mono">Latest</button>
+<span>|</span>
+<button class="hover:text-text-primary font-mono">Impact</button>
+<span>|</span>
+<button class="hover:text-text-primary font-mono">Buzz</button>
+</div>
+</div>
+<!-- Feed Rows Scrollable Container -->
+<div class="flex-1 overflow-y-auto divide-y divide-[#1B2128]">
+<!-- WIRE ITEM 1 (SELECTED ITEM) -->
+<article class="p-3 bg-[#171C22] border-l-2 border-accent cursor-pointer transition-colors relative">
+<div class="flex items-center justify-between text-[10px] font-mono mb-1">
+<div class="flex items-center space-x-1.5">
+<span class="px-1 py-0.5 rounded-sm bg-[#FF5C6C]/20 text-[#FF5C6C] font-semibold border border-[#FF5C6C]/40">HIGH IMPACT</span>
+<span class="px-1 py-0.5 rounded-sm bg-[#1c2025] text-text-secondary border border-[#252C34]">Macro</span>
+<span class="text-text-muted">Reuters / Fed Wire</span>
+</div>
+<span class="text-accent font-semibold">14:02:18 EDT</span>
+</div>
+<h2 class="text-[12px] font-semibold text-text-primary leading-snug hover:text-accent transition-colors mb-2">
+            Federal Reserve Holds Rates at 5.25%-5.50%; Signals Cautious Stance on Future Cuts Following Inflation Data
+          </h2>
+<!-- Asset Tick Pill Strip -->
+<div class="flex items-center flex-wrap gap-1 text-[10px] font-mono">
+<span class="px-1 py-0.2 rounded-sm bg-[#0a0f13] border border-[#252C34] text-text-secondary">BTC <span class="text-negative font-medium">-1.15%</span></span>
+<span class="px-1 py-0.2 rounded-sm bg-[#0a0f13] border border-[#252C34] text-text-secondary">SOL <span class="text-negative font-medium">-1.82%</span></span>
+<span class="px-1 py-0.2 rounded-sm bg-[#0a0f13] border border-[#252C34] text-text-secondary">SPY <span class="text-negative font-medium">-0.45%</span></span>
+<span class="px-1 py-0.2 rounded-sm bg-[#0a0f13] border border-[#252C34] text-text-secondary">DXY <span class="text-positive font-medium">+0.38%</span></span>
+<span class="px-1 py-0.2 rounded-sm bg-[#0a0f13] border border-[#252C34] text-text-secondary">US10Y <span class="text-warning font-medium">+5.2bp</span></span>
+</div>
+</article>
+<!-- WIRE ITEM 2 -->
+<article class="p-3 hover:bg-[#171C22]/50 cursor-pointer transition-colors">
+<div class="flex items-center justify-between text-[10px] font-mono mb-1">
+<div class="flex items-center space-x-1.5">
+<span class="px-1 py-0.5 rounded-sm bg-positive/15 text-positive font-semibold border border-positive/30">HIGH IMPACT</span>
+<span class="px-1 py-0.5 rounded-sm bg-[#1c2025] text-text-secondary border border-[#252C34]">Companies</span>
+<span class="text-text-muted">Bloomberg Terminal</span>
+</div>
+<span class="text-text-muted">13:48:02 EDT</span>
+</div>
+<h2 class="text-[12px] font-medium text-text-primary leading-snug hover:text-accent transition-colors mb-2">
+            NVIDIA Discloses Next-Gen Blackwell Ultra Architecture Sampling to Cloud Titans Ahead of Schedule
+          </h2>
+<div class="flex items-center flex-wrap gap-1 text-[10px] font-mono">
+<span class="px-1 py-0.2 rounded-sm bg-[#0a0f13] border border-[#252C34] text-text-secondary">NVDA <span class="text-positive font-medium">+4.10%</span></span>
+<span class="px-1 py-0.2 rounded-sm bg-[#0a0f13] border border-[#252C34] text-text-secondary">TSM <span class="text-positive font-medium">+2.30%</span></span>
+<span class="px-1 py-0.2 rounded-sm bg-[#0a0f13] border border-[#252C34] text-text-secondary">MSFT <span class="text-positive font-medium">+0.82%</span></span>
+</div>
+</article>
+<!-- WIRE ITEM 3 -->
+<article class="p-3 hover:bg-[#171C22]/50 cursor-pointer transition-colors">
+<div class="flex items-center justify-between text-[10px] font-mono mb-1">
+<div class="flex items-center space-x-1.5">
+<span class="px-1 py-0.5 rounded-sm bg-accent/15 text-accent font-semibold border border-accent/30">MEDIUM</span>
+<span class="px-1 py-0.5 rounded-sm bg-[#1c2025] text-text-secondary border border-[#252C34]">Protocols</span>
+<span class="text-text-muted">Solana Foundation / Github</span>
+</div>
+<span class="text-text-muted">13:30:15 EDT</span>
+</div>
+<h2 class="text-[12px] font-medium text-text-primary leading-snug hover:text-accent transition-colors mb-2">
+            Solana Mainnet V2.1 Rollout Enters Final Staging; Validator Consensus Latency Drops 32%
+          </h2>
+<div class="flex items-center flex-wrap gap-1 text-[10px] font-mono">
+<span class="px-1 py-0.2 rounded-sm bg-[#0a0f13] border border-[#252C34] text-text-secondary">SOL <span class="text-positive font-medium">+3.40%</span></span>
+<span class="px-1 py-0.2 rounded-sm bg-[#0a0f13] border border-[#252C34] text-text-secondary">JUP <span class="text-positive font-medium">+5.10%</span></span>
+<span class="px-1 py-0.2 rounded-sm bg-[#0a0f13] border border-[#252C34] text-text-secondary">PYTH <span class="text-positive font-medium">+2.20%</span></span>
+</div>
+</article>
+<!-- WIRE ITEM 4 -->
+<article class="p-3 hover:bg-[#171C22]/50 cursor-pointer transition-colors">
+<div class="flex items-center justify-between text-[10px] font-mono mb-1">
+<div class="flex items-center space-x-1.5">
+<span class="px-1 py-0.5 rounded-sm bg-positive/15 text-positive font-semibold border border-positive/30">HIGH IMPACT</span>
+<span class="px-1 py-0.5 rounded-sm bg-[#1c2025] text-text-secondary border border-[#252C34]">Crypto</span>
+<span class="text-text-muted">SEC Edgar Wire</span>
+</div>
+<span class="text-text-muted">12:55:40 EDT</span>
+</div>
+<h2 class="text-[12px] font-medium text-text-primary leading-snug hover:text-accent transition-colors mb-2">
+            SEC Approves In-Kind Creation Framework for Multi-Asset Crypto ETPs in Landmark Filing
+          </h2>
+<div class="flex items-center flex-wrap gap-1 text-[10px] font-mono">
+<span class="px-1 py-0.2 rounded-sm bg-[#0a0f13] border border-[#252C34] text-text-secondary">BTC <span class="text-positive font-medium">+2.10%</span></span>
+<span class="px-1 py-0.2 rounded-sm bg-[#0a0f13] border border-[#252C34] text-text-secondary">ETH <span class="text-positive font-medium">+3.80%</span></span>
+</div>
+</article>
+<!-- WIRE ITEM 5 -->
+<article class="p-3 hover:bg-[#171C22]/50 cursor-pointer transition-colors">
+<div class="flex items-center justify-between text-[10px] font-mono mb-1">
+<div class="flex items-center space-x-1.5">
+<span class="px-1 py-0.5 rounded-sm bg-warning/15 text-warning font-semibold border border-warning/30">MEDIUM</span>
+<span class="px-1 py-0.5 rounded-sm bg-[#1c2025] text-text-secondary border border-[#252C34]">Macro</span>
+<span class="text-text-muted">Financial Times</span>
+</div>
+<span class="text-text-muted">12:14:09 EDT</span>
+</div>
+<h2 class="text-[12px] font-medium text-text-primary leading-snug hover:text-accent transition-colors mb-2">
+            ECB President Lagarde Warns Energy Volatility Could Re-Accelerate Transitory Services Inflation
+          </h2>
+<div class="flex items-center flex-wrap gap-1 text-[10px] font-mono">
+<span class="px-1 py-0.2 rounded-sm bg-[#0a0f13] border border-[#252C34] text-text-secondary">EUR/USD <span class="text-negative font-medium">-0.32%</span></span>
+<span class="px-1 py-0.2 rounded-sm bg-[#0a0f13] border border-[#252C34] text-text-secondary">Brent <span class="text-positive font-medium">+1.24%</span></span>
+</div>
+</article>
+<!-- WIRE ITEM 6 -->
+<article class="p-3 hover:bg-[#171C22]/50 cursor-pointer transition-colors">
+<div class="flex items-center justify-between text-[10px] font-mono mb-1">
+<div class="flex items-center space-x-1.5">
+<span class="px-1 py-0.5 rounded-sm bg-[#1c2025] text-text-muted font-semibold border border-[#252C34]">LOW</span>
+<span class="px-1 py-0.5 rounded-sm bg-[#1c2025] text-text-secondary border border-[#252C34]">Protocols</span>
+<span class="text-text-muted">Jup Research</span>
+</div>
+<span class="text-text-muted">11:42:00 EDT</span>
+</div>
+<h2 class="text-[12px] font-medium text-text-primary leading-snug hover:text-accent transition-colors mb-2">
+            Jupiter Exchange Introduces Native Instant Cross-Chain Settlement Route via Circle CCTP
+          </h2>
+<div class="flex items-center flex-wrap gap-1 text-[10px] font-mono">
+<span class="px-1 py-0.2 rounded-sm bg-[#0a0f13] border border-[#252C34] text-text-secondary">JUP <span class="text-positive font-medium">+1.80%</span></span>
+<span class="px-1 py-0.2 rounded-sm bg-[#0a0f13] border border-[#252C34] text-text-secondary">USDC <span class="text-text-muted font-medium">$1.00</span></span>
+</div>
+</article>
+<!-- WIRE ITEM 7 -->
+<article class="p-3 hover:bg-[#171C22]/50 cursor-pointer transition-colors">
+<div class="flex items-center justify-between text-[10px] font-mono mb-1">
+<div class="flex items-center space-x-1.5">
+<span class="px-1 py-0.5 rounded-sm bg-positive/15 text-positive font-semibold border border-positive/30">HIGH IMPACT</span>
+<span class="px-1 py-0.5 rounded-sm bg-[#1c2025] text-text-secondary border border-[#252C34]">Crypto</span>
+<span class="text-text-muted">Farside Investors</span>
+</div>
+<span class="text-text-muted">10:15:22 EDT</span>
+</div>
+<h2 class="text-[12px] font-medium text-text-primary leading-snug hover:text-accent transition-colors mb-2">
+            BlackRock Increases Spot Bitcoin Trust (IBIT) Holdings by 4,120 BTC in Single Inflow Window
+          </h2>
+<div class="flex items-center flex-wrap gap-1 text-[10px] font-mono">
+<span class="px-1 py-0.2 rounded-sm bg-[#0a0f13] border border-[#252C34] text-text-secondary">BTC <span class="text-positive font-medium">+1.40%</span></span>
+<span class="px-1 py-0.2 rounded-sm bg-[#0a0f13] border border-[#252C34] text-text-secondary">IBIT <span class="text-positive font-medium">+1.65%</span></span>
+</div>
+</article>
+<!-- WIRE ITEM 8 -->
+<article class="p-3 hover:bg-[#171C22]/50 cursor-pointer transition-colors">
+<div class="flex items-center justify-between text-[10px] font-mono mb-1">
+<div class="flex items-center space-x-1.5">
+<span class="px-1 py-0.5 rounded-sm bg-accent/15 text-accent font-semibold border border-accent/30">MEDIUM</span>
+<span class="px-1 py-0.5 rounded-sm bg-[#1c2025] text-text-secondary border border-[#252C34]">Macro</span>
+<span class="text-text-muted">Bureau of Labor Statistics</span>
+</div>
+<span class="text-text-muted">08:30:00 EDT</span>
+</div>
+<h2 class="text-[12px] font-medium text-text-primary leading-snug hover:text-accent transition-colors mb-2">
+            U.S. Core PPI Rises 0.2% MoM in Line With Forecasts, Headline Up 0.1%
+          </h2>
+<div class="flex items-center flex-wrap gap-1 text-[10px] font-mono">
+<span class="px-1 py-0.2 rounded-sm bg-[#0a0f13] border border-[#252C34] text-text-secondary">SPY <span class="text-positive font-medium">+0.40%</span></span>
+<span class="px-1 py-0.2 rounded-sm bg-[#0a0f13] border border-[#252C34] text-text-secondary">QQQ <span class="text-positive font-medium">+0.62%</span></span>
+<span class="px-1 py-0.2 rounded-sm bg-[#0a0f13] border border-[#252C34] text-text-secondary">DXY <span class="text-negative font-medium">-0.21%</span></span>
+</div>
+</article>
+</div>
+<!-- Feed Footer Telemetry -->
+<div class="h-6 px-3 bg-[#0a0f13] border-t border-[#252C34] flex items-center justify-between text-[10px] font-mono text-text-muted">
+<span>AUTO-SCROLL: LOCKED</span>
+<span>BUFFER: 2,400 MSGS</span>
+</div>
+</aside>
+<!-- CENTER PANEL: SELECTED ARTICLE DETAIL & TELEMETRY (Col 5-8: Flex 1) -->
+<main class="col-span-12 lg:col-span-5 xl:col-span-5 border-r border-[#252C34] flex flex-col bg-background">
+<!-- 28px Flush Panel Header -->
+<div class="h-7 px-3 bg-[#0a0f13] border-b border-[#252C34] flex items-center justify-between shrink-0">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-[14px] text-accent">article</span>
+<span class="text-[11px] font-mono uppercase tracking-wider font-semibold text-text-primary">STORY INTELLIGENCE &amp; TELEMETRY</span>
+</div>
+<div class="flex items-center space-x-1.5">
+<button class="h-5 px-1.5 rounded-sm bg-[#1c2025] hover:bg-[#262a30] text-text-secondary hover:text-text-primary border border-[#252C34] flex items-center space-x-1 text-[10px] font-mono" title="Copy Link">
+<span class="material-symbols-outlined text-[12px]">link</span>
+<span>Link</span>
+</button>
+<button class="h-5 px-1.5 rounded-sm bg-[#1c2025] hover:bg-[#262a30] text-text-secondary hover:text-text-primary border border-[#252C34] flex items-center space-x-1 text-[10px] font-mono" title="Bookmark">
+<span class="material-symbols-outlined text-[12px]">bookmark</span>
+<span>Pin</span>
+</button>
+<button class="h-5 px-1.5 rounded-sm bg-[#1c2025] hover:bg-[#262a30] text-text-secondary hover:text-text-primary border border-[#252C34] flex items-center space-x-1 text-[10px] font-mono" title="Share to Social">
+<span class="material-symbols-outlined text-[12px]">share</span>
+</button>
+<button class="h-5 px-1.5 rounded-sm bg-accent/20 hover:bg-accent/30 text-accent border border-accent/40 flex items-center space-x-1 text-[10px] font-mono font-medium" title="Open in Trade">
+<span class="material-symbols-outlined text-[12px]">candlestick_chart</span>
+<span>Trade</span>
+</button>
+</div>
+</div>
+<!-- Article Content Container (Scrollable) -->
+<div class="flex-1 overflow-y-auto p-4 space-y-4">
+<!-- Title & Badges -->
+<div class="space-y-2">
+<div class="flex items-center space-x-2 text-[10px] font-mono">
+<span class="px-1.5 py-0.5 rounded-sm bg-[#FF5C6C]/20 text-[#FF5C6C] font-semibold border border-[#FF5C6C]/40">CRITICAL RELEASE</span>
+<span class="text-text-muted">•</span>
+<span class="text-text-secondary font-mono">FEED ID: #NW-984210</span>
+<span class="text-text-muted">•</span>
+<span class="text-positive font-mono">VERIFIED DISPATCH</span>
+</div>
+<h1 class="text-[17px] font-semibold text-text-primary leading-snug tracking-tight font-headline">
+            Federal Reserve Holds Rates at 5.25%-5.50%; Signals Cautious Stance on Future Cuts Following Inflation Data
+          </h1>
+</div>
+<!-- Metadata Strip -->
+<div class="p-2.5 rounded-sm bg-[#0a0f13] border border-[#252C34] grid grid-cols-2 gap-2 text-[11px] font-mono">
+<div>
+<div class="text-[9px] uppercase tracking-wider text-text-muted">SOURCE / WIRE</div>
+<div class="text-text-primary font-medium truncate">Reuters Macro Desk / Federal Reserve Release</div>
+</div>
+<div>
+<div class="text-[9px] uppercase tracking-wider text-text-muted">CORRESPONDENTS</div>
+<div class="text-text-primary truncate">Howard Schneider &amp; Ann Saphir</div>
+</div>
+<div>
+<div class="text-[9px] uppercase tracking-wider text-text-muted">TIMESTAMP (EDT)</div>
+<div class="text-text-secondary">Today 14:02:18 EDT <span class="text-accent">(28m ago)</span></div>
+</div>
+<div>
+<div class="text-[9px] uppercase tracking-wider text-text-muted">CONSENSUS VERIFICATION HASH</div>
+<div class="text-accent truncate">0x7f4c9a812e9b04...3e1a</div>
+</div>
+</div>
+<!-- Sentiment & Volatility Gauge Strip -->
+<div class="p-2.5 rounded-sm bg-[#1c2025]/50 border border-[#252C34] grid grid-cols-3 gap-3 text-center">
+<div class="border-r border-[#252C34]">
+<div class="text-[9px] font-mono uppercase tracking-wider text-text-muted">IMPACT SEVERITY</div>
+<div class="text-[13px] font-mono font-semibold text-[#FF5C6C] mt-0.5">HIGH / TIER 1</div>
+</div>
+<div class="border-r border-[#252C34]">
+<div class="text-[9px] font-mono uppercase tracking-wider text-text-muted">HAWKISH / DOVISH INDEX</div>
+<div class="text-[13px] font-mono font-semibold text-warning mt-0.5">-0.42 (Mildly Hawkish)</div>
+</div>
+<div>
+<div class="text-[9px] font-mono uppercase tracking-wider text-text-muted">VOLATILITY CATALYST</div>
+<div class="text-[13px] font-mono font-semibold text-accent mt-0.5">8.8 / 10</div>
+</div>
+</div>
+<!-- Editorial Body -->
+<div class="space-y-3 text-[13px] text-text-primary leading-relaxed font-body">
+<p>
+<span class="font-mono text-accent font-semibold uppercase text-[11px] mr-1.5">[WASHINGTON]</span>
+            The Federal Open Market Committee (FOMC) decided unanimously on Wednesday to maintain the target range for the federal funds rate at 5.25% to 5.50%. The rate decision reflects persistent caution among central bank policymakers following uneven readings in core personal consumption expenditures (PCE) through the first half of the year.
+          </p>
+<!-- Highlight Blockquote -->
+<div class="pl-3 py-1.5 border-l-2 border-accent bg-[#0a0f13] text-text-secondary italic text-[12px] font-body">
+            "The Committee does not expect it will be appropriate to reduce the target range until it has gained greater confidence that inflation is moving sustainably toward 2 percent. Recent indicators suggest that economic activity has continued to expand at a solid pace, though job gains have moderated."
+          </div>
+<p>
+            The updated Summary of Economic Projections (SEP) reveals a pivotal shift in the committee's forward path. The median dot plot now pencils in just one 25-basis-point reduction before year-end, down sharply from the three cuts anticipated during the March projections. Four participants indicated they foresee no rate reductions whatsoever through the calendar year 2024.
+          </p>
+<p>
+            During his post-meeting press conference, Chair Jerome Powell noted that while recent consumer price data showed welcoming normalization, policymakers require a string of consistently benign data points before loosening credit conditions. The Fed also confirmed it will continue reducing its holdings of Treasury securities and agency debt as previously outlined.
+          </p>
+</div>
+<!-- Fact Matrix / Takeaways Table -->
+<div class="space-y-1.5 pt-2">
+<div class="text-[10px] font-mono uppercase tracking-wider text-text-muted flex items-center justify-between">
+<span>POLICY DELTA FACT MATRIX</span>
+<span class="text-accent font-mono">FOMC STATEMENT COMPARISON</span>
+</div>
+<div class="border border-[#252C34] rounded-sm overflow-hidden bg-[#0a0f13]">
+<table class="w-full text-left text-[11px] font-mono">
+<thead class="bg-[#181c21] border-b border-[#252C34] text-text-muted uppercase text-[9px]">
+<tr>
+<th class="py-1 px-2.5">Indicator Metric</th>
+<th class="py-1 px-2.5">Previous (March SEP)</th>
+<th class="py-1 px-2.5">Updated Policy</th>
+<th class="py-1 px-2.5 text-right">Net Bias</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#1B2128]">
+<tr>
+<td class="py-1.5 px-2.5 text-text-primary font-medium">Fed Funds Rate</td>
+<td class="py-1.5 px-2.5 text-text-secondary">5.25% - 5.50%</td>
+<td class="py-1.5 px-2.5 text-accent">5.25% - 5.50% (Unchanged)</td>
+<td class="py-1.5 px-2.5 text-right text-text-muted">Neutral</td>
+</tr>
+<tr>
+<td class="py-1.5 px-2.5 text-text-primary font-medium">Median 2024 Cuts</td>
+<td class="py-1.5 px-2.5 text-positive">3 Cuts (-75 bps)</td>
+<td class="py-1.5 px-2.5 text-negative">1 Cut (-25 bps)</td>
+<td class="py-1.5 px-2.5 text-right text-negative">Hawkish (-50bps)</td>
+</tr>
+<tr>
+<td class="py-1.5 px-2.5 text-text-primary font-medium">Core PCE Inflation End '24</td>
+<td class="py-1.5 px-2.5 text-text-secondary">2.6%</td>
+<td class="py-1.5 px-2.5 text-warning">2.8%</td>
+<td class="py-1.5 px-2.5 text-right text-negative">+20 bps Upward</td>
+</tr>
+<tr>
+<td class="py-1.5 px-2.5 text-text-primary font-medium">Balance Sheet Runoff (QT)</td>
+<td class="py-1.5 px-2.5 text-text-secondary">$60B/mo Treasuries</td>
+<td class="py-1.5 px-2.5 text-text-secondary">$25B/mo Cap (Maintained)</td>
+<td class="py-1.5 px-2.5 text-right text-positive">Accommodative</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+<!-- RIGHT PANEL: MARKET REACTION & NEXUS AI INTELLIGENCE (Col 9-12: ~380px equivalent) -->
+<aside class="col-span-12 lg:col-span-3 xl:col-span-3 flex flex-col bg-surface-dim">
+<!-- SUB-PANEL 1: MARKET REACTION TELEMETRY -->
+<div class="flex-1 flex flex-col border-b border-[#252C34]">
+<!-- 28px Flush Header -->
+<div class="h-7 px-3 bg-[#0a0f13] border-b border-[#252C34] flex items-center justify-between shrink-0">
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-[14px] text-accent">monitoring</span>
+<span class="text-[11px] font-mono uppercase tracking-wider font-semibold text-text-primary">MARKET REACTION TELEMETRY</span>
+</div>
+<span class="text-[9px] font-mono text-positive bg-positive/10 px-1 rounded-sm border border-positive/20">T+28m TICK</span>
+</div>
+<div class="p-3 space-y-3 flex-1 overflow-y-auto">
+<!-- Real-Time Impact Matrix Table -->
+<div class="space-y-1 font-mono">
+<div class="text-[9px] uppercase tracking-wider text-text-muted">AFFECTED INSTRUMENT VOLATILITY</div>
+<div class="border border-[#252C34] rounded-sm divide-y divide-[#1B2128] bg-[#0a0f13] text-[11px]">
+<div class="p-1.5 flex items-center justify-between">
+<span class="text-text-primary font-medium">DXY (US Dollar Index)</span>
+<div class="text-right">
+<div class="text-text-primary font-semibold">104.82</div>
+<div class="text-[10px] text-positive">+0.38% (+24 bps)</div>
+</div>
+</div>
+<div class="p-1.5 flex items-center justify-between">
+<span class="text-text-primary font-medium">US 10Y Benchmark</span>
+<div class="text-right">
+<div class="text-text-primary font-semibold">4.280%</div>
+<div class="text-[10px] text-warning">+5.2 bps spike</div>
+</div>
+</div>
+<div class="p-1.5 flex items-center justify-between">
+<span class="text-text-primary font-medium">BTC / USD</span>
+<div class="text-right">
+<div class="text-text-primary font-semibold">$66,420.00</div>
+<div class="text-[10px] text-negative">-1.15% (-$780)</div>
+</div>
+</div>
+<div class="p-1.5 flex items-center justify-between">
+<span class="text-text-primary font-medium">SOL / USD</span>
+<div class="text-right">
+<div class="text-text-primary font-semibold">$148.60</div>
+<div class="text-[10px] text-negative">-1.82% (-$2.75)</div>
+</div>
+</div>
+<div class="p-1.5 flex items-center justify-between">
+<span class="text-text-primary font-medium">S&amp;P 500 (SPY)</span>
+<div class="text-right">
+<div class="text-text-primary font-semibold">$542.10</div>
+<div class="text-[10px] text-negative">-0.45%</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Micro Sparkline / Order Flow Visualization -->
+<div class="p-2 bg-[#0a0f13] border border-[#252C34] rounded-sm space-y-1.5">
+<div class="flex items-center justify-between text-[10px] font-mono">
+<span class="text-text-muted uppercase">BTC 15m Reaction Window</span>
+<span class="text-accent">Headline @ 14:00</span>
+</div>
+<!-- Inline SVG Sparkline -->
+<div class="w-full h-12 flex items-center">
+<svg class="w-full h-full text-negative" fill="none" preserveaspectratio="none" viewbox="0 0 280 40">
+<!-- Pre-announcement chop -->
+<path d="M0,18 L30,17 L60,19 L90,16 L120,18 L140,8 L150,5 L160,25 L180,32 L210,29 L240,35 L280,33" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+<!-- Headline Marker -->
+<line stroke="#6EA8FF" stroke-dasharray="2,2" stroke-width="1" x1="140" x2="140" y1="0" y2="40"></line>
+</svg>
+</div>
+<div class="flex justify-between text-[9px] font-mono text-text-muted">
+<span>13:45 EDT</span>
+<span class="text-accent font-semibold">14:00 RELEASE</span>
+<span>14:15 EDT</span>
+</div>
+<!-- Order Flow Micro-Stat -->
+<div class="pt-1 border-t border-[#1B2128] flex items-center justify-between text-[10px] font-mono">
+<span class="text-text-muted">Order Flow Imbalance:</span>
+<span class="text-[#FF5C6C] font-semibold">+18% Ask Surge (Rate Sens.)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SUB-PANEL 2: NEXUS AI NEWS BRIEF & SYNTHESIS -->
+<div class="flex-1 flex flex-col bg-[#0a0f13]">
+<!-- 28px Flush Header -->
+<div class="h-7 px-3 bg-[#11151A] border-b border-[#252C34] flex items-center justify-between shrink-0">
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-[14px] text-accent">auto_awesome</span>
+<span class="text-[11px] font-mono uppercase tracking-wider font-semibold text-text-primary">NEXUS AI ACTION SYNTHESIS</span>
+</div>
+<span class="text-[9px] font-mono text-accent bg-accent/10 px-1 rounded-sm border border-accent/20">CONFIDENCE 92%</span>
+</div>
+<div class="p-3 space-y-2.5 flex-1 overflow-y-auto text-[11px] font-mono">
+<!-- Direction & Assessment -->
+<div class="p-2 rounded-sm bg-[#181c21] border border-[#252C34] space-y-1">
+<div class="flex items-center justify-between text-[10px]">
+<span class="text-text-muted uppercase">SYNTHESIZED DIRECTION:</span>
+<span class="text-negative font-semibold uppercase">MILD BEARISH RISK / BULLISH USD</span>
+</div>
+<p class="text-[11px] text-text-primary font-body leading-snug">
+              Dot plot downshift from 3 cuts to 1 is more restrictive than market consensus expected. Liquidity expansion delayed until Q4.
+            </p>
+</div>
+<!-- Key Catalysts & Invalidation -->
+<div class="space-y-1">
+<div class="text-[9px] uppercase tracking-wider text-text-muted">CORE CATALYSTS &amp; RISKS</div>
+<div class="text-[10px] text-text-secondary space-y-1 bg-[#101419] p-2 border border-[#1B2128] rounded-sm font-body">
+<div class="flex items-start space-x-1.5">
+<span class="text-accent font-mono">•</span>
+<span>Services PCE stickiness (2.8%) remains the Fed's primary obstacle for summer easing.</span>
+</div>
+<div class="flex items-start space-x-1.5">
+<span class="text-warning font-mono">•</span>
+<span><strong class="text-text-primary font-medium">Invalidation Trigger:</strong> An upcoming Non-Farm Payrolls revision below 140k would force an emergency dovish pivot.</span>
+</div>
+</div>
+</div>
+<!-- Actionable Tactical Playbook -->
+<div class="space-y-1">
+<div class="text-[9px] uppercase tracking-wider text-text-muted">PROPOSED TACTICAL ACTIONS</div>
+<div class="space-y-1.5">
+<div class="p-1.5 bg-[#171C22] border border-[#252C34] rounded-sm flex items-center justify-between">
+<div>
+<div class="text-text-primary font-medium text-[10px]">Hedge Beta Exposure</div>
+<div class="text-[9px] text-text-muted">Buy QQQ short-dated put spread</div>
+</div>
+<button class="h-5 px-2 bg-accent hover:bg-accent/80 text-background font-mono text-[9px] font-semibold rounded-sm">Execute</button>
+</div>
+<div class="p-1.5 bg-[#171C22] border border-[#252C34] rounded-sm flex items-center justify-between">
+<div>
+<div class="text-text-primary font-medium text-[10px]">Delta-Neutral Yield</div>
+<div class="text-[9px] text-text-muted">SOL/USDC LP rebalance (9.4% APY)</div>
+</div>
+<button class="h-5 px-2 bg-[#1c2025] hover:bg-[#262a30] text-accent border border-accent/30 font-mono text-[9px] font-semibold rounded-sm">Deposit</button>
+</div>
+</div>
+</div>
+<!-- Quick Navigation Actions -->
+<div class="pt-2 grid grid-cols-2 gap-1.5">
+<button class="h-6 px-2 bg-[#1c2025] hover:bg-[#262a30] border border-[#252C34] text-text-primary rounded-sm text-[10px] font-mono flex items-center justify-center space-x-1">
+<span class="material-symbols-outlined text-[12px] text-accent">candlestick_chart</span>
+<span>BTC Ticket</span>
+</button>
+<button class="h-6 px-2 bg-[#1c2025] hover:bg-[#262a30] border border-[#252C34] text-text-primary rounded-sm text-[10px] font-mono flex items-center justify-center space-x-1">
+<span class="material-symbols-outlined text-[12px] text-positive">calendar_month</span>
+<span>FOMC Calendar</span>
+</button>
+</div>
+</div>
+</div>
+</aside>
+</div>
+<!-- PERSISTENT WORKSPACE BOTTOM UTILITY STRIP (32px flush) -->
+<footer class="h-8 w-full bg-[#0a0f13] border-t border-[#252C34] px-3 flex items-center justify-between text-[10px] font-mono text-text-muted shrink-0">
+<!-- Left Status Controls -->
+<div class="flex items-center space-x-3">
+<div class="flex items-center space-x-1.5 text-positive">
+<span class="w-1.5 h-1.5 rounded-full bg-positive"></span>
+<span class="font-semibold">LIVE WIRE: ON</span>
+</div>
+<span class="text-text-muted">|</span>
+<button class="hover:text-text-primary flex items-center space-x-1">
+<span class="material-symbols-outlined text-[12px]">volume_off</span>
+<span>AUDIO ALERTS: OFF</span>
+</button>
+<span class="text-text-muted">|</span>
+<span class="text-text-secondary">SOURCES: 7 CONNECTED</span>
+<span class="text-text-muted">|</span>
+<span class="text-text-muted">CLUSTER: US-EAST-VIRGINIA-01</span>
+</div>
+<!-- Right Telemetry & Controls -->
+<div class="flex items-center space-x-3">
+<span class="text-text-secondary">LATENCY: <strong class="text-positive font-normal">42ms</strong> (PYTH/SOLANA RPC)</span>
+<span class="text-text-muted">|</span>
+<span>LAYOUT: <strong class="text-text-primary font-normal">TRIPTYCH COCKPIT</strong></span>
+<span class="text-text-muted">|</span>
+<span class="text-accent">UTC 14:30:45</span>
+<button class="hover:text-text-primary">
+<span class="material-symbols-outlined text-[13px]">tune</span>
+</button>
+</div>
+</footer>
+</div></main><footer class="fixed bottom-0 left-0 right-0 z-40 h-[30px] bg-surface-dim border-t border-border flex items-center justify-between px-3"><div class="flex items-center space-x-1 h-full overflow-x-auto"><button class="h-6 px-2 flex items-center space-x-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-elevated rounded text-[10px] font-label transition-colors"><span class="material-symbols-outlined text-[13px]">terminal</span><span>Feed</span></button><button class="h-6 px-2 flex items-center space-x-1 text-accent hover:bg-surface-elevated rounded text-[10px] font-label transition-colors"><span class="material-symbols-outlined text-[13px]">newspaper</span><span>News</span></button><button class="h-6 px-2 flex items-center space-x-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-elevated rounded text-[10px] font-label transition-colors"><span class="material-symbols-outlined text-[13px]">forum</span><span>Chat</span><span class="w-1.5 h-1.5 rounded-full bg-accent"></span></button><button class="h-6 px-2 flex items-center space-x-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-elevated rounded text-[10px] font-label transition-colors"><span class="material-symbols-outlined text-[13px]">visibility</span><span>Watchlist</span></button><button class="h-6 px-2 flex items-center space-x-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-elevated rounded text-[10px] font-label transition-colors"><span class="material-symbols-outlined text-[13px]">monitoring</span><span>PnL</span><span class="text-[11px] font-mono text-positive">+$1,420.40</span></button><button class="h-6 px-2 flex items-center space-x-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-elevated rounded text-[10px] font-label transition-colors"><span class="material-symbols-outlined text-[13px]">schedule</span><span>Market Hours: <strong class="text-positive font-normal">OPEN</strong></span></button><button class="h-6 px-2 flex items-center space-x-1 text-accent hover:bg-surface-elevated rounded text-[10px] font-label transition-colors"><span class="material-symbols-outlined text-[13px]">auto_awesome</span><span>Nexus AI</span></button></div><div class="flex items-center space-x-2 h-full"><button class="h-6 px-2 flex items-center space-x-1 border border-border bg-surface-container hover:bg-surface-elevated text-on-surface rounded text-[10px] font-label transition-colors"><span class="material-symbols-outlined text-[13px]">dashboard_customize</span><span>Layout: Cockpit</span><span class="material-symbols-outlined text-[13px]">expand_more</span></button><button class="h-6 w-6 flex items-center justify-center text-text-muted hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[14px]">tune</span></button><span class="text-[11px] font-mono text-text-muted pr-1">UTC 14:28:02</span></div></footer></body></html>

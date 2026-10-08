@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-surface-variant":"#c2c6d3","tertiary":"#f7be37","on-error-container":"#ffdad6","background":"#101419","secondary-container":"#0072b5","surface-container-low":"#181c21","surface-dim":"#101419","surface-container-lowest":"#0a0f13","inverse-on-surface":"#2d3136","surface-container":"#1c2025","primary-container":"#6ea8ff","primary":"#a8c8ff","on-tertiary":"#402d00","tertiary-fixed":"#ffdea1","surface-variant":"#31353b","on-background":"#e0e2ea","on-tertiary-fixed-variant":"#5c4300","primary-fixed":"#d5e3ff","primary-fixed-dim":"#a8c8ff","on-primary-fixed":"#001b3c","on-primary":"#003061","secondary-fixed-dim":"#99cbff","on-surface":"#e0e2ea","surface-tint":"#a8c8ff","surface-container-highest":"#31353b","secondary-fixed":"#cfe5ff","on-primary-fixed-variant":"#00468a","inverse-primary":"#105eb0","tertiary-container":"#d39e10","on-secondary-fixed-variant":"#004a78","surface-container-high":"#262a30","on-secondary":"#003355","on-secondary-container":"#e8f1ff","error-container":"#93000a","on-secondary-fixed":"#001d34","error":"#ffb4ab","on-error":"#690005","on-tertiary-container":"#4e3800","tertiary-fixed-dim":"#f7be37","inverse-surface":"#e0e2ea","outline-variant":"#424751","on-tertiary-fixed":"#261900","secondary":"#99cbff","outline":"#8c919d","on-primary-container":"#003c77","surface":"#101419","surface-bright":"#36393f"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{},fontFamily:{headline:["Geist"],display:["Geist"],body:["Geist"],label:["Geist"]},fontSize:{}}}}</script></head><body class="bg-background font-body text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 flex flex-col"><div class="h-11 w-full bg-surface-container-lowest border-b border-outline-variant px-3 flex items-center justify-between text-xs"><div class="flex items-center gap-4"><div class="flex items-center gap-2"><span class="font-headline font-bold text-sm tracking-wider text-primary">NEXUS</span><span class="text-[10px] px-1.5 py-0.5 rounded-sm bg-surface-container-highest text-tertiary font-mono tracking-wide">PAPER</span></div><nav class="flex items-center gap-1" data-active-classes="text-primary border-b border-primary font-medium"><a class="px-2 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="trade" href="#">Trade</a><a class="px-2 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="markets" href="#">Markets</a><a class="px-2 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="predict" href="#">Predict</a><a aria-current="page" class="px-2 py-1 transition-colors text-primary border-b border-primary font-medium" data-path="social" href="#">Social</a><a class="px-2 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="leaderboard" href="#">Leaderboard</a><a class="px-2 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="earn" href="#">Earn</a><a class="px-2 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="calendar" href="#">Calendar</a><a class="px-2 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="co-invest" href="#">Co-Invest</a><a class="px-2 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="agents" href="#">Agents</a></nav></div><div class="flex items-center gap-3"><div class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container text-on-surface-variant border border-outline-variant font-mono text-[11px]"><span class="material-symbols-outlined text-[13px]">search</span><span>Search</span><kbd class="px-1 rounded bg-surface-container-high text-[10px]">⌘K</kbd></div><div class="flex items-center gap-1.5 text-on-surface-variant font-mono text-[11px]"><span class="inline-block w-1.5 h-1.5 rounded-full bg-tertiary"></span><span>12ms</span></div><button class="text-on-surface-variant hover:text-on-surface flex items-center justify-center"><span class="material-symbols-outlined text-[18px]">notifications</span></button><div class="flex items-center gap-2 pl-2 border-l border-outline-variant font-mono text-[11px]"><span class="text-on-surface">0x71a...9b4</span><span class="text-primary">$42,850.20 USDC</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="h-8 w-full bg-surface-container-low border-b border-outline-variant px-3 flex items-center gap-6 overflow-x-auto text-[11px] font-mono"><div class="flex items-center gap-1.5 text-on-surface-variant"><span class="text-[10px] uppercase font-bold text-primary">TICKER</span></div><div class="flex items-center gap-1.5"><span class="text-on-surface font-semibold">SOL</span><span class="text-on-surface">$184.25</span><span class="text-primary">+4.18%</span><span class="text-outline text-[10px]">24h $3.1B</span></div><div class="flex items-center gap-1.5"><span class="text-on-surface font-semibold">BTC</span><span class="text-on-surface">$64,120.00</span><span class="text-primary">+1.85%</span><span class="text-outline text-[10px]">24h $28.4B</span></div><div class="flex items-center gap-1.5"><span class="text-on-surface font-semibold">ETH</span><span class="text-on-surface">$3,485.40</span><span class="text-error">-0.64%</span><span class="text-outline text-[10px]">24h $14.2B</span></div><div class="flex items-center gap-1.5"><span class="text-on-surface font-semibold">JUP</span><span class="text-on-surface">$1.14</span><span class="text-primary">+8.92%</span><span class="text-outline text-[10px]">24h $412M</span></div><div class="flex items-center gap-1.5"><span class="text-on-surface font-semibold">HYPE</span><span class="text-on-surface">$26.40</span><span class="text-primary">+14.30%</span><span class="text-outline text-[10px]">24h $890M</span></div><div class="flex items-center gap-1.5"><span class="text-on-surface font-semibold">NVDA</span><span class="text-on-surface">$128.40</span><span class="text-primary">+2.31%</span><span class="text-outline text-[10px]">24h $9.8B</span></div><div class="flex items-center gap-1.5"><span class="text-on-surface font-semibold">TSLA</span><span class="text-on-surface">$248.12</span><span class="text-error">-1.12%</span><span class="text-outline text-[10px]">24h $4.5B</span></div></div></header><main class="w-full pt-[76px] pb-8 bg-background min-h-screen"><div class="flex flex-col w-full text-on-surface select-none font-body">
+<!-- SUB-HEADER / SOCIAL DISCOVERY CONTROLS (36px flush bar) -->
+<div class="h-9 w-full bg-surface-container-lowest border-b border-outline-variant/30 px-3 flex items-center justify-between text-xs font-mono">
+<div class="flex items-center gap-1 overflow-x-auto no-scrollbar">
+<nav class="flex items-center gap-0.5" id="nav-tabs">
+<button class="px-2.5 py-1 text-primary bg-surface-container font-medium border-b border-primary text-[11px] whitespace-nowrap">Global (All Alpha)</button>
+<button class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors text-[11px] whitespace-nowrap">Following</button>
+<button class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors text-[11px] whitespace-nowrap flex items-center gap-1">
+<span>Smart Money Flow</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+</button>
+<button class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors text-[11px] whitespace-nowrap">Verified Wallets</button>
+<button class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors text-[11px] whitespace-nowrap">Markets</button>
+<button class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors text-[11px] whitespace-nowrap">News Wire</button>
+<button class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors text-[11px] whitespace-nowrap flex items-center gap-1">
+<span>System Alerts</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-highest text-[9px] text-tertiary font-bold">4</span>
+</button>
+</nav>
+<span class="mx-2 text-outline-variant/40">|</span>
+<div class="flex items-center gap-1.5 px-2 py-0.5 bg-surface-container-high rounded text-[10px] text-on-surface-variant border border-outline-variant/30">
+<span class="inline-block w-1 h-1 rounded-full bg-primary animate-pulse"></span>
+<span class="text-on-surface font-semibold">Alpha Stream</span>
+<span class="text-outline">/</span>
+<span>Solana &amp; Synthetics</span>
+</div>
+</div>
+<!-- Right Controls: Filter flags + Search input -->
+<div class="flex items-center gap-2">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined text-[13px] text-outline absolute left-2 pointer-events-none">search</span>
+<input class="h-6 w-72 bg-surface-container text-on-surface placeholder:text-outline/70 pl-6 pr-8 text-[11px] rounded border border-outline-variant/30 focus:border-primary focus:outline-none font-mono" placeholder="Search theses, $SOL, wallets (7xK...9e), traders..." type="text"/>
+<kbd class="absolute right-1.5 px-1 py-0.2 bg-surface-container-highest text-[9px] text-on-surface-variant rounded">⌘F</kbd>
+</div>
+<div class="hidden xl:flex items-center gap-1 text-[10px]">
+<button class="px-1.5 py-0.5 rounded bg-surface-container-low hover:bg-surface-container border border-outline-variant/20 text-primary">Verified Positions Only</button>
+<button class="px-1.5 py-0.5 rounded bg-surface-container-low hover:bg-surface-container border border-outline-variant/20 text-on-surface-variant">Whale &gt;$100k</button>
+<button class="px-1.5 py-0.5 rounded bg-surface-container-low hover:bg-surface-container border border-outline-variant/20 text-on-surface-variant">Catalysts</button>
+<button class="px-1.5 py-0.5 rounded bg-surface-container-low hover:bg-surface-container border border-outline-variant/20 text-on-surface-variant">Copy-Eligible</button>
+</div>
+<div class="flex items-center pl-2 border-l border-outline-variant/30 text-[10px] text-outline">
+<span class="text-primary font-medium cursor-pointer">Ultra Dense</span>
+<span class="mx-1">/</span>
+<span class="hover:text-on-surface cursor-pointer">Compact</span>
+</div>
+</div>
+</div>
+<!-- WORKSPACE MAIN: THREE-COLUMN FLUSH SYSTEM -->
+<div class="flex w-full min-h-[calc(100vh-140px)] bg-background">
+<!-- LEFT COLUMN (260px) - CONTEXTUAL SOCIAL CHANNELS & SMART MONEY TRACKING -->
+<aside class="w-[260px] flex-shrink-0 bg-surface-container-lowest border-r border-outline-variant/30 flex flex-col justify-between">
+<div class="flex flex-col">
+<!-- Section Header 1 -->
+<div class="h-7 px-3 bg-surface-container-low border-b border-outline-variant/30 flex items-center justify-between text-[11px] font-mono tracking-wider text-on-surface-variant uppercase">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[13px] text-primary">tag</span>
+<span class="font-semibold text-on-surface">Alpha Channels</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="hover:text-on-surface"><span class="material-symbols-outlined text-[14px]">tune</span></button>
+<button class="hover:text-on-surface"><span class="material-symbols-outlined text-[14px]">unfold_less</span></button>
+</div>
+</div>
+<!-- Channels List -->
+<div class="py-1 text-xs font-mono">
+<a class="flex items-center justify-between px-3 py-1.5 bg-surface-container text-primary font-medium border-l-2 border-primary" href="#">
+<div class="flex items-center gap-1.5 truncate">
+<span class="text-primary">#</span>
+<span class="text-on-surface">general-alpha</span>
+</div>
+<span class="text-[10px] text-on-surface-variant font-normal">1.4k live</span>
+</a>
+<a class="flex items-center justify-between px-3 py-1.5 hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors" href="#">
+<div class="flex items-center gap-1.5 truncate">
+<span class="text-outline">#</span>
+<span>solana-ecosystem</span>
+</div>
+<span class="text-[9px] px-1 bg-surface-container-high rounded text-primary">$SOL</span>
+</a>
+<a class="flex items-center justify-between px-3 py-1.5 hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors" href="#">
+<div class="flex items-center gap-1.5 truncate">
+<span class="text-outline">#</span>
+<span>synth-equities</span>
+</div>
+<span class="text-[9px] px-1 bg-surface-container-high rounded text-on-surface">$NVDA</span>
+</a>
+<a class="flex items-center justify-between px-3 py-1.5 hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors" href="#">
+<div class="flex items-center gap-1.5 truncate">
+<span class="text-outline">#</span>
+<span class="flex items-center gap-1">smart-money-alerts</span>
+</div>
+<span class="text-[9px] px-1 rounded bg-error-container text-error font-bold">+14</span>
+</a>
+<a class="flex items-center justify-between px-3 py-1.5 hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors" href="#">
+<div class="flex items-center gap-1.5 truncate">
+<span class="text-outline">#</span>
+<span>macro-predict</span>
+</div>
+<span class="text-[10px] text-outline">Rates</span>
+</a>
+<a class="flex items-center justify-between px-3 py-1.5 hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors" href="#">
+<div class="flex items-center gap-1.5 truncate">
+<span class="text-outline">#</span>
+<span>funding-arb</span>
+</div>
+<span class="text-[9px] px-1 bg-surface-container-high rounded text-tertiary">38 bps</span>
+</a>
+</div>
+<!-- Section Header 2: SMART MONEY RADAR -->
+<div class="h-7 px-3 bg-surface-container-low border-y border-outline-variant/30 flex items-center justify-between text-[11px] font-mono tracking-wider text-on-surface-variant uppercase mt-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[13px] text-tertiary">radar</span>
+<span class="font-semibold text-on-surface">Smart Money Radar</span>
+</div>
+<span class="text-[10px] text-tertiary">Live PnL</span>
+</div>
+<!-- Radar List -->
+<div class="divide-y divide-outline-variant/20 font-mono text-[11px]">
+<!-- Radar Item 1 -->
+<div class="p-2.5 hover:bg-surface-container-low transition-colors group">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-semibold text-on-surface group-hover:text-primary">Whale 7xK...9e</span>
+</div>
+<span class="text-[9px] px-1 bg-primary/10 text-primary border border-primary/20 rounded">Tier 1</span>
+</div>
+<div class="flex items-center justify-between mt-1 text-[10px] text-on-surface-variant">
+<span>$48.2M AUM</span>
+<span class="text-primary font-medium">+34.2% 30D</span>
+</div>
+<div class="flex items-center justify-between mt-1.5 text-[10px]">
+<span class="text-outline truncate max-w-[150px]">Heavy SOL, JUP perps</span>
+<button class="text-primary hover:underline text-[10px]">Watch</button>
+</div>
+</div>
+<!-- Radar Item 2 -->
+<div class="p-2.5 hover:bg-surface-container-low transition-colors group">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-semibold text-on-surface group-hover:text-primary">alpha_surfer.sol</span>
+</div>
+<span class="text-[9px] px-1 bg-surface-container-highest text-tertiary rounded">Top 5</span>
+</div>
+<div class="flex items-center justify-between mt-1 text-[10px] text-on-surface-variant">
+<span>Sharpe 3.12</span>
+<span class="text-primary font-medium">82% Win Rate</span>
+</div>
+<div class="flex items-center justify-between mt-1.5 text-[10px]">
+<span class="text-outline">SOL Long ($756K)</span>
+<button class="text-primary hover:underline text-[10px]">Following</button>
+</div>
+</div>
+<!-- Radar Item 3 -->
+<div class="p-2.5 hover:bg-surface-container-low transition-colors group">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="font-semibold text-on-surface group-hover:text-primary">Jump_Arb_Node</span>
+</div>
+<span class="text-[9px] text-outline">BOT</span>
+</div>
+<div class="flex items-center justify-between mt-1 text-[10px] text-on-surface-variant">
+<span>MEV / Vol capture</span>
+<span class="text-primary font-medium">+142.1 bps</span>
+</div>
+<div class="flex items-center justify-between mt-1.5 text-[10px]">
+<span class="text-outline">Spread: 1.4 bps</span>
+<button class="text-primary hover:underline text-[10px]">Alerts</button>
+</div>
+</div>
+<!-- Radar Item 4 -->
+<div class="p-2.5 hover:bg-surface-container-low transition-colors group">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span class="font-semibold text-on-surface group-hover:text-primary">0x882...b01</span>
+</div>
+<span class="text-[9px] text-outline">Macro Prop</span>
+</div>
+<div class="flex items-center justify-between mt-1 text-[10px] text-on-surface-variant">
+<span>Accumulating NVDA-SYNTH</span>
+<span class="text-error font-medium">-1.2% Day</span>
+</div>
+<div class="flex items-center justify-between mt-1.5 text-[10px]">
+<span class="text-outline">$1.8M Perps Delta</span>
+<button class="text-primary hover:underline text-[10px]">Watch</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Status Box at Bottom of Left Panel -->
+<div class="p-2 bg-surface-container-low border-t border-outline-variant/30 text-[10px] font-mono flex items-center justify-between">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>DEX Oracle Sync: OK</span>
+</div>
+<span class="text-outline">Pyth v2.4</span>
+</div>
+</aside>
+<!-- CENTER COLUMN (Flex-1) - PRIMARY FINANCIAL FEED & DETAILED THESES -->
+<main class="flex-1 flex flex-col min-w-0 bg-background">
+<!-- Center Workspace Header (28px flush) -->
+<div class="h-7 px-3 bg-surface-container-low border-b border-outline-variant/30 flex items-center justify-between text-xs font-mono">
+<div class="flex items-center gap-2">
+<span class="font-bold tracking-wider text-on-surface uppercase text-[11px]">Live Alpha Stream</span>
+<span class="text-outline-variant/50">|</span>
+<span class="text-[10px] text-primary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+            Real-time Verified On-Chain Positions
+          </span>
+</div>
+<div class="flex items-center gap-3 text-[11px]">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="text-outline text-[10px]">Sort:</span>
+<button class="text-primary font-medium hover:underline">Top Signal</button>
+<span class="text-outline">/</span>
+<button class="hover:text-on-surface">Chronological</button>
+<span class="text-outline">/</span>
+<button class="hover:text-on-surface">PnL Impact</button>
+</div>
+<button class="flex items-center gap-1 px-2 py-0.5 bg-primary text-on-primary text-[10px] font-semibold rounded hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-[13px]">add_box</span>
+<span>Compose Thesis</span>
+</button>
+</div>
+</div>
+<!-- Quick Compose Inline Bar (Flush, 38px) -->
+<div class="p-2 bg-surface-container-lowest border-b border-outline-variant/30 flex items-center gap-2 font-mono">
+<div class="w-6 h-6 rounded bg-surface-container-high border border-outline-variant/30 flex items-center justify-center flex-shrink-0 text-[10px] font-bold text-primary">
+          0x71
+        </div>
+<div class="flex-1 relative flex items-center">
+<input class="w-full h-7 bg-surface-container text-on-surface placeholder:text-outline/70 px-2.5 text-[11px] rounded border border-outline-variant/30 focus:border-primary focus:outline-none" placeholder="Share trade thesis, attach verified on-chain position, or catalyst... [$Ticker, @Trader]" type="text"/>
+</div>
+<div class="flex items-center gap-1">
+<button class="h-7 px-2 bg-surface-container hover:bg-surface-container-high border border-outline-variant/30 rounded text-[10px] text-on-surface-variant hover:text-primary flex items-center gap-1" title="Attach Position">
+<span class="material-symbols-outlined text-[13px]">receipt_long</span>
+<span class="hidden sm:inline">Attach Position</span>
+</button>
+<button class="h-7 px-2 bg-surface-container hover:bg-surface-container-high border border-outline-variant/30 rounded text-[10px] text-on-surface-variant hover:text-on-surface flex items-center gap-1" title="Chart Snapshot">
+<span class="material-symbols-outlined text-[13px]">monitoring</span>
+<span class="hidden sm:inline">Chart</span>
+</button>
+<button class="h-7 px-2 bg-surface-container hover:bg-surface-container-high border border-outline-variant/30 rounded text-[10px] text-on-surface-variant hover:text-on-surface flex items-center gap-1" title="Catalyst Tag">
+<span class="material-symbols-outlined text-[13px]">sell</span>
+</button>
+<button class="h-7 px-2.5 bg-primary/20 text-primary border border-primary/40 hover:bg-primary hover:text-on-primary rounded text-[10px] font-bold transition-colors">
+            Post
+          </button>
+</div>
+</div>
+<!-- FEED STREAM CONTAINER (FLUSH, NO ROUNDED CARDS, 1PX DIVIDERS) -->
+<div class="flex-1 divide-y divide-outline-variant/30 overflow-y-auto font-body">
+<!-- POST 1: Deep Trade Thesis with Attached Verified On-Chain Perp -->
+<article class="p-3.5 bg-surface-container-lowest hover:bg-surface-container-lowest/60 transition-colors">
+<!-- Trader Meta Header -->
+<div class="flex items-center justify-between mb-2 font-mono text-[11px]">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded bg-primary text-on-primary font-bold flex items-center justify-center text-[10px]">
+                AS
+              </div>
+<div class="flex items-center gap-1.5">
+<span class="font-bold text-on-surface text-[12px]">alpha_surfer.sol</span>
+<span class="text-outline text-[11px]">@alpha42</span>
+<span class="px-1 py-0.2 bg-primary/10 text-primary border border-primary/30 text-[9px] font-semibold rounded">Tier 1 Pro</span>
+<span class="text-[10px] text-tertiary">#4 Leaderboard</span>
+</div>
+<span class="text-outline-variant/60">•</span>
+<span class="text-outline text-[10px]">3m ago</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2 py-0.5 bg-surface-container hover:bg-surface-container-high border border-outline-variant/30 text-[10px] text-on-surface-variant rounded">Following</button>
+<button class="text-outline hover:text-on-surface"><span class="material-symbols-outlined text-[15px]">more_horiz</span></button>
+</div>
+</div>
+<!-- VERIFIED POSITION CAPSULE (1px dense structural box) -->
+<div class="mb-2.5 p-2 bg-surface-container-low border border-outline-variant/40 rounded-sm font-mono text-xs">
+<div class="flex items-center justify-between pb-1.5 border-b border-outline-variant/20 mb-1.5">
+<div class="flex items-center gap-2">
+<span class="px-1.5 py-0.5 bg-primary/15 text-primary text-[10px] font-bold rounded">VERIFIED LONG • SOL-PERP</span>
+<span class="text-[10px] text-outline">Solana Nexus Perps v2</span>
+</div>
+<div class="flex items-center gap-2 text-[11px]">
+<span class="text-outline">PnL:</span>
+<span class="text-primary font-bold text-[12px]">+$17,325.40 (+11.72% ROE)</span>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[11px]">
+<div>
+<span class="text-outline text-[10px] block">Entry Price</span>
+<span class="text-on-surface font-semibold">$164.20</span>
+</div>
+<div>
+<span class="text-outline text-[10px] block">Mark Price</span>
+<span class="text-primary font-semibold">$168.05</span>
+</div>
+<div>
+<span class="text-outline text-[10px] block">Position Size</span>
+<span class="text-on-surface">4,500 SOL <span class="text-outline">($756.2K)</span></span>
+</div>
+<div>
+<span class="text-outline text-[10px] block">Leverage / Liq</span>
+<span class="text-on-surface">5.00x <span class="text-error text-[10px]">($141.10)</span></span>
+</div>
+</div>
+</div>
+<!-- Thesis Text -->
+<p class="text-xs leading-relaxed text-on-surface mb-2 font-normal">
+            Solana DEX volume outpacing mainnet L1 peers for 4 consecutive sessions. Funding compressed from <span class="text-tertiary font-mono">+0.02%</span> to <span class="text-primary font-mono">-0.0007%</span> while spot CVD shows persistent institutional absorption via aggregated liquidity pools. Key catalyst: upcoming network throughput upgrade and cross-margin collateral expansion. Invalidating thesis below <span class="text-error font-mono">$161.40</span> liquidity sweep.
+          </p>
+<!-- Catalyst Tags & AI Validation Capsule -->
+<div class="flex flex-wrap items-center gap-2 mb-2.5 font-mono text-[10px]">
+<span class="px-1.5 py-0.5 bg-surface-container text-on-surface-variant rounded">#Solana</span>
+<span class="px-1.5 py-0.5 bg-surface-container text-on-surface-variant rounded">#FundingCompression</span>
+<span class="px-1.5 py-0.5 bg-surface-container text-tertiary rounded">#CatalystNov20</span>
+<div class="flex items-center gap-1 px-2 py-0.5 bg-surface-container-high text-primary border border-primary/20 rounded">
+<span class="material-symbols-outlined text-[12px]">auto_awesome</span>
+<span>Nexus AI: Thesis verified by Pyth orderflow delta &amp; JUP liquidity surge (92% Alignment)</span>
+</div>
+</div>
+<!-- Action Bar (Buttons) -->
+<div class="flex items-center justify-between pt-1 border-t border-outline-variant/20 font-mono text-[11px] text-on-surface-variant">
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 bg-primary text-on-primary font-bold text-[10px] rounded hover:bg-primary/90 transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">content_copy</span>
+<span>Copy Trade (5x)</span>
+</button>
+<a class="px-2 py-1 bg-surface-container hover:bg-surface-container-high rounded text-[10px] text-on-surface flex items-center gap-1" href="#">
+<span>Open SOL Market</span>
+<span class="material-symbols-outlined text-[11px]">north_east</span>
+</a>
+<button class="hover:text-on-surface text-[10px] text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">open_in_new</span>
+<span>Explorer</span>
+</button>
+</div>
+<div class="flex items-center gap-3 text-[11px]">
+<button class="hover:text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+<span>182</span>
+</button>
+<button class="hover:text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">chat_bubble_outline</span>
+<span>74</span>
+</button>
+<button class="hover:text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bookmark_border</span>
+</button>
+<button class="hover:text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">share</span>
+</button>
+</div>
+</div>
+</article>
+<!-- POST 2: Smart Money Inflow Alert (Bot Generated & Verified) -->
+<article class="p-3.5 bg-surface-container-lowest hover:bg-surface-container-lowest/60 transition-colors">
+<div class="flex items-center justify-between mb-1.5 font-mono text-[11px]">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded bg-surface-container-high text-tertiary flex items-center justify-center text-[11px] font-bold border border-outline-variant/30">
+<span class="material-symbols-outlined text-[14px]">smart_toy</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-bold text-on-surface">Whale Radar</span>
+<span class="px-1 py-0.2 bg-surface-container-high text-tertiary border border-outline-variant/30 text-[9px] font-semibold rounded">Nexus Verified Bot</span>
+</div>
+<span class="text-outline-variant/60">•</span>
+<span class="text-outline text-[10px]">14m ago</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[10px] text-primary font-mono bg-primary/10 px-1.5 py-0.5 rounded border border-primary/20">+$2.08M Spot Inflow</span>
+</div>
+</div>
+<p class="text-xs text-on-surface font-mono leading-relaxed mb-2">
+<span class="text-tertiary font-bold">LARGE ON-CHAIN ACCUMULATION:</span> 12,400 SOL ($2,082,208 USDC) filled on-chain via Jupiter route aggregations across 4 consecutive transaction blocks. Average fill price: <span class="text-on-surface font-bold">$167.92</span>.
+          </p>
+<div class="flex items-center gap-2 p-1.5 bg-surface-container-low border border-outline-variant/30 rounded font-mono text-[10px] mb-2 text-on-surface-variant">
+<span class="text-outline">Tx Hash:</span>
+<span class="text-primary hover:underline cursor-pointer">5kR9zM...3wLq_sol82</span>
+<span class="text-outline">Route:</span>
+<span>JUP v6 Aggregator -&gt; Whirlpool</span>
+<span class="ml-auto text-primary">Confirmed (Block #291840291)</span>
+</div>
+<div class="flex items-center justify-between font-mono text-[11px] text-on-surface-variant pt-1 border-t border-outline-variant/20">
+<div class="flex items-center gap-2">
+<button class="px-2 py-0.5 bg-surface-container hover:bg-surface-container-high border border-outline-variant/30 rounded text-[10px] text-on-surface">Track Wallet 7xK...9e</button>
+<button class="px-2 py-0.5 bg-surface-container hover:bg-surface-container-high border border-outline-variant/30 rounded text-[10px] text-on-surface">Open SOL Market</button>
+</div>
+<div class="flex items-center gap-3">
+<button class="hover:text-on-surface flex items-center gap-1 text-[10px]">
+<span class="material-symbols-outlined text-[13px]">chat_bubble_outline</span>
+<span>18</span>
+</button>
+<button class="hover:text-on-surface flex items-center gap-1 text-[10px]">
+<span class="material-symbols-outlined text-[13px]">bookmark_border</span>
+<span>Save Alert</span>
+</button>
+</div>
+</div>
+</article>
+<!-- POST 3: Bearish Valuation Thesis & Synthetic Equity Hedge -->
+<article class="p-3.5 bg-surface-container-lowest hover:bg-surface-container-lowest/60 transition-colors">
+<div class="flex items-center justify-between mb-2 font-mono text-[11px]">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded bg-surface-container-highest text-on-surface font-bold flex items-center justify-center text-[10px]">
+                ER
+              </div>
+<div class="flex items-center gap-1.5">
+<span class="font-bold text-on-surface text-[12px]">macro_vault</span>
+<span class="text-outline text-[11px]">@ElenaR</span>
+<span class="px-1 py-0.2 bg-surface-container text-on-surface-variant border border-outline-variant/30 text-[9px] rounded">Certified Quant</span>
+</div>
+<span class="text-outline-variant/60">•</span>
+<span class="text-outline text-[10px]">32m ago</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2 py-0.5 bg-surface-container hover:bg-surface-container-high border border-outline-variant/30 text-[10px] text-on-surface-variant rounded">Followed</button>
+<button class="text-outline hover:text-on-surface"><span class="material-symbols-outlined text-[15px]">more_horiz</span></button>
+</div>
+</div>
+<!-- Position Capsule: Short NVDA-SYNTH -->
+<div class="mb-2.5 p-2 bg-surface-container-low border border-outline-variant/40 rounded-sm font-mono text-xs">
+<div class="flex items-center justify-between pb-1.5 border-b border-outline-variant/20 mb-1.5">
+<div class="flex items-center gap-2">
+<span class="px-1.5 py-0.5 bg-error/20 text-error text-[10px] font-bold rounded">VERIFIED SHORT • NVDA-SYNTH</span>
+<span class="text-[10px] text-outline">Nexus Synthetic Equities</span>
+</div>
+<div class="flex items-center gap-2 text-[11px]">
+<span class="text-outline">PnL:</span>
+<span class="text-primary font-bold text-[12px]">+$3,780.00 (+1.57%)</span>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[11px]">
+<div>
+<span class="text-outline text-[10px] block">Entry Price</span>
+<span class="text-on-surface font-semibold">$241.10</span>
+</div>
+<div>
+<span class="text-outline text-[10px] block">Mark Price</span>
+<span class="text-error font-semibold">$237.95</span>
+</div>
+<div>
+<span class="text-outline text-[10px] block">Size</span>
+<span class="text-on-surface">$240,000 NOTIONAL</span>
+</div>
+<div>
+<span class="text-outline text-[10px] block">Stop / Target</span>
+<span class="text-on-surface">$245.50 / $228.00</span>
+</div>
+</div>
+</div>
+<p class="text-xs leading-relaxed text-on-surface mb-2 font-normal">
+            Trimming synthetic equity delta ahead of tier-1 server supply chain shipment checks. Blackwell margin ramp may experience 1-quarter compression due to advanced packaging testing bottlenecks. Hedging beta against tech ETF basket. Looking to re-enter long post-earnings dip below <span class="text-on-surface font-mono">$230</span>.
+          </p>
+<div class="flex items-center gap-2 mb-2.5 font-mono text-[10px]">
+<span class="px-1.5 py-0.5 bg-surface-container text-on-surface-variant rounded">#NVDA</span>
+<span class="px-1.5 py-0.5 bg-surface-container text-on-surface-variant rounded">#SyntheticEquities</span>
+<span class="px-1.5 py-0.5 bg-surface-container text-on-surface-variant rounded">#BlackwellSupply</span>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-outline-variant/20 font-mono text-[11px] text-on-surface-variant">
+<div class="flex items-center gap-2">
+<button class="px-2 py-0.5 bg-surface-container hover:bg-surface-container-high border border-outline-variant/30 rounded text-[10px] text-on-surface">View Position Audit</button>
+<button class="px-2 py-0.5 bg-surface-container hover:bg-surface-container-high border border-outline-variant/30 rounded text-[10px] text-on-surface">Open NVDA-SYNTH</button>
+</div>
+<div class="flex items-center gap-3">
+<button class="hover:text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">arrow_upward</span><span>64</span></button>
+<button class="hover:text-on-surface flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">chat_bubble_outline</span><span>41</span></button>
+<button class="hover:text-on-surface"><span class="material-symbols-outlined text-[14px]">bookmark_border</span></button>
+</div>
+</div>
+</article>
+<!-- POST 4: Prediction Market Thesis -->
+<article class="p-3.5 bg-surface-container-lowest hover:bg-surface-container-lowest/60 transition-colors">
+<div class="flex items-center justify-between mb-2 font-mono text-[11px]">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded bg-surface-container-high text-primary font-bold flex items-center justify-center text-[10px]">
+                SN
+              </div>
+<div class="flex items-center gap-1.5">
+<span class="font-bold text-on-surface text-[12px]">predict_alpha</span>
+<span class="text-outline text-[11px]">@SatoshiN</span>
+<span class="px-1 py-0.2 bg-tertiary/10 text-tertiary border border-tertiary/30 text-[9px] rounded font-semibold">Macro Pred Top 1%</span>
+</div>
+<span class="text-outline-variant/60">•</span>
+<span class="text-outline text-[10px]">1h ago</span>
+</div>
+<button class="text-outline hover:text-on-surface"><span class="material-symbols-outlined text-[15px]">more_horiz</span></button>
+</div>
+<!-- Position Capsule: Dec 2024 Fed Rate Decision -->
+<div class="mb-2 p-2 bg-surface-container-low border border-outline-variant/40 rounded-sm font-mono text-xs">
+<div class="flex items-center justify-between pb-1.5 border-b border-outline-variant/20 mb-1.5">
+<div class="flex items-center gap-2">
+<span class="px-1.5 py-0.5 bg-tertiary/15 text-tertiary text-[10px] font-bold rounded">PREDICTION BET • FED RATE DECISION</span>
+<span class="text-[10px] text-outline">Nexus Prediction Protocol</span>
+</div>
+<span class="text-primary font-bold text-[11px]">+$5,410 Expected Payout</span>
+</div>
+<div class="flex items-center justify-between text-[11px]">
+<div>
+<span class="text-outline text-[10px]">Outcome Pick:</span>
+<span class="text-on-surface font-semibold ml-1">25bps Cut (88% Prob)</span>
+</div>
+<div>
+<span class="text-outline text-[10px]">Position Size:</span>
+<span class="text-on-surface font-semibold ml-1">24,500 Shares ($0.78 avg)</span>
+</div>
+</div>
+</div>
+<p class="text-xs leading-relaxed text-on-surface mb-2 font-normal">
+            Treasury liquidity index has expanded by $140B this cycle. Labor force participation softens slightly while PCE prints remain bounded inside terminal expectations. Pricing an 88% probability for 25bps cut is still mispriced by ~400bps compared to SOFR swaps.
+          </p>
+<div class="flex items-center justify-between pt-1 border-t border-outline-variant/20 font-mono text-[11px] text-on-surface-variant">
+<div class="flex items-center gap-2">
+<button class="px-2 py-0.5 bg-primary/20 text-primary hover:bg-primary hover:text-on-primary border border-primary/30 rounded text-[10px] font-bold">Bet with Trader</button>
+<button class="px-2 py-0.5 bg-surface-container hover:bg-surface-container-high border border-outline-variant/30 rounded text-[10px] text-on-surface">Open Prediction Market</button>
+</div>
+<div class="flex items-center gap-3">
+<button class="hover:text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">arrow_upward</span><span>88</span></button>
+<button class="hover:text-on-surface flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">chat_bubble_outline</span><span>29</span></button>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- RIGHT COLUMN (340px) - CONTEXTUAL CHAT & TRENDING ASSETS/TRADERS -->
+<aside class="w-[340px] flex-shrink-0 bg-surface-container-lowest border-l border-outline-variant/30 flex flex-col justify-between">
+<!-- TOP HALF (Fixed 280px): CONTEXTUAL CHAT SYNCHRONIZED TO ACTIVE ASSET -->
+<div class="h-[310px] flex flex-col border-b border-outline-variant/30">
+<!-- Header (28px flush) -->
+<div class="h-7 px-3 bg-surface-container-low border-b border-outline-variant/30 flex items-center justify-between text-xs font-mono">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[13px] text-primary">forum</span>
+<span class="font-bold text-[11px] text-on-surface">Context Chat:</span>
+<span class="text-primary font-semibold text-[11px]">#SOL-PERP</span>
+</div>
+<div class="flex items-center gap-1 text-[10px] text-outline font-mono">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>482 online</span>
+</div>
+</div>
+<!-- Chat Stream (Compact 22px rows) -->
+<div class="flex-1 p-2 space-y-1.5 overflow-y-auto font-mono text-[11px] leading-tight select-text">
+<div class="flex items-baseline gap-1.5">
+<span class="text-outline text-[9px]">14:32:01</span>
+<span class="text-primary font-bold">alpha42:</span>
+<span class="text-on-surface text-[11px]">Watching the $168.50 resistance wick closely.</span>
+</div>
+<div class="flex items-baseline gap-1.5">
+<span class="text-outline text-[9px]">14:32:15</span>
+<span class="text-on-surface-variant font-bold">ser_sol:</span>
+<span class="text-on-surface text-[11px]">Funding just flipped negative on Nexus perps.</span>
+</div>
+<div class="flex items-baseline gap-1.5 bg-surface-container-low px-1 py-0.5 rounded">
+<span class="text-outline text-[9px]">14:32:44</span>
+<span class="text-tertiary font-bold">quant_bot:</span>
+<span class="text-primary text-[10px]">Block trade: 2,500 SOL filled at $168.02.</span>
+</div>
+<div class="flex items-baseline gap-1.5">
+<span class="text-outline text-[9px]">14:33:02</span>
+<span class="text-on-surface-variant font-bold">trader_joe:</span>
+<span class="text-on-surface text-[11px]">Copied alpha_surfer's entry with 3x leverage.</span>
+</div>
+<div class="flex items-baseline gap-1.5">
+<span class="text-outline text-[9px]">14:33:28</span>
+<span class="text-on-surface-variant font-bold">defi_macro:</span>
+<span class="text-on-surface text-[11px]">Check open interest vs spot depth ratio.</span>
+</div>
+<div class="flex items-baseline gap-1.5">
+<span class="text-outline text-[9px]">14:33:49</span>
+<span class="text-primary font-bold">0x71a:</span>
+<span class="text-on-surface text-[11px]">Liquidity cluster at $169.20 confirmed.</span>
+</div>
+</div>
+<!-- Chat Input Bar (28px flush) -->
+<div class="p-1.5 bg-surface-container-low border-t border-outline-variant/30 flex items-center gap-1 font-mono">
+<input class="flex-1 h-6 bg-surface-container text-on-surface placeholder:text-outline text-[10px] px-2 rounded border border-outline-variant/30 focus:border-primary focus:outline-none" placeholder="Message #SOL-PERP channel... [Enter]" type="text"/>
+<button class="h-6 px-2 bg-primary text-on-primary text-[10px] font-bold rounded flex items-center justify-center hover:bg-primary/90">
+<span class="material-symbols-outlined text-[13px]">send</span>
+</button>
+</div>
+</div>
+<!-- BOTTOM HALF: TRENDING ALPHA ASSETS & TOP TRADERS -->
+<div class="flex-1 flex flex-col font-mono">
+<!-- Header: Trending Assets -->
+<div class="h-6 px-3 bg-surface-container-low border-b border-outline-variant/30 flex items-center justify-between text-[10px] tracking-wider text-on-surface-variant uppercase">
+<span class="font-bold text-on-surface">Trending Alpha Assets</span>
+<span class="text-outline">24H Velocity</span>
+</div>
+<!-- Assets Table -->
+<div class="p-2 space-y-1.5 border-b border-outline-variant/30 text-[11px]">
+<div class="flex items-center justify-between hover:bg-surface-container-low p-1 rounded cursor-pointer">
+<div class="flex items-center gap-1.5">
+<span class="text-outline text-[10px]">1.</span>
+<span class="font-bold text-primary">$SOL</span>
+<span class="text-[9px] text-outline">Solana</span>
+</div>
+<div class="text-right">
+<span class="text-primary font-bold block text-[10px]">+$38.4M Smart Flow</span>
+<span class="text-[9px] text-outline">1,428 mentions</span>
+</div>
+</div>
+<div class="flex items-center justify-between hover:bg-surface-container-low p-1 rounded cursor-pointer">
+<div class="flex items-center gap-1.5">
+<span class="text-outline text-[10px]">2.</span>
+<span class="font-bold text-on-surface">$NVDA</span>
+<span class="text-[9px] text-outline">Synth</span>
+</div>
+<div class="text-right">
+<span class="text-primary font-bold block text-[10px]">+$52.8M Inst Flow</span>
+<span class="text-[9px] text-outline">892 mentions</span>
+</div>
+</div>
+<div class="flex items-center justify-between hover:bg-surface-container-low p-1 rounded cursor-pointer">
+<div class="flex items-center gap-1.5">
+<span class="text-outline text-[10px]">3.</span>
+<span class="font-bold text-on-surface">$JUP</span>
+<span class="text-[9px] text-outline">Jupiter</span>
+</div>
+<div class="text-right">
+<span class="text-primary font-bold block text-[10px]">+18.4% Vol Surge</span>
+<span class="text-[9px] text-outline">640 mentions</span>
+</div>
+</div>
+<div class="flex items-center justify-between hover:bg-surface-container-low p-1 rounded cursor-pointer">
+<div class="flex items-center gap-1.5">
+<span class="text-outline text-[10px]">4.</span>
+<span class="font-bold text-on-surface">$BTC</span>
+<span class="text-[9px] text-outline">Bitcoin</span>
+</div>
+<div class="text-right">
+<span class="text-error font-bold block text-[10px]">-$42.0M Outflow</span>
+<span class="text-[9px] text-outline">1,840 mentions</span>
+</div>
+</div>
+</div>
+<!-- Header: Top Traders -->
+<div class="h-6 px-3 bg-surface-container-low border-b border-outline-variant/30 flex items-center justify-between text-[10px] tracking-wider text-on-surface-variant uppercase">
+<span class="font-bold text-on-surface">Top 30D Verified Traders</span>
+<span class="text-primary font-semibold">Copy PnL</span>
+</div>
+<!-- Top Traders List -->
+<div class="p-2 space-y-1.5 text-[11px] flex-1 overflow-y-auto">
+<div class="flex items-center justify-between hover:bg-surface-container-low p-1 rounded">
+<div class="flex items-center gap-1.5">
+<span class="text-tertiary font-bold text-[10px]">1.</span>
+<div class="truncate max-w-[120px]">
+<span class="font-bold text-on-surface block text-[11px] truncate">alpha_surfer.sol</span>
+<span class="text-[9px] text-outline">412 Copiers • $1.2M Vol</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-primary font-bold text-[11px]">+142.8%</span>
+<button class="px-1.5 py-0.5 bg-primary/20 text-primary border border-primary/30 hover:bg-primary hover:text-on-primary text-[9px] rounded font-bold">Copy</button>
+</div>
+</div>
+<div class="flex items-center justify-between hover:bg-surface-container-low p-1 rounded">
+<div class="flex items-center gap-1.5">
+<span class="text-outline font-bold text-[10px]">2.</span>
+<div class="truncate max-w-[120px]">
+<span class="font-bold text-on-surface block text-[11px] truncate">vault_prime</span>
+<span class="text-[9px] text-outline">180 Copiers • $8.4M Vol</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-primary font-bold text-[11px]">+98.4%</span>
+<button class="px-1.5 py-0.5 bg-primary/20 text-primary border border-primary/30 hover:bg-primary hover:text-on-primary text-[9px] rounded font-bold">Copy</button>
+</div>
+</div>
+<div class="flex items-center justify-between hover:bg-surface-container-low p-1 rounded">
+<div class="flex items-center gap-1.5">
+<span class="text-outline font-bold text-[10px]">3.</span>
+<div class="truncate max-w-[120px]">
+<span class="font-bold text-on-surface block text-[11px] truncate">sol_sniper_9</span>
+<span class="text-[9px] text-outline">95 Copiers • $420K Vol</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-primary font-bold text-[11px]">+84.2%</span>
+<button class="px-1.5 py-0.5 bg-primary/20 text-primary border border-primary/30 hover:bg-primary hover:text-on-primary text-[9px] rounded font-bold">Copy</button>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</div></main><footer class="fixed bottom-0 left-0 right-0 z-50 h-8 bg-surface-container-lowest border-t border-outline-variant px-3 flex items-center justify-between text-[11px] font-mono"><div class="flex items-center gap-4"><nav class="flex items-center gap-3" data-active-classes="text-primary font-semibold"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="feed" href="#">Feed</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="news" href="#">News</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="chat" href="#">Chat</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="watchlist" href="#">Watchlist</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="pnl" href="#">PnL</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="market-hours" href="#">Market Hours</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="ai-intelligence" href="#">AI Intelligence</a></nav></div><div class="flex items-center gap-4 text-on-surface-variant"><div class="flex items-center gap-1 hover:text-on-surface cursor-pointer"><span class="material-symbols-outlined text-[14px]">dashboard_customize</span><span>Layout: Standard</span></div><div class="flex items-center gap-1.5"><span class="inline-block w-1.5 h-1.5 rounded-full bg-primary"></span><span>21:42:09 UTC</span></div><button class="flex items-center gap-1 hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[14px]">lock</span><span>Panel Lock</span></button></div></footer></body></html>
