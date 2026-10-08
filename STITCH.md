@@ -1,19 +1,19 @@
-# FOMO Stitch Build Instructions
+# Nexus Stitch Build Instructions
 
 ## Purpose
-Use Google Stitch to design FOMO as one coherent product system, not unrelated screens.
+Use Google Stitch to design Nexus as one coherent product system, not unrelated screens.
 
-FOMO is an AI-native trading and social markets platform combining a dense trading terminal, multi-asset and perpetual markets, prediction markets, social feed, news, watchlists, portfolio/PnL, calendar, Earn, AI Co-Invest, AI agents, paper trading, and permissions/audit controls.
+Nexus is an AI-native trading and social markets platform combining a dense trading terminal, multi-asset and perpetual markets, prediction markets, social feed, news, watchlists, portfolio/PnL, calendar, Earn, AI Co-Invest, AI agents, paper trading, and permissions/audit controls.
 
 ## Design read
 Reading this as: dense financial product UI for active traders, investors, prediction-market users, and AI-assisted portfolio builders, with a premium dark trading-cockpit language, leaning toward a custom tokenized React/Tailwind system with restrained glass and high information density.
 
-## FOMO-specific visual dials
+## Nexus-specific visual dials
 - DESIGN_VARIANCE: 5
 - MOTION_INTENSITY: 4
 - VISUAL_DENSITY: 9
 
-These override the anti-slop skill baseline for FOMO because FOMO is dense product UI. Apply the uploaded Taste skill selectively as a visual quality and anti-slop guardrail. The skill itself explicitly says it is not for dashboards, data tables, or dense product UI.
+These override the anti-slop skill baseline for Nexus because Nexus is dense product UI. Apply the uploaded Taste skill selectively as a visual quality and anti-slop guardrail. The skill itself explicitly says it is not for dashboards, data tables, or dense product UI.
 
 ## System rules
 - Dark-first, with a light theme from the same semantic token system.
@@ -206,24 +206,24 @@ Global utilities:
 
 ## Stitch generation workflow
 For every screen:
-1. Find the existing FOMO Stitch project.
+1. Find the existing Nexus Stitch project.
 2. Inspect existing screens and tokens before creating a new screen.
 3. Reuse the established app shell and components.
 4. Generate the desktop-first state.
 5. Generate responsive variants where information architecture changes.
 6. Add loading, empty, error, disabled, selected, hover, focus, and confirmation states.
-7. Review against the FOMO system before moving on.
+7. Review against the Nexus system before moving on.
 8. Do not invent new navigation, typography, radii, colors, or interaction patterns per screen.
 
 ## Prompt template
 
-Create a production-quality FOMO [SCREEN NAME] screen for a dense dark-first trading terminal.
+Create a production-quality Nexus [SCREEN NAME] screen for a dense dark-first trading terminal.
 
 Audience:
 Active traders, investors, prediction-market users, and AI-assisted portfolio builders.
 
 Product context:
-FOMO is an AI-native trading and social markets platform. Reuse the existing FOMO app shell and design tokens from the Stitch project.
+Nexus is an AI-native trading and social markets platform. Reuse the existing Nexus app shell and design tokens from the Stitch project.
 
 Visual system:
 - dark-first
